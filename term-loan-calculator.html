@@ -2,154 +2,204 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Term Loan Calculator</title>
+  <title>Loan Calculator</title>
 
-  <!-- jsPDF & autoTable from CDN -->
+  <!-- jsPDF & autoTable CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
 
   <style>
+    :root {
+      --bg: #f9fafb;
+      --card-bg: #ffffff;
+      --border: #e5e7eb;
+      --border-hover: #d1d5db;
+      --text: #111827;
+      --text-secondary: #6b7280;
+      --primary: #3b82f6;
+      --primary-dark: #2563eb;
+      --button-bg: #1f2937;
+      --button-hover: #111827;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
     body {
-      background: #f0f2f5;
-      font-family: Arial, sans-serif;
+      background: var(--bg);
+      font-family: system-ui, sans-serif;
       margin: 0;
       padding: 2rem;
       display: flex;
       justify-content: center;
     }
     .calculator {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
       max-width: 600px;
       width: 100%;
-      padding: 2rem;
-      text-align: center;
+      padding: 1.5rem;
     }
-    h1 {
-      margin-bottom: 1.5rem;
-      font-size: 1.75rem;
-      color: #333;
+    .calculator h1 {
+      margin: 0 0 1rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text);
     }
-
-    /* 2x2 grid for inputs */
     .form-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
       margin-bottom: 1.5rem;
     }
-    .row {
+    .field {
+      display: flex;
+      flex-direction: column;
+    }
+    .field label {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 0.25rem;
+    }
+    .input-row {
       display: flex;
       align-items: center;
-      justify-content: center;
     }
-    .row label {
-      font-weight: bold;
-      color: #555;
+    .input-row input[type="text"] {
+      flex: 1;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 0.375rem;
+      padding: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--text);
+      text-align: right;
+      transition: border-color 0.2s;
     }
-    .row input[type="text"] {
-      width: 120px;
-      margin-left: .5rem;
-      padding: .25rem .5rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      text-align: center;
+    .input-row input[type="text"]:focus {
+      border-color: var(--primary);
+      outline: none;
     }
-    .row input[type="checkbox"] {
-      margin-left: .5rem;
+    .input-row input[type="checkbox"] {
+      margin-left: 0.5rem;
+      accent-color: var(--primary);
       transform: scale(1.2);
     }
 
-    /* Schedule actions */
     .schedule-actions {
-      margin: 1rem 0;
-      text-align: right;
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .schedule-actions label {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin-right: 0.5rem;
     }
     .schedule-actions select {
-      padding: .25rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      padding: 0.5rem;
+      border: 1px solid var(--border);
+      border-radius: 0.375rem;
+      font-size: 0.875rem;
+      color: var(--text);
       margin-right: 1rem;
     }
     .schedule-actions button {
-      background: #0070f3;
+      background: var(--button-bg);
       color: #fff;
       border: none;
-      border-radius: 4px;
-      padding: .5rem 1rem;
-      font-size: 1rem;
+      border-radius: 0.375rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
       cursor: pointer;
+      transition: background 0.2s;
     }
     .schedule-actions button:hover {
-      background: #005bb5;
+      background: var(--button-hover);
     }
 
-    /* Table styling */
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 1rem;
-      font-size: 0.9rem;
+      font-size: 0.875rem;
     }
     th, td {
-      border: 1px solid #ddd;
-      padding: .5rem;
+      border: 1px solid var(--border);
+      padding: 0.5rem;
     }
     th {
-      background: #0070f3;
+      background: var(--primary-dark);
       color: #fff;
+      font-weight: 500;
+      text-align: right;
     }
     th:first-child, td:first-child {
       text-align: center;
     }
     tr:nth-child(even) {
-      background: #f9f9f9;
+      background: var(--bg);
     }
   </style>
 </head>
 <body>
   <div class="calculator">
-    <h1>Term Loan Calculator</h1>
+    <h1>Loan Calculator</h1>
 
     <div class="form-grid">
-      <div class="row">
-        <label>Loan Amount:
-          <input id="loanAmount" type="text" value="350,000.00"
-                 onfocus="this.value=parseFloat(this.value.replace(/,/g,''))||''"
-                 onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})" />
-        </label>
-        <input id="lockAmount" type="checkbox" checked title="Provide this value" />
+      <div class="field">
+        <label for="loanAmount">Loan Amount</label>
+        <div class="input-row">
+          <input
+            id="loanAmount"
+            type="text"
+            value="350,000.00"
+            onfocus="this.value=parseFloat(this.value.replace(/,/g,''))||''"
+            onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})"
+          />
+          <input id="lockAmount" type="checkbox" checked />
+        </div>
       </div>
 
-      <div class="row">
-        <label>Interest Rate (%):
-          <input id="interestRate" type="text" value="10.50" step="0.01"
-                 onfocus="this.value=parseFloat(this.value)||''"
-                 onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})" />
-        </label>
-        <input id="lockRate" type="checkbox" checked title="Provide this value" />
+      <div class="field">
+        <label for="interestRate">Interest Rate (%)</label>
+        <div class="input-row">
+          <input
+            id="interestRate"
+            type="text"
+            value="10.50"
+            step="0.01"
+            onfocus="this.value=parseFloat(this.value)||''"
+            onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})"
+          />
+          <input id="lockRate" type="checkbox" checked />
+        </div>
       </div>
 
-      <div class="row">
-        <label>Loan Term (years):
-          <input id="loanTerm" type="text" value="10.00" step="0.01"
-                 onfocus="this.value=parseFloat(this.value)||''"
-                 onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})" />
-        </label>
-        <input id="lockTerm" type="checkbox" checked title="Provide this value" />
+      <div class="field">
+        <label for="loanTerm">Loan Term (years)</label>
+        <div class="input-row">
+          <input
+            id="loanTerm"
+            type="text"
+            value="10.00"
+            step="0.01"
+            onfocus="this.value=parseFloat(this.value)||''"
+            onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})"
+          />
+          <input id="lockTerm" type="checkbox" checked />
+        </div>
       </div>
 
-      <div class="row">
-        <label>Payment:
+      <div class="field">
+        <label for="payment">Payment</label>
+        <div class="input-row">
           <input id="payment" type="text" readonly value="4,722.72" />
-        </label>
-        <input id="lockPayment" type="checkbox" title="Provide this value" />
+          <input id="lockPayment" type="checkbox" />
+        </div>
       </div>
     </div>
 
-    <h2>Amortization Schedule</h2>
     <div class="schedule-actions">
+      <label for="frequency">Amortization Frequency:</label>
       <select id="frequency">
         <option value="monthly">Monthly</option>
         <option value="annual" selected>Annual</option>
@@ -221,13 +271,7 @@
           const principal = s.P - interest;
           bal -= principal;
           const tr = tbody.insertRow();
-          tr.innerHTML = `
-            <td>${i}</td>
-            <td>${fmt(s.P)}</td>
-            <td>${fmt(principal)}</td>
-            <td>${fmt(interest)}</td>
-            <td>${fmt(Math.max(bal,0))}</td>
-          `;
+          tr.innerHTML = `<td>${i}</td><td>${fmt(s.P)}</td><td>${fmt(principal)}</td><td>${fmt(interest)}</td><td>${fmt(Math.max(bal,0))}</td>`;
         }
       } else {
         let months = s.N, year = 1;
@@ -242,13 +286,7 @@
             bal -= principal;
           }
           const tr = tbody.insertRow();
-          tr.innerHTML = `
-            <td>${year}</td>
-            <td>${fmt(yPay)}</td>
-            <td>${fmt(yPr)}</td>
-            <td>${fmt(yInt)}</td>
-            <td>${fmt(Math.max(bal,0))}</td>
-          `;
+          tr.innerHTML = `<td>${year}</td><td>${fmt(yPay)}</td><td>${fmt(yPr)}</td><td>${fmt(yInt)}</td><td>${fmt(Math.max(bal,0))}</td>`;
           months -= mcount;
           year++;
         }
