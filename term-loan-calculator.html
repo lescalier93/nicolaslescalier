@@ -24,9 +24,10 @@
       max-width: 600px;
       width: 100%;
       padding: 2rem;
-      text-align: center;
+      text-align: left;
     }
     .calculator h1 {
+      text-align: center;
       margin-bottom: 1.5rem;
       font-size: 1.75rem;
       color: #333;
@@ -36,22 +37,19 @@
     .form-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      text-align: left;
-    }
-    .field {
-      display: flex;
-      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
     }
     .field label {
       font-size: 0.9rem;
       color: #555;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.5rem;
+      display: block;
     }
     .input-row {
       display: flex;
       align-items: center;
+      gap: 0.5rem;
     }
     .input-row input[type="text"] {
       flex: 1;
@@ -67,36 +65,31 @@
       outline: none;
     }
     .input-row input[type="checkbox"] {
-      margin-left: 0.5rem;
+      margin: 0;
       transform: scale(1.2);
-    }
-    .input-row input[readonly] {
-      background: #f9f9f9;
-      cursor: default;
     }
 
     /* Frequency & download layout */
     .schedule-actions {
-      position: relative;
-      margin: 1rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
     }
     .schedule-actions .freq {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
       font-size: 0.9rem;
       color: #555;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
     .schedule-actions select {
-      margin-left: 0.5rem;
-      padding: 0.3rem;
+      padding: 0.4rem;
       border: 1px solid #ccc;
       border-radius: 4px;
       font-size: 1rem;
     }
     .schedule-actions button {
-      position: absolute;
-      right: 0;
       background: #111827;
       color: #fff;
       border: none;
@@ -149,7 +142,6 @@
           <input id="lockAmount" type="checkbox" checked />
         </div>
       </div>
-
       <div class="field">
         <label for="interestRate">Interest Rate (%)</label>
         <div class="input-row">
@@ -159,7 +151,6 @@
           <input id="lockRate" type="checkbox" checked />
         </div>
       </div>
-
       <div class="field">
         <label for="loanTerm">Loan Term (years)</label>
         <div class="input-row">
@@ -169,7 +160,6 @@
           <input id="lockTerm" type="checkbox" checked />
         </div>
       </div>
-
       <div class="field">
         <label for="payment">Payment (Monthly)</label>
         <div class="input-row">
@@ -179,10 +169,9 @@
       </div>
     </div>
 
-    <h2>Amortization Schedule</h2>
     <div class="schedule-actions">
       <div class="freq">
-        Amortization Frequency:
+        <label for="frequency">Amortization Frequency:</label>
         <select id="frequency">
           <option value="monthly">Monthly</option>
           <option value="annual" selected>Annual</option>
@@ -211,14 +200,19 @@
           parseN = str => parseFloat(str.replace(/,/g,'')) || 0;
 
     function state() {
-      const A = parseN($('loanAmount').value), R = parseN($('interestRate').value)/100/12,
-            Y = parseN($('loanTerm').value), N = Math.round(Y*12), P = parseN($('payment').value);
-      return {A, R, Y, N, P, freq: $('frequency').value, locks: {
-        loanAmount: $('lockAmount').checked,
-        interestRate: $('lockRate').checked,
-        loanTerm: $('lockTerm').checked,
-        payment: $('lockPayment').checked
-      }};
+      const A = parseN($('loanAmount').value),
+            R = parseN($('interestRate').value)/100/12,
+            Y = parseN($('loanTerm').value),
+            N = Math.round(Y*12),
+            P = parseN($('payment').value);
+      return {A, R, Y, N, P,
+        freq: $('frequency').value,
+        locks: {
+          loanAmount: $('lockAmount').checked,
+          interestRate: $('lockRate').checked,
+          loanTerm: $('lockTerm').checked,
+          payment: $('lockPayment').checked
+        }};
     }
 
     function solveMissing(s) {
@@ -228,7 +222,7 @@
       if (!locks.loanTerm)     return Math.ceil((-Math.log(1-(A*R)/P)/Math.log(1+R))/12*100)/100;
       if (!locks.interestRate) {
         let r = 0.01;
-        for (let i=0; i<20; i++) {
+        for (let i = 0; i < 20; i++) {
           const f = P*(1-Math.pow(1+r,-N))/r - A;
           const df = (-P*(1-Math.pow(1+r,-N)))/(r*r) + (P*N*Math.pow(1+r,-N-1))/r;
           r -= f/df;
@@ -240,7 +234,8 @@
     }
 
     function renderSchedule() {
-      const s = state(), tbody = $('schedule');
+      const s = state();
+      const tbody = $('schedule');
       tbody.innerHTML = '';
       $('hdrPeriod').textContent = s.freq === 'monthly' ? 'Month' : 'Year';
 
@@ -260,7 +255,8 @@
           `;
         }
       } else {
-        let months = s.N, year = 1;
+        let months = s.N;
+        let year = 1;
         while (months > 0) {
           let yPay = 0, yPr = 0, yInt = 0;
           const mcount = Math.min(12, months);
@@ -299,16 +295,13 @@
       calculate();
       const { jsPDF } = window.jspdf;
       const doc = new jsPDF({ unit: 'pt', format: 'a4' });
-      // Loan details
       doc.setFontSize(12);
       doc.text('Loan Amount: ' + $('loanAmount').value, 40, 40);
       doc.text('Interest Rate (%): ' + $('interestRate').value, 40, 55);
       doc.text('Loan Term (years): ' + $('loanTerm').value, 40, 70);
       doc.text('Payment: ' + $('payment').value, 40, 85);
-      // Schedule title
       doc.setFontSize(14);
       doc.text('Amortization Schedule', 40, 110);
-
       const head = [[ $('hdrPeriod').textContent, 'Payment', 'Principal', 'Interest', 'Balance' ]];
       const body = Array.from($('schedule').rows).map(r =>
         Array.from(r.cells).map(td => td.textContent)
@@ -318,7 +311,6 @@
       doc.save('term-loan-schedule.pdf');
     };
 
-    // Bind events
     ['loanAmount','interestRate','loanTerm','lockAmount','lockRate','lockTerm','lockPayment','frequency']
       .forEach(id => $(id).addEventListener('change', calculate));
     ['loanAmount','interestRate','loanTerm','payment']
