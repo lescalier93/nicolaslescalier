@@ -2,62 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Loan Calculator</title>
+  <title>Term Loan Calculator</title>
 
-  <!-- jsPDF & autoTable CDN -->
+  <!-- jsPDF & autoTable -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
 
   <style>
-    :root {
-      --bg: #f9fafb;
-      --card-bg: #ffffff;
-      --border: #e5e7eb;
-      --border-hover: #d1d5db;
-      --text: #111827;
-      --text-secondary: #6b7280;
-      --primary: #3b82f6;
-      --primary-dark: #2563eb;
-      --button-bg: #1f2937;
-      --button-hover: #111827;
-    }
-    *, *::before, *::after { box-sizing: border-box; }
     body {
-      background: var(--bg);
-      font-family: system-ui, sans-serif;
+      background: #f0f2f5;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 2rem;
       display: flex;
       justify-content: center;
     }
     .calculator {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 0.5rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
       max-width: 600px;
       width: 100%;
-      padding: 1.5rem;
+      padding: 2rem;
+      text-align: center;
     }
     .calculator h1 {
-      margin: 0 0 1rem;
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--text);
+      margin-bottom: 1.5rem;
+      font-size: 1.75rem;
+      color: #333;
     }
+
+    /* 2×2 grid for inputs */
     .form-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
       margin-bottom: 1.5rem;
+      text-align: left;
     }
     .field {
       display: flex;
       flex-direction: column;
     }
     .field label {
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--text-secondary);
+      font-size: 0.9rem;
+      color: #555;
       margin-bottom: 0.25rem;
     }
     .input-row {
@@ -66,77 +55,83 @@
     }
     .input-row input[type="text"] {
       flex: 1;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 0.375rem;
       padding: 0.5rem;
-      font-size: 0.875rem;
-      color: var(--text);
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
       text-align: right;
       transition: border-color 0.2s;
     }
     .input-row input[type="text"]:focus {
-      border-color: var(--primary);
+      border-color: #111827;
       outline: none;
     }
     .input-row input[type="checkbox"] {
       margin-left: 0.5rem;
-      accent-color: var(--primary);
       transform: scale(1.2);
     }
-
-    .schedule-actions {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1rem;
+    .input-row input[readonly] {
+      background: #f9f9f9;
+      cursor: default;
     }
-    .schedule-actions label {
-      font-size: 0.875rem;
-      color: var(--text-secondary);
-      margin-right: 0.5rem;
+
+    /* Frequency & download layout */
+    .schedule-actions {
+      position: relative;
+      margin: 1rem 0;
+    }
+    .schedule-actions .freq {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.9rem;
+      color: #555;
     }
     .schedule-actions select {
-      padding: 0.5rem;
-      border: 1px solid var(--border);
-      border-radius: 0.375rem;
-      font-size: 0.875rem;
-      color: var(--text);
-      margin-right: 1rem;
+      margin-left: 0.5rem;
+      padding: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
     }
     .schedule-actions button {
-      background: var(--button-bg);
+      position: absolute;
+      right: 0;
+      background: #111827;
       color: #fff;
       border: none;
-      border-radius: 0.375rem;
+      border-radius: 4px;
       padding: 0.5rem 1rem;
-      font-size: 0.875rem;
+      font-size: 1rem;
       cursor: pointer;
       transition: background 0.2s;
     }
     .schedule-actions button:hover {
-      background: var(--button-hover);
+      background: #3f4850;
     }
 
+    /* Table styling */
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.875rem;
+      margin-top: 1rem;
+      font-size: 0.9rem;
     }
     th, td {
-      border: 1px solid var(--border);
+      border: 1px solid #ddd;
       padding: 0.5rem;
+      text-align: right;
     }
     th {
-      background: var(--primary-dark);
+      background: #111827;
       color: #fff;
-      font-weight: 500;
-      text-align: right;
+      font-weight: normal;
     }
     th:first-child, td:first-child {
       text-align: center;
     }
     tr:nth-child(even) {
-      background: var(--bg);
+      background: #f9f9f9;
     }
   </style>
 </head>
@@ -146,15 +141,11 @@
 
     <div class="form-grid">
       <div class="field">
-        <label for="loanAmount">Loan Amount</label>
+        <label for="loanAmount">Loan Amount ($)</label>
         <div class="input-row">
-          <input
-            id="loanAmount"
-            type="text"
-            value="350,000.00"
-            onfocus="this.value=parseFloat(this.value.replace(/,/g,''))||''"
-            onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})"
-          />
+          <input id="loanAmount" type="text" value="350,000.00"
+                 onfocus="this.value=parseFloat(this.value.replace(/,/g,''))||''"
+                 onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})" />
           <input id="lockAmount" type="checkbox" checked />
         </div>
       </div>
@@ -162,14 +153,9 @@
       <div class="field">
         <label for="interestRate">Interest Rate (%)</label>
         <div class="input-row">
-          <input
-            id="interestRate"
-            type="text"
-            value="10.50"
-            step="0.01"
-            onfocus="this.value=parseFloat(this.value)||''"
-            onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})"
-          />
+          <input id="interestRate" type="text" value="10.50" step="0.01"
+                 onfocus="this.value=parseFloat(this.value)||''"
+                 onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})" />
           <input id="lockRate" type="checkbox" checked />
         </div>
       </div>
@@ -177,20 +163,15 @@
       <div class="field">
         <label for="loanTerm">Loan Term (years)</label>
         <div class="input-row">
-          <input
-            id="loanTerm"
-            type="text"
-            value="10.00"
-            step="0.01"
-            onfocus="this.value=parseFloat(this.value)||''"
-            onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})"
-          />
+          <input id="loanTerm" type="text" value="10.00" step="0.01"
+                 onfocus="this.value=parseFloat(this.value)||''"
+                 onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})" />
           <input id="lockTerm" type="checkbox" checked />
         </div>
       </div>
 
       <div class="field">
-        <label for="payment">Payment</label>
+        <label for="payment">Payment (Monthly)</label>
         <div class="input-row">
           <input id="payment" type="text" readonly value="4,722.72" />
           <input id="lockPayment" type="checkbox" />
@@ -198,12 +179,15 @@
       </div>
     </div>
 
+    <h2>Amortization Schedule</h2>
     <div class="schedule-actions">
-      <label for="frequency">Amortization Frequency:</label>
-      <select id="frequency">
-        <option value="monthly">Monthly</option>
-        <option value="annual" selected>Annual</option>
-      </select>
+      <div class="freq">
+        Amortization Frequency:
+        <select id="frequency">
+          <option value="monthly">Monthly</option>
+          <option value="annual" selected>Annual</option>
+        </select>
+      </div>
       <button id="download">Download PDF</button>
     </div>
 
@@ -227,26 +211,21 @@
           parseN = str => parseFloat(str.replace(/,/g,'')) || 0;
 
     function state() {
-      const A = parseN($('loanAmount').value),
-            R = parseN($('interestRate').value)/100/12,
-            Y = parseN($('loanTerm').value),
-            N = Math.round(Y*12),
-            P = parseN($('payment').value);
-      return {A, R, Y, N, P,
-        freq: $('frequency').value,
-        locks: {
-          loanAmount: $('lockAmount').checked,
-          interestRate: $('lockRate').checked,
-          loanTerm: $('lockTerm').checked,
-          payment: $('lockPayment').checked
-        }};
+      const A = parseN($('loanAmount').value), R = parseN($('interestRate').value)/100/12,
+            Y = parseN($('loanTerm').value), N = Math.round(Y*12), P = parseN($('payment').value);
+      return {A, R, Y, N, P, freq: $('frequency').value, locks: {
+        loanAmount: $('lockAmount').checked,
+        interestRate: $('lockRate').checked,
+        loanTerm: $('lockTerm').checked,
+        payment: $('lockPayment').checked
+      }};
     }
 
     function solveMissing(s) {
       const {A, R, N, P, locks} = s;
-      if (!locks.payment)    return A*R/(1-Math.pow(1+R,-N));
-      if (!locks.loanAmount) return P*(1-Math.pow(1+R,-N))/R;
-      if (!locks.loanTerm)   return Math.ceil((-Math.log(1-(A*R)/P)/Math.log(1+R))/12*100)/100;
+      if (!locks.payment)      return A*R/(1-Math.pow(1+R,-N));
+      if (!locks.loanAmount)   return P*(1-Math.pow(1+R,-N))/R;
+      if (!locks.loanTerm)     return Math.ceil((-Math.log(1-(A*R)/P)/Math.log(1+R))/12*100)/100;
       if (!locks.interestRate) {
         let r = 0.01;
         for (let i=0; i<20; i++) {
@@ -264,21 +243,29 @@
       const s = state(), tbody = $('schedule');
       tbody.innerHTML = '';
       $('hdrPeriod').textContent = s.freq === 'monthly' ? 'Month' : 'Year';
+
       let bal = s.A;
       if (s.freq === 'monthly') {
-        for (let i=1; i<=s.N; i++) {
-          const interest = bal*s.R;
+        for (let i = 1; i <= s.N; i++) {
+          const interest = bal * s.R;
           const principal = s.P - interest;
           bal -= principal;
           const tr = tbody.insertRow();
-          tr.innerHTML = `<td>${i}</td><td>${fmt(s.P)}</td><td>${fmt(principal)}</td><td>${fmt(interest)}</td><td>${fmt(Math.max(bal,0))}</td>`;
+          tr.innerHTML = `
+            <td>${i}</td>
+            <td>${fmt(s.P)}</td>
+            <td>${fmt(principal)}</td>
+            <td>${fmt(interest)}</td>
+            <td>${fmt(Math.max(bal, 0))}</td>
+          `;
         }
       } else {
         let months = s.N, year = 1;
         while (months > 0) {
-          let yPay=0, yPr=0, yInt=0, mcount = Math.min(12, months);
-          for (let j=0; j<mcount; j++) {
-            const interest = bal*s.R;
+          let yPay = 0, yPr = 0, yInt = 0;
+          const mcount = Math.min(12, months);
+          for (let j = 0; j < mcount; j++) {
+            const interest = bal * s.R;
             const principal = s.P - interest;
             yInt += interest;
             yPr += principal;
@@ -286,7 +273,13 @@
             bal -= principal;
           }
           const tr = tbody.insertRow();
-          tr.innerHTML = `<td>${year}</td><td>${fmt(yPay)}</td><td>${fmt(yPr)}</td><td>${fmt(yInt)}</td><td>${fmt(Math.max(bal,0))}</td>`;
+          tr.innerHTML = `
+            <td>${year}</td>
+            <td>${fmt(yPay)}</td>
+            <td>${fmt(yPr)}</td>
+            <td>${fmt(yInt)}</td>
+            <td>${fmt(Math.max(bal, 0))}</td>
+          `;
           months -= mcount;
           year++;
         }
@@ -306,17 +299,26 @@
       calculate();
       const { jsPDF } = window.jspdf;
       const doc = new jsPDF({ unit: 'pt', format: 'a4' });
+      // Loan details
+      doc.setFontSize(12);
+      doc.text('Loan Amount: ' + $('loanAmount').value, 40, 40);
+      doc.text('Interest Rate (%): ' + $('interestRate').value, 40, 55);
+      doc.text('Loan Term (years): ' + $('loanTerm').value, 40, 70);
+      doc.text('Payment: ' + $('payment').value, 40, 85);
+      // Schedule title
       doc.setFontSize(14);
-      doc.text('Amortization Schedule', 40, 40);
+      doc.text('Amortization Schedule', 40, 110);
+
       const head = [[ $('hdrPeriod').textContent, 'Payment', 'Principal', 'Interest', 'Balance' ]];
       const body = Array.from($('schedule').rows).map(r =>
         Array.from(r.cells).map(td => td.textContent)
       );
       // @ts-ignore
-      doc.autoTable({ head, body, startY: 60, theme: 'grid' });
+      doc.autoTable({ head, body, startY: 125, theme: 'grid' });
       doc.save('term-loan-schedule.pdf');
     };
 
+    // Bind events
     ['loanAmount','interestRate','loanTerm','lockAmount','lockRate','lockTerm','lockPayment','frequency']
       .forEach(id => $(id).addEventListener('change', calculate));
     ['loanAmount','interestRate','loanTerm','payment']
