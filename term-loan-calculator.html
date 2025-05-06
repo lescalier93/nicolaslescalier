@@ -9,6 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
 
   <style>
+    /* Base */
     body {
       background: #f0f2f5;
       font-family: Arial, sans-serif;
@@ -19,8 +20,8 @@
     }
     .calculator {
       background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
       max-width: 600px;
       width: 100%;
       padding: 2rem;
@@ -35,50 +36,77 @@
     /* 2x2 grid for inputs */
     .input-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
       margin-bottom: 1.5rem;
     }
-    .row {
+    .input-card {
+      background: #fafafa;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1rem;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
+      transition: border-color 0.3s;
     }
-    .row label {
+    .input-card:focus-within {
+      border-color: #0070f3;
+    }
+    .input-card label {
       font-weight: bold;
       color: #555;
+      margin-bottom: 0.5rem;
     }
-    .row input[type="text"] {
-      width: 120px;
-      margin-left: .5rem;
-      padding: .25rem .5rem;
+    .input-card input[type="text"] {
+      width: 100%;
+      max-width: 140px;
+      padding: 0.5rem;
       border: 1px solid #ccc;
-      border-radius: 4px;
+      border-radius: 6px;
       text-align: right;
+      font-size: 1rem;
+      transition: border-color 0.3s;
     }
-    .row input[type="checkbox"] {
-      margin-left: .5rem;
+    .input-card input[type="text"]:focus {
+      border-color: #0070f3;
+      outline: none;
+    }
+    .input-card .switch {
+      margin-top: 0.75rem;
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .input-card .switch input {
+      margin-right: 0.5rem;
       transform: scale(1.2);
     }
 
     /* Schedule actions */
     .schedule-actions {
       margin: 1rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .schedule-actions select {
-      padding: .25rem;
+      padding: 0.5rem;
       border: 1px solid #ccc;
-      border-radius: 4px;
+      border-radius: 6px;
       margin-right: 1rem;
+      font-size: 1rem;
     }
     .schedule-actions button {
       background: #0070f3;
       color: #fff;
       border: none;
-      border-radius: 4px;
-      padding: .5rem 1rem;
+      border-radius: 6px;
+      padding: 0.6rem 1.2rem;
       font-size: 1rem;
       cursor: pointer;
+      transition: background 0.3s;
     }
     .schedule-actions button:hover {
       background: #005bb5;
@@ -93,11 +121,12 @@
     }
     th, td {
       border: 1px solid #ddd;
-      padding: .5rem;
+      padding: 0.5rem;
     }
     th {
       background: #0070f3;
       color: #fff;
+      font-weight: normal;
     }
     th:first-child, td:first-child {
       text-align: center;
@@ -112,38 +141,34 @@
     <h1>Term Loan Calculator</h1>
 
     <div class="input-grid">
-      <div class="row">
-        <label>Loan Amount:
-          <input id="loanAmount" type="text" value="350,000.00"
-                 onfocus="this.value=parseFloat(this.value.replace(/,/g,''))||''"
-                 onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})" />
-        </label>
-        <input id="lockAmount" type="checkbox" checked title="Provide this value" />
+      <div class="input-card">
+        <label for="loanAmount">Loan Amount</label>
+        <input id="loanAmount" type="text" value="350,000.00"
+               onfocus="this.value=parseFloat(this.value.replace(/,/g,''))||''"
+               onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})" />
+        <div class="switch"><input id="lockAmount" type="checkbox" checked /><span>Provide</span></div>
       </div>
 
-      <div class="row">
-        <label>Interest Rate (%):
-          <input id="interestRate" type="text" value="10.50" step="0.01"
-                 onfocus="this.value=parseFloat(this.value)||''"
-                 onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})" />
-        </label>
-        <input id="lockRate" type="checkbox" checked title="Provide this value" />
+      <div class="input-card">
+        <label for="interestRate">Interest Rate (%)</label>
+        <input id="interestRate" type="text" value="10.50" step="0.01"
+               onfocus="this.value=parseFloat(this.value)||''"
+               onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})" />
+        <div class="switch"><input id="lockRate" type="checkbox" checked /><span>Provide</span></div>
       </div>
 
-      <div class="row">
-        <label>Loan Term (years):
-          <input id="loanTerm" type="text" value="10.00" step="0.01"
-                 onfocus="this.value=parseFloat(this.value)||''"
-                 onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})" />
-        </label>
-        <input id="lockTerm" type="checkbox" checked title="Provide this value" />
+      <div class="input-card">
+        <label for="loanTerm">Loan Term (years)</label>
+        <input id="loanTerm" type="text" value="10.00" step="0.01"
+               onfocus="this.value=parseFloat(this.value)||''"
+               onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})" />
+        <div class="switch"><input id="lockTerm" type="checkbox" checked /><span>Provide</span></div>
       </div>
 
-      <div class="row">
-        <label>Payment:
-          <input id="payment" type="text" readonly value="4,722.72" />
-        </label>
-        <input id="lockPayment" type="checkbox" title="Provide this value" />
+      <div class="input-card">
+        <label for="payment">Payment</label>
+        <input id="payment" type="text" readonly value="4,722.72" />
+        <div class="switch"><input id="lockPayment" type="checkbox" /><span>Provide</span></div>
       </div>
     </div>
 
@@ -185,10 +210,10 @@
         A, R, Y, N, P,
         freq: $('frequency').value,
         locks: {
-          loanAmount:  $('lockAmount').checked,
+          loanAmount: $('lockAmount').checked,
           interestRate: $('lockRate').checked,
-          loanTerm:     $('lockTerm').checked,
-          payment:      $('lockPayment').checked
+          loanTerm: $('lockTerm').checked,
+          payment: $('lockPayment').checked
         }
       };
     }
@@ -199,11 +224,12 @@
       if (!locks.loanAmount)   return P*(1-Math.pow(1+R,-N))/R;
       if (!locks.loanTerm)     return Math.ceil((-Math.log(1-(A*R)/P)/Math.log(1+R))/12*100)/100;
       if (!locks.interestRate) {
-        let r = 0.01;
-        for (let i=0; i<20; i++){
-          const f = P*(1-Math.pow(1+r,-N))/r - A;
-          const df= (-P*(1-Math.pow(1+r,-N)))/(r*r) + (P*N*Math.pow(1+r,-N-1))/r;
-          r -= f/df; if (r<=0) r = Math.abs(r);
+        let r=0.01;
+        for(let i=0;i<20;i++){
+          const f=P*(1-Math.pow(1+r,-N))/r - A;
+          const df=(-P*(1-Math.pow(1+r,-N)))/(r*r)
+                    + (P*N*Math.pow(1+r,-N-1))/r;
+          r-=f/df; if(r<=0) r=Math.abs(r);
         }
         return r*12*100;
       }
@@ -230,10 +256,10 @@
           `;
         }
       } else {
-        let months = s.N, year = 1;
-        while (months>0) {
-          let yPay=0, yPr=0, yInt=0, mcount = Math.min(12,months);
-          for (let j=0; j<mcount; j++) {
+        let months=s.N, year=1;
+        while(months>0){
+          let yPay=0,yPr=0,yInt=0,mcount=Math.min(12,months);
+          for(let j=0;j<mcount;j++){
             const interest = bal*s.R, principal = s.P - interest;
             yInt+=interest; yPr+=principal; yPay+=s.P; bal-=principal;
           }
@@ -245,16 +271,15 @@
             <td>${fmt(yInt)}</td>
             <td>${fmt(Math.max(bal,0))}</td>
           `;
-          months -= mcount; year++;
+          months-=mcount; year++;
         }
       }
     }
 
     function calculate() {
-      const s = state(),
-            missing = Object.keys(s.locks).find(k=>!s.locks[k]),
-            val = solveMissing(s),
-            map = { payment:'payment', loanAmount:'loanAmount', interestRate:'interestRate', loanTerm:'loanTerm' };
+      const s = state(), missing = Object.keys(s.locks).find(k=>!s.locks[k]);
+      const val = solveMissing(s);
+      const map = { payment:'payment', loanAmount:'loanAmount', interestRate:'interestRate', loanTerm:'loanTerm' };
       $(map[missing]).value = fmt(val);
       renderSchedule();
     }
@@ -266,21 +291,17 @@
       doc.setFontSize(14);
       doc.text('Amortization Schedule',40,40);
       const head = [[ $('hdrPeriod').textContent,'Payment','Principal','Interest','Balance' ]];
-      const body = Array.from($('schedule').rows).map(r =>
-        Array.from(r.cells).map(td => td.textContent)
-      );
+      const body = Array.from($('schedule').rows).map(r=>Array.from(r.cells).map(td=>td.textContent));
       // @ts-ignore
       doc.autoTable({ head, body, startY:60, theme:'grid' });
       doc.save('term-loan-schedule.pdf');
     };
 
-    // bind events
     ['loanAmount','interestRate','loanTerm','lockAmount','lockRate','lockTerm','lockPayment','frequency']
       .forEach(id => $(id).addEventListener('change', calculate));
     ['loanAmount','interestRate','loanTerm','payment']
       .forEach(id => $(id).addEventListener('input', calculate));
 
-    // initial render
     window.onload = calculate;
   </script>
 </body>
