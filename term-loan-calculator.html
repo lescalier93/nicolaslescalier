@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Term Loan Calculator</title>
+  <!-- jsPDF & autoTable from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+  <style>
+    body { font-family: sans-serif; padding: 1rem; }
+    label { display: block; margin: .5rem 0; }
+    input { width: 150px; margin-left: .5rem; }
+    button { margin-right: 1rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #ccc; padding: .25rem .5rem; text-align: right; }
+    th:first-child, td:first-child { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Term Loan Calculator</h1>
+
+  <label>
+    Loan Amount:
+    <input id="loanAmount" value="350000" />
+  </label>
+  <label>
+    Interest Rate (%):
+    <input id="interestRate" value="10.50" step="0.01" />
+  </label>
+  <label>
+    Loan Term (years):
+    <input id="loanTerm" value="10.00" step="0.01" />
+  </label>
+  <label>
+    Payment:
+    <input id="payment" readonly />
+  </label>
+
+  <button id="calc">Calculate</button>
+  <button id="dl">Download PDF</button>
+
+  <h2>Amortization Schedule</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Period</th>
+        <th>Payment</th>
+        <th>Principal</th>
+        <th>Interest</th>
+        <th>Balance</th>
+      </tr>
+    </thead>
+    <tbody id="schedule"></tbody>
+  </table>
+
+  <script>
+    const $ = id => document.getElementById(id);
+    const fmt = n => Number(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+
+    function buildSchedule() {
+      const A = parseFloat($('loanAmount').value) || 0;
+      const R = parseFloat($('interestRate').value) / 100 / 12 || 0;
+      const Y = parseFloat($('loanTerm').value) || 0;
+      const N = Math.round(Y*12);
+
+      // formula for payment
+      const P = A * R / (1 - Math.pow(1+R, -N));
+      $('payment').value = fmt(P);
+
+      let bal = A;
+      const body = $('schedule');
+      body.innerHTML = '';
+      for(let i=1;i<=N;i++){
+        const int = bal*R;
+        const prin = P - int;
+        bal -= prin;
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${i}</td>
+          <td>${fmt(P)}</td>
+          <td>${fmt(prin)}</td>
+          <td>${fmt(int)}</td>
+          <td>${fmt(Math.max(bal,0))}</td>
+        `;
+        body.appendChild(tr);
+      }
+    }
+
+    $('calc').onclick = buildSchedule;
+
+    $('dl').onclick = () => {
+      buildSchedule();
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF({ unit:'pt', format:'a4' });
+      doc.setFontSize(14);
+      doc.text('Amortization Schedule', 40, 40);
+
+      // collect table data
+      const headers = [['Period','Payment','Principal','Interest','Balance']];
+      const data = Array.from(document.querySelectorAll('#schedule tr')).map(tr =>
+        Array.from(tr.children).map(td => td.textContent)
+      );
+
+      // autoTable
+      // plugin registers itself onto jsPDF
+      // @ts-ignore
+      doc.autoTable({
+        head: headers,
+        body: data,
+        startY: 60,
+        theme: 'grid',
+        headStyles: { fillColor: [240,240,240], textColor: 50 },
+      });
+
+      doc.save('term-loan-schedule.pdf');
+    };
+
+    // initial calc on load
+    window.onload = buildSchedule;
+  </script>
+</body>
+</html>
