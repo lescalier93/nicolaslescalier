@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Term Loan Calculator</title>
 
   <!-- jsPDF & autoTable -->
@@ -9,128 +9,35 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
 
   <style>
-    body {
-      background: #f0f2f5;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 2rem;
-      display: flex;
-      justify-content: center;
-    }
-    .calculator {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-      max-width: 600px;
-      width: 100%;
-      padding: 2rem;
-      text-align: left;
-    }
-    .calculator h1 {
-      text-align: center;
-      margin-bottom: 1.5rem;
-      font-size: 1.75rem;
-      color: #333;
-    }
+    body { background: #f0f2f5; font-family: Arial, sans-serif; margin: 0; padding: 2rem; display: flex; justify-content: center; }
+    .calculator { background: #fff; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); max-width: 600px; width: 100%; padding: 2rem; text-align: left; }
+    .calculator h1 { text-align: center; margin-bottom: 0.5rem; font-size: 1.75rem; color: #333; }
+    .calculator p.instructions { font-size: 0.9rem; color: #555; text-align: center; margin-bottom: 1.5rem; }
 
-    /* 2×2 grid for inputs */
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
-    .field label {
-      font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 0.5rem;
-      display: block;
-    }
-    .input-row {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .input-row input[type="text"] {
-      flex: 1;
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
-      text-align: right;
-      transition: border-color 0.2s;
-    }
-    .input-row input[type="text"]:focus {
-      border-color: #111827;
-      outline: none;
-    }
-    .input-row input[type="checkbox"] {
-      margin: 0;
-      transform: scale(1.2);
-    }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+    .field label { font-size: 0.9rem; color: #555; margin-bottom: 0.5rem; display: block; }
+    .input-row { display: flex; align-items: center; gap: 0.5rem; }
+    .input-row input[type="text"] { flex: 1; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; text-align: right; transition: border-color 0.2s; }
+    .input-row input[type="text"]:focus { border-color: #111827; outline: none; }
+    .input-row input[type="checkbox"] { transform: scale(1.2); }
 
-    /* Frequency & download layout */
-    .schedule-actions {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
-    .schedule-actions .freq {
-      font-size: 0.9rem;
-      color: #555;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .schedule-actions select {
-      padding: 0.4rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
-    .schedule-actions button {
-      background: #111827;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .schedule-actions button:hover {
-      background: #3f4850;
-    }
+    .schedule-actions { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+    .schedule-actions .freq { font-size: 0.9rem; color: #555; display: flex; align-items: center; gap: 0.5rem; }
+    .schedule-actions select { padding: 0.4rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+    .schedule-actions button { background: #111827; color: #fff; border: none; border-radius: 4px; padding: 0.5rem 1rem; font-size: 1rem; cursor: pointer; transition: background 0.2s; }
+    .schedule-actions button:hover { background: #3f4850; }
 
-    /* Table styling */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-      font-size: 0.9rem;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 0.5rem;
-      text-align: right;
-    }
-    th {
-      background: #111827;
-      color: #fff;
-      font-weight: normal;
-    }
-    th:first-child, td:first-child {
-      text-align: center;
-    }
-    tr:nth-child(even) {
-      background: #f9f9f9;
-    }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem; }
+    th, td { border: 1px solid #ddd; padding: 0.5rem; text-align: right; }
+    th { background: #111827; color: #fff; font-weight: normal; }
+    th:first-child, td:first-child { text-align: center; }
+    tr:nth-child(even) { background: #f9f9f9; }
   </style>
 </head>
 <body>
   <div class="calculator">
     <h1>Loan Calculator</h1>
+    <p class="instructions">Check the boxes next to the three fields you want to provide; the calculator will compute the remaining field automatically.</p>
 
     <div class="form-grid">
       <div class="field">
@@ -163,7 +70,9 @@
       <div class="field">
         <label for="payment">Payment (Monthly)</label>
         <div class="input-row">
-          <input id="payment" type="text" readonly value="4,722.72" />
+          <input id="payment" type="text" value="4,722.72"
+                 onfocus="this.value=parseFloat(this.value.replace(/,/g,''))||''"
+                 onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})" />
           <input id="lockPayment" type="checkbox" />
         </div>
       </div>
@@ -200,122 +109,66 @@
           parseN = str => parseFloat(str.replace(/,/g,'')) || 0;
 
     function state() {
-      const A = parseN($('loanAmount').value),
-            R = parseN($('interestRate').value)/100/12,
-            Y = parseN($('loanTerm').value),
-            N = Math.round(Y*12),
-            P = parseN($('payment').value);
-      return {A, R, Y, N, P,
-        freq: $('frequency').value,
-        locks: {
-          loanAmount: $('lockAmount').checked,
-          interestRate: $('lockRate').checked,
-          loanTerm: $('lockTerm').checked,
-          payment: $('lockPayment').checked
-        }};
+      const A = parseN($('loanAmount').value), R = parseN($('interestRate').value)/100/12,
+            Y = parseN($('loanTerm').value), N = Math.round(Y*12), P = parseN($('payment').value);
+      return {A, R, Y, N, P, freq: $('frequency').value, locks: {
+        loanAmount: $('lockAmount').checked,
+        interestRate: $('lockRate').checked,
+        loanTerm: $('lockTerm').checked,
+        payment: $('lockPayment').checked
+      }};
     }
 
     function solveMissing(s) {
       const {A, R, N, P, locks} = s;
-      if (!locks.payment)      return A*R/(1-Math.pow(1+R,-N));
-      if (!locks.loanAmount)   return P*(1-Math.pow(1+R,-N))/R;
-      if (!locks.loanTerm)     return Math.ceil((-Math.log(1-(A*R)/P)/Math.log(1+R))/12*100)/100;
+      if (!locks.payment) return A*R/(1-Math.pow(1+R,-N));
+      if (!locks.loanAmount) return P*(1-Math.pow(1+R,-N))/R;
+      if (!locks.loanTerm) return Math.ceil((-Math.log(1-(A*R)/P)/Math.log(1+R))/12*100)/100;
       if (!locks.interestRate) {
-        let r = 0.01;
-        for (let i = 0; i < 20; i++) {
-          const f = P*(1-Math.pow(1+r,-N))/r - A;
-          const df = (-P*(1-Math.pow(1+r,-N)))/(r*r) + (P*N*Math.pow(1+r,-N-1))/r;
-          r -= f/df;
-          if (r <= 0) r = Math.abs(r);
-        }
-        return r*12*100;
+        let r=0.01; for (let i=0;i<20;i++){ const f=P*(1-Math.pow(1+r,-N))/r - A; const df=(-P*(1-Math.pow(1+r,-N)))/(r*r)+(P*N*Math.pow(1+r,-N-1))/r; r-=f/df; if(r<=0)r=Math.abs(r); } return r*12*100;
       }
       return 0;
     }
 
     function renderSchedule() {
-      const s = state();
-      const tbody = $('schedule');
-      tbody.innerHTML = '';
-      $('hdrPeriod').textContent = s.freq === 'monthly' ? 'Month' : 'Year';
-
-      let bal = s.A;
-      if (s.freq === 'monthly') {
-        for (let i = 1; i <= s.N; i++) {
-          const interest = bal * s.R;
-          const principal = s.P - interest;
-          bal -= principal;
-          const tr = tbody.insertRow();
-          tr.innerHTML = `
-            <td>${i}</td>
-            <td>${fmt(s.P)}</td>
-            <td>${fmt(principal)}</td>
-            <td>${fmt(interest)}</td>
-            <td>${fmt(Math.max(bal, 0))}</td>
-          `;
+      const s = state(), tbody = $('schedule'); tbody.innerHTML=''; $('hdrPeriod').textContent = s.freq==='monthly'?'Month':'Year';
+      let bal=s.A;
+      if (s.freq==='monthly'){
+        for (let i=1;i<=s.N;i++){
+          const interest=bal*s.R, principal=s.P-interest; bal-=principal;
+          const tr=tbody.insertRow(); tr.innerHTML=`<td>${i}</td><td>${fmt(s.P)}</td><td>${fmt(principal)}</td><td>${fmt(interest)}</td><td>${fmt(Math.max(bal,0))}</td>`;
         }
       } else {
-        let months = s.N;
-        let year = 1;
-        while (months > 0) {
-          let yPay = 0, yPr = 0, yInt = 0;
-          const mcount = Math.min(12, months);
-          for (let j = 0; j < mcount; j++) {
-            const interest = bal * s.R;
-            const principal = s.P - interest;
-            yInt += interest;
-            yPr += principal;
-            yPay += s.P;
-            bal -= principal;
-          }
-          const tr = tbody.insertRow();
-          tr.innerHTML = `
-            <td>${year}</td>
-            <td>${fmt(yPay)}</td>
-            <td>${fmt(yPr)}</td>
-            <td>${fmt(yInt)}</td>
-            <td>${fmt(Math.max(bal, 0))}</td>
-          `;
-          months -= mcount;
-          year++;
-        }
+        let months=s.N, year=1;
+        while(months>0){ let yPay=0,yPr=0,yInt=0,c=Math.min(12,months);
+          for(let j=0;j<c;j++){ const interest=bal*s.R, principal=s.P-interest; yInt+=interest; yPr+=principal; yPay+=s.P; bal-=principal; }
+          const tr=tbody.insertRow(); tr.innerHTML=`<td>${year}</td><td>${fmt(yPay)}</td><td>${fmt(yPr)}</td><td>${fmt(yInt)}</td><td>${fmt(Math.max(bal,0))}</td>`;
+          months-=c; year++; }
       }
     }
 
-    function calculate() {
-      const s = state();
-      const missing = Object.keys(s.locks).find(k => !s.locks[k]);
-      const val = solveMissing(s);
-      const map = { payment: 'payment', loanAmount: 'loanAmount', interestRate: 'interestRate', loanTerm: 'loanTerm' };
-      $(map[missing]).value = fmt(val);
-      renderSchedule();
-    }
+    function calculate(){ const s=state(), missing=Object.keys(s.locks).find(k=>!s.locks[k]), val=solveMissing(s);
+      const map={ payment:'payment', loanAmount:'loanAmount', interestRate:'interestRate', loanTerm:'loanTerm'};
+      $(map[missing]).value=fmt(val); renderSchedule(); }
 
     $('download').onclick = () => {
-      calculate();
-      const { jsPDF } = window.jspdf;
-      const doc = new jsPDF({ unit: 'pt', format: 'a4' });
-      doc.setFontSize(12);
-      doc.text('Loan Amount: ' + $('loanAmount').value, 40, 40);
-      doc.text('Interest Rate (%): ' + $('interestRate').value, 40, 55);
-      doc.text('Loan Term (years): ' + $('loanTerm').value, 40, 70);
-      doc.text('Payment: ' + $('payment').value, 40, 85);
-      doc.setFontSize(14);
-      doc.text('Amortization Schedule', 40, 110);
-      const head = [[ $('hdrPeriod').textContent, 'Payment', 'Principal', 'Interest', 'Balance' ]];
-      const body = Array.from($('schedule').rows).map(r =>
-        Array.from(r.cells).map(td => td.textContent)
-      );
+      calculate(); const { jsPDF } = window.jspdf; const doc = new jsPDF({ unit:'pt', format:'a4' });
+      doc.setFontSize(12); doc.text('Loan Amount: '+$('loanAmount').value,40,40);
+      doc.text('Interest Rate (%): '+$('interestRate').value,40,55);
+      doc.text('Loan Term (years): '+$('loanTerm').value,40,70);
+      doc.text('Payment: '+$('payment').value,40,85);
+      doc.setFontSize(14); doc.text('Amortization Schedule',40,110);
+      const head=[[ $('hdrPeriod').textContent,'Payment','Principal','Interest','Balance']];
+      const body=Array.from($('schedule').rows).map(r=>Array.from(r.cells).map(td=>td.textContent));
       // @ts-ignore
-      doc.autoTable({ head, body, startY: 125, theme: 'grid' });
-      doc.save('term-loan-schedule.pdf');
+doc.autoTable({ head, body, startY:125, theme:'grid' }); doc.save('term-loan-schedule.pdf');
     };
 
     ['loanAmount','interestRate','loanTerm','lockAmount','lockRate','lockTerm','lockPayment','frequency']
-      .forEach(id => $(id).addEventListener('change', calculate));
+      .forEach(id=>$(id).addEventListener('change',calculate));
     ['loanAmount','interestRate','loanTerm','payment']
-      .forEach(id => $(id).addEventListener('input', calculate));
-    window.onload = calculate;
+      .forEach(id=>$(id).addEventListener('input',calculate));
+    window.onload=calculate;
   </script>
 </body>
 </html>
