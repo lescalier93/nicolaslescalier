@@ -1,174 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Term Loan Calculator</title>
-
-  <!-- jsPDF & autoTable -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MCA Deal Comparison | Nicolas Lescalier</title>
   <style>
-    body { background: #f0f2f5; font-family: Arial, sans-serif; margin: 0; padding: 2rem; display: flex; justify-content: center; }
-    .calculator { background: #fff; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); max-width: 600px; width: 100%; padding: 2rem; text-align: left; }
-    .calculator h1 { text-align: center; margin-bottom: 0.5rem; font-size: 1.75rem; color: #333; }
-    .calculator p.instructions { font-size: 0.9rem; color: #555; text-align: center; margin-bottom: 1.5rem; }
-
-    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
-    .field label { font-size: 0.9rem; color: #555; margin-bottom: 0.5rem; display: block; }
-    .input-row { display: flex; align-items: center; gap: 0.5rem; }
-    .input-row input[type="text"] { flex: 1; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; text-align: right; transition: border-color 0.2s; }
-    .input-row input[type="text"]:focus { border-color: #111827; outline: none; }
-    .input-row input[type="checkbox"] { transform: scale(1.2); }
-
-    .schedule-actions { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
-    .schedule-actions .freq { font-size: 0.9rem; color: #555; display: flex; align-items: center; gap: 0.5rem; }
-    .schedule-actions select { padding: 0.4rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
-    .schedule-actions button { background: #111827; color: #fff; border: none; border-radius: 4px; padding: 0.5rem 1rem; font-size: 1rem; cursor: pointer; transition: background 0.2s; }
-    .schedule-actions button:hover { background: #3f4850; }
-
-    table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem; }
-    th, td { border: 1px solid #ddd; padding: 0.5rem; text-align: right; }
-    th { background: #111827; color: #fff; font-weight: normal; }
-    th:first-child, td:first-child { text-align: center; }
-    tr:nth-child(even) { background: #f9f9f9; }
+    body { margin: 0; font-family: Arial, sans-serif; color: #333; line-height: 1.6; }
+    header { background: #004e89; color: #fff; padding: 1rem 2rem; }
+    nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+    nav li { margin-right: 1rem; }
+    nav a { color: #fff; text-decoration: none; font-weight: bold; }
+    .container { max-width: 1200px; margin: 2rem auto; padding: 1rem; }
+    h1 { text-align: center; color: #004e89; margin-bottom: 2rem; }
+    .comparison-row { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .calculator { flex: 1 1 400px; border: 1px solid #ccc; border-radius: 4px; padding: 1rem; }
+    .calculator h2 { color: #004e89; margin-top: 0; text-align: center; }
+    form { display: flex; flex-direction: column; gap: 1rem; }
+    .row { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .row > div { flex: 1 1 150px; }
+    label { font-weight: bold; }
+    input, select { padding: 0.5rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 4px; width: 100%; box-sizing: border-box; }
+    .btn { background: #007acc; color: #fff; padding: 0.75rem; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; }
+    .btn:hover { background: #005fa3; }
+    .btn:disabled { background: #999; cursor: not-allowed; }
+    .results { margin-top: 1.5rem; background: #f4f4f4; padding: 1rem; border-radius: 4px; text-align: center; }
+    .results h3 { margin-top: 0; color: #004e89; }
+    .result-item { margin-bottom: 0.5rem; }
+    @media (max-width: 900px) { .comparison-row { flex-direction: column; } }
   </style>
 </head>
 <body>
-  <div class="calculator">
-    <h1>Loan Calculator</h1>
-    <p class="instructions">Check the boxes next to the three fields you want to provide; the calculator will compute the remaining field automatically.</p>
 
-    <div class="form-grid">
-      <div class="field">
-        <label for="loanAmount">Loan Amount ($)</label>
-        <div class="input-row">
-          <input id="loanAmount" type="text" value="350,000.00"
-                 onfocus="this.value=parseFloat(this.value.replace(/,/g,''))||''"
-                 onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})" />
-          <input id="lockAmount" type="checkbox" checked />
+  <!-- Shared Header / Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="merchant-cash-advance-calculator.html">MCA Calculator</a></li>
+          <li><a href="merchant-cash-advance-comparison.html">Compare MCA Deals</a></li>
+          <li><a href="term-loan-calculator.html">Term‑Loan Calculator</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="blog.html">Insights</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="/sitemap.xml">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>MCA Deal Comparison</h1>
+
+    <div class="comparison-row">
+      <!-- Deal A -->
+      <div class="calculator">
+        <h2>Deal A</h2>
+        <form id="mca-form-1">
+          <div class="row">
+            <div>
+              <label for="advanceAmount1">Advance Amount ($)</label>
+              <input type="text" id="advanceAmount1" placeholder="e.g., 10,000.00" required />
+            </div>
+            <div>
+              <label for="factorRate1">Factor Rate (e.g., 1.20)</label>
+              <input type="number" id="factorRate1" placeholder="1.20" min="1" step="0.01" required />
+            </div>
+          </div>
+          <div>
+            <label for="termLength1">Term Length</label>
+            <div class="row">
+              <div>
+                <input type="number" id="termLength1" placeholder="140" min="1" step="1" required />
+              </div>
+              <div>
+                <select id="termUnit1" required>
+                  <option value="days">Business Days</option>
+                  <option value="weeks">Weeks</option>
+                  <option value="months">Months</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn" id="calculate1" disabled>Calculate</button>
+        </form>
+        <div class="results" id="results1" style="display: none;">
+          <h3>Results A</h3>
+          <div class="result-item" id="displayAdvance1"></div>
+          <div class="result-item" id="interestPaid1"></div>
+          <div class="result-item" id="totalPayback1"></div>
+          <div class="result-item" id="periodicPayment1"></div>
+          <div class="result-item" id="ratePerMonth1"></div>
         </div>
       </div>
-      <div class="field">
-        <label for="interestRate">Interest Rate (%)</label>
-        <div class="input-row">
-          <input id="interestRate" type="text" value="10.50" step="0.01"
-                 onfocus="this.value=parseFloat(this.value)||''"
-                 onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})" />
-          <input id="lockRate" type="checkbox" checked />
-        </div>
-      </div>
-      <div class="field">
-        <label for="loanTerm">Loan Term (years)</label>
-        <div class="input-row">
-          <input id="loanTerm" type="text" value="10.00" step="0.01"
-                 onfocus="this.value=parseFloat(this.value)||''"
-                 onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})" />
-          <input id="lockTerm" type="checkbox" checked />
-        </div>
-      </div>
-      <div class="field">
-        <label for="payment">Monthly Payment ($)</label>
-        <div class="input-row">
-          <input id="payment" type="text" value="4,722.72"
-                 onfocus="this.value=parseFloat(this.value.replace(/,/g,''))||''"
-                 onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})" />
-          <input id="lockPayment" type="checkbox" />
+
+      <!-- Deal B -->
+      <div class="calculator">
+        <h2>Deal B</h2>
+        <form id="mca-form-2">
+          <div class="row">
+            <div>
+              <label for="advanceAmount2">Advance Amount ($)</label>
+              <input type="text" id="advanceAmount2" placeholder="e.g., 10,000.00" required />
+            </div>
+            <div>
+              <label for="factorRate2">Factor Rate (e.g., 1.20)</label>
+              <input type="number" id="factorRate2" placeholder="1.20" min="1" step="0.01" required />
+            </div>
+          </div>
+          <div>
+            <label for="termLength2">Term Length</label>
+            <div class="row">
+              <div>
+                <input type="number" id="termLength2" placeholder="140" min="1" step="1" required />
+              </div>
+              <div>
+                <select id="termUnit2" required>
+                  <option value="days">Business Days</option>
+                  <option value="weeks">Weeks</option>
+                  <option value="months">Months</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn" id="calculate2" disabled>Calculate</button>
+        </form>
+        <div class="results" id="results2" style="display: none;">
+          <h3>Results B</h3>
+          <div class="result-item" id="displayAdvance2"></div>
+          <div class="result-item" id="interestPaid2"></div>
+          <div class="result-item" id="totalPayback2"></div>
+          <div class="result-item" id="periodicPayment2"></div>
+          <div class="result-item" id="ratePerMonth2"></div>
         </div>
       </div>
     </div>
-
-    <div class="schedule-actions">
-      <div class="freq">
-        <label for="frequency">Amortization Frequency:</label>
-        <select id="frequency">
-          <option value="monthly">Monthly</option>
-          <option value="annual" selected>Annual</option>
-        </select>
-      </div>
-      <button id="download">Download PDF</button>
-    </div>
-
-    <table>
-      <thead>
-        <tr>
-          <th id="hdrPeriod">Year</th>
-          <th>Payment</th>
-          <th>Principal</th>
-          <th>Interest</th>
-          <th>Balance</th>
-        </tr>
-      </thead>
-      <tbody id="schedule"></tbody>
-    </table>
   </div>
 
   <script>
-    const $ = id => document.getElementById(id),
-          fmt = n => Number(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}),
-          parseN = str => parseFloat(str.replace(/,/g,'')) || 0;
-
-    function state() {
-      const A = parseN($('loanAmount').value), R = parseN($('interestRate').value)/100/12,
-            Y = parseN($('loanTerm').value), N = Math.round(Y*12), P = parseN($('payment').value);
-      return {A, R, Y, N, P, freq: $('frequency').value, locks: {
-        loanAmount: $('lockAmount').checked,
-        interestRate: $('lockRate').checked,
-        loanTerm: $('lockTerm').checked,
-        payment: $('lockPayment').checked
-      }};
+    function formatCurrency(value) {
+      return value
+        .toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     }
-
-    function solveMissing(s) {
-      const {A, R, N, P, locks} = s;
-      if (!locks.payment) return A*R/(1-Math.pow(1+R,-N));
-      if (!locks.loanAmount) return P*(1-Math.pow(1+R,-N))/R;
-      if (!locks.loanTerm) return Math.ceil((-Math.log(1-(A*R)/P)/Math.log(1+R))/12*100)/100;
-      if (!locks.interestRate) {
-        let r=0.01; for (let i=0;i<20;i++){ const f=P*(1-Math.pow(1+r,-N))/r - A; const df=(-P*(1-Math.pow(1+r,-N)))/(r*r)+(P*N*Math.pow(1+r,-N-1))/r; r-=f/df; if(r<=0)r=Math.abs(r); } return r*12*100;
-      }
-      return 0;
+    function parseCurrency(input) {
+      const numericString = input.replace(/,/g, '');
+      return parseFloat(numericString) || 0;
     }
+    function setupCalculator(suffix) {
+      const form = document.getElementById(`mca-form-${suffix}`);
+      const advanceInput = document.getElementById(`advanceAmount${suffix}`);
+      const factorRateInput = document.getElementById(`factorRate${suffix}`);
+      const termLengthInput = document.getElementById(`termLength${suffix}`);
+      const termUnitInput = document.getElementById(`termUnit${suffix}`);
+      const submitButton = document.getElementById(`calculate${suffix}`);
+      const resultsDiv = document.getElementById(`results${suffix}`);
 
-    function renderSchedule() {
-      const s = state(), tbody = $('schedule'); tbody.innerHTML=''; $('hdrPeriod').textContent = s.freq==='monthly'?'Month':'Year';
-      let bal=s.A;
-      if (s.freq==='monthly'){
-        for (let i=1;i<=s.N;i++){
-          const interest=bal*s.R, principal=s.P-interest; bal-=principal;
-          const tr=tbody.insertRow(); tr.innerHTML=`<td>${i}</td><td>${fmt(s.P)}</td><td>${fmt(principal)}</td><td>${fmt(interest)}</td><td>${fmt(Math.max(bal,0))}</td>`;
+      const displayAdvance = document.getElementById(`displayAdvance${suffix}`);
+      const interestPaid = document.getElementById(`interestPaid${suffix}`);
+      const totalPayback = document.getElementById(`totalPayback${suffix}`);
+      const periodicPayment = document.getElementById(`periodicPayment${suffix}`);
+      const ratePerMonth = document.getElementById(`ratePerMonth${suffix}`);
+
+      function validateForm() {
+        const advanceAmt = parseCurrency(advanceInput.value);
+        const factorRate = parseFloat(factorRateInput.value);
+        const termLen = parseInt(termLengthInput.value, 10);
+        if (advanceAmt > 0 && factorRate >= 1 && termLen >= 1) {
+          submitButton.disabled = false;
+        } else {
+          submitButton.disabled = true;
         }
-      } else {
-        let months=s.N, year=1;
-        while(months>0){ let yPay=0,yPr=0,yInt=0,c=Math.min(12,months);
-          for(let j=0;j<c;j++){ const interest=bal*s.R, principal=s.P-interest; yInt+=interest; yPr+=principal; yPay+=s.P; bal-=principal; }
-          const tr=tbody.insertRow(); tr.innerHTML=`<td>${year}</td><td>${fmt(yPay)}</td><td>${fmt(yPr)}</td><td>${fmt(yInt)}</td><td>${fmt(Math.max(bal,0))}</td>`;
-          months-=c; year++; }
       }
+
+      // Real-time validation
+      advanceInput.addEventListener('input', validateForm);
+      factorRateInput.addEventListener('input', validateForm);
+      termLengthInput.addEventListener('input', validateForm);
+      termUnitInput.addEventListener('change', validateForm);
+
+      advanceInput.addEventListener('blur', function() {
+        const rawValue = parseCurrency(this.value);
+        if (!isNaN(rawValue)) {
+          this.value = formatCurrency(rawValue);
+        }
+      });
+      advanceInput.addEventListener('focus', function() {
+        const rawValue = parseCurrency(this.value);
+        if (!isNaN(rawValue)) {
+          this.value = rawValue > 0 ? rawValue.toFixed(2) : '';
+        }
+      });
+
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const advanceAmt = parseCurrency(advanceInput.value);
+        const factorRate = parseFloat(factorRateInput.value);
+        const termLen = parseInt(termLengthInput.value, 10);
+        const termUnit = termUnitInput.value;
+
+        // Calculate total payback & interest
+        const totPay = advanceAmt * factorRate;
+        const intPaid = totPay - advanceAmt;
+
+        // Convert term length to months using 20 business days = 1 month
+        let termInMonths;
+        if (termUnit === 'months') {
+          termInMonths = termLen;
+        } else if (termUnit === 'weeks') {
+          termInMonths = termLen / 4.345;  // approx. weeks per month
+        } else {
+          termInMonths = termLen / 20;     // 20 business days per month
+        }
+
+        // Rate per month (%) & interest $/month
+        const rpm = termInMonths > 0 ? ((factorRate - 1) / termInMonths) * 100 : 0;
+        const interestPerMonth = termInMonths > 0 ? intPaid / termInMonths : 0;
+        const freqLabel = {
+          days: 'per Business Day',
+          weeks: 'per Week',
+          months: 'per Month'
+        }[termUnit];
+        const payPerPeriod = totPay / termLen;
+
+        displayAdvance.textContent = `Advance Amount: $${formatCurrency(advanceAmt)}`;
+        interestPaid.textContent = `Interest Paid Over Time: $${formatCurrency(intPaid)}`;
+        totalPayback.textContent = `Total Payback Amount: $${formatCurrency(totPay)}`;
+        periodicPayment.textContent = `Periodic Payment (${freqLabel}): $${formatCurrency(payPerPeriod)}`;
+        ratePerMonth.textContent = `Rate per Month: ${rpm.toFixed(2)}% ($${formatCurrency(interestPerMonth)}/month)`;
+
+        resultsDiv.style.display = 'block';
+      });
+
+      // Initialize validation on load
+      validateForm();
     }
 
-    function calculate(){ const s=state(), missing=Object.keys(s.locks).find(k=>!s.locks[k]), val=solveMissing(s);
-      const map={ payment:'payment', loanAmount:'loanAmount', interestRate:'interestRate', loanTerm:'loanTerm'};
-      $(map[missing]).value=fmt(val); renderSchedule(); }
-
-    $('download').onclick = () => {
-      calculate(); const { jsPDF } = window.jspdf; const doc = new jsPDF({ unit:'pt', format:'a4' });
-      doc.setFontSize(12); doc.text('Loan Amount: '+$('loanAmount').value,40,40);
-      doc.text('Interest Rate (%): '+$('interestRate').value,40,55);
-      doc.text('Loan Term (years): '+$('loanTerm').value,40,70);
-      doc.text('Payment: '+$('payment').value,40,85);
-      doc.setFontSize(14); doc.text('Amortization Schedule',40,110);
-      const head=[[ $('hdrPeriod').textContent,'Payment','Principal','Interest','Balance']];
-      const body=Array.from($('schedule').rows).map(r=>Array.from(r.cells).map(td=>td.textContent));
-      // @ts-ignore
-doc.autoTable({ head, body, startY:125, theme:'grid' }); doc.save('term-loan-schedule.pdf');
-    };
-
-    ['loanAmount','interestRate','loanTerm','lockAmount','lockRate','lockTerm','lockPayment','frequency']
-      .forEach(id=>$(id).addEventListener('change',calculate));
-    ['loanAmount','interestRate','loanTerm','payment']
-      .forEach(id=>$(id).addEventListener('input',calculate));
-    window.onload=calculate;
+    // Initialize both calculators
+    setupCalculator('1');
+    setupCalculator('2');
   </script>
 </body>
 </html>
