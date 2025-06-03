@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Copy your existing <meta>, <title>, and <style> tags here -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title }}</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    /* …any other global CSS… */
+  </style>
+</head>
+<body>
+  {% include header.html %}
+  <main>
+    {{ content }}
+  </main>
+</body>
+</html>
