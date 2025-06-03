@@ -1,244 +1,194 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MCA Deal Comparison | Nicolas Lescalier</title>
-  <style>
-    body { margin: 0; font-family: Arial, sans-serif; color: #333; line-height: 1.6; }
-    header { background: #004e89; color: #fff; padding: 1rem 2rem; }
-    nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
-    nav li { margin-right: 1rem; }
-    nav a { color: #fff; text-decoration: none; font-weight: bold; }
-    .container { max-width: 1200px; margin: 2rem auto; padding: 1rem; }
-    h1 { text-align: center; color: #004e89; margin-bottom: 2rem; }
-    .comparison-row { display: flex; gap: 2rem; flex-wrap: wrap; }
-    .calculator { flex: 1 1 400px; border: 1px solid #ccc; border-radius: 4px; padding: 1rem; }
-    .calculator h2 { color: #004e89; margin-top: 0; text-align: center; }
-    form { display: flex; flex-direction: column; gap: 1rem; }
-    .row { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .row > div { flex: 1 1 150px; }
-    label { font-weight: bold; }
-    input, select { padding: 0.5rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 4px; width: 100%; box-sizing: border-box; }
-    .btn { background: #007acc; color: #fff; padding: 0.75rem; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; }
-    .btn:hover { background: #005fa3; }
-    .btn:disabled { background: #999; cursor: not-allowed; }
-    .results { margin-top: 1.5rem; background: #f4f4f4; padding: 1rem; border-radius: 4px; text-align: center; }
-    .results h3 { margin-top: 0; color: #004e89; }
-    .result-item { margin-bottom: 0.5rem; }
-    @media (max-width: 900px) { .comparison-row { flex-direction: column; } }
-  </style>
-</head>
-<body>
+---
+layout: default
+title: "MCA Deal Comparison | Nicolas Lescalier"
+---
 
-  <!-- Shared Header / Navigation -->
-  <header>
-    <div class="container">
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="merchant-cash-advance-calculator.html">MCA Calculator</a></li>
-          <li><a href="merchant-cash-advance-comparison.html">Compare MCA Deals</a></li>
-          <li><a href="term-loan-calculator.html">Term‑Loan Calculator</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="blog.html">Insights</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="/sitemap.xml">Sitemap</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<div class="container">
+  <h1>MCA Deal Comparison</h1>
 
-  <div class="container">
-    <h1>MCA Deal Comparison</h1>
-
-    <div class="comparison-row">
-      <!-- Deal A -->
-      <div class="calculator">
-        <h2>Deal A</h2>
-        <form id="mca-form-1">
-          <div class="row">
-            <div>
-              <label for="advanceAmount1">Advance Amount ($)</label>
-              <input type="text" id="advanceAmount1" placeholder="e.g., 10,000.00" required />
-            </div>
-            <div>
-              <label for="factorRate1">Factor Rate (e.g., 1.20)</label>
-              <input type="number" id="factorRate1" placeholder="1.20" min="1" step="0.01" required />
-            </div>
+  <div class="comparison-row">
+    <!-- Deal A -->
+    <div class="calculator">
+      <h2>Deal A</h2>
+      <form id="mca-form-1">
+        <div class="row">
+          <div>
+            <label for="advanceAmount1">Advance Amount ($)</label>
+            <input type="text" id="advanceAmount1" placeholder="e.g., 10,000.00" required />
           </div>
           <div>
-            <label for="termLength1">Term Length</label>
-            <div class="row">
-              <div>
-                <input type="number" id="termLength1" placeholder="140" min="1" step="1" required />
-              </div>
-              <div>
-                <select id="termUnit1" required>
-                  <option value="days">Business Days</option>
-                  <option value="weeks">Weeks</option>
-                  <option value="months">Months</option>
-                </select>
-              </div>
+            <label for="factorRate1">Factor Rate (e.g., 1.20)</label>
+            <input type="number" id="factorRate1" placeholder="1.20" min="1" step="0.01" required />
+          </div>
+        </div>
+        <div>
+          <label for="termLength1">Term Length</label>
+          <div class="row">
+            <div>
+              <input type="number" id="termLength1" placeholder="140" min="1" step="1" required />
+            </div>
+            <div>
+              <select id="termUnit1" required>
+                <option value="days">Business Days</option>
+                <option value="weeks">Weeks</option>
+                <option value="months">Months</option>
+              </select>
             </div>
           </div>
-          <button type="submit" class="btn" id="calculate1" disabled>Calculate</button>
-        </form>
-        <div class="results" id="results1" style="display: none;">
-          <h3>Results A</h3>
-          <div class="result-item" id="displayAdvance1"></div>
-          <div class="result-item" id="interestPaid1"></div>
-          <div class="result-item" id="totalPayback1"></div>
-          <div class="result-item" id="periodicPayment1"></div>
-          <div class="result-item" id="ratePerMonth1"></div>
         </div>
+        <button type="submit" class="btn" id="calculate1" disabled>Calculate</button>
+      </form>
+      <div class="results" id="results1" style="display: none;">
+        <h3>Results A</h3>
+        <div class="result-item" id="displayAdvance1"></div>
+        <div class="result-item" id="interestPaid1"></div>
+        <div class="result-item" id="totalPayback1"></div>
+        <div class="result-item" id="periodicPayment1"></div>
+        <div class="result-item" id="ratePerMonth1"></div>
       </div>
+    </div>
 
-      <!-- Deal B -->
-      <div class="calculator">
-        <h2>Deal B</h2>
-        <form id="mca-form-2">
-          <div class="row">
-            <div>
-              <label for="advanceAmount2">Advance Amount ($)</label>
-              <input type="text" id="advanceAmount2" placeholder="e.g., 10,000.00" required />
-            </div>
-            <div>
-              <label for="factorRate2">Factor Rate (e.g., 1.20)</label>
-              <input type="number" id="factorRate2" placeholder="1.20" min="1" step="0.01" required />
-            </div>
+    <!-- Deal B -->
+    <div class="calculator">
+      <h2>Deal B</h2>
+      <form id="mca-form-2">
+        <div class="row">
+          <div>
+            <label for="advanceAmount2">Advance Amount ($)</label>
+            <input type="text" id="advanceAmount2" placeholder="e.g., 10,000.00" required />
           </div>
           <div>
-            <label for="termLength2">Term Length</label>
-            <div class="row">
-              <div>
-                <input type="number" id="termLength2" placeholder="140" min="1" step="1" required />
-              </div>
-              <div>
-                <select id="termUnit2" required>
-                  <option value="days">Business Days</option>
-                  <option value="weeks">Weeks</option>
-                  <option value="months">Months</option>
-                </select>
-              </div>
+            <label for="factorRate2">Factor Rate (e.g., 1.20)</label>
+            <input type="number" id="factorRate2" placeholder="1.20" min="1" step="0.01" required />
+          </div>
+        </div>
+        <div>
+          <label for="termLength2">Term Length</label>
+          <div class="row">
+            <div>
+              <input type="number" id="termLength2" placeholder="140" min="1" step="1" required />
+            </div>
+            <div>
+              <select id="termUnit2" required>
+                <option value="days">Business Days</option>
+                <option value="weeks">Weeks</option>
+                <option value="months">Months</option>
+              </select>
             </div>
           </div>
-          <button type="submit" class="btn" id="calculate2" disabled>Calculate</button>
-        </form>
-        <div class="results" id="results2" style="display: none;">
-          <h3>Results B</h3>
-          <div class="result-item" id="displayAdvance2"></div>
-          <div class="result-item" id="interestPaid2"></div>
-          <div class="result-item" id="totalPayback2"></div>
-          <div class="result-item" id="periodicPayment2"></div>
-          <div class="result-item" id="ratePerMonth2"></div>
         </div>
+        <button type="submit" class="btn" id="calculate2" disabled>Calculate</button>
+      </form>
+      <div class="results" id="results2" style="display: none;">
+        <h3>Results B</h3>
+        <div class="result-item" id="displayAdvance2"></div>
+        <div class="result-item" id="interestPaid2"></div>
+        <div class="result-item" id="totalPayback2"></div>
+        <div class="result-item" id="periodicPayment2"></div>
+        <div class="result-item" id="ratePerMonth2"></div>
       </div>
     </div>
   </div>
+</div>
 
-  <script>
-    function formatCurrency(value) {
-      return value
-        .toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+<script>
+  function formatCurrency(value) {
+    return value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+  function parseCurrency(input) {
+    const numericString = input.replace(/,/g, '');
+    return parseFloat(numericString) || 0;
+  }
+  function setupCalculator(suffix) {
+    const form = document.getElementById(`mca-form-${suffix}`);
+    const advanceInput = document.getElementById(`advanceAmount${suffix}`);
+    const factorRateInput = document.getElementById(`factorRate${suffix}`);
+    const termLengthInput = document.getElementById(`termLength${suffix}`);
+    const termUnitInput = document.getElementById(`termUnit${suffix}`);
+    const submitButton = document.getElementById(`calculate${suffix}`);
+    const resultsDiv = document.getElementById(`results${suffix}`);
+
+    const displayAdvance = document.getElementById(`displayAdvance${suffix}`);
+    const interestPaid = document.getElementById(`interestPaid${suffix}`);
+    const totalPayback = document.getElementById(`totalPayback${suffix}`);
+    const periodicPayment = document.getElementById(`periodicPayment${suffix}`);
+    const ratePerMonth = document.getElementById(`ratePerMonth${suffix}`);
+
+    function validateForm() {
+      const advanceAmt = parseCurrency(advanceInput.value);
+      const factorRate = parseFloat(factorRateInput.value);
+      const termLen = parseInt(termLengthInput.value, 10);
+      if (advanceAmt > 0 && factorRate >= 1 && termLen >= 1) {
+        submitButton.disabled = false;
+      } else {
+        submitButton.disabled = true;
+      }
     }
-    function parseCurrency(input) {
-      const numericString = input.replace(/,/g, '');
-      return parseFloat(numericString) || 0;
-    }
-    function setupCalculator(suffix) {
-      const form = document.getElementById(`mca-form-${suffix}`);
-      const advanceInput = document.getElementById(`advanceAmount${suffix}`);
-      const factorRateInput = document.getElementById(`factorRate${suffix}`);
-      const termLengthInput = document.getElementById(`termLength${suffix}`);
-      const termUnitInput = document.getElementById(`termUnit${suffix}`);
-      const submitButton = document.getElementById(`calculate${suffix}`);
-      const resultsDiv = document.getElementById(`results${suffix}`);
 
-      const displayAdvance = document.getElementById(`displayAdvance${suffix}`);
-      const interestPaid = document.getElementById(`interestPaid${suffix}`);
-      const totalPayback = document.getElementById(`totalPayback${suffix}`);
-      const periodicPayment = document.getElementById(`periodicPayment${suffix}`);
-      const ratePerMonth = document.getElementById(`ratePerMonth${suffix}`);
+    // Real-time validation
+    advanceInput.addEventListener('input', validateForm);
+    factorRateInput.addEventListener('input', validateForm);
+    termLengthInput.addEventListener('input', validateForm);
+    termUnitInput.addEventListener('change', validateForm);
 
-      function validateForm() {
-        const advanceAmt = parseCurrency(advanceInput.value);
-        const factorRate = parseFloat(factorRateInput.value);
-        const termLen = parseInt(termLengthInput.value, 10);
-        if (advanceAmt > 0 && factorRate >= 1 && termLen >= 1) {
-          submitButton.disabled = false;
-        } else {
-          submitButton.disabled = true;
-        }
+    advanceInput.addEventListener('blur', function() {
+      const rawValue = parseCurrency(this.value);
+      if (!isNaN(rawValue)) {
+        this.value = formatCurrency(rawValue);
+      }
+    });
+    advanceInput.addEventListener('focus', function() {
+      const rawValue = parseCurrency(this.value);
+      if (!isNaN(rawValue)) {
+        this.value = rawValue > 0 ? rawValue.toFixed(2) : '';
+      }
+    });
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const advanceAmt = parseCurrency(advanceInput.value);
+      const factorRate = parseFloat(factorRateInput.value);
+      const termLen = parseInt(termLengthInput.value, 10);
+      const termUnit = termUnitInput.value;
+
+      // Calculate total payback & interest
+      const totPay = advanceAmt * factorRate;
+      const intPaid = totPay - advanceAmt;
+
+      // Convert term length to months using 20 business days = 1 month
+      let termInMonths;
+      if (termUnit === 'months') {
+        termInMonths = termLen;
+      } else if (termUnit === 'weeks') {
+        termInMonths = termLen / 4.345;  // approx. weeks per month
+      } else {
+        termInMonths = termLen / 20;     // 20 business days per month
       }
 
-      // Real-time validation
-      advanceInput.addEventListener('input', validateForm);
-      factorRateInput.addEventListener('input', validateForm);
-      termLengthInput.addEventListener('input', validateForm);
-      termUnitInput.addEventListener('change', validateForm);
+      // Rate per month (%) & interest $/month
+      const rpm = termInMonths > 0 ? ((factorRate - 1) / termInMonths) * 100 : 0;
+      const interestPerMonth = termInMonths > 0 ? intPaid / termInMonths : 0;
+      const freqLabel = {
+        days: 'per Business Day',
+        weeks: 'per Week',
+        months: 'per Month'
+      }[termUnit];
+      const payPerPeriod = totPay / termLen;
 
-      advanceInput.addEventListener('blur', function() {
-        const rawValue = parseCurrency(this.value);
-        if (!isNaN(rawValue)) {
-          this.value = formatCurrency(rawValue);
-        }
-      });
-      advanceInput.addEventListener('focus', function() {
-        const rawValue = parseCurrency(this.value);
-        if (!isNaN(rawValue)) {
-          this.value = rawValue > 0 ? rawValue.toFixed(2) : '';
-        }
-      });
+      displayAdvance.textContent = `Advance Amount: $${formatCurrency(advanceAmt)}`;
+      interestPaid.textContent = `Interest Paid Over Time: $${formatCurrency(intPaid)}`;
+      totalPayback.textContent = `Total Payback Amount: $${formatCurrency(totPay)}`;
+      periodicPayment.textContent = `Periodic Payment (${freqLabel}): $${formatCurrency(payPerPeriod)}`;
+      ratePerMonth.textContent = `Rate per Month: ${rpm.toFixed(2)}% ($${formatCurrency(interestPerMonth)}/month)`;
 
-      form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        const advanceAmt = parseCurrency(advanceInput.value);
-        const factorRate = parseFloat(factorRateInput.value);
-        const termLen = parseInt(termLengthInput.value, 10);
-        const termUnit = termUnitInput.value;
+      resultsDiv.style.display = 'block';
+    });
 
-        // Calculate total payback & interest
-        const totPay = advanceAmt * factorRate;
-        const intPaid = totPay - advanceAmt;
+    // Initialize validation on load
+    validateForm();
+  }
 
-        // Convert term length to months using 20 business days = 1 month
-        let termInMonths;
-        if (termUnit === 'months') {
-          termInMonths = termLen;
-        } else if (termUnit === 'weeks') {
-          termInMonths = termLen / 4.345;  // approx. weeks per month
-        } else {
-          termInMonths = termLen / 20;     // 20 business days per month
-        }
-
-        // Rate per month (%) & interest $/month
-        const rpm = termInMonths > 0 ? ((factorRate - 1) / termInMonths) * 100 : 0;
-        const interestPerMonth = termInMonths > 0 ? intPaid / termInMonths : 0;
-        const freqLabel = {
-          days: 'per Business Day',
-          weeks: 'per Week',
-          months: 'per Month'
-        }[termUnit];
-        const payPerPeriod = totPay / termLen;
-
-        displayAdvance.textContent = `Advance Amount: $${formatCurrency(advanceAmt)}`;
-        interestPaid.textContent = `Interest Paid Over Time: $${formatCurrency(intPaid)}`;
-        totalPayback.textContent = `Total Payback Amount: $${formatCurrency(totPay)}`;
-        periodicPayment.textContent = `Periodic Payment (${freqLabel}): $${formatCurrency(payPerPeriod)}`;
-        ratePerMonth.textContent = `Rate per Month: ${rpm.toFixed(2)}% ($${formatCurrency(interestPerMonth)}/month)`;
-
-        resultsDiv.style.display = 'block';
-      });
-
-      // Initialize validation on load
-      validateForm();
-    }
-
-    // Initialize both calculators
-    setupCalculator('1');
-    setupCalculator('2');
-  </script>
-</body>
-</html>
+  // Initialize both calculators
+  setupCalculator('1');
+  setupCalculator('2');
+</script>
