@@ -1,19 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Copy your existing <meta>, <title>, and <style> tags here -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- This <title> will be replaced by each page’s title via front‐matter -->
   <title>{{ page.title }}</title>
+
+  <!-- =====================
+       SITE‑WIDE CSS
+       =====================
+       We’ve consolidated all of your inline styles here.
+       If you prefer, you could also link to an external stylesheet:
+         <link rel="stylesheet" href="/assets/styles.css">
+       but for now we’re putting everything inline so every page “just works.”
+  -->
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-    /* …any other global CSS… */
+    /* ——— Reset / Base Styles ——— */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f0f2f5; /* only homepage might override this, but safe default */
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ——— Header + Navigation ——— */
+    header {
+      background: #004e89;
+      color: #fff;
+      padding: 1rem 2rem;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    nav li {
+      margin-right: 1rem;
+    }
+    nav a {
+      color: #fff;
+      font-weight: bold;
+    }
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    /* ——— Homepage “Hero” Section ——— */
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: #f4f4f4;
+    }
+    .hero h1 {
+      margin-bottom: 0.5rem;
+      color: #004e89;
+      font-size: 2rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+    .btn {
+      display: inline-block;
+      background: #007acc;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 1rem;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #005fa3;
+    }
+
+    /* ——— Two‑Column Layout (used on homepage About, etc.) ——— */
+    .two-column {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .two-column > div {
+      flex: 1 1 300px;
+    }
+
+    /* ——— Section Headings ——— */
+    section h2 {
+      border-bottom: 2px solid #004e89;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: #004e89;
+    }
+    p, li {
+      text-align: justify;
+      margin-bottom: 0.75rem;
+    }
+
+    /* ——— Testimonials (blockquotes) ——— */
+    .testimonials blockquote {
+      font-style: italic;
+      border-left: 4px solid #007acc;
+      margin: 1rem 0;
+      padding-left: 1rem;
+      color: #555;
+    }
+    .testimonials blockquote strong {
+      display: block;
+      margin-top: 0.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* ——— Footer ——— */
+    footer {
+      background: #222;
+      color: #bbb;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+    footer a {
+      color: #bbb;
+      margin: 0 0.5rem;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ——— MCA Deal Comparison (Calculator) Styles ——— */
+    /* NOTE: If you want to isolate calculator CSS from the homepage, you can wrap these in a body class (e.g. `.calculator-page .calculator { … }`). */
+    .comparison-row {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .calculator {
+      flex: 1 1 400px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 1rem;
+      background: #fff;
+    }
+    .calculator h2 {
+      color: #004e89;
+      margin-top: 0;
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .row > div {
+      flex: 1 1 150px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    input, select {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    input:focus, select:focus {
+      outline: none;
+      border-color: #004e89;
+    }
+    .btn {
+      background: #007acc;
+      color: #fff;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #005fa3;
+    }
+    .btn:disabled {
+      background: #999;
+      cursor: not-allowed;
+    }
+    .results {
+      margin-top: 1.5rem;
+      background: #f4f4f4;
+      padding: 1rem;
+      border-radius: 4px;
+      text-align: center;
+    }
+    .results h3 {
+      margin-top: 0;
+      color: #004e89;
+    }
+    .result-item {
+      margin-bottom: 0.5rem;
+    }
+
+    /* ——— Term‑Loan Calculator Styles ——— */
+    .calculator-page {
+      background: #f0f2f5;
+      padding-bottom: 2rem;
+    }
+    .calculator-page .calculator {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      width: 100%;
+      padding: 2rem;
+      text-align: left;
+    }
+    .calculator-page .calculator h1 {
+      text-align: center;
+      margin-bottom: 0.5rem;
+      font-size: 1.75rem;
+      color: #333;
+    }
+    .calculator-page .instructions {
+      font-size: 0.9rem;
+      color: #555;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .field label {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .input-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .input-row input[type="text"] {
+      flex: 1;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      text-align: right;
+      transition: border-color 0.2s;
+    }
+    .input-row input[type="text"]:focus {
+      border-color: #111827;
+      outline: none;
+    }
+    .input-row input[type="checkbox"] {
+      transform: scale(1.2);
+    }
+    .schedule-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .schedule-actions .freq {
+      font-size: 0.9rem;
+      color: #555;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .schedule-actions select {
+      padding: 0.4rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .schedule-actions button {
+      background: #111827;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .schedule-actions button:hover {
+      background: #3f4850;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+      text-align: right;
+    }
+    th {
+      background: #111827;
+      color: #fff;
+      font-weight: normal;
+    }
+    th:first-child, td:first-child {
+      text-align: center;
+    }
+    tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    /* ——— Responsive Breakpoints ——— */
+    @media (max-width: 900px) {
+      .comparison-row {
+        flex-direction: column;
+      }
+    }
+    @media (max-width: 600px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      nav ul {
+        flex-direction: column;
+      }
+      .two-column {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
+
 <body>
   {% include header.html %}
-  <main>
+
+  <!-- 
+    Each page’s content (index.html, calculator pages, etc.) 
+    will be inserted where {{ content }} is written.
+  -->
+  <div class="{% if page.url contains 'term-loan-calculator' %}calculator-page{% endif %}">
     {{ content }}
-  </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Nicolas Lescalier. All Rights Reserved.</p>
+    <p>
+      <a href="/privacy-policy.html">Privacy Policy</a> | 
+      <a href="/terms-of-use.html">Terms of Use</a>
+    </p>
+    <p>
+      <a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank">LinkedIn</a> • 
+      <a href="https://twitter.com/lescalier93" target="_blank">Twitter</a>
+    </p>
+  </footer>
 </body>
 </html>
