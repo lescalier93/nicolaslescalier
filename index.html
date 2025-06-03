@@ -1,236 +1,203 @@
-<!-- File: _layouts/default.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ page.title }}</title>
+---
+layout: default
+title: "Nicolas Lescalier | MCA & Term Loans"
+---
 
-  <!-- Site‑wide CSS (you can also move this to a .css file if you prefer) -->
-  <style>
-    /* ─── Base / Reset ─── */
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: #f0f2f5;
-    }
-    a { color: #007acc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    img { max-width: 100%; height: auto; display: block; }
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Welcome, I’m <strong>Nicolas Lescalier</strong></h1>
+      <p class="hero-subtitle">
+        Commercial financing specialist for Merchant Cash Advances, Term Loans, and
+        CRE financing—serving Ontario &amp; US markets.
+      </p>
+      <a href="#contact" class="btn">Book a Consultation</a>
+    </div>
+  </section>
 
-    /* ─── Header & Nav ─── */
-    header {
-      background: #004e89;
-      color: #fff;
-      padding: 1rem 2rem;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-    }
-    nav li { margin-right: 1rem; }
-    nav a { color: #fff; font-weight: bold; }
-    nav a:hover { opacity: 0.8; }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem;
-    }
-
-    /* ─── Hero (only appears on homepage) ─── */
-    .hero {
-      text-align: center;
-      padding: 3rem 1rem;
-      background: #f4f4f4;
-    }
-    .hero h1 { margin-bottom: 0.5rem; font-size: 2rem; color: #004e89; }
-    .hero p { font-size: 1.1rem; color: #555; }
-    .btn {
-      display: inline-block;
-      background: #007acc;
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      border-radius: 4px;
-      margin-top: 1rem;
-      transition: background 0.2s;
-    }
-    .btn:hover { background: #005fa3; }
-
-    /* ─── Two‑Column Utility ─── */
-    .two-column {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-    .two-column > div { flex: 1 1 300px; }
-
-    /* ─── Section Headings ─── */
-    section h2 {
-      border-bottom: 2px solid #004e89;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-      color: #004e89;
-    }
-    p, li {
-      text-align: justify;
-      margin-bottom: 0.75rem;
-    }
-
-    /* ─── Testimonials ─── */
-    .testimonials blockquote {
-      font-style: italic;
-      border-left: 4px solid #007acc;
-      margin: 1rem 0;
-      padding-left: 1rem;
-      color: #555;
-    }
-    .testimonials figcaption {
-      margin-top: 0.5rem;
-      font-weight: bold;
-      color: #333;
-    }
-
-    /* ─── Cards / Grids for Services & Blog ─── */
-    .services-grid,
-    .blog-grid {
-      display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-    .service-card,
-    .blog-card {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      padding: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      transition: box-shadow 0.2s;
-    }
-    .service-card:hover,
-    .blog-card:hover {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .service-card h3,
-    .blog-card h3 {
-      margin-top: 0;
-      color: #004e89;
-      font-size: 1.25rem;
-    }
-    .read-more {
-      font-weight: bold;
-      color: #007acc;
-    }
-
-    /* ─── Resources List ─── */
-    .resources-list {
-      list-style: none;
-      padding: 0;
-    }
-    .resources-list li {
-      margin-bottom: 0.75rem;
-    }
-    .resource-desc {
-      margin-left: 0.5rem;
-      color: #555;
-      font-size: 0.9rem;
-    }
-
-    /* ─── Contact Form ─── */
-    .contact-form {
-      max-width: 500px;
-      margin-top: 1rem;
-    }
-    .contact-form .form-field {
-      margin-bottom: 1rem;
-    }
-    .contact-form label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 0.25rem;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 0.5rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      outline: none;
-      border-color: #004e89;
-    }
-
-    /* ─── Footer ─── */
-    footer {
-      background: #222;
-      color: #bbb;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
-    }
-    .footer-nav a,
-    .social-links a {
-      color: #bbb;
-      margin: 0 0.5rem;
-      font-size: 0.9rem;
-    }
-    .footer-nav a:hover,
-    .social-links a:hover {
-      text-decoration: underline;
-    }
-
-    /* ─── Responsive ─── */
-    @media (max-width: 900px) {
-      .services-grid,
-      .blog-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-    @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-      }
-      .two-column {
-        flex-direction: column;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <!-- Site‑wide header / navigation -->
-  {% include header.html %}
-
-  <!-- Page Content inserted here -->
-  {{ content }}
-
-  <!-- Site‑wide footer -->
-  <footer>
-    <div class="container footer-content">
-      <p>&copy; 2025 Nicolas Lescalier. All Rights Reserved.</p>
-      <nav class="footer-nav">
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <span> | </span>
-        <a href="/terms-of-use.html">Terms of Use</a>
-      </nav>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank">LinkedIn</a>
-        <span> • </span>
-        <a href="https://twitter.com/lescalier93" target="_blank">Twitter</a>
+  <!-- About -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="two-column about-grid">
+        <div class="profile-image-wrapper">
+          <img
+            src="https://ca.slack-edge.com/TTGE78XT6-U014QDNH198-b0c035a0dcc3-512"
+            alt="Nicolas Lescalier"
+            class="profile-img"
+          />
+        </div>
+        <div class="profile-text">
+          <p>
+            I’m a Toronto-based broker with over 5 years of experience arranging
+            Merchant Cash Advances, Term Loans, and Commercial Real Estate refinancing.
+            I help businesses secure fast, flexible capital to optimize cash flow,
+            fund growth, and manage construction projects.
+          </p>
+          <p>
+            <em>Why choose me?</em>
+            I leverage deep relationships with multiple lenders, fast turnaround times,
+            and personalized service to match you with the best financing solution
+            for your unique needs.
+          </p>
+        </div>
       </div>
     </div>
-  </footer>
-</body>
-</html>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <h2>Services</h2>
+      <div class="services-grid">
+        <article class="service-card">
+          <h3>Merchant Cash Advance (MCA)</h3>
+          <p>
+            Quick capital based on future receivables—ideal for seasonal or retail businesses.
+          </p>
+        </article>
+        <article class="service-card">
+          <h3>Term Loan Structuring</h3>
+          <p>
+            Customized repayment schedules with competitive rates—perfect for expansion or equipment purchases.
+          </p>
+        </article>
+        <article class="service-card">
+          <h3>Commercial Real Estate (CRE) Refinancing</h3>
+          <p>
+            Lower monthly payments and equity take‑out options for commercial properties.
+          </p>
+        </article>
+        <article class="service-card">
+          <h3>Construction &amp; Bridge Financing</h3>
+          <p>
+            Short‑term funding to bridge gaps between project phases or refinance at completion.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <h2>Client Testimonials</h2>
+      <div class="testimonials-grid">
+        <figure class="testimonial">
+          <blockquote>
+            “Nicolas secured a $200K MCA for our restaurant in just one week—
+            cash flow has never been smoother.”
+          </blockquote>
+          <figcaption>— Sarah P., Restaurant Owner</figcaption>
+        </figure>
+        <figure class="testimonial">
+          <blockquote>
+            “We refinanced our office building at a 2% lower rate thanks to Nicolas’s network.
+            Huge savings!”
+          </blockquote>
+          <figcaption>— Mark T., Real Estate Developer</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources & Tools -->
+  <section id="resources" class="resources-section">
+    <div class="container">
+      <h2>Resources &amp; Tools</h2>
+      <ul class="resources-list">
+        <li>
+          <a href="term-loan-calculator.html">Term‑Loan Payment Calculator</a>
+          <span class="resource-desc">(Estimate monthly payments instantly)</span>
+        </li>
+        <li>
+          <a href="/lease-checklist.pdf" download>Loan Documentation Checklist</a>
+          <span class="resource-desc">(PDF download)</span>
+        </li>
+        <li>
+          <a href="/mca‑primer.pdf" download>Merchant Cash Advance Primer</a>
+          <span class="resource-desc">(Free guide)</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Industry Insights -->
+  <section id="blog" class="blog-section">
+    <div class="container">
+      <h2>Industry Insights</h2>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <h3>
+            <a href="/blog/mca‑trends‑2025.html">Top 5 MCA Trends to Watch in 2025</a>
+          </h3>
+          <p>
+            Stay ahead with the latest developments in the Merchant Cash Advance market.
+            <a href="/blog/mca‑trends‑2025.html" class="read-more">Read More →</a>
+          </p>
+        </article>
+        <article class="blog-card">
+          <h3>
+            <a href="/blog/cre‑refinance‑strategies.html">CRE Refinance Strategies for High‑Yield Properties</a>
+          </h3>
+          <p>
+            Learn how to structure your next refinance to maximize returns.
+            <a href="/blog/cre‑refinance‑strategies.html" class="read-more">Read More →</a>
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>If you’re ready to discuss financing options, let’s connect:</p>
+      <ul class="contact-details">
+        <li><strong>Email:</strong>
+          <a href="mailto:nicolas@lescalierfinance.com">nicolas@lescalierfinance.com</a>
+        </li>
+        <li><strong>Phone:</strong> (305) 699‑3636</li>
+        <li><strong>LinkedIn:</strong>
+          <a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank">linkedin.com/in/nicolaslescalier</a>
+        </li>
+      </ul>
+      <p>Or fill out the form below and I’ll reply within 24 hours:</p>
+      <form action="/submit-contact" method="post" class="contact-form">
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Your Name"
+          />
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="you@example.com"
+          />
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            placeholder="How can I help you?"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+</main>
