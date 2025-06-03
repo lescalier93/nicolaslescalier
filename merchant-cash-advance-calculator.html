@@ -3,6 +3,120 @@ layout: default
 title: "MCA Deal Comparison | Nicolas Lescalier"
 ---
 
+<style>
+  /* ================================
+     Comparison Page Styles
+     ================================ */
+  .page-title {
+    text-align: center;
+    color: #004e89;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .comparison-row {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .calculator-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1.5rem;
+    flex: 1 1 400px;
+    max-width: 500px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .calculator-title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #004e89;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .calculator-form .form-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+  }
+
+  .form-input:focus {
+    outline: none;
+    border-color: #004e89;
+  }
+
+  .btn-primary {
+    display: block;
+    width: 100%;
+    background: #007acc;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .btn-primary:disabled {
+    background: #999;
+    cursor: not-allowed;
+  }
+
+  .btn-primary:hover:not(:disabled) {
+    background: #005fa3;
+  }
+
+  .results {
+    margin-top: 1rem;
+  }
+
+  .results-title {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    color: #004e89;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .result-item {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 900px) {
+    .calculator-card {
+      max-width: 100%;
+    }
+    .calculator-form .form-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
 <div class="container">
   <h1 class="page-title">MCA Deal Comparison</h1>
 
@@ -60,7 +174,7 @@ title: "MCA Deal Comparison | Nicolas Lescalier"
         <button
           type="submit"
           id="calculate1"
-          class="btn btn-primary"
+          class="btn-primary"
           disabled
         >
           Calculate
@@ -130,7 +244,7 @@ title: "MCA Deal Comparison | Nicolas Lescalier"
         <button
           type="submit"
           id="calculate2"
-          class="btn btn-primary"
+          class="btn-primary"
           disabled
         >
           Calculate
