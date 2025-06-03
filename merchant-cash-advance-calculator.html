@@ -6,6 +6,10 @@
   <title>MCA Comparison Calculator | Nicolas Lescalier</title>
   <style>
     body { margin: 0; font-family: Arial, sans-serif; color: #333; line-height: 1.6; }
+    header { background: #004e89; color: #fff; padding: 1rem 2rem; }
+    nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+    nav li { margin-right: 1rem; }
+    nav a { color: #fff; text-decoration: none; font-weight: bold; }
     .container { max-width: 1200px; margin: 2rem auto; padding: 1rem; }
     h1 { text-align: center; color: #004e89; margin-bottom: 2rem; }
     .comparison-row { display: flex; gap: 2rem; flex-wrap: wrap; }
@@ -18,6 +22,7 @@
     input, select { padding: 0.5rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 4px; width: 100%; box-sizing: border-box; }
     .btn { background: #007acc; color: #fff; padding: 0.75rem; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; }
     .btn:hover { background: #005fa3; }
+    .btn:disabled { background: #999; cursor: not-allowed; }
     .results { margin-top: 1.5rem; background: #f4f4f4; padding: 1rem; border-radius: 4px; text-align: center; }
     .results h3 { margin-top: 0; color: #004e89; }
     .result-item { margin-bottom: 0.5rem; }
@@ -25,6 +30,16 @@
   </style>
 </head>
 <body>
+  <header>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="/sitemap.xml">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
   <div class="container">
     <h1>MCA Deal Comparison</h1>
     <div class="comparison-row">
@@ -56,7 +71,7 @@
               </div>
             </div>
           </div>
-          <button type="submit" class="btn">Calculate</button>
+          <button type="submit" class="btn" id="calculate1" disabled>Calculate</button>
         </form>
         <div class="results" id="results1" style="display: none;">
           <h3>Results A</h3>
@@ -96,7 +111,7 @@
               </div>
             </div>
           </div>
-          <button type="submit" class="btn">Calculate</button>
+          <button type="submit" class="btn" id="calculate2" disabled>Calculate</button>
         </form>
         <div class="results" id="results2" style="display: none;">
           <h3>Results B</h3>
@@ -124,6 +139,7 @@
       const factorRateInput = document.getElementById(`factorRate${suffix}`);
       const termLengthInput = document.getElementById(`termLength${suffix}`);
       const termUnitInput = document.getElementById(`termUnit${suffix}`);
+      const submitButton = document.getElementById(`calculate${suffix}`);
       const resultsDiv = document.getElementById(`results${suffix}`);
 
       const displayAdvance = document.getElementById(`displayAdvance${suffix}`);
@@ -131,6 +147,22 @@
       const totalPayback = document.getElementById(`totalPayback${suffix}`);
       const periodicPayment = document.getElementById(`periodicPayment${suffix}`);
       const ratePerMonth = document.getElementById(`ratePerMonth${suffix}`);
+
+      function validateForm() {
+        const advanceAmt = parseCurrency(advanceInput.value);
+        const factorRate = parseFloat(factorRateInput.value);
+        const termLen = parseInt(termLengthInput.value, 10);
+        if (advanceAmt > 0 && factorRate >= 1 && termLen >= 1) {
+          submitButton.disabled = false;
+        } else {
+          submitButton.disabled = true;
+        }
+      }
+
+      advanceInput.addEventListener('input', validateForm);
+      factorRateInput.addEventListener('input', validateForm);
+      termLengthInput.addEventListener('input', validateForm);
+      termUnitInput.addEventListener('change', validateForm);
 
       advanceInput.addEventListener('blur', function() {
         const rawValue = parseCurrency(this.value);
@@ -161,6 +193,7 @@
         else termInMonths = termLen / 22;
 
         const rpm = termInMonths > 0 ? ((factorRate - 1) / termInMonths) * 100 : 0;
+        const interestPerMonth = termInMonths > 0 ? intPaid / termInMonths : 0;
         const freqLabel = { days: 'per Business Day', weeks: 'per Week', months: 'per Month' }[termUnit];
         const payPerPeriod = totPay / termLen;
 
@@ -168,10 +201,13 @@
         interestPaid.textContent = `Interest Paid Over Time: $${formatCurrency(intPaid)}`;
         totalPayback.textContent = `Total Payback Amount: $${formatCurrency(totPay)}`;
         periodicPayment.textContent = `Periodic Payment (${freqLabel}): $${formatCurrency(payPerPeriod)}`;
-        ratePerMonth.textContent = `Rate per Month: ${rpm.toFixed(2)}%`;
+        ratePerMonth.textContent = `Rate per Month: ${rpm.toFixed(2)}% ($${formatCurrency(interestPerMonth)}/month)`;
 
         resultsDiv.style.display = 'block';
       });
+
+      // Initialize validation
+      validateForm();
     }
     setupCalculator('1');
     setupCalculator('2');
