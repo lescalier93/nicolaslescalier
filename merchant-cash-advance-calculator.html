@@ -10,7 +10,7 @@
     h1 { text-align: center; color: #004e89; margin-bottom: 1rem; }
     form { display: flex; flex-direction: column; gap: 1rem; }
     label { font-weight: bold; }
-    input { padding: 0.5rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 4px; }
+    input, select { padding: 0.5rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 4px; }
     .btn { background: #007acc; color: #fff; padding: 0.75rem; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; }
     .btn:hover { background: #005fa3; }
     .results { margin-top: 2rem; background: #f4f4f4; padding: 1rem; border-radius: 4px; }
@@ -25,59 +25,111 @@
     <form id="mca-form">
       <div>
         <label for="advanceAmount">Advance Amount ($)</label>
-        <input type="number" id="advanceAmount" placeholder="e.g., 10000" min="0" step="0.01" required />
+        <input type="text" id="advanceAmount" placeholder="e.g., 10,000.00" required />
       </div>
       <div>
         <label for="factorRate">Factor Rate (e.g., 1.20)</label>
         <input type="number" id="factorRate" placeholder="e.g., 1.20" min="1" step="0.01" required />
       </div>
       <div>
-        <label for="holdbackPercent">Holdback Percentage (%)</label>
-        <input type="number" id="holdbackPercent" placeholder="e.g., 10" min="0" max="100" step="0.1" required />
-      </div>
-      <div>
-        <label for="dailySales">Average Daily Sales ($)</label>
-        <input type="number" id="dailySales" placeholder="e.g., 500" min="0" step="0.01" required />
+        <label for="termLength">Term Length</label>
+        <div style="display: flex; gap: 1rem;">
+          <input type="number" id="termLength" placeholder="e.g., 6" min="1" step="1" required style="flex: 1;" />
+          <select id="termUnit" required style="flex: 1;">
+            <option value="days">Business Days</option>
+            <option value="weeks">Weeks</option>
+            <option value="months">Months</option>
+          </select>
+        </div>
       </div>
       <button type="submit" class="btn">Calculate</button>
     </form>
 
     <div class="results" id="results" style="display: none;">
       <h2>Calculation Results</h2>
+      <div class="result-item" id="displayAdvance"></div>
+      <div class="result-item" id="interestPaid"></div>
       <div class="result-item" id="totalPayback"></div>
-      <div class="result-item" id="dailyHoldback"></div>
-      <div class="result-item" id="estimatedDays"></div>
+      <div class="result-item" id="periodicPayment"></div>
+      <div class="result-item" id="ratePerMonth"></div>
     </div>
   </div>
 
   <script>
+    // Format number as currency with commas and two decimals
+    function formatCurrency(value) {
+      return value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    // Remove non-numeric characters except dot
+    function parseCurrency(input) {
+      const numericString = input.replace(/,/g, '');
+      return parseFloat(numericString) || 0;
+    }
+
+    const advanceInput = document.getElementById('advanceAmount');
+
+    // On blur, format the input
+    advanceInput.addEventListener('blur', function() {
+      const rawValue = parseCurrency(this.value);
+      if (!isNaN(rawValue)) {
+        this.value = formatCurrency(rawValue);
+      }
+    });
+
+    // On focus, remove formatting to allow editing
+    advanceInput.addEventListener('focus', function() {
+      const rawValue = parseCurrency(this.value);
+      if (!isNaN(rawValue)) {
+        this.value = rawValue > 0 ? rawValue.toFixed(2) : '';
+      }
+    });
+
     document.getElementById('mca-form').addEventListener('submit', function(event) {
       event.preventDefault();
 
-      // Get input values
-      const advanceAmount = parseFloat(document.getElementById('advanceAmount').value);
+      // Get and parse Advance Amount
+      const advanceAmount = parseCurrency(document.getElementById('advanceAmount').value);
       const factorRate = parseFloat(document.getElementById('factorRate').value);
-      const holdbackPercent = parseFloat(document.getElementById('holdbackPercent').value) / 100;
-      const dailySales = parseFloat(document.getElementById('dailySales').value);
+      const termLength = parseInt(document.getElementById('termLength').value, 10);
+      const termUnit = document.getElementById('termUnit').value;
 
-      // Calculate total payback
+      // Calculate total payback and interest paid
       const totalPayback = advanceAmount * factorRate;
+      const interestPaid = totalPayback - advanceAmount;
 
-      // Calculate daily holdback amount
-      const dailyHoldback = dailySales * holdbackPercent;
-
-      // Calculate estimated days to repay
-      let estimatedDays = 0;
-      if (dailyHoldback > 0) {
-        estimatedDays = Math.ceil(totalPayback / dailyHoldback);
-      } else {
-        estimatedDays = 'N/A';
+      // Determine term in months for rate calculation
+      let termInMonths;
+      if (termUnit === 'months') {
+        termInMonths = termLength;
+      } else if (termUnit === 'weeks') {
+        termInMonths = termLength / 4.345;
+      } else if (termUnit === 'days') {
+        termInMonths = termLength / 22;
       }
 
+      // Calculate rate per month (%)
+      let ratePerMonthPercent;
+      if (termInMonths > 0) {
+        ratePerMonthPercent = ((factorRate - 1) / termInMonths) * 100;
+      } else {
+        ratePerMonthPercent = 0;
+      }
+
+      // Calculate payment per period
+      const frequencyLabel = {
+        days: 'per Business Day',
+        weeks: 'per Week',
+        months: 'per Month'
+      }[termUnit];
+      const paymentPerPeriod = totalPayback / termLength;
+
       // Display results
-      document.getElementById('totalPayback').textContent = `Total Payback Amount: $${totalPayback.toFixed(2)}`;
-      document.getElementById('dailyHoldback').textContent = `Daily Holdback Amount: $${dailyHoldback.toFixed(2)}`;
-      document.getElementById('estimatedDays').textContent = `Estimated Days to Repay: ${estimatedDays}`;
+      document.getElementById('displayAdvance').textContent = `Advance Amount: $${formatCurrency(advanceAmount)}`;
+      document.getElementById('interestPaid').textContent = `Interest Paid Over Time: $${formatCurrency(interestPaid)}`;
+      document.getElementById('totalPayback').textContent = `Total Payback Amount: $${formatCurrency(totalPayback)}`;
+      document.getElementById('periodicPayment').textContent = `Periodic Payment (${frequencyLabel}): $${formatCurrency(paymentPerPeriod)}`;
+      document.getElementById('ratePerMonth').textContent = `Rate per Month: ${ratePerMonthPercent.toFixed(2)}%`;
 
       document.getElementById('results').style.display = 'block';
     });
