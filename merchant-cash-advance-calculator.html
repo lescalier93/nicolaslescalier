@@ -159,6 +159,7 @@
         }
       }
 
+      // Real-time validation events
       advanceInput.addEventListener('input', validateForm);
       factorRateInput.addEventListener('input', validateForm);
       termLengthInput.addEventListener('input', validateForm);
@@ -188,9 +189,15 @@
         const intPaid = totPay - advanceAmt;
 
         let termInMonths;
-        if (termUnit === 'months') termInMonths = termLen;
-        else if (termUnit === 'weeks') termInMonths = termLen / 4.345;
-        else termInMonths = termLen / 22;
+        if (termUnit === 'months') {
+          termInMonths = termLen;
+        } else if (termUnit === 'weeks') {
+          // Assume 4.345 weeks per month
+          termInMonths = termLen / 4.345;
+        } else {
+          // Use 20 business days per month
+          termInMonths = termLen / 20;
+        }
 
         const rpm = termInMonths > 0 ? ((factorRate - 1) / termInMonths) * 100 : 0;
         const interestPerMonth = termInMonths > 0 ? intPaid / termInMonths : 0;
@@ -209,6 +216,7 @@
       // Initialize validation
       validateForm();
     }
+
     setupCalculator('1');
     setupCalculator('2');
   </script>
