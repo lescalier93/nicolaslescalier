@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MCA Comparison Calculator | Nicolas Lescalier</title>
+  <title>MCA Deal Comparison | Nicolas Lescalier</title>
   <style>
     body { margin: 0; font-family: Arial, sans-serif; color: #333; line-height: 1.6; }
     header { background: #004e89; color: #fff; padding: 1rem 2rem; }
@@ -30,21 +30,30 @@
   </style>
 </head>
 <body>
+
+  <!-- Shared Header / Navigation -->
   <header>
     <div class="container">
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="merchant-cash-advance-calculator.html">MCA Calculator</a></li>
+          <li><a href="merchant-cash-advance-comparison.html">Compare MCA Deals</a></li>
+          <li><a href="term-loan-calculator.html">Term‑Loan Calculator</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="blog.html">Insights</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li><a href="/sitemap.xml">Sitemap</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  
+
   <div class="container">
     <h1>MCA Deal Comparison</h1>
+
     <div class="comparison-row">
-      
       <!-- Deal A -->
       <div class="calculator">
         <h2>Deal A</h2>
@@ -85,7 +94,7 @@
           <div class="result-item" id="ratePerMonth1"></div>
         </div>
       </div>
-      
+
       <!-- Deal B -->
       <div class="calculator">
         <h2>Deal B</h2>
@@ -126,13 +135,13 @@
           <div class="result-item" id="ratePerMonth2"></div>
         </div>
       </div>
-      
     </div>
   </div>
 
   <script>
     function formatCurrency(value) {
-      return value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      return value
+        .toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     }
     function parseCurrency(input) {
       const numericString = input.replace(/,/g, '');
@@ -190,22 +199,21 @@
         const termLen = parseInt(termLengthInput.value, 10);
         const termUnit = termUnitInput.value;
 
-        // Calculate total payback and interest paid
+        // Calculate total payback & interest
         const totPay = advanceAmt * factorRate;
         const intPaid = totPay - advanceAmt;
 
-        // Convert term length to months using 20 business days/month
+        // Convert term length to months using 20 business days = 1 month
         let termInMonths;
         if (termUnit === 'months') {
           termInMonths = termLen;
         } else if (termUnit === 'weeks') {
-          termInMonths = termLen / 4.345;   // approx. weeks/month
+          termInMonths = termLen / 4.345;  // approx. weeks per month
         } else {
-          // Business Days: 20 business days = 1 month
-          termInMonths = termLen / 20;
+          termInMonths = termLen / 20;     // 20 business days per month
         }
 
-        // Rate per month (%) and interest $/month
+        // Rate per month (%) & interest $/month
         const rpm = termInMonths > 0 ? ((factorRate - 1) / termInMonths) * 100 : 0;
         const interestPerMonth = termInMonths > 0 ? intPaid / termInMonths : 0;
         const freqLabel = {
