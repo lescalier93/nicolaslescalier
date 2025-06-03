@@ -15,36 +15,65 @@ title: "Term Loan Calculator | Nicolas Lescalier"
       <div class="field">
         <label for="loanAmount">Loan Amount ($)</label>
         <div class="input-row">
-          <input id="loanAmount" type="text" value="350,000.00"
-                 onfocus="this.value=parseFloat(this.value.replace(/,/g,''))||''"
-                 onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})" />
+          <!-- Added inline style="font-size:1.1rem; padding:0.75rem;" -->
+          <input
+            id="loanAmount" 
+            type="text" 
+            value="350,000.00"
+            style="font-size: 1.1rem; padding: 0.75rem;"
+            onfocus="this.value=parseFloat(this.value.replace(/,/g,''))||''"
+            onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})"
+          />
           <input id="lockAmount" type="checkbox" checked />
         </div>
       </div>
+
       <div class="field">
         <label for="interestRate">Interest Rate (%)</label>
         <div class="input-row">
-          <input id="interestRate" type="text" value="10.50" step="0.01"
-                 onfocus="this.value=parseFloat(this.value)||''"
-                 onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})" />
+          <!-- Added inline style="font-size:1.1rem; padding:0.75rem;" -->
+          <input
+            id="interestRate" 
+            type="text" 
+            value="10.50" 
+            step="0.01"
+            style="font-size: 1.1rem; padding: 0.75rem;"
+            onfocus="this.value=parseFloat(this.value)||''"
+            onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})"
+          />
           <input id="lockRate" type="checkbox" checked />
         </div>
       </div>
+
       <div class="field">
         <label for="loanTerm">Loan Term (years)</label>
         <div class="input-row">
-          <input id="loanTerm" type="text" value="10.00" step="0.01"
-                 onfocus="this.value=parseFloat(this.value)||''"
-                 onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})" />
+          <!-- Added inline style="font-size:1.1rem; padding:0.75rem;" -->
+          <input
+            id="loanTerm" 
+            type="text" 
+            value="10.00" 
+            step="0.01"
+            style="font-size: 1.1rem; padding: 0.75rem;"
+            onfocus="this.value=parseFloat(this.value)||''"
+            onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})"
+          />
           <input id="lockTerm" type="checkbox" checked />
         </div>
       </div>
+
       <div class="field">
         <label for="payment">Monthly Payment ($)</label>
         <div class="input-row">
-          <input id="payment" type="text" value="4,722.72"
-                 onfocus="this.value=parseFloat(this.value.replace(/,/g,''))||''"
-                 onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})" />
+          <!-- Added inline style="font-size:1.1rem; padding:0.75rem;" -->
+          <input
+            id="payment" 
+            type="text" 
+            value="4,722.72"
+            style="font-size: 1.1rem; padding: 0.75rem;"
+            onfocus="this.value=parseFloat(this.value.replace(/,/g,''))||''"
+            onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})"
+          />
           <input id="lockPayment" type="checkbox" />
         </div>
       </div>
