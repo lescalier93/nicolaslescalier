@@ -40,19 +40,22 @@
       </nav>
     </div>
   </header>
+  
   <div class="container">
     <h1>MCA Deal Comparison</h1>
     <div class="comparison-row">
+      
+      <!-- Deal A -->
       <div class="calculator">
         <h2>Deal A</h2>
         <form id="mca-form-1">
           <div class="row">
             <div>
               <label for="advanceAmount1">Advance Amount ($)</label>
-              <input type="text" id="advanceAmount1" placeholder="e.g., 10,000.00" required />
+              <input type="text" id="advanceAmount1" placeholder="e.g., 10,000.00" required />
             </div>
             <div>
-              <label for="factorRate1">Factor Rate (e.g., 1.20)</label>
+              <label for="factorRate1">Factor Rate (e.g., 1.20)</label>
               <input type="number" id="factorRate1" placeholder="1.20" min="1" step="0.01" required />
             </div>
           </div>
@@ -64,7 +67,7 @@
               </div>
               <div>
                 <select id="termUnit1" required>
-                  <option value="days">Business Days</option>
+                  <option value="days">Business Days</option>
                   <option value="weeks">Weeks</option>
                   <option value="months">Months</option>
                 </select>
@@ -74,7 +77,7 @@
           <button type="submit" class="btn" id="calculate1" disabled>Calculate</button>
         </form>
         <div class="results" id="results1" style="display: none;">
-          <h3>Results A</h3>
+          <h3>Results A</h3>
           <div class="result-item" id="displayAdvance1"></div>
           <div class="result-item" id="interestPaid1"></div>
           <div class="result-item" id="totalPayback1"></div>
@@ -82,17 +85,18 @@
           <div class="result-item" id="ratePerMonth1"></div>
         </div>
       </div>
-
+      
+      <!-- Deal B -->
       <div class="calculator">
         <h2>Deal B</h2>
         <form id="mca-form-2">
           <div class="row">
             <div>
               <label for="advanceAmount2">Advance Amount ($)</label>
-              <input type="text" id="advanceAmount2" placeholder="e.g., 10,000.00" required />
+              <input type="text" id="advanceAmount2" placeholder="e.g., 10,000.00" required />
             </div>
             <div>
-              <label for="factorRate2">Factor Rate (e.g., 1.20)</label>
+              <label for="factorRate2">Factor Rate (e.g., 1.20)</label>
               <input type="number" id="factorRate2" placeholder="1.20" min="1" step="0.01" required />
             </div>
           </div>
@@ -104,7 +108,7 @@
               </div>
               <div>
                 <select id="termUnit2" required>
-                  <option value="days">Business Days</option>
+                  <option value="days">Business Days</option>
                   <option value="weeks">Weeks</option>
                   <option value="months">Months</option>
                 </select>
@@ -114,7 +118,7 @@
           <button type="submit" class="btn" id="calculate2" disabled>Calculate</button>
         </form>
         <div class="results" id="results2" style="display: none;">
-          <h3>Results B</h3>
+          <h3>Results B</h3>
           <div class="result-item" id="displayAdvance2"></div>
           <div class="result-item" id="interestPaid2"></div>
           <div class="result-item" id="totalPayback2"></div>
@@ -122,6 +126,7 @@
           <div class="result-item" id="ratePerMonth2"></div>
         </div>
       </div>
+      
     </div>
   </div>
 
@@ -159,7 +164,7 @@
         }
       }
 
-      // Real-time validation events
+      // Real-time validation
       advanceInput.addEventListener('input', validateForm);
       factorRateInput.addEventListener('input', validateForm);
       termLengthInput.addEventListener('input', validateForm);
@@ -185,23 +190,29 @@
         const termLen = parseInt(termLengthInput.value, 10);
         const termUnit = termUnitInput.value;
 
+        // Calculate total payback and interest paid
         const totPay = advanceAmt * factorRate;
         const intPaid = totPay - advanceAmt;
 
+        // Convert term length to months using 20 business days/month
         let termInMonths;
         if (termUnit === 'months') {
           termInMonths = termLen;
         } else if (termUnit === 'weeks') {
-          // Assume 4.345 weeks per month
-          termInMonths = termLen / 4.345;
+          termInMonths = termLen / 4.345;   // approx. weeks/month
         } else {
-          // Use 20 business days per month
+          // Business Days: 20 business days = 1 month
           termInMonths = termLen / 20;
         }
 
+        // Rate per month (%) and interest $/month
         const rpm = termInMonths > 0 ? ((factorRate - 1) / termInMonths) * 100 : 0;
         const interestPerMonth = termInMonths > 0 ? intPaid / termInMonths : 0;
-        const freqLabel = { days: 'per Business Day', weeks: 'per Week', months: 'per Month' }[termUnit];
+        const freqLabel = {
+          days: 'per Business Day',
+          weeks: 'per Week',
+          months: 'per Month'
+        }[termUnit];
         const payPerPeriod = totPay / termLen;
 
         displayAdvance.textContent = `Advance Amount: $${formatCurrency(advanceAmt)}`;
@@ -213,10 +224,11 @@
         resultsDiv.style.display = 'block';
       });
 
-      // Initialize validation
+      // Initialize validation on load
       validateForm();
     }
 
+    // Initialize both calculators
     setupCalculator('1');
     setupCalculator('2');
   </script>
