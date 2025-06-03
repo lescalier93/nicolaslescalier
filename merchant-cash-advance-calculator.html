@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "MCA Deal Comparison | Nicolas Lescalier"
+title: "MCA Deal Comparison | Nicolas Lescalier"
 ---
 
 <div class="container">
@@ -100,24 +100,24 @@ title: "MCA Deal Comparison | Nicolas Lescalier"
     return parseFloat(numericString) || 0;
   }
   function setupCalculator(suffix) {
-    const form = document.getElementById(`mca-form-${suffix}`);
-    const advanceInput = document.getElementById(`advanceAmount${suffix}`);
+    const form          = document.getElementById(`mca-form-${suffix}`);
+    const advanceInput  = document.getElementById(`advanceAmount${suffix}`);
     const factorRateInput = document.getElementById(`factorRate${suffix}`);
     const termLengthInput = document.getElementById(`termLength${suffix}`);
-    const termUnitInput = document.getElementById(`termUnit${suffix}`);
-    const submitButton = document.getElementById(`calculate${suffix}`);
-    const resultsDiv = document.getElementById(`results${suffix}`);
+    const termUnitInput   = document.getElementById(`termUnit${suffix}`);
+    const submitButton    = document.getElementById(`calculate${suffix}`);
+    const resultsDiv      = document.getElementById(`results${suffix}`);
 
-    const displayAdvance = document.getElementById(`displayAdvance${suffix}`);
-    const interestPaid = document.getElementById(`interestPaid${suffix}`);
-    const totalPayback = document.getElementById(`totalPayback${suffix}`);
-    const periodicPayment = document.getElementById(`periodicPayment${suffix}`);
-    const ratePerMonth = document.getElementById(`ratePerMonth${suffix}`);
+    const displayAdvance   = document.getElementById(`displayAdvance${suffix}`);
+    const interestPaid     = document.getElementById(`interestPaid${suffix}`);
+    const totalPayback     = document.getElementById(`totalPayback${suffix}`);
+    const periodicPayment  = document.getElementById(`periodicPayment${suffix}`);
+    const ratePerMonth     = document.getElementById(`ratePerMonth${suffix}`);
 
     function validateForm() {
       const advanceAmt = parseCurrency(advanceInput.value);
       const factorRate = parseFloat(factorRateInput.value);
-      const termLen = parseInt(termLengthInput.value, 10);
+      const termLen    = parseInt(termLengthInput.value, 10);
       if (advanceAmt > 0 && factorRate >= 1 && termLen >= 1) {
         submitButton.disabled = false;
       } else {
@@ -146,13 +146,13 @@ title: "MCA Deal Comparison | Nicolas Lescalier"
 
     form.addEventListener('submit', function(event) {
       event.preventDefault();
-      const advanceAmt = parseCurrency(advanceInput.value);
-      const factorRate = parseFloat(factorRateInput.value);
-      const termLen = parseInt(termLengthInput.value, 10);
-      const termUnit = termUnitInput.value;
+      const advanceAmt  = parseCurrency(advanceInput.value);
+      const factorRate  = parseFloat(factorRateInput.value);
+      const termLen     = parseInt(termLengthInput.value, 10);
+      const termUnit    = termUnitInput.value;
 
       // Calculate total payback & interest
-      const totPay = advanceAmt * factorRate;
+      const totPay  = advanceAmt * factorRate;
       const intPaid = totPay - advanceAmt;
 
       // Convert term length to months using 20 business days = 1 month
@@ -166,20 +166,20 @@ title: "MCA Deal Comparison | Nicolas Lescalier"
       }
 
       // Rate per month (%) & interest $/month
-      const rpm = termInMonths > 0 ? ((factorRate - 1) / termInMonths) * 100 : 0;
+      const rpm             = termInMonths > 0 ? ((factorRate - 1) / termInMonths) * 100 : 0;
       const interestPerMonth = termInMonths > 0 ? intPaid / termInMonths : 0;
-      const freqLabel = {
-        days: 'per Business Day',
-        weeks: 'per Week',
+      const freqLabel       = {
+        days:   'per Business Day',
+        weeks:  'per Week',
         months: 'per Month'
       }[termUnit];
       const payPerPeriod = totPay / termLen;
 
-      displayAdvance.textContent = `Advance Amount: $${formatCurrency(advanceAmt)}`;
-      interestPaid.textContent = `Interest Paid Over Time: $${formatCurrency(intPaid)}`;
-      totalPayback.textContent = `Total Payback Amount: $${formatCurrency(totPay)}`;
-      periodicPayment.textContent = `Periodic Payment (${freqLabel}): $${formatCurrency(payPerPeriod)}`;
-      ratePerMonth.textContent = `Rate per Month: ${rpm.toFixed(2)}% ($${formatCurrency(interestPerMonth)}/month)`;
+      displayAdvance.textContent    = `Advance Amount: $${formatCurrency(advanceAmt)}`;
+      interestPaid.textContent      = `Interest Paid Over Time: $${formatCurrency(intPaid)}`;
+      totalPayback.textContent      = `Total Payback Amount: $${formatCurrency(totPay)}`;
+      periodicPayment.textContent   = `Periodic Payment (${freqLabel}): $${formatCurrency(payPerPeriod)}`;
+      ratePerMonth.textContent      = `Rate per Month: ${rpm.toFixed(2)}% ($${formatCurrency(interestPerMonth)}/month)`;
 
       resultsDiv.style.display = 'block';
     });
