@@ -3,13 +3,380 @@ layout: default
 title: "Nicolas Lescalier | MCA & Term Loans"
 ---
 
+<style>
+  /* ─── Basic Reset ─── */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #f2f4f7;
+    line-height: 1.6;
+  }
+  a {
+    color: #007acc;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  a:hover {
+    opacity: 0.8;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  .container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+
+  /* ─── Hero Section ─── */
+  .hero {
+    background: linear-gradient(135deg, #007acc, #004e89);
+    color: #fff;
+    text-align: center;
+    padding: 4rem 1rem;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+  }
+  .hero p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  .hero .btn {
+    background: #fff;
+    color: #004e89;
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .hero .btn:hover {
+    background: #f0f0f0;
+  }
+
+  /* ─── About Section ─── */
+  .about-section {
+    background: #fff;
+    padding: 3rem 0;
+  }
+  .about-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #004e89;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+  .about-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .profile-image-wrapper {
+    flex: 0 0 200px;
+    text-align: center;
+  }
+  .profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #007acc;
+  }
+  .profile-text {
+    flex: 1 1 300px;
+    max-width: 600px;
+  }
+  .profile-text p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #444;
+  }
+  .profile-text em {
+    color: #007acc;
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  /* ─── Services Section ─── */
+  .services-section {
+    padding: 3rem 0;
+  }
+  .services-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #004e89;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.75rem;
+  }
+  .service-card {
+    background: #fff;
+    border: 1px solid #e0e2e5;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: box-shadow 0.2s;
+  }
+  .service-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  .service-card h3 {
+    font-size: 1.25rem;
+    color: #004e89;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.3px;
+  }
+  .service-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* ─── Testimonials Section ─── */
+  .testimonials-section {
+    background: #f9f9f9;
+    padding: 3rem 0;
+  }
+  .testimonials-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #004e89;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .testimonial {
+    background: #fff;
+    border-left: 4px solid #007acc;
+    padding: 1.5rem;
+    border-radius: 6px;
+    position: relative;
+  }
+  .testimonial blockquote {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+  .testimonial figcaption {
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+    font-size: 0.95rem;
+  }
+
+  /* ─── Resources & Tools Section ─── */
+  .resources-section {
+    padding: 3rem 0;
+  }
+  .resources-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #004e89;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+  .resources-list {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+  .resources-list li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: baseline;
+  }
+  .resources-list a {
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+  .resource-desc {
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  /* ─── Blog/Insights Section ─── */
+  .blog-section {
+    background: #fff;
+    padding: 3rem 0;
+  }
+  .blog-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #004e89;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.75rem;
+  }
+  .blog-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  }
+  .blog-card h3 {
+    font-size: 1.25rem;
+    color: #004e89;
+    margin-bottom: 0.75rem;
+  }
+  .blog-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
+  }
+  .read-more {
+    color: #007acc;
+    font-weight: bold;
+    margin-left: 0.25rem;
+  }
+
+  /* ─── Contact Section ─── */
+  .contact-section {
+    padding: 3rem 0;
+  }
+  .contact-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #004e89;
+    margin-bottom: 1.5rem;
+  }
+  .contact-details {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    padding-left: 0;
+  }
+  .contact-details li {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+  }
+  .contact-details a {
+    color: #007acc;
+  }
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+  }
+  .contact-form .form-field label {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    display: block;
+    color: #333;
+  }
+  .contact-form .form-field input,
+  .contact-form .form-field textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: #fafafa;
+  }
+  .contact-form .form-field input:focus,
+  .contact-form .form-field textarea:focus {
+    outline: none;
+    border-color: #004e89;
+    box-shadow: 0 0 0 3px rgba(0, 78, 137, 0.2);
+    background: #fff;
+  }
+  .contact-form button {
+    background: #007acc;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    justify-self: center;
+  }
+  .contact-form button:hover {
+    background: #005fa3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  .contact-form button:active {
+    background: #004e89;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  }
+
+  /* ─── Responsive Tweaks ─── */
+  @media (max-width: 900px) {
+    .hero h1 {
+      font-size: 2.25rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+    .about-grid {
+      flex-direction: column;
+    }
+    .services-grid,
+    .testimonials-grid,
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+    .calculator-container {
+      margin: 2rem 1rem;
+    }
+  }
+  @media (max-width: 600px) {
+    .hero {
+      padding: 3rem 1rem;
+    }
+    .hero h1 {
+      font-size: 2rem;
+    }
+    .hero p {
+      font-size: 0.95rem;
+    }
+    .contact-form .form-field input,
+    .contact-form .form-field textarea {
+      font-size: 0.95rem;
+    }
+  }
+</style>
+
 <main>
   <!-- Hero -->
   <section class="hero">
     <div class="container">
       <h1>Welcome, I’m <strong>Nicolas Lescalier</strong></h1>
       <p class="hero-subtitle">
-        Commercial financing specialist for Merchant Cash Advances, Term Loans, and CRE financing—serving Ontario & US markets.
+        Commercial financing specialist for Merchant Cash Advances, Term Loans, and CRE financing—serving the United States & Canada.
       </p>
       <a href="#contact" class="btn">Book a Consultation</a>
     </div>
@@ -19,7 +386,7 @@ title: "Nicolas Lescalier | MCA & Term Loans"
   <section id="about" class="about-section">
     <div class="container">
       <h2>About Me</h2>
-      <div class="two-column about-grid">
+      <div class="about-grid">
         <div class="profile-image-wrapper">
           <img
             src="https://ca.slack-edge.com/TTGE78XT6-U014QDNH198-b0c035a0dcc3-512"
@@ -29,7 +396,7 @@ title: "Nicolas Lescalier | MCA & Term Loans"
         </div>
         <div class="profile-text">
           <p>
-            I’m a Toronto-based broker with over 5 years of experience arranging Merchant Cash Advances, Term Loans, and Commercial Real Estate refinancing. I help businesses secure fast, flexible capital to optimize cash flow, fund growth, and manage construction projects.
+            I’m a Toronto‑based broker with over 5 years of experience arranging Merchant Cash Advances, Term Loans, and Commercial Real Estate refinancing. I help businesses secure fast, flexible capital to optimize cash flow, fund growth, and manage construction projects.
           </p>
           <p>
             <em>Why choose me?</em> I leverage deep relationships with multiple lenders, fast turnaround times, and personalized service to match you with the best financing solution for your unique needs.
@@ -46,19 +413,27 @@ title: "Nicolas Lescalier | MCA & Term Loans"
       <div class="services-grid">
         <article class="service-card">
           <h3>Merchant Cash Advance (MCA)</h3>
-          <p>Quick capital based on future receivables—ideal for seasonal or retail businesses.</p>
+          <p>
+            Quick capital based on future receivables—ideal for seasonal or retail businesses.
+          </p>
         </article>
         <article class="service-card">
           <h3>Term Loan Structuring</h3>
-          <p>Customized repayment schedules with competitive rates—perfect for expansion or equipment purchases.</p>
+          <p>
+            Customized repayment schedules with competitive rates—perfect for expansion or equipment purchases.
+          </p>
         </article>
         <article class="service-card">
           <h3>Commercial Real Estate (CRE) Refinancing</h3>
-          <p>Lower monthly payments and equity take‑out options for commercial properties.</p>
+          <p>
+            Lower monthly payments and equity take‑out options for commercial properties.
+          </p>
         </article>
         <article class="service-card">
           <h3>Construction & Bridge Financing</h3>
-          <p>Short‑term funding to bridge gaps between project phases or refinance at completion.</p>
+          <p>
+            Short‑term funding to bridge gaps between project phases or refinance at completion.
+          </p>
         </article>
       </div>
     </div>
@@ -75,6 +450,7 @@ title: "Nicolas Lescalier | MCA & Term Loans"
           </blockquote>
           <figcaption>— Sarah P., Restaurant Owner</figcaption>
         </figure>
+
         <figure class="testimonial">
           <blockquote>
             “We refinanced our office building at a 2 % lower rate thanks to Nicolas’s network. Huge savings!”
