@@ -4,88 +4,146 @@ title: "MCA Deal Comparison | Nicolas Lescalier"
 ---
 
 <div class="container">
-  <h1>MCA Deal Comparison</h1>
+  <h1 class="page-title">MCA Deal Comparison</h1>
 
   <div class="comparison-row">
     <!-- Deal A -->
-    <div class="calculator">
-      <h2>Deal A</h2>
-      <form id="mca-form-1">
-        <div class="row">
-          <div>
+    <div class="calculator-card">
+      <h2 class="calculator-title">Deal A</h2>
+      <form id="mca-form-1" class="calculator-form">
+        <div class="form-grid">
+          <div class="form-group">
             <label for="advanceAmount1">Advance Amount ($)</label>
-            <input type="text" id="advanceAmount1" placeholder="e.g., 10,000.00" required />
+            <input
+              type="text"
+              id="advanceAmount1"
+              placeholder="10,000.00"
+              required
+              class="form-input"
+            />
           </div>
-          <div>
-            <label for="factorRate1">Factor Rate (e.g., 1.20)</label>
-            <input type="number" id="factorRate1" placeholder="1.20" min="1" step="0.01" required />
+          <div class="form-group">
+            <label for="factorRate1">Factor Rate</label>
+            <input
+              type="number"
+              id="factorRate1"
+              placeholder="1.20"
+              min="1"
+              step="0.01"
+              required
+              class="form-input"
+            />
           </div>
         </div>
-        <div>
-          <label for="termLength1">Term Length</label>
-          <div class="row">
-            <div>
-              <input type="number" id="termLength1" placeholder="140" min="1" step="1" required />
-            </div>
-            <div>
-              <select id="termUnit1" required>
-                <option value="days">Business Days</option>
-                <option value="weeks">Weeks</option>
-                <option value="months">Months</option>
-              </select>
-            </div>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="termLength1">Term Length</label>
+            <input
+              type="number"
+              id="termLength1"
+              placeholder="140"
+              min="1"
+              step="1"
+              required
+              class="form-input"
+            />
+          </div>
+          <div class="form-group">
+            <label for="termUnit1">Term Unit</label>
+            <select id="termUnit1" required class="form-input">
+              <option value="days">Business Days</option>
+              <option value="weeks">Weeks</option>
+              <option value="months">Months</option>
+            </select>
           </div>
         </div>
-        <button type="submit" class="btn" id="calculate1" disabled>Calculate</button>
+        <button
+          type="submit"
+          id="calculate1"
+          class="btn btn-primary"
+          disabled
+        >
+          Calculate
+        </button>
       </form>
+
       <div class="results" id="results1" style="display: none;">
-        <h3>Results A</h3>
-        <div class="result-item" id="displayAdvance1"></div>
-        <div class="result-item" id="interestPaid1"></div>
-        <div class="result-item" id="totalPayback1"></div>
-        <div class="result-item" id="periodicPayment1"></div>
-        <div class="result-item" id="ratePerMonth1"></div>
+        <h3 class="results-title">Results A</h3>
+        <p class="result-item" id="displayAdvance1"></p>
+        <p class="result-item" id="interestPaid1"></p>
+        <p class="result-item" id="totalPayback1"></p>
+        <p class="result-item" id="periodicPayment1"></p>
+        <p class="result-item" id="ratePerMonth1"></p>
       </div>
     </div>
 
     <!-- Deal B -->
-    <div class="calculator">
-      <h2>Deal B</h2>
-      <form id="mca-form-2">
-        <div class="row">
-          <div>
+    <div class="calculator-card">
+      <h2 class="calculator-title">Deal B</h2>
+      <form id="mca-form-2" class="calculator-form">
+        <div class="form-grid">
+          <div class="form-group">
             <label for="advanceAmount2">Advance Amount ($)</label>
-            <input type="text" id="advanceAmount2" placeholder="e.g., 10,000.00" required />
+            <input
+              type="text"
+              id="advanceAmount2"
+              placeholder="10,000.00"
+              required
+              class="form-input"
+            />
           </div>
-          <div>
-            <label for="factorRate2">Factor Rate (e.g., 1.20)</label>
-            <input type="number" id="factorRate2" placeholder="1.20" min="1" step="0.01" required />
+          <div class="form-group">
+            <label for="factorRate2">Factor Rate</label>
+            <input
+              type="number"
+              id="factorRate2"
+              placeholder="1.20"
+              min="1"
+              step="0.01"
+              required
+              class="form-input"
+            />
           </div>
         </div>
-        <div>
-          <label for="termLength2">Term Length</label>
-          <div class="row">
-            <div>
-              <input type="number" id="termLength2" placeholder="140" min="1" step="1" required />
-            </div>
-            <div>
-              <select id="termUnit2" required>
-                <option value="days">Business Days</option>
-                <option value="weeks">Weeks</option>
-                <option value="months">Months</option>
-              </select>
-            </div>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="termLength2">Term Length</label>
+            <input
+              type="number"
+              id="termLength2"
+              placeholder="140"
+              min="1"
+              step="1"
+              required
+              class="form-input"
+            />
+          </div>
+          <div class="form-group">
+            <label for="termUnit2">Term Unit</label>
+            <select id="termUnit2" required class="form-input">
+              <option value="days">Business Days</option>
+              <option value="weeks">Weeks</option>
+              <option value="months">Months</option>
+            </select>
           </div>
         </div>
-        <button type="submit" class="btn" id="calculate2" disabled>Calculate</button>
+        <button
+          type="submit"
+          id="calculate2"
+          class="btn btn-primary"
+          disabled
+        >
+          Calculate
+        </button>
       </form>
+
       <div class="results" id="results2" style="display: none;">
-        <h3>Results B</h3>
-        <div class="result-item" id="displayAdvance2"></div>
-        <div class="result-item" id="interestPaid2"></div>
-        <div class="result-item" id="totalPayback2"></div>
-        <div class="result-item" id="periodicPayment2"></div>
-        <div class="result-item" id="ratePerMonth2"></div>
+        <h3 class="results-title">Results B</h3>
+        <p class="result-item" id="displayAdvance2"></p>
+        <p class="result-item" id="interestPaid2"></p>
+        <p class="result-item" id="totalPayback2"></p>
+        <p class="result-item" id="periodicPayment2"></p>
+        <p class="result-item" id="ratePerMonth2"></p>
       </div>
     </div>
   </div>
@@ -93,15 +151,18 @@ title: "MCA Deal Comparison | Nicolas Lescalier"
 
 <script>
   function formatCurrency(value) {
-    return value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    return value.toLocaleString("en-US", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
   }
   function parseCurrency(input) {
-    const numericString = input.replace(/,/g, '');
+    const numericString = input.replace(/,/g, "");
     return parseFloat(numericString) || 0;
   }
   function setupCalculator(suffix) {
-    const form          = document.getElementById(`mca-form-${suffix}`);
-    const advanceInput  = document.getElementById(`advanceAmount${suffix}`);
+    const form            = document.getElementById(`mca-form-${suffix}`);
+    const advanceInput    = document.getElementById(`advanceAmount${suffix}`);
     const factorRateInput = document.getElementById(`factorRate${suffix}`);
     const termLengthInput = document.getElementById(`termLength${suffix}`);
     const termUnitInput   = document.getElementById(`termUnit${suffix}`);
@@ -118,33 +179,29 @@ title: "MCA Deal Comparison | Nicolas Lescalier"
       const advanceAmt = parseCurrency(advanceInput.value);
       const factorRate = parseFloat(factorRateInput.value);
       const termLen    = parseInt(termLengthInput.value, 10);
-      if (advanceAmt > 0 && factorRate >= 1 && termLen >= 1) {
-        submitButton.disabled = false;
-      } else {
-        submitButton.disabled = true;
-      }
+      submitButton.disabled = !(advanceAmt > 0 && factorRate >= 1 && termLen >= 1);
     }
 
     // Real-time validation
-    advanceInput.addEventListener('input', validateForm);
-    factorRateInput.addEventListener('input', validateForm);
-    termLengthInput.addEventListener('input', validateForm);
-    termUnitInput.addEventListener('change', validateForm);
+    advanceInput.addEventListener("input", validateForm);
+    factorRateInput.addEventListener("input", validateForm);
+    termLengthInput.addEventListener("input", validateForm);
+    termUnitInput.addEventListener("change", validateForm);
 
-    advanceInput.addEventListener('blur', function() {
+    advanceInput.addEventListener("blur", function () {
       const rawValue = parseCurrency(this.value);
       if (!isNaN(rawValue)) {
         this.value = formatCurrency(rawValue);
       }
     });
-    advanceInput.addEventListener('focus', function() {
+    advanceInput.addEventListener("focus", function () {
       const rawValue = parseCurrency(this.value);
       if (!isNaN(rawValue)) {
-        this.value = rawValue > 0 ? rawValue.toFixed(2) : '';
+        this.value = rawValue > 0 ? rawValue.toFixed(2) : "";
       }
     });
 
-    form.addEventListener('submit', function(event) {
+    form.addEventListener("submit", function (event) {
       event.preventDefault();
       const advanceAmt  = parseCurrency(advanceInput.value);
       const factorRate  = parseFloat(factorRateInput.value);
@@ -157,9 +214,9 @@ title: "MCA Deal Comparison | Nicolas Lescalier"
 
       // Convert term length to months using 20 business days = 1 month
       let termInMonths;
-      if (termUnit === 'months') {
+      if (termUnit === "months") {
         termInMonths = termLen;
-      } else if (termUnit === 'weeks') {
+      } else if (termUnit === "weeks") {
         termInMonths = termLen / 4.345;  // approx. weeks per month
       } else {
         termInMonths = termLen / 20;     // 20 business days per month
@@ -169,9 +226,9 @@ title: "MCA Deal Comparison | Nicolas Lescalier"
       const rpm             = termInMonths > 0 ? ((factorRate - 1) / termInMonths) * 100 : 0;
       const interestPerMonth = termInMonths > 0 ? intPaid / termInMonths : 0;
       const freqLabel       = {
-        days:   'per Business Day',
-        weeks:  'per Week',
-        months: 'per Month'
+        days:   "per Business Day",
+        weeks:  "per Week",
+        months: "per Month",
       }[termUnit];
       const payPerPeriod = totPay / termLen;
 
@@ -181,7 +238,7 @@ title: "MCA Deal Comparison | Nicolas Lescalier"
       periodicPayment.textContent   = `Periodic Payment (${freqLabel}): $${formatCurrency(payPerPeriod)}`;
       ratePerMonth.textContent      = `Rate per Month: ${rpm.toFixed(2)}% ($${formatCurrency(interestPerMonth)}/month)`;
 
-      resultsDiv.style.display = 'block';
+      resultsDiv.style.display = "block";
     });
 
     // Initialize validation on load
@@ -189,6 +246,6 @@ title: "MCA Deal Comparison | Nicolas Lescalier"
   }
 
   // Initialize both calculators
-  setupCalculator('1');
-  setupCalculator('2');
+  setupCalculator("1");
+  setupCalculator("2");
 </script>
