@@ -1,7 +1,7 @@
 ---
 title: "Nicolas Lescalier | U.S. Business Financing Specialist"
 description: "Trusted U.S. business financing specialist offering merchant cash advances, term loans, bridge loans and commercial real estate financing to small and mid‑sized companies across the United States."
-permalink: "/"
+permalink: /us/
 layout: default
 ---
 
