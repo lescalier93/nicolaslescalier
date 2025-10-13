@@ -1,1 +1,28 @@
+title: "Nicolas Lescalier | Business Financing & Merchant Cash Advances"
+description: "Official site of Nicolas Lescalier, Toronto-based funding manager helping small businesses secure merchant cash advances, SBA & term loans, and commercial real-estate funding."
+url: "https://nicolaslescalier.com"
+
+# SEO and sitemap plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Social metadata
+twitter:
+  username: nicolaslescalier
+  card: summary
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+
+sitemap:
+  filename: "sitemap.xml"
+
+markdown: kramdown
+kramdown:
+  input: GFM
 
