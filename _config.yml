@@ -1,28 +1,26 @@
-title: "Nicolas Lescalier | Business Financing & Merchant Cash Advances"
-description: "Official site of Nicolas Lescalier, Toronto-based funding manager helping small businesses secure merchant cash advances, SBA & term loans, and commercial real-estate funding."
-url: "https://nicolaslescalier.com"
+# Site configuration for Nicolas Lescalier U.S. market
 
-# SEO and sitemap plugins
+# Basic settings
+url: "https://nicolaslescalier.com"
+title: "Nicolas Lescalier | U.S. Business Financing"
+description: "Trusted U.S. business financing specialist helping small and mid‑sized companies secure merchant cash advances, term loans, bridge loans and commercial real estate financing."
+
+# Plugins to automatically generate SEO metadata and sitemap
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Social metadata
-twitter:
-  username: nicolaslescalier
-  card: summary
+# Optional: exclude vendor or tooling directories
+exclude:
+  - vendor
 
+# Markdown processing
+markdown: kramdown
+
+# Default layout assignment for posts (if you add blog posts)
 defaults:
   - scope:
       path: ""
       type: "pages"
     values:
       layout: default
-
-sitemap:
-  filename: "sitemap.xml"
-
-markdown: kramdown
-kramdown:
-  input: GFM
-
