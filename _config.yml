@@ -7,18 +7,18 @@ description: "Trusted U.S. business financing specialist helping small and midâ€
 
 # Plugins to automatically generate SEO metadata and sitemap
 plugins:
-      - jekyll-seo-tag
+  - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-redirect-from
+
 # Optional: exclude vendor or tooling directories
-exlude:
-   -
+exclude:
   - vendor
 
 # Markdown processing
 markdown: kramdown
 
-# Default layout assignment for posts (if you add blog posts)
+# Default layout assignment for pages
 defaults:
   - scope:
       path: ""
