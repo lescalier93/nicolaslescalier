@@ -11,7 +11,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
 # Optional: exclude vendor or tooling directories
-exclude:
+exlude:
+   -
   - vendor
 
 # Markdown processing
