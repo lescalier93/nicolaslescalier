@@ -1,57 +1,96 @@
-/* Global styles */
+/* Global styles with modern aesthetic */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background-color: #f3f7fa;
   color: #333;
 }
+
+/* Navigation bar */
 nav {
-  background-color: #004f9e;
+  background-color: #0a3c6c;
   color: #fff;
-  padding: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 nav a {
   color: #fff;
-  margin-right: 1rem;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 nav a:hover {
   text-decoration: underline;
 }
+
+/* Main content container */
 main {
   max-width: 900px;
   margin: 2rem auto;
-  padding: 0 1rem;
+  padding: 1.5rem;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-h1, h2, h3, h4 {
-  color: #004f9e;
-  margin-top: 1.5rem;
-}
-p, li {
+
+/* Headings */
+h1 {
+  color: #0a3c6c;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
+h2 {
+  color: #0a3c6c;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+h3 {
+  color: #0a3c6c;
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+/* Paragraph and lists */
+p {
+  margin-bottom: 1rem;
+}
+ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Blockquotes */
 blockquote {
-  border-left: 4px solid #004f9e;
+  border-left: 4px solid #0a3c6c;
   padding-left: 1rem;
   color: #555;
   font-style: italic;
 }
-button, .btn {
-  background-color: #004f9e;
+
+/* Call-to-action button */
+.call-to-action {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #0a3c6c;
   color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
   border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
   text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out;
 }
-button:hover, .btn:hover {
-  background-color: #003770;
+.call-to-action:hover {
+  background-color: #063057;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: #555;
+  font-size: 0.9rem;
 }
