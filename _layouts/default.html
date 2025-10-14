@@ -13,15 +13,25 @@
 <body>
   <header>
     <nav>
-      <a href="/">Home</a> |
-      <a href="/services/">Services</a> |
-      <a <a href="/client-success-stories/">Success Stories</a> |
-            <a href="/us/">U.S. Market</a>  |
-      <a
-      <a href="/about-nicolas-lescalier-us/">About</a> |
-      <a href="/contact/">Contact</a>
+      <<a href="{{ '/' | relative_url }}">Home</a> |
+        
+      <a href="{{ '/services/' | relative_url }}">Services</a> |
+        
+      <<a href="{{ '/services/us-client-success-stories/' | relative_url }}">Success Stories</a> |
+        
+            <a <a href="{{ '/us/' | relative_url }}">U.S. Market</a> |
+        
+     
+              <a href="{{ '/about-nicolas-lescalier-us/' | relative_url }}">About</a> |
+      <a href="{{ '/contact/' | relative_url }}">Contact</a>
+   
       
-    </nav>
+
+        
+        
+        
+      
+    </nv>
   </header>
 
   <main>
