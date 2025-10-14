@@ -1,8 +1,22 @@
-<nav>
-  <a href="{{ '/' | relative_url }}">Home</a> |
-  <a href="{{ '/services/' | relative_url }}">Services</a> |
-  <a href="{{ '/services/us-client-success-stories/' | relative_url }}">Success Stories</a> |
-  <a href="{{ '/us/' | relative_url }}">U.S. Market</a> |
-  <a href="{{ '/about-nicolas-lescalier-us/' | relative_url }}">About</a> |
-  <a href="{{ '/contact/' | relative_url }}">Contact</a>
-</nav>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    {% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <nav>
+      <a href="{{ '/' | relative_url }}">Home</a> |
+      <a href="{{ '/services/' | relative_url }}">Services</a> |
+      <a href="{{ '/services/us-client-success-stories/' | relative_url }}">Success Stories</a> |
+      <a href="{{ '/us/' | relative_url }}">U.S. Market</a> |
+      <a href="{{ '/about-nicolas-lescalier-us/' | relative_url }}">About</a> |
+      <a href="{{ '/contact/' | relative_url }}">Contact</a>
+    </nav>
+    <main>
+      {{ content }}
+    </main>
+  </body>
+</html>>
