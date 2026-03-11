@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Term Loan Calculator | Nicolas Lescalier"
-description: "Model term loan payments, compare repayment scenarios, and review amortization schedules for U.S. business financing decisions."
+description: "Model term loan payments, solve for the missing variable, review amortization, and carry the scenario into a financing application."
 permalink: /term-loan-calculator.html
 ---
 
@@ -14,152 +14,6 @@ permalink: /term-loan-calculator.html
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     gap: 1rem;
-  }
-  .calculator-container {
-    background: rgba(255, 252, 247, 0.92);
-    border: 1px solid rgba(22, 32, 42, 0.08);
-    border-radius: 24px;
-    box-shadow: 0 18px 48px rgba(34, 36, 38, 0.12);
-    overflow: hidden;
-  }
-  .calculator-header {
-    background: linear-gradient(135deg, #1b4d3e, #12352a);
-    color: #fff;
-    padding: 1.75rem 2rem;
-  }
-  .calculator-header h1,
-  .calculator-header h2 {
-    margin: 0;
-    font-size: 2rem;
-  }
-  .calculator-header p {
-    margin: 0.5rem 0 0;
-    font-size: 1rem;
-    opacity: 0.9;
-  }
-  .form-grid {
-    display: grid;
-    gap: 1.5rem;
-    padding: 2rem 2.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-  .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-  .form-group label {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: #16202a;
-  }
-  .input-row {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-  .input-row input[type="text"],
-  .input-row input[type="number"] {
-    flex: 1;
-    padding: 0.85rem 1rem;
-    font-size: 1.05rem;
-    border: 1px solid rgba(22, 32, 42, 0.14);
-    border-radius: 12px;
-    transition: border-color 0.2s, box-shadow 0.2s;
-    text-align: right;
-    background: rgba(255, 255, 255, 0.92);
-  }
-  .input-row input[type="text"]:focus,
-  .input-row input[type="number"]:focus {
-    outline: none;
-    border-color: #1b4d3e;
-    box-shadow: 0 0 0 3px rgba(27, 77, 62, 0.18);
-    background: #fff;
-  }
-  .input-row input[type="checkbox"] {
-    transform: scale(1.2);
-    accent-color: #1b4d3e;
-  }
-  .schedule-actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(243, 236, 226, 0.62);
-    border-top: 1px solid rgba(22, 32, 42, 0.08);
-    padding: 1.25rem 2.5rem;
-  }
-  .schedule-actions .freq {
-    display: flex;
-    align-items: center;
-  }
-  .schedule-actions .freq label {
-    margin-right: 0.6rem;
-    font-weight: bold;
-    color: #16202a;
-    font-size: 1rem;
-  }
-  .schedule-actions .freq select {
-    padding: 0.6rem 0.8rem;
-    border: 1px solid rgba(22, 32, 42, 0.14);
-    border-radius: 12px;
-    font-size: 1rem;
-    transition: border-color 0.2s, box-shadow 0.2s;
-    background: #fff;
-  }
-  .schedule-actions .freq select:focus {
-    outline: none;
-    border-color: #1b4d3e;
-    box-shadow: 0 0 0 3px rgba(27, 77, 62, 0.18);
-  }
-  .btn-download {
-    background: #1b4d3e;
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1.6rem;
-    font-size: 1rem;
-    border-radius: 999px;
-    cursor: pointer;
-    transition: background 0.2s, box-shadow 0.2s;
-  }
-  .btn-download:hover {
-    background: #12352a;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  .btn-download:active {
-    background: #12352a;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  }
-  .table-wrapper {
-    overflow-x: auto;
-    margin: 0 2.5rem 2.5rem;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.95rem;
-    color: #16202a;
-    min-width: 650px;
-  }
-  th, td {
-    padding: 0.75rem 1rem;
-    border: 1px solid rgba(22, 32, 42, 0.1);
-  }
-  th {
-    background: #1b4d3e;
-    color: #fff;
-    font-weight: 500;
-    text-align: center;
-  }
-  td {
-    text-align: right;
-  }
-  td:first-child {
-    text-align: center;
-  }
-  tr:nth-child(even) {
-    background: rgba(243, 236, 226, 0.46);
-  }
-  tr:hover {
-    background: rgba(217, 122, 51, 0.12);
   }
   .tool-note {
     padding: 1.4rem;
@@ -178,54 +32,307 @@ permalink: /term-loan-calculator.html
     padding-left: 1.1rem;
     margin-bottom: 0;
   }
+  .calculator-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .calculator-toolbar p {
+    max-width: 45rem;
+    margin-bottom: 0;
+  }
+  .preset-row,
+  .schedule-actions__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .mini-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(22, 32, 42, 0.12);
+    background: rgba(255, 255, 255, 0.72);
+    color: #16202a;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(18, 53, 42, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+  .mini-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(18, 53, 42, 0.12);
+  }
+  .mini-button--ghost {
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.45);
+  }
+  .btn-download {
+    background: #1b4d3e;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.35rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 10px 24px rgba(18, 53, 42, 0.18);
+  }
+  .btn-download:hover:not(:disabled) {
+    background: #12352a;
+    box-shadow: 0 14px 28px rgba(18, 53, 42, 0.22);
+  }
+  .btn-download:disabled {
+    background: #92a19b;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
   .insight-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
   }
-  .insight-card {
+  .insight-card,
+  .summary-card {
     padding: 1.25rem;
     border-radius: 18px;
     border: 1px solid rgba(22, 32, 42, 0.08);
     background: rgba(255, 252, 247, 0.88);
     box-shadow: 0 18px 48px rgba(34, 36, 38, 0.12);
   }
-  .insight-card h3 {
+  .insight-card h3,
+  .summary-card h3 {
     margin-top: 0;
     margin-bottom: 0.65rem;
   }
-  @media (max-width: 920px) {
-    .tool-intro {
-      grid-template-columns: 1fr;
-    }
-    .schedule-actions {
-      flex-direction: column;
-      gap: 1rem;
-      padding: 1rem 1.5rem;
-    }
-    .schedule-actions .freq {
-      width: 100%;
-      justify-content: center;
-    }
-    .btn-download {
-      width: 100%;
-    }
-    .insight-grid {
+  .calculator-container {
+    background: rgba(255, 252, 247, 0.92);
+    border: 1px solid rgba(22, 32, 42, 0.08);
+    border-radius: 24px;
+    box-shadow: 0 18px 48px rgba(34, 36, 38, 0.12);
+    overflow: hidden;
+  }
+  .calculator-header {
+    background: linear-gradient(135deg, #1b4d3e, #12352a);
+    color: #fff;
+    padding: 1.75rem 2rem;
+  }
+  .calculator-header h2 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  .calculator-header p {
+    margin: 0.55rem 0 0;
+    font-size: 1rem;
+    opacity: 0.9;
+    max-width: 42rem;
+  }
+  .summary-strip {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 1.25rem 2rem 0;
+  }
+  .summary-label {
+    display: block;
+    color: rgba(22, 32, 42, 0.58);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 0.35rem;
+  }
+  .summary-value {
+    display: block;
+    color: #16202a;
+    font-size: 1.45rem;
+    line-height: 1.1;
+  }
+  .summary-note {
+    display: block;
+    margin-top: 0.3rem;
+    color: rgba(22, 32, 42, 0.68);
+    font-size: 0.92rem;
+  }
+  .validation-note {
+    margin: 1rem 2rem 0;
+    padding: 0.95rem 1rem;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(22, 32, 42, 0.08);
+    color: #16202a;
+  }
+  .validation-note--error {
+    border-color: rgba(159, 63, 42, 0.2);
+    background: rgba(255, 243, 239, 0.92);
+    color: #8d3826;
+  }
+  .validation-note--success {
+    border-color: rgba(27, 77, 62, 0.16);
+    background: rgba(239, 248, 244, 0.92);
+    color: #1b4d3e;
+  }
+  .form-grid {
+    display: grid;
+    gap: 1.4rem;
+    padding: 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+  .form-group label {
+    font-weight: 700;
+    color: #16202a;
+  }
+  .solve-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .solve-row input[type="text"],
+  .solve-row input[type="number"] {
+    flex: 1;
+    padding: 0.9rem 1rem;
+    font-size: 1.05rem;
+    border: 1px solid rgba(22, 32, 42, 0.14);
+    border-radius: 12px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    text-align: right;
+    background: rgba(255, 255, 255, 0.92);
+  }
+  .solve-row input[type="text"]:focus,
+  .solve-row input[type="number"]:focus {
+    outline: none;
+    border-color: #1b4d3e;
+    box-shadow: 0 0 0 3px rgba(27, 77, 62, 0.18);
+    background: #fff;
+  }
+  .solve-row input[readonly] {
+    background: rgba(243, 236, 226, 0.92);
+    color: #1b4d3e;
+    font-weight: 700;
+  }
+  .solve-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
+    padding: 0.72rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(22, 32, 42, 0.1);
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #16202a;
+  }
+  .solve-chip input {
+    accent-color: #1b4d3e;
+  }
+  .field-help {
+    margin: 0;
+    color: rgba(22, 32, 42, 0.66);
+    font-size: 0.92rem;
+  }
+  .schedule-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(243, 236, 226, 0.62);
+    border-top: 1px solid rgba(22, 32, 42, 0.08);
+    padding: 1.25rem 2rem;
+  }
+  .schedule-actions .freq {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .schedule-actions .freq label {
+    font-weight: 700;
+    color: #16202a;
+  }
+  .schedule-actions .freq select {
+    padding: 0.75rem 0.9rem;
+    border: 1px solid rgba(22, 32, 42, 0.14);
+    border-radius: 12px;
+    font-size: 1rem;
+    background: #fff;
+  }
+  .table-wrapper {
+    overflow-x: auto;
+    margin: 0 2rem 2rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    color: #16202a;
+    min-width: 680px;
+  }
+  th,
+  td {
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(22, 32, 42, 0.1);
+  }
+  th {
+    background: #1b4d3e;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+  }
+  td {
+    text-align: right;
+  }
+  td:first-child {
+    text-align: center;
+  }
+  tr:nth-child(even) {
+    background: rgba(243, 236, 226, 0.46);
+  }
+  tr:hover {
+    background: rgba(217, 122, 51, 0.12);
+  }
+  @media (max-width: 980px) {
+    .tool-intro,
+    .insight-grid,
+    .summary-strip,
+    .form-grid {
       grid-template-columns: 1fr;
     }
   }
-  @media (max-width: 600px) {
-    .form-grid {
-      padding: 1.5rem 1rem;
-    }
+  @media (max-width: 760px) {
+    .solve-row,
     .schedule-actions {
-      padding: 1rem 1rem 1.5rem 1rem;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .schedule-actions .freq {
+      flex-direction: column;
+      align-items: stretch;
     }
     .table-wrapper {
-      margin: 0 1rem 1.5rem 1rem;
+      margin: 0 1rem 1.5rem;
     }
-    table {
-      min-width: 550px;
+    .calculator-header,
+    .summary-strip,
+    .form-grid {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .validation-note {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    .schedule-actions {
+      padding: 1rem;
     }
   }
 </style>
@@ -235,143 +342,173 @@ permalink: /term-loan-calculator.html
     <div class="panel">
       <p class="eyebrow">Calculator</p>
       <h1>Model whether a term loan payment actually fits the business.</h1>
-      <p>Use this tool to estimate payment load, loan term tradeoffs, and amortization before you commit to a lender path. The useful question is not just whether a loan is available. It is whether the repayment is supportable after the deal closes.</p>
+      <p>This calculator solves for the missing variable, builds the amortization, and shows the numbers borrowers usually underestimate: the payment, the total interest, and how long the cash flow has to carry the debt.</p>
       <div class="cta-row">
-        <a class="button" href="/apply/">Start application</a>
+        <a class="button" id="termScenarioLink" href="/apply/">Use this scenario in application</a>
         <a class="button button--secondary" href="/services/us-term-loans-approach/">Read the term loan guide</a>
       </div>
     </div>
     <aside class="tool-note">
       <p class="eyebrow">How to use it</p>
-      <h3>Lock any three fields and solve for the fourth.</h3>
+      <h3>Choose one field to solve for, then give the other three.</h3>
       <ul class="plain-list">
-        <li>Keep loan amount, rate, and term locked to solve for payment</li>
-        <li>Unlock rate or term to compare lender proposals</li>
-        <li>Switch between monthly and annual schedules to review total burden</li>
+        <li>Use it to back into payment, rate, loan amount, or term.</li>
+        <li>Annual schedule view groups the monthly amortization into yearly totals.</li>
+        <li>If the solved result looks unrealistic, the structure is likely weak before the lender review starts.</li>
       </ul>
     </aside>
+  </section>
+
+  <section class="section">
+    <div class="calculator-toolbar">
+      <div>
+        <p class="eyebrow">Scenario tools</p>
+        <h2 style="margin: 0; color: #16202a;">Use a real scenario or load an example.</h2>
+        <p>If you want a quick benchmark first, load one of the examples below and then adjust it to your file.</p>
+      </div>
+      <div class="preset-row">
+        <button class="mini-button" type="button" data-loan-preset="working-capital">Short-term example</button>
+        <button class="mini-button" type="button" data-loan-preset="growth">Growth example</button>
+        <button class="mini-button" type="button" data-loan-preset="longer-term">Longer-term example</button>
+      </div>
+    </div>
   </section>
 
   <section class="section">
     <div class="insight-grid">
       <article class="insight-card">
         <h3>Useful for longer-term fit</h3>
-        <p>Model whether the monthly load still makes sense after payroll, inventory, rent, and existing debt are considered.</p>
+        <p>Model whether the monthly load still works after payroll, rent, inventory, and existing debt are taken into account.</p>
       </article>
       <article class="insight-card">
-        <h3>Compare structure, not just rate</h3>
-        <p>Term, amortization, and payment cadence can change business strain as much as the nominal rate.</p>
+        <h3>Structure matters as much as rate</h3>
+        <p>Term length and amortization can change business strain just as much as the nominal rate.</p>
       </article>
       <article class="insight-card">
-        <h3>Best paired with real file context</h3>
-        <p>A calculator can show burden. It cannot decide whether term debt is cleaner than LOC, SBA, equipment finance, or another path.</p>
+        <h3>Best when tied to a real use of proceeds</h3>
+        <p>A calculator can tell you whether the debt fits. It cannot decide whether term, SBA, LOC, or equipment finance is the better product family.</p>
       </article>
-    </div>
-    <div class="cta-row">
-      <a class="button" href="/apply/">Apply with this scenario</a>
-      <a class="button button--secondary" href="/services/us-term-loans-approach/">Read the term loan guide</a>
     </div>
   </section>
 
   <div class="calculator-container">
-  <div class="calculator-header">
-    <h2>Loan Calculator</h2>
-    <p>Check the boxes next to the three fields you provide. The calculator computes the remaining field automatically.</p>
-  </div>
-  <div class="form-grid">
-    <div class="form-group">
-      <label for="loanAmount">Loan Amount ($)</label>
-      <div class="input-row">
-        <input
-          id="loanAmount"
-          type="text"
-          value="350,000.00"
-          onfocus="this.value=parseFloat(this.value.replace(/,/g,''))||''"
-          onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})"
-        />
-        <input id="lockAmount" type="checkbox" checked title="Lock this field" />
+    <div class="calculator-header">
+      <h2>Term Loan Solver and Amortization</h2>
+      <p>Select the field you want solved, then enter the other three. The calculator updates the answer, total repayment, total interest, and the amortization schedule automatically.</p>
+    </div>
+
+    <div class="summary-strip">
+      <article class="summary-card">
+        <span class="summary-label">Monthly payment</span>
+        <strong class="summary-value" id="summaryPayment">$0.00</strong>
+        <span class="summary-note" id="summaryPaymentNote">Updated as inputs change.</span>
+      </article>
+      <article class="summary-card">
+        <span class="summary-label">Total repaid</span>
+        <strong class="summary-value" id="summaryTotalPaid">$0.00</strong>
+        <span class="summary-note" id="summaryTotalPaidNote">Principal plus interest over the full term.</span>
+      </article>
+      <article class="summary-card">
+        <span class="summary-label">Total interest</span>
+        <strong class="summary-value" id="summaryInterest">$0.00</strong>
+        <span class="summary-note" id="summaryInterestNote">The cost of the debt if carried to maturity.</span>
+      </article>
+      <article class="summary-card">
+        <span class="summary-label">Payoff horizon</span>
+        <strong class="summary-value" id="summaryHorizon">0.00 years</strong>
+        <span class="summary-note" id="summaryHorizonNote">Annual view groups the same monthly schedule.</span>
+      </article>
+    </div>
+
+    <p class="validation-note" id="loanMessage">Select the field to solve for. The other three values must describe a realistic loan structure.</p>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="loanAmount">Loan amount ($)</label>
+        <div class="solve-row">
+          <input id="loanAmount" type="text" value="350,000.00" inputmode="decimal">
+          <label class="solve-chip" for="solveAmount">
+            <input id="solveAmount" type="radio" name="solveField" value="loanAmount">
+            Solve for this
+          </label>
+        </div>
+        <p class="field-help">Use the requested or quoted principal balance.</p>
+      </div>
+
+      <div class="form-group">
+        <label for="interestRate">Interest rate (%)</label>
+        <div class="solve-row">
+          <input id="interestRate" type="text" value="10.50" inputmode="decimal">
+          <label class="solve-chip" for="solveRate">
+            <input id="solveRate" type="radio" name="solveField" value="interestRate">
+            Solve for this
+          </label>
+        </div>
+        <p class="field-help">Annual nominal rate. Leave it as the solved field if you want to back into the implied pricing.</p>
+      </div>
+
+      <div class="form-group">
+        <label for="loanTerm">Loan term (years)</label>
+        <div class="solve-row">
+          <input id="loanTerm" type="text" value="10.00" inputmode="decimal">
+          <label class="solve-chip" for="solveTerm">
+            <input id="solveTerm" type="radio" name="solveField" value="loanTerm">
+            Solve for this
+          </label>
+        </div>
+        <p class="field-help">Use decimal years when needed. Example: `2.50` for a 30-month term.</p>
+      </div>
+
+      <div class="form-group">
+        <label for="payment">Monthly payment ($)</label>
+        <div class="solve-row">
+          <input id="payment" type="text" value="4,722.72" inputmode="decimal">
+          <label class="solve-chip" for="solvePayment">
+            <input id="solvePayment" type="radio" name="solveField" value="payment" checked>
+            Solve for this
+          </label>
+        </div>
+        <p class="field-help">Usually the most useful solve target when a borrower wants to know if the debt actually fits.</p>
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="interestRate">Interest Rate (%)</label>
-      <div class="input-row">
-        <input
-          id="interestRate"
-          type="text"
-          value="10.50"
-          step="0.01"
-          onfocus="this.value=parseFloat(this.value)||''"
-          onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})"
-        />
-        <input id="lockRate" type="checkbox" checked title="Lock this field" />
+    <div class="schedule-actions">
+      <div class="freq">
+        <label for="frequency">Schedule view</label>
+        <select id="frequency">
+          <option value="monthly">Monthly</option>
+          <option value="annual">Annual</option>
+        </select>
+      </div>
+      <div class="schedule-actions__buttons">
+        <button id="download" class="btn-download" type="button">Download PDF</button>
+        <button id="loan-reset" class="mini-button mini-button--ghost" type="button">Reset</button>
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="loanTerm">Loan Term (years)</label>
-      <div class="input-row">
-        <input
-          id="loanTerm"
-          type="text"
-          value="10.00"
-          step="0.01"
-          onfocus="this.value=parseFloat(this.value)||''"
-          onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})"
-        />
-        <input id="lockTerm" type="checkbox" checked title="Lock this field" />
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label for="payment">Monthly Payment ($)</label>
-      <div class="input-row">
-        <input
-          id="payment"
-          type="text"
-          value="4,722.72"
-          onfocus="this.value=parseFloat(this.value.replace(/,/g,''))||''"
-          onblur="this.value=Number(this.value||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})"
-        />
-        <input id="lockPayment" type="checkbox" title="Lock this field" />
-      </div>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th id="hdrPeriod">Month</th>
+            <th>Payment</th>
+            <th>Principal</th>
+            <th>Interest</th>
+            <th>Balance</th>
+          </tr>
+        </thead>
+        <tbody id="schedule"></tbody>
+      </table>
     </div>
   </div>
-
-  <!-- Frequency & PDF Download -->
-  <div class="schedule-actions">
-    <div class="freq">
-      <label for="frequency">Amortization Frequency:</label>
-      <select id="frequency">
-        <option value="monthly">Monthly</option>
-        <option value="annual" selected>Annual</option>
-      </select>
-    </div>
-    <button id="download" class="btn-download">Download PDF</button>
-  </div>
-  <div class="table-wrapper">
-    <table>
-      <thead>
-        <tr>
-          <th id="hdrPeriod">Year</th>
-          <th>Payment</th>
-          <th>Principal</th>
-          <th>Interest</th>
-          <th>Balance</th>
-        </tr>
-      </thead>
-      <tbody id="schedule"></tbody>
-    </table>
-  </div>
-</div>
 
   <section class="section">
     <div class="cta-panel">
       <p class="eyebrow">Interpret the result</p>
       <h2>Payment size is only one part of the decision.</h2>
-      <p>After you model the payment, compare it against operating cash flow, existing debt load, and the expected return from the use of proceeds. If you want, I can help pressure-test the numbers against real lender options.</p>
+      <p>The payment still has to compete with payroll, rent, inventory, taxes, and any existing debt. If the monthly number only works in a best-case month, the structure is probably too aggressive.</p>
       <div class="cta-row">
-        <a class="button" href="/apply/">Start application</a>
+        <a class="button" id="termBottomApplyLink" href="/apply/">Use this scenario in application</a>
         <a class="button button--secondary" href="/services/us-smbs-funding-guide/">Open funding guide</a>
       </div>
     </div>
@@ -382,169 +519,437 @@ permalink: /term-loan-calculator.html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.4/jspdf.plugin.autotable.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
-  const $    = id => document.getElementById(id),
-        fmt  = n  => Number(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}),
-        parseN = str => parseFloat(str.replace(/,/g,'')) || 0;
+  const $ = (id) => document.getElementById(id);
+  const currencyFields = new Set(["loanAmount", "payment"]);
+  const decimalFields = new Set(["interestRate", "loanTerm"]);
 
-  function state() {
-    const A = parseN($('loanAmount').value),
-          R = parseN($('interestRate').value)/100/12,
-          Y = parseN($('loanTerm').value),
-          N = Math.round(Y*12),
-          P = parseN($('payment').value);
+  function fmt(value) {
+    return Number(value).toLocaleString("en-US", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+  }
+
+  function parseValue(value) {
+    return parseFloat(String(value || "").replace(/[^0-9.-]/g, "")) || 0;
+  }
+
+  function amountRange(amount) {
+    if (amount < 25000) return "Under $25,000";
+    if (amount < 50000) return "$25,000-$50,000";
+    if (amount < 100000) return "$50,000-$100,000";
+    if (amount < 250000) return "$100,000-$250,000";
+    if (amount < 500000) return "$250,000-$500,000";
+    if (amount < 1000000) return "$500,000-$1,000,000";
+    return "$1,000,000+";
+  }
+
+  function paymentFromLoan(amount, monthlyRate, months) {
+    if (months <= 0) {
+      throw new Error("Loan term must be greater than zero.");
+    }
+    if (Math.abs(monthlyRate) < 1e-9) {
+      return amount / months;
+    }
+    return amount * monthlyRate / (1 - Math.pow(1 + monthlyRate, -months));
+  }
+
+  function amountFromPayment(payment, monthlyRate, months) {
+    if (months <= 0) {
+      throw new Error("Loan term must be greater than zero.");
+    }
+    if (Math.abs(monthlyRate) < 1e-9) {
+      return payment * months;
+    }
+    return payment * (1 - Math.pow(1 + monthlyRate, -months)) / monthlyRate;
+  }
+
+  function termFromPayment(amount, monthlyRate, payment) {
+    if (amount <= 0 || payment <= 0) {
+      throw new Error("Loan amount and payment must both be greater than zero.");
+    }
+    if (Math.abs(monthlyRate) < 1e-9) {
+      return amount / payment;
+    }
+    if (payment <= amount * monthlyRate) {
+      throw new Error("Payment is too low to ever reduce principal at this rate.");
+    }
+    return -Math.log(1 - (amount * monthlyRate) / payment) / Math.log(1 + monthlyRate);
+  }
+
+  function annualRateFromPayment(amount, months, payment) {
+    if (amount <= 0 || months <= 0 || payment <= 0) {
+      throw new Error("Loan amount, term, and payment must all be greater than zero.");
+    }
+
+    const zeroRatePayment = amount / months;
+    if (payment < zeroRatePayment - 0.01) {
+      throw new Error("Payment is too low for a positive rate over the selected term.");
+    }
+    if (Math.abs(payment - zeroRatePayment) < 0.01) {
+      return 0;
+    }
+
+    let low = 0;
+    let high = 1;
+
+    while (paymentFromLoan(amount, high, months) < payment && high < 100) {
+      high *= 2;
+    }
+
+    for (let i = 0; i < 80; i += 1) {
+      const mid = (low + high) / 2;
+      const guess = paymentFromLoan(amount, mid, months);
+      if (guess > payment) {
+        high = mid;
+      } else {
+        low = mid;
+      }
+    }
+
+    return ((low + high) / 2) * 12 * 100;
+  }
+
+  function getSolveField() {
+    return document.querySelector('input[name="solveField"]:checked').value;
+  }
+
+  function setFieldValue(id, value) {
+    $(id).value = fmt(value);
+  }
+
+  function getState() {
+    const amount = parseValue($("loanAmount").value);
+    const rateAnnual = parseValue($("interestRate").value);
+    const termYears = parseValue($("loanTerm").value);
+    const payment = parseValue($("payment").value);
+    const solveField = getSolveField();
 
     return {
-      A, R, Y, N, P,
-      freq: $('frequency').value,
-      locks: {
-        loanAmount:   $('lockAmount').checked,
-        interestRate: $('lockRate').checked,
-        loanTerm:     $('lockTerm').checked,
-        payment:      $('lockPayment').checked
-      }
+      amount,
+      rateAnnual,
+      monthlyRate: rateAnnual / 100 / 12,
+      termYears,
+      months: Math.round(termYears * 12),
+      payment,
+      frequency: $("frequency").value,
+      solveField,
     };
   }
 
-  function solveMissing(s) {
-    const { A, R, N, P, locks } = s;
-    if (!locks.payment)       return A * R / (1 - Math.pow(1+R, -N));
-    if (!locks.loanAmount)    return P * (1 - Math.pow(1+R, -N)) / R;
-    if (!locks.loanTerm) {
-      return Math.ceil((-Math.log(1 - (A * R)/P) / Math.log(1+R))/12*100)/100;
-    }
-    if (!locks.interestRate) {
-      let r = 0.01;
-      for (let i=0; i<20; i++) {
-        const f  = P * (1 - Math.pow(1+r, -N)) / r - A;
-        const df = (-P * (1 - Math.pow(1+r, -N)))/(r*r)
-                 + (P * N * Math.pow(1+r, -N-1))/r;
-        r -= f/df;
-        if (r <= 0) r = Math.abs(r);
-      }
-      return r * 12 * 100;
-    }
-    return 0;
+  function buildApplyHref(result) {
+    const params = new URLSearchParams({
+      product_interest: "Term loan",
+      amount_requested: amountRange(result.amount),
+      use_of_proceeds: "Evaluating whether a term loan payment fits the business and repayment timeline.",
+      additional_context: `Term scenario: $${fmt(result.amount)} amount, ${fmt(result.rateAnnual)}% annual rate, ${fmt(result.termYears)} years, monthly payment $${fmt(result.payment)}, total interest $${fmt(result.totalInterest)}.`,
+    });
+    return `/apply/?${params.toString()}`;
   }
 
-  function renderSchedule() {
-    const s    = state(),
-          tbody = $('schedule');
-    tbody.innerHTML = '';
-    $('hdrPeriod').textContent = s.freq==='monthly' ? 'Month' : 'Year';
-
-    let bal = s.A;
-    if (s.freq==='monthly') {
-      for (let i=1; i<=s.N; i++) {
-        const interest  = bal * s.R,
-              principal = s.P - interest;
-        bal -= principal;
-        const tr = tbody.insertRow();
-        tr.innerHTML = `
-          <td>${i}</td>
-          <td>${fmt(s.P)}</td>
-          <td>${fmt(principal)}</td>
-          <td>${fmt(interest)}</td>
-          <td>${fmt(Math.max(bal,0))}</td>
-        `;
-      }
-    } else {
-      let monthsLeft = s.N, year = 1;
-      while (monthsLeft>0) {
-        let yPay=0,yPr=0,yInt=0,
-            count = Math.min(12, monthsLeft);
-        for (let j=0; j<count; j++) {
-          const interest  = bal * s.R,
-                principal = s.P - interest;
-          yInt += interest;
-          yPr  += principal;
-          yPay += s.P;
-          bal -= principal;
-        }
-        const tr = tbody.insertRow();
-        tr.innerHTML = `
-          <td>${year}</td>
-          <td>${fmt(yPay)}</td>
-          <td>${fmt(yPr)}</td>
-          <td>${fmt(yInt)}</td>
-          <td>${fmt(Math.max(bal,0))}</td>
-        `;
-        monthsLeft -= count;
-        year++;
-      }
+  function setMessage(text, tone) {
+    const message = $("loanMessage");
+    message.textContent = text;
+    message.className = "validation-note";
+    if (tone) {
+      message.classList.add(`validation-note--${tone}`);
     }
+  }
+
+  function setEditableState() {
+    const solveField = getSolveField();
+    ["loanAmount", "interestRate", "loanTerm", "payment"].forEach((id) => {
+      const input = $(id);
+      const isSolved = id === solveField;
+      input.readOnly = isSolved;
+      input.setAttribute("aria-readonly", isSolved ? "true" : "false");
+    });
+  }
+
+  function formatFieldOnBlur(id) {
+    const input = $(id);
+    const raw = parseValue(input.value);
+    if (raw <= 0 && input.readOnly) {
+      input.value = "";
+      return;
+    }
+    input.value = raw > 0 ? fmt(raw) : "";
+  }
+
+  function stripFormattingOnFocus(id) {
+    const input = $(id);
+    input.addEventListener("focus", () => {
+      const raw = parseValue(input.value);
+      input.value = raw > 0 ? raw.toFixed(2) : "";
+    });
+    input.addEventListener("blur", () => formatFieldOnBlur(id));
+  }
+
+  function solveScenario(state) {
+    const result = { ...state };
+
+    if (state.solveField === "payment") {
+      if (!(state.amount > 0 && state.termYears > 0 && state.rateAnnual >= 0)) {
+        throw new Error("Amount, rate, and term are required to solve for payment.");
+      }
+      result.payment = paymentFromLoan(state.amount, state.monthlyRate, state.months);
+      setFieldValue("payment", result.payment);
+    } else if (state.solveField === "loanAmount") {
+      if (!(state.payment > 0 && state.termYears > 0 && state.rateAnnual >= 0)) {
+        throw new Error("Payment, rate, and term are required to solve for amount.");
+      }
+      result.amount = amountFromPayment(state.payment, state.monthlyRate, state.months);
+      setFieldValue("loanAmount", result.amount);
+    } else if (state.solveField === "loanTerm") {
+      if (!(state.amount > 0 && state.payment > 0 && state.rateAnnual >= 0)) {
+        throw new Error("Amount, payment, and rate are required to solve for term.");
+      }
+      const months = termFromPayment(state.amount, state.monthlyRate, state.payment);
+      result.termYears = months / 12;
+      result.months = Math.max(1, Math.round(months));
+      setFieldValue("loanTerm", result.termYears);
+    } else if (state.solveField === "interestRate") {
+      if (!(state.amount > 0 && state.payment > 0 && state.termYears > 0)) {
+        throw new Error("Amount, payment, and term are required to solve for rate.");
+      }
+      result.rateAnnual = annualRateFromPayment(state.amount, state.months, state.payment);
+      result.monthlyRate = result.rateAnnual / 100 / 12;
+      setFieldValue("interestRate", result.rateAnnual);
+    }
+
+    result.totalPaid = result.payment * result.months;
+    result.totalInterest = result.totalPaid - result.amount;
+
+    return result;
+  }
+
+  function buildMonthlyRows(result) {
+    const rows = [];
+    let balance = result.amount;
+
+    for (let index = 1; index <= result.months; index += 1) {
+      const interest = balance * result.monthlyRate;
+      let principal = result.payment - interest;
+      if (index === result.months || principal > balance) {
+        principal = balance;
+      }
+      const payment = principal + interest;
+      balance = Math.max(balance - principal, 0);
+
+      rows.push({
+        period: index,
+        payment,
+        principal,
+        interest,
+        balance,
+      });
+    }
+
+    return rows;
+  }
+
+  function renderSchedule(result) {
+    const tbody = $("schedule");
+    const monthlyRows = buildMonthlyRows(result);
+    tbody.innerHTML = "";
+
+    if (result.frequency === "monthly") {
+      $("hdrPeriod").textContent = "Month";
+      monthlyRows.forEach((row) => {
+        const tr = tbody.insertRow();
+        tr.innerHTML = `
+          <td>${row.period}</td>
+          <td>${fmt(row.payment)}</td>
+          <td>${fmt(row.principal)}</td>
+          <td>${fmt(row.interest)}</td>
+          <td>${fmt(row.balance)}</td>
+        `;
+      });
+      return monthlyRows;
+    }
+
+    $("hdrPeriod").textContent = "Year";
+    for (let start = 0; start < monthlyRows.length; start += 12) {
+      const slice = monthlyRows.slice(start, start + 12);
+      const totals = slice.reduce((acc, row) => ({
+        payment: acc.payment + row.payment,
+        principal: acc.principal + row.principal,
+        interest: acc.interest + row.interest,
+        balance: row.balance,
+      }), { payment: 0, principal: 0, interest: 0, balance: 0 });
+
+      const tr = tbody.insertRow();
+      tr.innerHTML = `
+        <td>${Math.floor(start / 12) + 1}</td>
+        <td>${fmt(totals.payment)}</td>
+        <td>${fmt(totals.principal)}</td>
+        <td>${fmt(totals.interest)}</td>
+        <td>${fmt(totals.balance)}</td>
+      `;
+    }
+
+    return monthlyRows;
+  }
+
+  function renderSummary(result) {
+    $("summaryPayment").textContent = `$${fmt(result.payment)}`;
+    $("summaryPaymentNote").textContent = result.solveField === "payment"
+      ? "Solved from amount, rate, and term."
+      : "What the business would carry every month.";
+
+    $("summaryTotalPaid").textContent = `$${fmt(result.totalPaid)}`;
+    $("summaryTotalPaidNote").textContent = `${result.months} monthly payments in total.`;
+
+    $("summaryInterest").textContent = `$${fmt(result.totalInterest)}`;
+    $("summaryInterestNote").textContent = result.rateAnnual === 0
+      ? "Zero interest scenario."
+      : `${fmt(result.rateAnnual)}% annual rate across the full term.`;
+
+    $("summaryHorizon").textContent = `${fmt(result.termYears)} years`;
+    $("summaryHorizonNote").textContent = result.frequency === "monthly"
+      ? "Table shows monthly amortization."
+      : "Table groups monthly amortization by year.";
+
+    const applyHref = buildApplyHref(result);
+    $("termScenarioLink").href = applyHref;
+    $("termBottomApplyLink").href = applyHref;
+  }
+
+  function clearSummary() {
+    $("summaryPayment").textContent = "$0.00";
+    $("summaryPaymentNote").textContent = "Updated as inputs change.";
+    $("summaryTotalPaid").textContent = "$0.00";
+    $("summaryTotalPaidNote").textContent = "Principal plus interest over the full term.";
+    $("summaryInterest").textContent = "$0.00";
+    $("summaryInterestNote").textContent = "The cost of the debt if carried to maturity.";
+    $("summaryHorizon").textContent = "0.00 years";
+    $("summaryHorizonNote").textContent = "Annual view groups the same monthly schedule.";
+    $("termScenarioLink").href = "/apply/";
+    $("termBottomApplyLink").href = "/apply/";
   }
 
   function calculate() {
-    const s       = state(),
-          missing = Object.keys(s.locks).find(k => !s.locks[k]),
-          val     = solveMissing(s);
-
-    const map = {
-      payment:      'payment',
-      loanAmount:   'loanAmount',
-      interestRate: 'interestRate',
-      loanTerm:     'loanTerm'
-    };
-    $(map[missing]).value = fmt(val);
-    renderSchedule();
+    try {
+      const solved = solveScenario(getState());
+      renderSummary(solved);
+      renderSchedule(solved);
+      $("download").disabled = false;
+      setMessage(`Scenario updated. ${$("hdrPeriod").textContent === "Month" ? "Monthly" : "Annual"} schedule view is live.`, "success");
+      window.__loanResult = solved;
+    } catch (error) {
+      $("schedule").innerHTML = "";
+      clearSummary();
+      $("download").disabled = true;
+      setMessage(error.message, "error");
+      window.__loanResult = null;
+    }
   }
 
-  // ── Download PDF Routine ──
-  $('download').onclick = () => {
+  function resetCalculator() {
+    $("loanAmount").value = "350,000.00";
+    $("interestRate").value = "10.50";
+    $("loanTerm").value = "10.00";
+    $("payment").value = "4,722.72";
+    $("solvePayment").checked = true;
+    $("frequency").value = "monthly";
+    setEditableState();
     calculate();
+  }
+
+  function loadPreset(name) {
+    const presets = {
+      "working-capital": {
+        amount: 100000,
+        rateAnnual: 16.5,
+        termYears: 2,
+        solveField: "payment",
+      },
+      growth: {
+        amount: 350000,
+        rateAnnual: 10.5,
+        termYears: 10,
+        solveField: "payment",
+      },
+      "longer-term": {
+        amount: 750000,
+        rateAnnual: 8.75,
+        termYears: 12,
+        solveField: "payment",
+      },
+    };
+
+    const preset = presets[name];
+    if (!preset) return;
+
+    $("loanAmount").value = fmt(preset.amount);
+    $("interestRate").value = fmt(preset.rateAnnual);
+    $("loanTerm").value = fmt(preset.termYears);
+    $("payment").value = "";
+    document.querySelector(`input[name="solveField"][value="${preset.solveField}"]`).checked = true;
+    setEditableState();
+    calculate();
+  }
+
+  $("download").addEventListener("click", () => {
+    if (!window.__loanResult) {
+      return;
+    }
+
     const { jsPDF } = window.jspdf;
-    const doc = new jsPDF({ unit:'pt', format:'a4' });
-
+    const doc = new jsPDF({ unit: "pt", format: "a4" });
     const marginLeft = 40;
-    const contentStartY = 60;
+    const startY = 60;
 
-    // Title
     doc.setFontSize(16);
-    doc.text('Loan Amortization Schedule', marginLeft, 40);
-
-    // Summary Fields
+    doc.text("Loan Amortization Schedule", marginLeft, 40);
     doc.setFontSize(12);
-    doc.text(`Loan Amount: $${$('loanAmount').value}`, marginLeft, contentStartY);
-    doc.text(`Interest Rate (%): ${$('interestRate').value}`, marginLeft, contentStartY + 15);
-    doc.text(`Loan Term (years): ${$('loanTerm').value}`, marginLeft, contentStartY + 30);
-    doc.text(`Monthly Payment: $${$('payment').value}`, marginLeft, contentStartY + 45);
+    doc.text(`Loan Amount: $${$("loanAmount").value}`, marginLeft, startY);
+    doc.text(`Interest Rate (%): ${$("interestRate").value}`, marginLeft, startY + 15);
+    doc.text(`Loan Term (years): ${$("loanTerm").value}`, marginLeft, startY + 30);
+    doc.text(`Monthly Payment: $${$("payment").value}`, marginLeft, startY + 45);
 
-    // Add a bit of extra space before the table
-    const tableY = contentStartY + 70;
-
-    // Build table headers & rows for autoTable
     const head = [[
-      $('hdrPeriod').textContent,
-      'Payment',
-      'Principal',
-      'Interest',
-      'Balance'
+      $("hdrPeriod").textContent,
+      "Payment",
+      "Principal",
+      "Interest",
+      "Balance",
     ]];
-    const body = Array.from($('schedule').rows).map(row =>
-      Array.from(row.cells).map(td => td.textContent)
+    const body = Array.from($("schedule").rows).map((row) =>
+      Array.from(row.cells).map((cell) => cell.textContent)
     );
 
-    // Generate the table
     doc.autoTable({
       head,
       body,
-      startY: tableY,
-      theme: 'grid',
-      headStyles: { fillColor: [0, 78, 137] },   // dark blue header
-      styles:    { fontSize: 10, cellPadding: 4 },
-      margin: { left: marginLeft, right: 40 }
+      startY: startY + 70,
+      theme: "grid",
+      headStyles: { fillColor: [27, 77, 62] },
+      styles: { fontSize: 10, cellPadding: 4 },
+      margin: { left: marginLeft, right: 40 },
     });
 
-    // Save
-    doc.save('loan-amortization-schedule.pdf');
-  };
+    doc.save("loan-amortization-schedule.pdf");
+  });
 
-  // Attach real-time validation & calculation
-  ['loanAmount','interestRate','loanTerm','lockAmount','lockRate','lockTerm','lockPayment','frequency']
-    .forEach(id => $(id).addEventListener('change', calculate));
-  ['loanAmount','interestRate','loanTerm','payment']
-    .forEach(id => $(id).addEventListener('input', calculate));
+  ["loanAmount", "interestRate", "loanTerm", "payment"].forEach((id) => {
+    stripFormattingOnFocus(id);
+    $(id).addEventListener("input", calculate);
+  });
 
-  // Initialize on load
-  window.onload = calculate;
+  document.querySelectorAll('input[name="solveField"]').forEach((input) => {
+    input.addEventListener("change", () => {
+      setEditableState();
+      calculate();
+    });
+  });
+
+  $("frequency").addEventListener("change", calculate);
+  $("loan-reset").addEventListener("click", resetCalculator);
+  document.querySelectorAll("[data-loan-preset]").forEach((button) => {
+    button.addEventListener("click", () => loadPreset(button.dataset.loanPreset));
+  });
+
+  setEditableState();
+  calculate();
 </script>

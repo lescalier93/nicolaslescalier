@@ -29,6 +29,51 @@ layout: default
   </div>
 </section>
 
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    if (!params.toString()) {
+      return;
+    }
+
+    const setFieldValue = (id, value) => {
+      const field = document.getElementById(id);
+      if (!field || !value) {
+        return;
+      }
+      field.value = value;
+    };
+
+    const setSelectByText = (id, value) => {
+      const field = document.getElementById(id);
+      if (!field || !value) {
+        return;
+      }
+      const option = Array.from(field.options).find((entry) => entry.value === value || entry.text === value);
+      if (option) {
+        field.value = option.value;
+      }
+    };
+
+    const productInterest = params.get("product_interest");
+    if (productInterest) {
+      const radio = Array.from(document.querySelectorAll('input[name="product_interest"]')).find(
+        (input) => input.value.toLowerCase() === productInterest.toLowerCase()
+      );
+
+      if (radio) {
+        radio.checked = true;
+      } else {
+        setFieldValue("product_interest_other", productInterest);
+      }
+    }
+
+    setSelectByText("amount_requested", params.get("amount_requested"));
+    setFieldValue("use_of_proceeds", params.get("use_of_proceeds"));
+    setFieldValue("additional_context", params.get("additional_context"));
+  });
+</script>
+
 <section class="section">
   <div class="step-grid">
     <article class="step-card">

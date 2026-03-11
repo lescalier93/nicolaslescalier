@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "MCA Deal Comparison | Nicolas Lescalier"
-description: "Compare two merchant cash advance offers by factor rate, payback, remittance pace, and estimated monthly pressure."
+description: "Compare two merchant cash advance offers by factor rate, payback, remittance pace, monthly drag, and which structure is easier to carry."
 permalink: /merchant-cash-advance-calculator.html
 ---
 
@@ -15,96 +15,263 @@ permalink: /merchant-cash-advance-calculator.html
     grid-template-columns: 1.1fr 0.9fr;
     gap: 1rem;
   }
-  .page-title {
-    margin: 0;
-    color: #16202a;
-    font-size: 2rem;
-  }
-  .comparison-row {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .calculator-card {
-    background: rgba(255, 252, 247, 0.92);
-    border: 1px solid rgba(22, 32, 42, 0.08);
-    border-radius: 24px;
-    padding: 1.5rem;
-    flex: 1 1 400px;
-    max-width: 500px;
-    box-shadow: 0 18px 48px rgba(34, 36, 38, 0.12);
-  }
-  .calculator-title {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    color: #1b4d3e;
-    font-size: 1.5rem;
-  }
-  .calculator-form .form-grid {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 1.5rem;
-  }
-  .form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.25rem;
-  }
-  .form-input {
-    width: 100%;
-    padding: 0.8rem 0.9rem;
-    font-size: 1rem;
-    border: 1px solid rgba(22, 32, 42, 0.14);
-    border-radius: 12px;
-    transition: border-color 0.2s, box-shadow 0.2s;
-  }
-  .form-input:focus {
-    outline: none;
-    border-color: #1b4d3e;
-    box-shadow: 0 0 0 3px rgba(27, 77, 62, 0.18);
-  }
-  .btn-primary {
-    display: block;
-    width: 100%;
-    background: #1b4d3e;
-    color: #fff;
-    border: none;
-    padding: 0.75rem;
-    font-size: 1rem;
-    border-radius: 999px;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  .btn-primary:disabled {
-    background: #999;
-    cursor: not-allowed;
-  }
-  .btn-primary:hover:not(:disabled) {
-    background: #12352a;
-  }
-  .results {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(22, 32, 42, 0.08);
-  }
-  .results-title {
-    margin-top: 0;
-    margin-bottom: 0.75rem;
-    color: #1b4d3e;
-    font-size: 1.25rem;
-  }
-  .result-item {
-    margin-bottom: 0.5rem;
-    font-size: 0.95rem;
-  }
   .tool-note {
     padding: 1.4rem;
     border-radius: 18px;
     border: 1px solid rgba(22, 32, 42, 0.08);
     background: rgba(255, 252, 247, 0.88);
     box-shadow: 0 18px 48px rgba(34, 36, 38, 0.12);
+  }
+  .tool-note h2,
+  .tool-note h3,
+  .tool-note p,
+  .tool-note li {
+    margin-top: 0;
+  }
+  .tool-note ul {
+    margin-bottom: 0;
+    padding-left: 1.1rem;
+  }
+  .page-title {
+    margin: 0;
+    color: #16202a;
+    font-size: 2rem;
+  }
+  .calculator-band {
+    display: grid;
+    gap: 1.25rem;
+  }
+  .calculator-band__intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .calculator-band__intro p {
+    max-width: 44rem;
+    margin-bottom: 0;
+  }
+  .preset-row,
+  .form-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .mini-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(22, 32, 42, 0.12);
+    background: rgba(255, 255, 255, 0.72);
+    color: #16202a;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(18, 53, 42, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+  .mini-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(18, 53, 42, 0.12);
+  }
+  .mini-button--ghost {
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.45);
+  }
+  .comparison-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .calculator-card {
+    background: rgba(255, 252, 247, 0.92);
+    border: 1px solid rgba(22, 32, 42, 0.08);
+    border-radius: 24px;
+    padding: 1.5rem;
+    box-shadow: 0 18px 48px rgba(34, 36, 38, 0.12);
+    display: grid;
+    gap: 1rem;
+  }
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .card-top p {
+    margin: 0;
+    color: rgba(22, 32, 42, 0.72);
+    max-width: 18rem;
+  }
+  .deal-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(27, 77, 62, 0.12);
+    color: #1b4d3e;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .calculator-form .form-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  .form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+    color: #16202a;
+  }
+  .form-input {
+    width: 100%;
+    padding: 0.85rem 0.95rem;
+    font-size: 1rem;
+    border: 1px solid rgba(22, 32, 42, 0.14);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.92);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+  .form-input:focus {
+    outline: none;
+    border-color: #1b4d3e;
+    box-shadow: 0 0 0 3px rgba(27, 77, 62, 0.18);
+    background: #fff;
+  }
+  .input-help {
+    margin: 0;
+    color: rgba(22, 32, 42, 0.66);
+    font-size: 0.92rem;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #1b4d3e;
+    color: #fff;
+    border: none;
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 10px 24px rgba(18, 53, 42, 0.18);
+  }
+  .btn-primary:disabled {
+    background: #92a19b;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  .btn-primary:hover:not(:disabled) {
+    background: #12352a;
+    box-shadow: 0 14px 28px rgba(18, 53, 42, 0.22);
+  }
+  .results {
+    display: grid;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(22, 32, 42, 0.08);
+  }
+  .metric-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+  }
+  .metric-card {
+    padding: 1rem;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(244, 238, 228, 0.78));
+    border: 1px solid rgba(22, 32, 42, 0.07);
+  }
+  .metric-label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: rgba(22, 32, 42, 0.56);
+    margin-bottom: 0.35rem;
+  }
+  .metric-value {
+    display: block;
+    color: #16202a;
+    font-size: 1.45rem;
+    line-height: 1.1;
+  }
+  .metric-note {
+    display: block;
+    margin-top: 0.35rem;
+    color: rgba(22, 32, 42, 0.68);
+    font-size: 0.92rem;
+  }
+  .metric-note--tone {
+    font-weight: 700;
+  }
+  .tone--good {
+    color: #1b4d3e;
+  }
+  .tone--warn {
+    color: #b56922;
+  }
+  .tone--risk {
+    color: #9f3f2a;
+  }
+  .results-foot {
+    display: grid;
+    gap: 0.9rem;
+  }
+  .results-foot p {
+    margin: 0;
+  }
+  .comparison-summary {
+    padding: 1.25rem;
+    border-radius: 24px;
+    border: 1px solid rgba(22, 32, 42, 0.08);
+    background: linear-gradient(135deg, rgba(255, 250, 242, 0.98), rgba(244, 232, 214, 0.88));
+    box-shadow: 0 18px 48px rgba(34, 36, 38, 0.12);
+    display: grid;
+    gap: 1rem;
+  }
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.85rem;
+  }
+  .comparison-pill {
+    padding: 0.95rem 1rem;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(22, 32, 42, 0.08);
+  }
+  .comparison-pill span {
+    display: block;
+    color: rgba(22, 32, 42, 0.58);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+  .comparison-pill strong {
+    display: block;
+    color: #16202a;
+    font-size: 1.05rem;
+  }
+  .summary-callout {
+    display: grid;
+    gap: 0.7rem;
+  }
+  .summary-callout h3,
+  .summary-callout p {
+    margin: 0;
   }
   .insight-grid {
     display: grid;
@@ -123,18 +290,24 @@ permalink: /merchant-cash-advance-calculator.html
     margin-bottom: 0.65rem;
     color: #16202a;
   }
-  @media (max-width: 900px) {
-    .tool-intro {
-      grid-template-columns: 1fr;
-    }
-    .calculator-card {
-      max-width: 100%;
-    }
-    .calculator-form .form-grid {
-      grid-template-columns: 1fr;
-    }
+  @media (max-width: 980px) {
+    .tool-intro,
+    .comparison-row,
+    .comparison-grid,
     .insight-grid {
       grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 720px) {
+    .calculator-form .form-grid,
+    .metric-grid {
+      grid-template-columns: 1fr;
+    }
+    .card-top {
+      flex-direction: column;
+    }
+    .card-top p {
+      max-width: none;
     }
   }
 </style>
@@ -144,182 +317,210 @@ permalink: /merchant-cash-advance-calculator.html
     <div class="panel">
       <p class="eyebrow">Calculator</p>
       <h1>Compare MCA offers by real repayment pressure, not just headline speed.</h1>
-      <p>MCA pricing is easy to misread because factor rates compress the real cost into a simple-looking number. This tool helps you compare two offers side by side so you can see payback, remittance pace, and approximate monthly drag more clearly.</p>
+      <p>MCA pricing gets misread when the discussion stops at factor rate. This page turns two offers into the numbers that matter most in practice: total payback, cost of capital, payment cadence, and monthly drag on the business.</p>
       <div class="cta-row">
         <a class="button" href="/services/us-mca-expert/">Read the MCA guide</a>
         <a class="button button--secondary" href="/apply/">Start application</a>
       </div>
     </div>
     <aside class="tool-note">
-      <p class="eyebrow">What to watch</p>
-      <h3>Do not compare factor rate in isolation.</h3>
+      <p class="eyebrow">Best use of this tool</p>
+      <h3>Use it to compare tradeoffs, not to justify the first approval.</h3>
       <ul class="plain-list">
-        <li>Shorter terms increase repayment pressure fast</li>
-        <li>Daily remittance can be more important than total payback</li>
-        <li>The best offer is the one the business can absorb cleanly</li>
+        <li>Lower factor rate can still create worse pressure if the term is compressed.</li>
+        <li>Daily remittance often matters more than the headline offer size.</li>
+        <li>The cleaner MCA is the one the business can absorb without creating the next problem.</li>
       </ul>
     </aside>
   </section>
 
   <section class="section">
-    <h2 class="page-title">MCA Deal Comparison</h2>
-
-  <div class="comparison-row">
-    <!-- Deal A -->
-    <div class="calculator-card">
-      <h2 class="calculator-title">Deal A</h2>
-      <form id="mca-form-1" class="calculator-form">
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="advanceAmount1">Advance Amount ($)</label>
-            <input
-              type="text"
-              id="advanceAmount1"
-              placeholder="10,000.00"
-              required
-              class="form-input"
-            />
-          </div>
-          <div class="form-group">
-            <label for="factorRate1">Factor Rate</label>
-            <input
-              type="number"
-              id="factorRate1"
-              placeholder="1.20"
-              min="1"
-              step="0.01"
-              required
-              class="form-input"
-            />
-          </div>
+    <div class="calculator-band">
+      <div class="calculator-band__intro">
+        <div>
+          <p class="eyebrow">Deal compare</p>
+          <h2 class="page-title">MCA Deal Comparison</h2>
+          <p>Use the actual advance, factor rate, and term. If you want a fast demo first, load an example pair and see how cost and pressure can point to different answers.</p>
         </div>
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="termLength1">Term Length</label>
-            <input
-              type="number"
-              id="termLength1"
-              placeholder="140"
-              min="1"
-              step="1"
-              required
-              class="form-input"
-            />
-          </div>
-          <div class="form-group">
-            <label for="termUnit1">Term Unit</label>
-            <select id="termUnit1" required class="form-input">
-              <option value="days">Business Days</option>
-              <option value="weeks">Weeks</option>
-              <option value="months">Months</option>
-            </select>
-          </div>
+        <div class="preset-row">
+          <button class="mini-button" type="button" id="mca-example">Load example offers</button>
+          <button class="mini-button mini-button--ghost" type="button" id="mca-reset-all">Clear both deals</button>
         </div>
-        <button
-          type="submit"
-          id="calculate1"
-          class="btn-primary"
-          disabled
-        >
-          Calculate
-        </button>
-      </form>
-
-      <div class="results" id="results1" style="display: none;">
-        <h3 class="results-title">Results A</h3>
-        <p class="result-item" id="displayAdvance1"></p>
-        <p class="result-item" id="interestPaid1"></p>
-        <p class="result-item" id="totalPayback1"></p>
-        <p class="result-item" id="periodicPayment1"></p>
-        <p class="result-item" id="ratePerMonth1"></p>
       </div>
-    </div>
 
-    <!-- Deal B -->
-    <div class="calculator-card">
-      <h2 class="calculator-title">Deal B</h2>
-      <form id="mca-form-2" class="calculator-form">
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="advanceAmount2">Advance Amount ($)</label>
-            <input
-              type="text"
-              id="advanceAmount2"
-              placeholder="10,000.00"
-              required
-              class="form-input"
-            />
+      <div class="comparison-row">
+        <div class="calculator-card">
+          <div class="card-top">
+            <span class="deal-chip">Deal A</span>
+            <p>Best for the first offer, the fastest offer, or the offer you expect the borrower to prefer.</p>
           </div>
-          <div class="form-group">
-            <label for="factorRate2">Factor Rate</label>
-            <input
-              type="number"
-              id="factorRate2"
-              placeholder="1.20"
-              min="1"
-              step="0.01"
-              required
-              class="form-input"
-            />
+
+          <form id="mca-form-1" class="calculator-form" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="advanceAmount1">Advance amount ($)</label>
+                <input type="text" id="advanceAmount1" placeholder="85,000.00" required class="form-input">
+              </div>
+              <div class="form-group">
+                <label for="factorRate1">Factor rate</label>
+                <input type="number" id="factorRate1" placeholder="1.24" min="1" step="0.01" required class="form-input">
+              </div>
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="termLength1">Term length</label>
+                <input type="number" id="termLength1" placeholder="140" min="1" step="1" required class="form-input">
+              </div>
+              <div class="form-group">
+                <label for="termUnit1">Term unit</label>
+                <select id="termUnit1" required class="form-input">
+                  <option value="days">Business days</option>
+                  <option value="weeks">Weeks</option>
+                  <option value="months">Months</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" id="calculate1" class="btn-primary" disabled>Update results</button>
+              <button class="mini-button mini-button--ghost" type="button" data-clear-deal="1">Clear</button>
+            </div>
+            <p class="input-help">Business days are converted using 20 business days = 1 month for the monthly drag estimate.</p>
+          </form>
+
+          <div class="results" id="results1" hidden>
+            <div class="metric-grid">
+              <article class="metric-card">
+                <span class="metric-label">Total payback</span>
+                <strong class="metric-value" id="totalPayback1"></strong>
+                <span class="metric-note" id="paybackNote1"></span>
+              </article>
+              <article class="metric-card">
+                <span class="metric-label">Cost of capital</span>
+                <strong class="metric-value" id="capitalCost1"></strong>
+                <span class="metric-note" id="capitalCostNote1"></span>
+              </article>
+              <article class="metric-card">
+                <span class="metric-label">Payment cadence</span>
+                <strong class="metric-value" id="periodicPayment1"></strong>
+                <span class="metric-note" id="periodicNote1"></span>
+              </article>
+              <article class="metric-card">
+                <span class="metric-label">Estimated monthly drag</span>
+                <strong class="metric-value" id="monthlyBurden1"></strong>
+                <span class="metric-note metric-note--tone" id="pressureNote1"></span>
+              </article>
+            </div>
+            <div class="results-foot">
+              <p id="dealNarrative1"></p>
+              <div class="cta-row">
+                <a class="button" id="applyDeal1" href="/apply/">Use Deal A in application</a>
+                <a class="button button--secondary" href="/application-checklist/">Prepare docs first</a>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="termLength2">Term Length</label>
-            <input
-              type="number"
-              id="termLength2"
-              placeholder="140"
-              min="1"
-              step="1"
-              required
-              class="form-input"
-            />
+
+        <div class="calculator-card">
+          <div class="card-top">
+            <span class="deal-chip">Deal B</span>
+            <p>Best for the competing offer, the lower-factor alternative, or the deal with the cleaner payment rhythm.</p>
           </div>
-          <div class="form-group">
-            <label for="termUnit2">Term Unit</label>
-            <select id="termUnit2" required class="form-input">
-              <option value="days">Business Days</option>
-              <option value="weeks">Weeks</option>
-              <option value="months">Months</option>
-            </select>
+
+          <form id="mca-form-2" class="calculator-form" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="advanceAmount2">Advance amount ($)</label>
+                <input type="text" id="advanceAmount2" placeholder="85,000.00" required class="form-input">
+              </div>
+              <div class="form-group">
+                <label for="factorRate2">Factor rate</label>
+                <input type="number" id="factorRate2" placeholder="1.29" min="1" step="0.01" required class="form-input">
+              </div>
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="termLength2">Term length</label>
+                <input type="number" id="termLength2" placeholder="11" min="1" step="1" required class="form-input">
+              </div>
+              <div class="form-group">
+                <label for="termUnit2">Term unit</label>
+                <select id="termUnit2" required class="form-input">
+                  <option value="days">Business days</option>
+                  <option value="weeks">Weeks</option>
+                  <option value="months">Months</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" id="calculate2" class="btn-primary" disabled>Update results</button>
+              <button class="mini-button mini-button--ghost" type="button" data-clear-deal="2">Clear</button>
+            </div>
+            <p class="input-help">Use the term the lender is actually quoting. A lower factor can still be harder to carry if the payback window is short.</p>
+          </form>
+
+          <div class="results" id="results2" hidden>
+            <div class="metric-grid">
+              <article class="metric-card">
+                <span class="metric-label">Total payback</span>
+                <strong class="metric-value" id="totalPayback2"></strong>
+                <span class="metric-note" id="paybackNote2"></span>
+              </article>
+              <article class="metric-card">
+                <span class="metric-label">Cost of capital</span>
+                <strong class="metric-value" id="capitalCost2"></strong>
+                <span class="metric-note" id="capitalCostNote2"></span>
+              </article>
+              <article class="metric-card">
+                <span class="metric-label">Payment cadence</span>
+                <strong class="metric-value" id="periodicPayment2"></strong>
+                <span class="metric-note" id="periodicNote2"></span>
+              </article>
+              <article class="metric-card">
+                <span class="metric-label">Estimated monthly drag</span>
+                <strong class="metric-value" id="monthlyBurden2"></strong>
+                <span class="metric-note metric-note--tone" id="pressureNote2"></span>
+              </article>
+            </div>
+            <div class="results-foot">
+              <p id="dealNarrative2"></p>
+              <div class="cta-row">
+                <a class="button" id="applyDeal2" href="/apply/">Use Deal B in application</a>
+                <a class="button button--secondary" href="/application-checklist/">Prepare docs first</a>
+              </div>
+            </div>
           </div>
         </div>
-        <button
-          type="submit"
-          id="calculate2"
-          class="btn-primary"
-          disabled
-        >
-          Calculate
-        </button>
-      </form>
-
-      <div class="results" id="results2" style="display: none;">
-        <h3 class="results-title">Results B</h3>
-        <p class="result-item" id="displayAdvance2"></p>
-        <p class="result-item" id="interestPaid2"></p>
-        <p class="result-item" id="totalPayback2"></p>
-        <p class="result-item" id="periodicPayment2"></p>
-        <p class="result-item" id="ratePerMonth2"></p>
       </div>
-    </div>
-  </div>
-</section>
 
-  <section class="section">
-    <div class="cta-panel">
-      <p class="eyebrow">After the comparison</p>
-      <h2>If the deal looks expensive, that does not automatically make it wrong.</h2>
-      <p>The real question is whether the timing value and use of proceeds justify the repayment cadence. If you want, I can help compare the MCA against a term loan, bridge structure, or no-debt alternative.</p>
-      <div class="cta-row">
-        <a class="button" href="/apply/">Apply with this scenario</a>
-        <a class="button button--secondary" href="/term-loan-calculator.html">Compare with a term loan</a>
+      <div class="comparison-summary" id="comparisonSummary" hidden>
+        <div class="comparison-grid">
+          <div class="comparison-pill">
+            <span>Lower total payback</span>
+            <strong id="winnerCost"></strong>
+          </div>
+          <div class="comparison-pill">
+            <span>Lower monthly drag</span>
+            <strong id="winnerBurden"></strong>
+          </div>
+          <div class="comparison-pill">
+            <span>Shorter payoff</span>
+            <strong id="winnerTerm"></strong>
+          </div>
+          <div class="comparison-pill">
+            <span>Cleaner pressure profile</span>
+            <strong id="winnerPressure"></strong>
+          </div>
+        </div>
+        <div class="summary-callout">
+          <p class="eyebrow">Decision take</p>
+          <h3 id="comparisonHeadline"></h3>
+          <p id="comparisonBody"></p>
+          <div class="cta-row">
+            <a class="button" id="comparisonApply" href="/apply/">Use the cleaner scenario in application</a>
+            <a class="button button--secondary" href="/term-loan-calculator.html">Compare with a term loan</a>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="cta-row" style="margin-top: 1.5rem;">
-      <a class="button" href="/apply/">Start application</a>
-      <a class="button button--secondary" href="/application-checklist/">Prepare the file before applying</a>
     </div>
   </section>
 
@@ -327,118 +528,353 @@ permalink: /merchant-cash-advance-calculator.html
     <p class="eyebrow">How to interpret the result</p>
     <div class="insight-grid">
       <article class="insight-card">
-        <h3>Lower total payback is not enough</h3>
-        <p>A cheaper-looking offer can still create more weekly or daily stress if the term is compressed.</p>
+        <h3>Cheaper is not always easier</h3>
+        <p>A lower-cost offer can still create worse weekly or daily strain if the payback window is too compressed for the business rhythm.</p>
       </article>
       <article class="insight-card">
-        <h3>Cash flow fit matters most</h3>
-        <p>The better structure is usually the one the business can absorb without destabilizing payroll, inventory, or vendor rhythm.</p>
+        <h3>Monthly drag is the fastest truth test</h3>
+        <p>If the business cannot carry the implied monthly load without stressing payroll, inventory, or vendor timing, the deal is weak even if it closes fast.</p>
       </article>
       <article class="insight-card">
-        <h3>Use this as a filter, not a final decision</h3>
-        <p>Real offer quality still depends on documentation, remittance mechanics, renewal pressure, and whether MCA is even the right product.</p>
+        <h3>Use the outputs as a screen</h3>
+        <p>The better offer still depends on remittance mechanics, renewal pressure, documentation requirements, and whether MCA is the right product at all.</p>
       </article>
     </div>
   </section>
 </div>
 
 <script>
+  const periodLabels = {
+    days: "per business day",
+    weeks: "per week",
+    months: "per month",
+  };
+
+  const periodCounts = {
+    days: 20,
+    weeks: 4.345,
+    months: 1,
+  };
+
   function formatCurrency(value) {
-    return value.toLocaleString("en-US", {
+    return Number(value).toLocaleString("en-US", {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     });
   }
+
   function parseCurrency(input) {
-    const numericString = input.replace(/,/g, "");
-    return parseFloat(numericString) || 0;
+    return parseFloat(String(input || "").replace(/[^0-9.-]/g, "")) || 0;
   }
-  function setupCalculator(suffix) {
-    const form            = document.getElementById(`mca-form-${suffix}`);
-    const advanceInput    = document.getElementById(`advanceAmount${suffix}`);
-    const factorRateInput = document.getElementById(`factorRate${suffix}`);
-    const termLengthInput = document.getElementById(`termLength${suffix}`);
-    const termUnitInput   = document.getElementById(`termUnit${suffix}`);
-    const submitButton    = document.getElementById(`calculate${suffix}`);
-    const resultsDiv      = document.getElementById(`results${suffix}`);
 
-    const displayAdvance   = document.getElementById(`displayAdvance${suffix}`);
-    const interestPaid     = document.getElementById(`interestPaid${suffix}`);
-    const totalPayback     = document.getElementById(`totalPayback${suffix}`);
-    const periodicPayment  = document.getElementById(`periodicPayment${suffix}`);
-    const ratePerMonth     = document.getElementById(`ratePerMonth${suffix}`);
+  function amountRange(amount) {
+    if (amount < 25000) return "Under $25,000";
+    if (amount < 50000) return "$25,000-$50,000";
+    if (amount < 100000) return "$50,000-$100,000";
+    if (amount < 250000) return "$100,000-$250,000";
+    if (amount < 500000) return "$250,000-$500,000";
+    if (amount < 1000000) return "$500,000-$1,000,000";
+    return "$1,000,000+";
+  }
 
-    function validateForm() {
-      const advanceAmt = parseCurrency(advanceInput.value);
-      const factorRate = parseFloat(factorRateInput.value);
-      const termLen    = parseInt(termLengthInput.value, 10);
-      submitButton.disabled = !(advanceAmt > 0 && factorRate >= 1 && termLen >= 1);
+  function pluralizeTerm(length, unit) {
+    const unitLabel = {
+      days: "business day",
+      weeks: "week",
+      months: "month",
+    }[unit];
+    return `${length} ${unitLabel}${length === 1 ? "" : "s"}`;
+  }
+
+  function pressureProfile(monthlyBurden, advanceAmount) {
+    const ratio = advanceAmount > 0 ? monthlyBurden / advanceAmount : 0;
+    if (ratio <= 0.2) {
+      return { text: "Lower carry pressure", className: "tone--good" };
+    }
+    if (ratio <= 0.35) {
+      return { text: "Moderate carry pressure", className: "tone--warn" };
+    }
+    return { text: "High carry pressure", className: "tone--risk" };
+  }
+
+  function toMonths(termLength, termUnit) {
+    return termLength / periodCounts[termUnit];
+  }
+
+  function computeDeal({ advanceAmount, factorRate, termLength, termUnit }) {
+    if (!(advanceAmount > 0 && factorRate >= 1 && termLength >= 1)) {
+      return null;
     }
 
-    // Real-time validation
-    advanceInput.addEventListener("input", validateForm);
-    factorRateInput.addEventListener("input", validateForm);
-    termLengthInput.addEventListener("input", validateForm);
-    termUnitInput.addEventListener("change", validateForm);
+    const totalPayback = advanceAmount * factorRate;
+    const capitalCost = totalPayback - advanceAmount;
+    const months = toMonths(termLength, termUnit);
+    const periodicPayment = totalPayback / termLength;
+    const monthlyBurden = months > 0 ? totalPayback / months : 0;
+    const monthlyCost = months > 0 ? capitalCost / months : 0;
+    const costPercent = (factorRate - 1) * 100;
+    const paybackMultiple = totalPayback / advanceAmount;
+    const pressure = pressureProfile(monthlyBurden, advanceAmount);
 
-    advanceInput.addEventListener("blur", function () {
-      const rawValue = parseCurrency(this.value);
-      if (!isNaN(rawValue)) {
-        this.value = formatCurrency(rawValue);
-      }
-    });
-    advanceInput.addEventListener("focus", function () {
-      const rawValue = parseCurrency(this.value);
-      if (!isNaN(rawValue)) {
-        this.value = rawValue > 0 ? rawValue.toFixed(2) : "";
-      }
-    });
-
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      const advanceAmt  = parseCurrency(advanceInput.value);
-      const factorRate  = parseFloat(factorRateInput.value);
-      const termLen     = parseInt(termLengthInput.value, 10);
-      const termUnit    = termUnitInput.value;
-
-      // Calculate total payback & interest
-      const totPay  = advanceAmt * factorRate;
-      const intPaid = totPay - advanceAmt;
-
-      // Convert term length to months using 20 business days = 1 month
-      let termInMonths;
-      if (termUnit === "months") {
-        termInMonths = termLen;
-      } else if (termUnit === "weeks") {
-        termInMonths = termLen / 4.345;  // approx. weeks per month
-      } else {
-        termInMonths = termLen / 20;     // 20 business days per month
-      }
-
-      // Rate per month (%) & interest $/month
-      const rpm             = termInMonths > 0 ? ((factorRate - 1) / termInMonths) * 100 : 0;
-      const interestPerMonth = termInMonths > 0 ? intPaid / termInMonths : 0;
-      const freqLabel       = {
-        days:   "per Business Day",
-        weeks:  "per Week",
-        months: "per Month",
-      }[termUnit];
-      const payPerPeriod = totPay / termLen;
-
-      displayAdvance.textContent    = `Advance Amount: $${formatCurrency(advanceAmt)}`;
-      interestPaid.textContent      = `Interest Paid Over Time: $${formatCurrency(intPaid)}`;
-      totalPayback.textContent      = `Total Payback Amount: $${formatCurrency(totPay)}`;
-      periodicPayment.textContent   = `Periodic Payment (${freqLabel}): $${formatCurrency(payPerPeriod)}`;
-      ratePerMonth.textContent      = `Rate per Month: ${rpm.toFixed(2)}% ($${formatCurrency(interestPerMonth)}/month)`;
-
-      resultsDiv.style.display = "block";
-    });
-
-    // Initialize validation on load
-    validateForm();
+    return {
+      advanceAmount,
+      factorRate,
+      termLength,
+      termUnit,
+      termLabel: pluralizeTerm(termLength, termUnit),
+      totalPayback,
+      capitalCost,
+      months,
+      periodicPayment,
+      monthlyBurden,
+      monthlyCost,
+      costPercent,
+      paybackMultiple,
+      pressure,
+    };
   }
 
-  // Initialize both calculators
-  setupCalculator("1");
-  setupCalculator("2");
+  function buildApplyHref(result, label) {
+    const params = new URLSearchParams({
+      product_interest: "Merchant cash advance",
+      amount_requested: amountRange(result.advanceAmount),
+      use_of_proceeds: "Comparing merchant cash advance offers for a working capital request.",
+      additional_context: `${label}: $${formatCurrency(result.advanceAmount)} advance, factor ${result.factorRate.toFixed(2)}, ${result.termLabel}, total payback $${formatCurrency(result.totalPayback)}, monthly drag about $${formatCurrency(result.monthlyBurden)}.`,
+    });
+    return `/apply/?${params.toString()}`;
+  }
+
+  function setAdvanceFormatting(input) {
+    input.addEventListener("focus", () => {
+      const rawValue = parseCurrency(input.value);
+      input.value = rawValue > 0 ? rawValue.toFixed(2) : "";
+    });
+
+    input.addEventListener("blur", () => {
+      const rawValue = parseCurrency(input.value);
+      input.value = rawValue > 0 ? formatCurrency(rawValue) : "";
+    });
+  }
+
+  const deals = {};
+
+  function initDeal(suffix, label) {
+    const form = document.getElementById(`mca-form-${suffix}`);
+    const advanceInput = document.getElementById(`advanceAmount${suffix}`);
+    const factorInput = document.getElementById(`factorRate${suffix}`);
+    const termInput = document.getElementById(`termLength${suffix}`);
+    const unitInput = document.getElementById(`termUnit${suffix}`);
+    const submitButton = document.getElementById(`calculate${suffix}`);
+    const results = document.getElementById(`results${suffix}`);
+    const clearButton = document.querySelector(`[data-clear-deal="${suffix}"]`);
+
+    deals[suffix] = {
+      label,
+      form,
+      advanceInput,
+      factorInput,
+      termInput,
+      unitInput,
+      submitButton,
+      results,
+      fields: {
+        totalPayback: document.getElementById(`totalPayback${suffix}`),
+        paybackNote: document.getElementById(`paybackNote${suffix}`),
+        capitalCost: document.getElementById(`capitalCost${suffix}`),
+        capitalCostNote: document.getElementById(`capitalCostNote${suffix}`),
+        periodicPayment: document.getElementById(`periodicPayment${suffix}`),
+        periodicNote: document.getElementById(`periodicNote${suffix}`),
+        monthlyBurden: document.getElementById(`monthlyBurden${suffix}`),
+        pressureNote: document.getElementById(`pressureNote${suffix}`),
+        narrative: document.getElementById(`dealNarrative${suffix}`),
+        apply: document.getElementById(`applyDeal${suffix}`),
+      },
+      result: null,
+    };
+
+    setAdvanceFormatting(advanceInput);
+
+    function currentState() {
+      return {
+        advanceAmount: parseCurrency(advanceInput.value),
+        factorRate: parseFloat(factorInput.value),
+        termLength: parseInt(termInput.value, 10),
+        termUnit: unitInput.value,
+      };
+    }
+
+    function validate() {
+      const state = currentState();
+      const isValid = state.advanceAmount > 0 && state.factorRate >= 1 && state.termLength >= 1;
+      submitButton.disabled = !isValid;
+
+      if (!isValid && !results.hidden) {
+        results.hidden = true;
+        deals[suffix].result = null;
+      }
+
+      renderComparison();
+      return isValid;
+    }
+
+    function renderDeal(result) {
+      const { fields } = deals[suffix];
+
+      fields.totalPayback.textContent = `$${formatCurrency(result.totalPayback)}`;
+      fields.paybackNote.textContent = `${result.paybackMultiple.toFixed(2)}x of the amount advanced`;
+      fields.capitalCost.textContent = `$${formatCurrency(result.capitalCost)}`;
+      fields.capitalCostNote.textContent = `${result.costPercent.toFixed(1)}% cost of capital`;
+      fields.periodicPayment.textContent = `$${formatCurrency(result.periodicPayment)}`;
+      fields.periodicNote.textContent = `${periodLabels[result.termUnit]} for ${result.termLabel}`;
+      fields.monthlyBurden.textContent = `$${formatCurrency(result.monthlyBurden)}`;
+      fields.pressureNote.textContent = `${result.pressure.text} | about $${formatCurrency(result.monthlyCost)}/month in cost`;
+      fields.pressureNote.className = `metric-note metric-note--tone ${result.pressure.className}`;
+      fields.narrative.textContent = `${label} asks the business to absorb roughly $${formatCurrency(result.monthlyBurden)} per month over about ${result.months.toFixed(1)} months. That is the fast way to judge whether speed is worth the carry.`;
+      fields.apply.href = buildApplyHref(result, label);
+
+      results.hidden = false;
+      deals[suffix].result = result;
+      renderComparison();
+    }
+
+    function calculateAndRender() {
+      if (!validate()) {
+        return;
+      }
+      const result = computeDeal(currentState());
+      if (result) {
+        renderDeal(result);
+      }
+    }
+
+    [advanceInput, factorInput, termInput].forEach((input) => {
+      input.addEventListener("input", () => {
+        validate();
+        if (!results.hidden) {
+          calculateAndRender();
+        }
+      });
+    });
+    unitInput.addEventListener("change", () => {
+      validate();
+      if (!results.hidden) {
+        calculateAndRender();
+      }
+    });
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      calculateAndRender();
+    });
+
+    clearButton.addEventListener("click", () => {
+      form.reset();
+      advanceInput.value = "";
+      factorInput.value = "";
+      termInput.value = "";
+      unitInput.value = "days";
+      submitButton.disabled = true;
+      results.hidden = true;
+      deals[suffix].result = null;
+      renderComparison();
+    });
+  }
+
+  function winnerText(labelA, valueA, labelB, valueB, comparator) {
+    if (Math.abs(valueA - valueB) < 0.01) {
+      return "Tie";
+    }
+    return comparator(valueA, valueB) ? labelA : labelB;
+  }
+
+  function renderComparison() {
+    const comparisonSummary = document.getElementById("comparisonSummary");
+    const dealA = deals["1"]?.result;
+    const dealB = deals["2"]?.result;
+
+    if (!dealA || !dealB) {
+      comparisonSummary.hidden = true;
+      return;
+    }
+
+    const cheaper = winnerText("Deal A", dealA.totalPayback, "Deal B", dealB.totalPayback, (a, b) => a < b);
+    const lowerBurden = winnerText("Deal A", dealA.monthlyBurden, "Deal B", dealB.monthlyBurden, (a, b) => a < b);
+    const shorter = winnerText("Deal A", dealA.months, "Deal B", dealB.months, (a, b) => a < b);
+    const cleanerPressure = winnerText("Deal A", dealA.monthlyCost, "Deal B", dealB.monthlyCost, (a, b) => a < b);
+
+    document.getElementById("winnerCost").textContent = cheaper;
+    document.getElementById("winnerBurden").textContent = lowerBurden;
+    document.getElementById("winnerTerm").textContent = shorter;
+    document.getElementById("winnerPressure").textContent = cleanerPressure;
+
+    const headline = document.getElementById("comparisonHeadline");
+    const body = document.getElementById("comparisonBody");
+    const apply = document.getElementById("comparisonApply");
+
+    let preferredDeal = lowerBurden === "Deal B" ? dealB : dealA;
+    let preferredLabel = lowerBurden === "Deal B" ? "Deal B" : "Deal A";
+
+    if (cheaper === lowerBurden && cheaper !== "Tie") {
+      headline.textContent = `${cheaper} is cleaner on both total cost and monthly carry.`;
+      body.textContent = `${cheaper} wins on what usually matters most in practice: less total payback and less monthly drag. It is the better first candidate to pressure-test with the actual business cash flow.`;
+      preferredDeal = cheaper === "Deal B" ? dealB : dealA;
+      preferredLabel = cheaper;
+    } else if (cheaper === "Tie" && lowerBurden === "Tie") {
+      headline.textContent = "The offers are effectively tied on the core cost metrics.";
+      body.textContent = "At that point the real decision moves to remittance mechanics, lender behavior, renewal pressure, and whether MCA is the right structure at all.";
+      preferredDeal = dealA;
+      preferredLabel = "Deal A";
+    } else {
+      headline.textContent = `${cheaper} is cheaper overall, but ${lowerBurden} is easier to carry month to month.`;
+      body.textContent = `This is the common MCA tradeoff: one offer costs less on paper, while the other puts less immediate strain on the business. If the cash flow is tight, monthly drag usually matters more than a modest cost advantage.`;
+    }
+
+    apply.href = buildApplyHref(preferredDeal, preferredLabel);
+    comparisonSummary.hidden = false;
+  }
+
+  function loadExampleDeals() {
+    const examples = {
+      "1": { advanceAmount: 85000, factorRate: 1.24, termLength: 140, termUnit: "days" },
+      "2": { advanceAmount: 85000, factorRate: 1.29, termLength: 11, termUnit: "months" },
+    };
+
+    Object.entries(examples).forEach(([suffix, example]) => {
+      const deal = deals[suffix];
+      deal.advanceInput.value = formatCurrency(example.advanceAmount);
+      deal.factorInput.value = example.factorRate.toFixed(2);
+      deal.termInput.value = String(example.termLength);
+      deal.unitInput.value = example.termUnit;
+      deal.submitButton.disabled = false;
+      const result = computeDeal(example);
+      if (result) {
+        const { fields, results } = deal;
+        fields.apply.href = buildApplyHref(result, deal.label);
+        results.hidden = false;
+        deal.result = result;
+        fields.totalPayback.textContent = `$${formatCurrency(result.totalPayback)}`;
+        fields.paybackNote.textContent = `${result.paybackMultiple.toFixed(2)}x of the amount advanced`;
+        fields.capitalCost.textContent = `$${formatCurrency(result.capitalCost)}`;
+        fields.capitalCostNote.textContent = `${result.costPercent.toFixed(1)}% cost of capital`;
+        fields.periodicPayment.textContent = `$${formatCurrency(result.periodicPayment)}`;
+        fields.periodicNote.textContent = `${periodLabels[result.termUnit]} for ${result.termLabel}`;
+        fields.monthlyBurden.textContent = `$${formatCurrency(result.monthlyBurden)}`;
+        fields.pressureNote.textContent = `${result.pressure.text} | about $${formatCurrency(result.monthlyCost)}/month in cost`;
+        fields.pressureNote.className = `metric-note metric-note--tone ${result.pressure.className}`;
+        fields.narrative.textContent = `${deal.label} asks the business to absorb roughly $${formatCurrency(result.monthlyBurden)} per month over about ${result.months.toFixed(1)} months. That is the fast way to judge whether speed is worth the carry.`;
+      }
+    });
+
+    renderComparison();
+  }
+
+  initDeal("1", "Deal A");
+  initDeal("2", "Deal B");
+
+  document.getElementById("mca-example").addEventListener("click", loadExampleDeals);
+  document.getElementById("mca-reset-all").addEventListener("click", () => {
+    ["1", "2"].forEach((suffix) => {
+      document.querySelector(`[data-clear-deal="${suffix}"]`).click();
+    });
+  });
 </script>
