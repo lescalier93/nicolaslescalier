@@ -55,6 +55,25 @@ layout: default
       }
     };
 
+    const humanizeLeadSource = (value) => {
+      const sourceMap = {
+        website: "the website",
+        mca_calculator: "the MCA calculator",
+        term_calculator: "the term calculator",
+      };
+      return sourceMap[value] || String(value || "the website").replace(/_/g, " ");
+    };
+
+    const humanizeScenarioOrigin = (value) => {
+      const scenarioMap = {
+        payment: "payment-based",
+        loanAmount: "loan-amount-based",
+        interestRate: "rate-based",
+        loanTerm: "term-based",
+      };
+      return scenarioMap[value] || value;
+    };
+
     setFieldValue("lead_source", params.get("lead_source") || "website");
     setFieldValue("scenario_origin", params.get("scenario_origin") || "");
 
@@ -92,8 +111,8 @@ layout: default
     if (scenarioCarryover && scenarioCarryoverText && (leadSource !== "website" || scenarioOrigin)) {
       scenarioCarryover.hidden = false;
       scenarioCarryoverText.textContent = scenarioOrigin
-        ? `Calculator context has been carried into this form from ${leadSource.replace(/_/g, " ")} using the "${scenarioOrigin}" scenario.`
-        : `Calculator context has been carried into this form from ${leadSource.replace(/_/g, " ")}.`;
+        ? `Calculator context has been carried into this form from ${humanizeLeadSource(leadSource)} using the "${humanizeScenarioOrigin(scenarioOrigin)}" scenario.`
+        : `Calculator context has been carried into this form from ${humanizeLeadSource(leadSource)}.`;
     }
 
     if (typeof window.nicolasTrack === "function") {
