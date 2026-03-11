@@ -58,7 +58,7 @@ layout: default
     const humanizeLeadSource = (value) => {
       const sourceMap = {
         website: "the website",
-        mca_calculator: "the working capital calculator",
+        working_capital_calculator: "the working capital calculator",
         term_calculator: "the term calculator",
       };
       return sourceMap[value] || String(value || "the website").replace(/_/g, " ");

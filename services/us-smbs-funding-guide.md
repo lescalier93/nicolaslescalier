@@ -1,6 +1,6 @@
 ---
 title: "How U.S. SMBs Get Funding Fast | Nicolas Lescalier"
-description: "A practical guide to choosing between MCAs, lines of credit, term loans, equipment financing, factoring, PO financing, SBA 7(a), and commercial real estate options."
+description: "A practical guide to choosing between working capital loans, lines of credit, term loans, equipment financing, factoring, PO financing, SBA 7(a), and commercial real estate options."
 layout: default
 permalink: /services/us-smbs-funding-guide/
 redirect_from:
@@ -20,7 +20,7 @@ redirect_from:
       <span class="card-label">Working Capital</span>
       <h3>Best for speed and receivables-driven repayment</h3>
       <p>Useful when time is tight and the business has deposit or card volume that supports daily or weekly remittances.</p>
-      <a href="/services/us-mca-expert/">Learn about MCAs</a>
+      <a href="/services/us-working-capital-loans/">Learn about working capital loans</a>
     </article>
     <article class="service-card">
       <span class="card-label">Line of Credit</span>

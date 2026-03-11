@@ -109,7 +109,7 @@ faq:
       <span class="card-label">Working Capital</span>
       <h3>Working capital loans</h3>
       <p>Fast capital for businesses that need speed and can support frequent remittances tied to real revenue activity.</p>
-      <a href="/services/us-mca-expert/">See working capital options</a>
+      <a href="/services/us-working-capital-loans/">See working capital options</a>
     </article>
     <article class="service-card">
       <span class="card-label">Flexible Access</span>
@@ -159,7 +159,7 @@ faq:
       <span class="card-label">Calculator</span>
       <h3>Working capital calculator</h3>
       <p>Compare two short-term working capital offers by real repayment pressure instead of treating factor rate as the only decision point.</p>
-      <a href="/merchant-cash-advance-calculator.html">Open working capital calculator</a>
+      <a href="/working-capital-calculator.html">Open working capital calculator</a>
     </article>
     <article class="service-card">
       <span class="card-label">Calculator</span>
@@ -240,7 +240,7 @@ faq:
   <div class="grid grid--2">
     <article class="service-card">
       <h3>How fast can funding happen?</h3>
-      <p>That depends on the product. MCAs and some working-capital structures can move inside days. SBA and more documentation-heavy files usually take longer.</p>
+      <p>That depends on the product. Working capital loans and some short-term structures can move inside days. SBA and more documentation-heavy files usually take longer.</p>
     </article>
     <article class="service-card">
       <h3>Do I need to know the exact product first?</h3>

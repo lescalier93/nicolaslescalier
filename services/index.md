@@ -35,7 +35,7 @@ permalink: /services/
       <span class="card-label">Fast Access</span>
       <h3>Working capital loans</h3>
       <p>For urgent working capital, inventory, payroll, repairs, or seasonal swings when traditional bank timing is too slow.</p>
-      <a href="{{ '/services/us-mca-expert/' | relative_url }}">View working capital details</a>
+      <a href="{{ '/services/us-working-capital-loans/' | relative_url }}">View working capital details</a>
     </article>
     <article class="service-card">
       <span class="card-label">Flexible Access</span>

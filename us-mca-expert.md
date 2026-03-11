@@ -2,8 +2,9 @@
 title: "U.S. Working Capital Loans | Nicolas Lescalier"
 description: "Learn when a short-term working capital loan makes sense, how repayment works, and how Nicolas Lescalier helps U.S. businesses evaluate fast-turn working capital offers responsibly."
 layout: default
-permalink: /services/us-mca-expert/
+permalink: /services/us-working-capital-loans/
 redirect_from:
+  - /services/us-mca-expert/
   - /blog/merchant-cash-advance-basics.html
 faq:
   - question: "How fast can a working capital loan fund?"
@@ -102,7 +103,7 @@ faq:
     <h2>Use the calculator, then compare the structure before signing.</h2>
     <p>A working capital loan can look simple until you translate the factor and term into actual repayment pressure. Use the calculator to compare offers, then reach out if you want a second view on the structure.</p>
     <div class="cta-row">
-      <a class="button" href="/merchant-cash-advance-calculator.html">Open working capital calculator</a>
+      <a class="button" href="/working-capital-calculator.html">Open working capital calculator</a>
       <a class="button button--secondary" href="/apply/">Start application</a>
     </div>
   </div>

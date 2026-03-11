@@ -12,7 +12,7 @@ redirect_from:
   <h1>Working capital loans can solve a timing problem fast, but structure matters.</h1>
   <p class="section-intro">If you are evaluating a short-term working capital option, the full guide below is the better starting point because it covers fit, repayment cadence, and how to compare the cost against other capital options.</p>
   <div class="cta-row">
-    <a class="button" href="/services/us-mca-expert/">Go to full working capital guide</a>
-    <a class="button button--secondary" href="/merchant-cash-advance-calculator.html">Open working capital calculator</a>
+    <a class="button" href="/services/us-working-capital-loans/">Go to full working capital guide</a>
+    <a class="button button--secondary" href="/working-capital-calculator.html">Open working capital calculator</a>
   </div>
 </section>

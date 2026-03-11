@@ -2,7 +2,9 @@
 layout: default
 title: "Working Capital Offer Comparison | Nicolas Lescalier"
 description: "Compare two short-term working capital offers by factor rate, payback, remittance pace, monthly drag, and which structure is easier to carry."
-permalink: /merchant-cash-advance-calculator.html
+permalink: /working-capital-calculator.html
+redirect_from:
+  - /merchant-cash-advance-calculator.html
 ---
 
 <style>
@@ -371,7 +373,7 @@ permalink: /merchant-cash-advance-calculator.html
       <h1>Compare working capital offers by real repayment pressure, not just headline speed.</h1>
       <p>Short-term working capital pricing gets misread when the discussion stops at factor rate. This page turns two offers into the numbers that matter most in practice: total payback, cost of capital, payment cadence, and monthly drag on the business.</p>
       <div class="cta-row">
-        <a class="button" href="/services/us-mca-expert/">Read the working capital guide</a>
+        <a class="button" href="/services/us-working-capital-loans/">Read the working capital guide</a>
         <a class="button button--secondary" href="/apply/">Start application</a>
       </div>
     </div>
@@ -784,7 +786,7 @@ permalink: /merchant-cash-advance-calculator.html
       amount_requested: amountRange(result.advanceAmount),
       use_of_proceeds: "Comparing short-term working capital offers for a business financing request.",
       additional_context: `${label}: $${formatCurrency(result.advanceAmount)} advance, factor ${result.factorRate.toFixed(2)}, ${result.termLabel}, total payback $${formatCurrency(result.totalPayback)}, monthly drag about $${formatCurrency(result.monthlyBurden)}.`,
-      lead_source: "mca_calculator",
+      lead_source: "working_capital_calculator",
       scenario_origin: label,
     });
     return `/apply/?${params.toString()}`;

@@ -1,6 +1,6 @@
 ---
 title: "Term Loans for U.S. Businesses | Nicolas Lescalier"
-description: "See when term loans make sense for U.S. businesses, how repayment compares to MCAs, and how Nicolas Lescalier structures term lending decisions."
+description: "See when term loans make sense for U.S. businesses, how repayment compares to short-term working capital loans, and how Nicolas Lescalier structures term lending decisions."
 layout: default
 permalink: /services/us-term-loans-approach/
 redirect_from:
@@ -22,7 +22,7 @@ faq:
   <div class="panel">
     <p class="eyebrow">Term Loans</p>
     <h1>Lower-cost capital for business needs that deserve a longer repayment runway.</h1>
-    <p>Term loans are usually the right choice when the business is financing growth, equipment, expansion, acquisition, or refinancing and needs predictable monthly repayment. They are slower than MCAs, but they can be materially cleaner from a total-cost and cash-flow standpoint.</p>
+    <p>Term loans are usually the right choice when the business is financing growth, equipment, expansion, acquisition, or refinancing and needs predictable monthly repayment. They are slower than short-term working capital loans, but they can be materially cleaner from a total-cost and cash-flow standpoint.</p>
     <p>I help borrowers evaluate whether the structure fits not just the purchase, but what the business will need after the loan closes.</p>
   </div>
   <div class="proof-card">

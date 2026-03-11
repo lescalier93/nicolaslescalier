@@ -55,7 +55,7 @@ layout: default
       <span class="card-label">Speed</span>
       <h3>Working capital loans</h3>
       <p>Useful when a business needs fast working capital and repayment can be tied to receivables or sales activity.</p>
-      <a href="/services/us-mca-expert/">Learn about working capital loans</a>
+      <a href="/services/us-working-capital-loans/">Learn about working capital loans</a>
     </article>
     <article class="service-card">
       <span class="card-label">Structure</span>
