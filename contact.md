@@ -26,8 +26,9 @@ layout: default
     </div>
     <div class="grid">
       <div>
-        <h3>Direct contact</h3>
-        <p><a href="tel:+13056993636">(305) 699-3636</a><br><a href="mailto:nicolas@lescalierfinance.com">nicolas@lescalierfinance.com</a><br><a href="https://www.linkedin.com/in/nicolaslescalier/">LinkedIn profile</a></p>
+        <h3>Best channel</h3>
+        <p>Use the message form on this page for a lighter first conversation, or go straight to the full application if the file is already warm.</p>
+        <p><a href="/apply/">Open full application</a><br><a href="/application-checklist/">Application checklist</a><br><a href="https://www.linkedin.com/in/nicolaslescalier/">LinkedIn profile</a></p>
       </div>
       <div>
         <h3>What to include</h3>

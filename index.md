@@ -264,7 +264,7 @@ faq:
     <p>If the deal is a fit, I will help you identify the most realistic financing path, the likely documentation, and the tradeoffs you should expect before you apply.</p>
     <div class="cta-row">
       <a class="button" href="/apply/">Start the application</a>
-      <a class="button button--secondary" href="tel:+13056993636">Call (305) 699-3636</a>
+      <a class="button button--secondary" href="/contact/">Send a message first</a>
     </div>
   </div>
 </section>

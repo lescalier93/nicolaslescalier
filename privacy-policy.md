@@ -43,6 +43,6 @@ layout: default
   </div>
   <div class="proof-card">
     <p class="eyebrow">Contact</p>
-    <p>If you want to ask about privacy, communication preferences, or opt out of future outreach, contact <a href="tel:+13056993636">(305) 699-3636</a> or <a href="mailto:nicolas@lescalierfinance.com">nicolas@lescalierfinance.com</a>.</p>
+    <p>If you want to ask about privacy, communication preferences, or opt out of future outreach, use the <a href="/contact/">contact page</a>.</p>
   </div>
 </section>

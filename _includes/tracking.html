@@ -14,6 +14,7 @@
 <script>
   (() => {
     window.dataLayer = window.dataLayer || [];
+    const startedForms = new WeakSet();
 
     window.nicolasTrack = (eventName, params = {}) => {
       const payload = {
@@ -40,5 +41,102 @@
         detail: { eventName, payload },
       }));
     };
+
+    const normalizeText = (value) => String(value || "").replace(/\s+/g, " ").trim().slice(0, 120);
+
+    const sanitizeTarget = (value) => {
+      if (!value) {
+        return "";
+      }
+      if (value.startsWith("http")) {
+        try {
+          const url = new URL(value);
+          return `${url.origin}${url.pathname}`;
+        } catch (error) {
+          return value;
+        }
+      }
+      return value;
+    };
+
+    const classifyTarget = (target) => {
+      if (!target) return "button";
+      if (target.includes("/apply/")) return "apply";
+      if (target.includes("/contact/")) return "contact";
+      if (target.includes("calculator")) return "calculator";
+      if (target.includes("/services/")) return "service";
+      if (target.includes("/resources")) return "resource";
+      if (target.includes("/application-checklist/")) return "checklist";
+      if (target.includes("linkedin.com")) return "profile";
+      return target.startsWith("#") ? "jump_link" : "link";
+    };
+
+    const sectionLabel = (node) => {
+      const section = node.closest("section");
+      if (!section) {
+        return "site";
+      }
+      const heading = section.querySelector("h1, h2, h3");
+      return normalizeText(heading?.textContent || section.id || "section");
+    };
+
+    document.addEventListener("click", (event) => {
+      const target = event.target.closest("a, button");
+      if (!target) {
+        return;
+      }
+
+      const href = target.getAttribute("href") || target.getAttribute("data-href") || "";
+      const text = normalizeText(target.dataset.trackLabel || target.textContent || target.getAttribute("aria-label"));
+      const isCta = target.classList.contains("button") || target.classList.contains("button--nav") || target.closest(".cta-row");
+      const isNav = !!target.closest("nav") || !!target.closest(".site-footer");
+      const isTrackedLink = isCta
+        || isNav
+        || href.includes("/apply/")
+        || href.includes("/contact/")
+        || href.includes("calculator")
+        || href.includes("linkedin.com");
+
+      if (target.matches("[data-nav-toggle]")) {
+        window.nicolasTrack("nav_toggle", {
+          nav_state: target.getAttribute("aria-expanded") === "true" ? "open" : "closed",
+        });
+        return;
+      }
+
+      if (!isTrackedLink) {
+        return;
+      }
+
+      window.nicolasTrack(isNav && !isCta ? "nav_click" : "cta_click", {
+        cta_label: text || "Unnamed CTA",
+        cta_target: sanitizeTarget(href),
+        cta_type: classifyTarget(href),
+        cta_section: sectionLabel(target),
+      });
+    });
+
+    document.addEventListener("focusin", (event) => {
+      const form = event.target.closest("form");
+      if (!form || startedForms.has(form)) {
+        return;
+      }
+      startedForms.add(form);
+      window.nicolasTrack("form_started", {
+        form_name: form.getAttribute("name") || form.id || form.getAttribute("action") || "form",
+        form_target: sanitizeTarget(form.getAttribute("action") || ""),
+      });
+    });
+
+    document.addEventListener("submit", (event) => {
+      const form = event.target;
+      if (!(form instanceof HTMLFormElement)) {
+        return;
+      }
+      window.nicolasTrack("form_submit", {
+        form_name: form.getAttribute("name") || form.id || form.getAttribute("action") || "form",
+        form_target: sanitizeTarget(form.getAttribute("action") || ""),
+      });
+    });
   })();
 </script>
