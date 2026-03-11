@@ -24,6 +24,20 @@ faq:
         <a class="button" href="/contact/">Book a Free Consultation</a>
         <a class="button button--secondary" href="/services/">Explore Financing Options</a>
       </div>
+      <div class="trust-strip">
+        <div class="trust-chip">
+          <span class="trust-chip__label">Products</span>
+          <span class="trust-chip__value">MCA, LOC, term, equipment, invoice, SBA, CRE</span>
+        </div>
+        <div class="trust-chip">
+          <span class="trust-chip__label">Industries</span>
+          <span class="trust-chip__value">Retail, hospitality, construction, logistics, medical, investor deals</span>
+        </div>
+        <div class="trust-chip">
+          <span class="trust-chip__label">Approach</span>
+          <span class="trust-chip__value">Fast response, fit-first guidance, cleaner application prep</span>
+        </div>
+      </div>
       <div class="hero__stats">
         <div class="stat">
           <strong>48-72 hrs</strong>
