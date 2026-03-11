@@ -1,5 +1,5 @@
 ---
-title: "Why Clients Trust Nicolas Lescalier"
+title: "Why Clients Trust Nicolas Lescalier | U.S. Business Financing"
 description: "See why borrowers choose Nicolas Lescalier for clearer financing guidance, stronger product fit, and more disciplined deal execution."
 permalink: "/why-us-clients-trust-nicolas/"
 layout: default
@@ -18,7 +18,7 @@ layout: default
       <h2>Trust is built when the borrower understands the tradeoffs before the documents start flying.</h2>
       <p>That means being direct about speed, cost pressure, documentation, collateral, and whether the chosen structure is solving the right problem in the first place.</p>
       <div class="section-band__actions">
-        <a class="button" href="/contact/">Review your situation</a>
+        <a class="button" href="/apply/">Start application</a>
         <a class="button button--secondary" href="/reviews-us-funding/">See outcomes first</a>
       </div>
     </div>
@@ -128,8 +128,8 @@ layout: default
     <p class="eyebrow">Practical next step</p>
     <p>If you already know your funding target and timeline, the most useful next page is the application checklist.</p>
     <div class="cta-row">
-      <a class="button" href="/application-checklist/">Open checklist</a>
-      <a class="button button--secondary" href="/contact/">Contact Nicolas</a>
+      <a class="button" href="/apply/">Start application</a>
+      <a class="button button--secondary" href="/application-checklist/">Open checklist</a>
     </div>
   </div>
 </section>

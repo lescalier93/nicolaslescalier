@@ -1,6 +1,6 @@
 ---
-title: "Nicolas Lescalier Reviews and Outcomes"
-description: "Read case-style reviews and outcomes across working capital, term loans, invoice finance, bridge debt, and commercial real estate transactions."
+title: "Nicolas Lescalier Reviews and Outcomes | U.S. Business Financing"
+description: "Read financing reviews and case-style outcomes across working capital, term loans, invoice finance, bridge debt, and commercial real estate transactions."
 permalink: "/reviews-us-funding/"
 layout: default
 ---
@@ -79,8 +79,8 @@ layout: default
     <h2>Before you reach out, gather the basic file information.</h2>
     <p>The faster way to get a useful answer is to start with the amount, use of proceeds, timeline, and the documents most likely to matter.</p>
     <div class="cta-row">
-      <a class="button" href="/application-checklist/">Open application checklist</a>
-      <a class="button button--secondary" href="/contact/">Talk to Nicolas</a>
+      <a class="button" href="/apply/">Start application</a>
+      <a class="button button--secondary" href="/application-checklist/">Open application checklist</a>
     </div>
   </div>
 </section>

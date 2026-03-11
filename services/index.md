@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Financing Products | Nicolas Lescalier"
+description: "Compare business financing products with Nicolas Lescalier, including MCA, line of credit, term loans, equipment financing, factoring, PO finance, SBA 7(a), and commercial mortgage options."
 permalink: /services/
 ---
 
@@ -14,7 +15,7 @@ permalink: /services/
       <h2>Pick the financing family that best matches the business problem.</h2>
       <p>Do not start with product names if you are unsure. Start with what the capital is solving, how fast it is needed, and what repayment structure the business can support.</p>
       <div class="section-band__actions">
-        <a class="button" href="/contact/">Review your scenario</a>
+        <a class="button" href="/apply/">Start application</a>
         <a class="button button--secondary" href="/services/us-smbs-funding-guide/">Compare products first</a>
       </div>
     </div>
@@ -110,7 +111,7 @@ permalink: /services/
     <h3>Need help narrowing the right path?</h3>
     <p>The highest-value conversation usually happens before an application is submitted, when the file can still be steered toward the structure that fits best.</p>
     <div class="cta-row">
-      <a class="button" href="/contact/">Talk to Nicolas</a>
+      <a class="button" href="/apply/">Start application</a>
       <a class="button button--secondary" href="/application-checklist/">Prepare your file</a>
     </div>
   </div>

@@ -60,7 +60,7 @@ permalink: /services/us-client-success-stories/
     <h3>Your situation will be different.</h3>
     <p>The useful question is not whether one product is universally better. It is which structure solves the problem without creating the next one.</p>
     <div class="cta-row">
-      <a class="button" href="/contact/">Talk through your deal</a>
+      <a class="button" href="/apply/">Start application</a>
       <a class="button button--secondary" href="/why-us-clients-trust-nicolas/">Why clients trust Nicolas</a>
     </div>
   </div>

@@ -18,7 +18,7 @@ layout: default
       <h2>A cleaner file does more than save time. It changes the quality of the answer you get.</h2>
       <p>Most financing conversations go sideways because the borrower starts with a product request but not enough context around timing, revenue profile, use of proceeds, or existing constraints.</p>
       <div class="section-band__actions">
-        <a class="button" href="/contact/">Send the basics</a>
+        <a class="button" href="/apply/">Start application</a>
         <a class="button button--secondary" href="/services/">Compare products first</a>
       </div>
     </div>
@@ -120,7 +120,7 @@ layout: default
     <h2>If you have these basics ready, the first conversation will be much more useful.</h2>
     <p>Send the file summary and I can help identify the most realistic financing path before you spend time chasing the wrong product.</p>
     <div class="cta-row">
-      <a class="button" href="/contact/">Start the conversation</a>
+      <a class="button" href="/apply/">Start application</a>
       <a class="button button--secondary" href="/services/">Review financing products</a>
     </div>
   </div>
