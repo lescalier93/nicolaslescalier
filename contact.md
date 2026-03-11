@@ -1,33 +1,53 @@
 ---
-title: "Contact Nicolas Lescalier – U.S. Business Financing"
-description: "Get in touch with Nicolas Lescalier for personalized business financing solutions in the United States.  Book a consultation or send a message today."
+title: "Contact Nicolas Lescalier | U.S. Business Financing"
+description: "Get in touch with Nicolas Lescalier for personalized business financing solutions in the United States. Book a consultation or send a message today."
 permalink: "/contact/"
 layout: default
 ---
 
-# Contact Nicolas Lescalier – U.S. Business Financing
+<section class="section split">
+  <div class="contact-card">
+    <p class="eyebrow">Contact</p>
+    <h1>Start with the deal basics.</h1>
+    <p>Send the funding target, what the capital is for, and how quickly you need it. That is enough to identify whether an MCA, term loan, bridge structure, or another option is the right first path.</p>
+    <div class="grid">
+      <div>
+        <h3>Direct contact</h3>
+        <p><a href="tel:+13056993636">(305) 699-3636</a><br><a href="mailto:nicolas@lescalierfinance.com">nicolas@lescalierfinance.com</a><br><a href="https://www.linkedin.com/in/nicolaslescalier/">LinkedIn profile</a></p>
+      </div>
+      <div>
+        <h3>What to include</h3>
+        <ul class="plain-list">
+          <li>Requested amount or range</li>
+          <li>Use of proceeds</li>
+          <li>Preferred timeline</li>
+          <li>Any collateral or existing debt constraints</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-If you’re ready to explore funding options for your business, I’d love to speak with you.  Please complete the form below or reach out directly via phone or email.
+  <div class="contact-form">
+    <p class="eyebrow">Message</p>
+    <h2>Book a free consultation</h2>
+    <p>I review inquiries personally. If the scenario is a fit, I will outline the most likely financing path and next documents required.</p>
+    <form action="https://formspree.io/f/maypkwyo" method="POST">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your name">
+      </div>
 
-## Book a Consultation
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+      </div>
 
-I offer a free initial consultation to discuss your goals and assess which financing options may be right for you.  Book a time that suits your schedule or call me for immediate assistance.
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="7" required placeholder="Tell me about the business, the amount you need, and the timeline."></textarea>
+      </div>
 
-- **Phone (U.S.):** (305) 699‑3636
-- **Email:** <a href="mailto:nicolas@lescalierfinance.com">nicolas@lescalierfinance.com</a>
-- **LinkedIn:** [linkedin.com/in/nicolaslescalier](https://www.linkedin.com/in/nicolaslescalier/)
-
-## Contact Form
-
-<form action="https://formspree.io/f/maypkwyo" method="POST">
-  <label for="name">Name</label><br>
-  <input type="text" id="name" name="name" required placeholder="Your Name"><br><br>
-
-  <label for="email">Email</label><br>
-  <input type="email" id="email" name="email" required placeholder="you@example.com"><br><br>
-
-  <label for="message">Message</label><br>
-  <textarea id="message" name="message" rows="6" required placeholder="How can I help you?"></textarea><br><br>
-
-  <button type="submit">Send Message</button>
-</form>
+      <button class="button" type="submit">Send Message</button>
+    </form>
+  </div>
+</section>

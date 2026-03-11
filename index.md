@@ -1,38 +1,103 @@
 ---
 layout: default
 title: "Nicolas Lescalier | U.S. Business Financing Specialist"
-description: "Trusted U.S. business financing specialist offering merchant cash advances, term loans, bridge loans and commercial real estate financing to small and mid-sized companies across the United States."
+description: "Trusted U.S. business financing specialist offering merchant cash advances, term loans, bridge loans, and commercial real estate financing to small and mid-sized companies across the United States."
 permalink: /
 ---
 
-# Nicolas Lescalier – U.S. Business Financing Specialist
+<section class="hero">
+  <div class="hero__grid">
+    <div>
+      <p class="eyebrow">Fast capital, clearly structured</p>
+      <h1>Funding that fits the business you are actually running.</h1>
+      <p class="lede">I help U.S. operators secure working capital, term loans, bridge loans, and commercial real estate financing without wasting weeks in the wrong process. The goal is simple: match the deal structure to your timeline, cash flow, and growth plan.</p>
+      <div class="hero__actions">
+        <a class="button" href="/contact/">Book a Free Consultation</a>
+        <a class="button button--secondary" href="/services/">Explore Financing Options</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <strong>48-72 hrs</strong>
+          <span>Typical speed for time-sensitive working capital requests.</span>
+        </div>
+        <div class="stat">
+          <strong>5+ years</strong>
+          <span>Experience structuring alternative financing for operating businesses.</span>
+        </div>
+        <div class="stat">
+          <strong>Nationwide</strong>
+          <span>Lender relationships built for U.S. borrowers across multiple industries.</span>
+        </div>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <span class="hero-card__label">How I work</span>
+      <h3>Practical guidance, not generic lender shopping.</h3>
+      <ul class="check-list">
+        <li>Clarify the use of proceeds before choosing a product.</li>
+        <li>Pressure-test repayment fit against real cash flow.</li>
+        <li>Prioritize speed only when speed actually matters.</li>
+        <li>Keep communication direct so decisions happen faster.</li>
+      </ul>
+    </aside>
+  </div>
+</section>
 
-Running a business in the United States requires more than a great product or service — you need reliable access to capital. As a U.S. business owner you face shifting interest rates, supply chain disruptions and competitive pressures. I’m **Nicolas Lescalier**, and for over five years I've helped entrepreneurs like you obtain the funding they need to grow and thrive.
+<section class="section">
+  <p class="eyebrow">Core solutions</p>
+  <h2>Financing products built around the situation, not a template.</h2>
+  <p class="section-intro">Different funding problems require different instruments. A payroll gap, a location expansion, and a property refinance should not go through the same playbook.</p>
+  <div class="grid grid--3">
+    <article class="service-card">
+      <span class="card-label">Working Capital</span>
+      <h3>Merchant cash advances</h3>
+      <p>Best for businesses that need speed, flexibility, and approvals tied more to receivables than traditional underwriting.</p>
+      <a href="/services/us-mca-expert/">See MCA options</a>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Growth Capital</span>
+      <h3>Term loans and credit lines</h3>
+      <p>Useful for expansion, equipment, hiring, or acquisitions when predictable repayment matters more than pure speed.</p>
+      <a href="/services/us-term-loans-approach/">Review term loan approach</a>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Real Estate</span>
+      <h3>Bridge and CRE financing</h3>
+      <p>Designed for acquisitions, refinances, and transition periods where timing and structure both matter.</p>
+      <a href="/services/us-bridge-financing/">Explore bridge financing</a>
+    </article>
+  </div>
+</section>
 
-## Empowering U.S. Businesses with Smarter Capital
+<section class="section split">
+  <div class="panel">
+    <p class="eyebrow">Why clients hire me</p>
+    <h2>A financing advisor who is comfortable with nuance.</h2>
+    <p>Most borrowers do not need more lender noise. They need help narrowing the right product, avoiding bad-fit offers, and getting to a decision quickly. I work with small and mid-sized U.S. companies that want clarity on tradeoffs before signing anything.</p>
+    <ul class="plain-list">
+      <li>Direct access by phone and email</li>
+      <li>Product selection based on timeline and repayment reality</li>
+      <li>Support for retail, construction, medical, logistics, hospitality, and investor-led deals</li>
+    </ul>
+  </div>
+  <div class="proof-card">
+    <p class="eyebrow">Client snapshot</p>
+    <blockquote class="quote">
+      Nicolas secured a $300,000 MCA for our Miami-based restaurant group in 72 hours, allowing us to renovate and reopen on schedule.
+      <footer>Sarah P., Restaurateur</footer>
+    </blockquote>
+    <p><a href="/services/us-client-success-stories/">Read more success stories</a></p>
+  </div>
+</section>
 
-I specialize in alternative funding solutions designed for small and mid-sized companies. Whether you operate a retail store in Florida, a construction firm in Texas or a medical practice in California, I understand the regulatory environment and lender requirements across the United States. With access to nationwide lenders, I can match you with the best product for your situation.
-
-### Merchant Cash Advances (MCAs) for U.S. businesses
-
-A merchant cash advance provides working capital based on your future receivables. It’s ideal for seasonal businesses, restaurants or retail shops needing quick funds without lengthy approvals. I partner with top U.S. MCA providers to secure funding in as little as 48 hours. Learn how a merchant cash advance can help manage inventory, cover payroll or fund a marketing campaign by visiting my [MCA expert page](/services/us-mca-expert/).
-
-### Term Loans & Lines of Credit
-
-For larger investments—equipment purchases, expansion or acquisition—term loans and lines of credit offer predictable payments and competitive rates. I structure term loans for U.S. companies with clear repayment schedules tailored to your cash flow. Visit the [Term Loan Approach](/services/us-term-loans-approach/) page to learn more about my process and how it differs from bank loans.
-
-### Commercial & Bridge Financing
-
-From refinancing office buildings to financing new construction, my commercial real estate (CRE) programs help U.S. investors reduce monthly payments and unlock equity. Need a bridge loan while waiting for long-term financing? I specialize in short-term bridge financing for property acquisitions and development projects. Read the [Bridge Financing in U.S. Markets](/services/us-bridge-financing/) article for examples.
-
-### Client Success Stories
-
-> **Nicolas secured a $300,000 MCA for our Miami-based restaurant group in 72 hours, allowing us to renovate and reopen on schedule.** — *Sarah P., Restaurateur*
-
-> **We acquired a warehouse in New Jersey with a bridge loan Nicolas arranged. His understanding of U.S. CRE markets and speed was unmatched.** — *Mark T., Real Estate Developer*
-
-For more case studies, see the [Client Success Stories](/services/us-client-success-stories/) page.
-
-## Ready to Grow?
-
-Get in touch today to explore your financing options. Whether you need a merchant cash advance, term loan or bridge financing, I’m here to help you secure the capital you need to thrive. [Contact me](/contact/) for a free consultation.
+<section class="section">
+  <div class="cta-panel">
+    <p class="eyebrow">Next step</p>
+    <h2>Tell me what you need capital for and how fast you need it.</h2>
+    <p>If the deal is a fit, I will help you identify the most realistic financing path, the likely documentation, and the tradeoffs you should expect before you commit time.</p>
+    <div class="cta-row">
+      <a class="button" href="/contact/">Start the conversation</a>
+      <a class="button button--secondary" href="tel:+13056993636">Call (305) 699-3636</a>
+    </div>
+  </div>
+</section>

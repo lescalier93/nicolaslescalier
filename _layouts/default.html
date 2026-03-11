@@ -2,22 +2,56 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | default: site.title }}</title>
     {% seo %}
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    {% include structured_data.html %}
   </head>
   <body>
-    <nav>
-      <a href="{{ '/' | relative_url }}">Home</a> |
-      <a href="{{ '/services/' | relative_url }}">Services</a> |
-      <a href="{{ '/services/us-client-success-stories/' | relative_url }}">Success Stories</a> |
-      <a href="{{ '/us/' | relative_url }}">U.S. Market</a> |
-      <a href="{{ '/about-nicolas-lescalier-us/' | relative_url }}">About</a> |
-      <a href="{{ '/contact/' | relative_url }}">Contact</a>
-    </nav>
-    <main>
-      {{ content }}
-    </main>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="wrap site-header__inner">
+          <a class="brand" href="{{ '/' | relative_url }}">
+            <span class="brand__eyebrow">U.S. Business Financing</span>
+            <span class="brand__name">Nicolas Lescalier</span>
+          </a>
+          <nav class="site-nav" aria-label="Primary">
+            <a href="{{ '/services/' | relative_url }}">Services</a>
+            <a href="{{ '/services/us-client-success-stories/' | relative_url }}">Success Stories</a>
+            <a href="{{ '/us/' | relative_url }}">U.S. Market</a>
+            <a href="{{ '/about-nicolas-lescalier-us/' | relative_url }}">About</a>
+            <a href="{{ '/contact/' | relative_url }}">Contact</a>
+          </nav>
+          <a class="button button--nav" href="{{ '/contact/' | relative_url }}">Book a Call</a>
+        </div>
+      </header>
+
+      <main class="site-main">
+        <div class="wrap">
+          {{ content }}
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="wrap site-footer__grid">
+          <div>
+            <p class="site-footer__title">Nicolas Lescalier</p>
+            <p class="site-footer__copy">Financing solutions for U.S. small and mid-sized businesses, from working capital to bridge and commercial real estate financing.</p>
+          </div>
+          <div>
+            <p class="site-footer__title">Direct</p>
+            <p class="site-footer__copy"><a href="tel:+13056993636">(305) 699-3636</a><br><a href="mailto:nicolas@lescalierfinance.com">nicolas@lescalierfinance.com</a></p>
+          </div>
+          <div>
+            <p class="site-footer__title">Next step</p>
+            <p class="site-footer__copy">Share your timeline, funding target, and use of proceeds. I will help you narrow the right product fast.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
-</html>>
+</html>
