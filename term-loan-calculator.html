@@ -178,6 +178,22 @@ permalink: /term-loan-calculator.html
     padding-left: 1.1rem;
     margin-bottom: 0;
   }
+  .insight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .insight-card {
+    padding: 1.25rem;
+    border-radius: 18px;
+    border: 1px solid rgba(22, 32, 42, 0.08);
+    background: rgba(255, 252, 247, 0.88);
+    box-shadow: 0 18px 48px rgba(34, 36, 38, 0.12);
+  }
+  .insight-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.65rem;
+  }
   @media (max-width: 920px) {
     .tool-intro {
       grid-template-columns: 1fr;
@@ -193,6 +209,9 @@ permalink: /term-loan-calculator.html
     }
     .btn-download {
       width: 100%;
+    }
+    .insight-grid {
+      grid-template-columns: 1fr;
     }
   }
   @media (max-width: 600px) {
@@ -231,6 +250,27 @@ permalink: /term-loan-calculator.html
         <li>Switch between monthly and annual schedules to review total burden</li>
       </ul>
     </aside>
+  </section>
+
+  <section class="section">
+    <div class="insight-grid">
+      <article class="insight-card">
+        <h3>Useful for longer-term fit</h3>
+        <p>Model whether the monthly load still makes sense after payroll, inventory, rent, and existing debt are considered.</p>
+      </article>
+      <article class="insight-card">
+        <h3>Compare structure, not just rate</h3>
+        <p>Term, amortization, and payment cadence can change business strain as much as the nominal rate.</p>
+      </article>
+      <article class="insight-card">
+        <h3>Best paired with real file context</h3>
+        <p>A calculator can show burden. It cannot decide whether term debt is cleaner than LOC, SBA, equipment finance, or another path.</p>
+      </article>
+    </div>
+    <div class="cta-row">
+      <a class="button" href="/contact/">Review a term loan scenario</a>
+      <a class="button button--secondary" href="/services/us-term-loans-approach/">Read the term loan guide</a>
+    </div>
   </section>
 
   <div class="calculator-container">

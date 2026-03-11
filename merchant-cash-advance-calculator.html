@@ -106,6 +106,23 @@ permalink: /merchant-cash-advance-calculator.html
     background: rgba(255, 252, 247, 0.88);
     box-shadow: 0 18px 48px rgba(34, 36, 38, 0.12);
   }
+  .insight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .insight-card {
+    padding: 1.25rem;
+    border-radius: 18px;
+    border: 1px solid rgba(22, 32, 42, 0.08);
+    background: rgba(255, 252, 247, 0.88);
+    box-shadow: 0 18px 48px rgba(34, 36, 38, 0.12);
+  }
+  .insight-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.65rem;
+    color: #16202a;
+  }
   @media (max-width: 900px) {
     .tool-intro {
       grid-template-columns: 1fr;
@@ -114,6 +131,9 @@ permalink: /merchant-cash-advance-calculator.html
       max-width: 100%;
     }
     .calculator-form .form-grid {
+      grid-template-columns: 1fr;
+    }
+    .insight-grid {
       grid-template-columns: 1fr;
     }
   }
@@ -296,6 +316,28 @@ permalink: /merchant-cash-advance-calculator.html
         <a class="button" href="/contact/">Get a structure review</a>
         <a class="button button--secondary" href="/term-loan-calculator.html">Compare with a term loan</a>
       </div>
+    </div>
+    <div class="cta-row" style="margin-top: 1.5rem;">
+      <a class="button" href="/contact/">Have Nicolas review the offers</a>
+      <a class="button button--secondary" href="/application-checklist/">Prepare the file before applying</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="eyebrow">How to interpret the result</p>
+    <div class="insight-grid">
+      <article class="insight-card">
+        <h3>Lower total payback is not enough</h3>
+        <p>A cheaper-looking offer can still create more weekly or daily stress if the term is compressed.</p>
+      </article>
+      <article class="insight-card">
+        <h3>Cash flow fit matters most</h3>
+        <p>The better structure is usually the one the business can absorb without destabilizing payroll, inventory, or vendor rhythm.</p>
+      </article>
+      <article class="insight-card">
+        <h3>Use this as a filter, not a final decision</h3>
+        <p>Real offer quality still depends on documentation, remittance mechanics, renewal pressure, and whether MCA is even the right product.</p>
+      </article>
     </div>
   </section>
 </div>

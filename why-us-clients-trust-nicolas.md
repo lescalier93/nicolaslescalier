@@ -12,6 +12,30 @@ layout: default
 </section>
 
 <section class="section">
+  <div class="section-band">
+    <div class="section-band__panel">
+      <p class="eyebrow">What trust should mean here</p>
+      <h2>Trust is built when the borrower understands the tradeoffs before the documents start flying.</h2>
+      <p>That means being direct about speed, cost pressure, documentation, collateral, and whether the chosen structure is solving the right problem in the first place.</p>
+      <div class="section-band__actions">
+        <a class="button" href="/contact/">Review your situation</a>
+        <a class="button button--secondary" href="/reviews-us-funding/">See outcomes first</a>
+      </div>
+    </div>
+    <div class="mini-grid">
+      <article class="mini-card">
+        <h3>What weak advice looks like</h3>
+        <p>Oversimplified rate talk, product pushing, and vague certainty before the file has actually been pressure-tested.</p>
+      </article>
+      <article class="mini-card">
+        <h3>What strong advice looks like</h3>
+        <p>Clear fit analysis, realistic expectations, and cleaner movement into the right application path only when the file is ready.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <div class="grid grid--3">
     <article class="service-card">
       <span class="card-label">1. Transparency</span>
@@ -66,6 +90,27 @@ layout: default
       <span class="card-label">Application Readiness</span>
       <h3>Prepared borrowers convert faster</h3>
       <p>Borrowers who understand the likely product path and have the right documents ready tend to get better traction and fewer dead-end conversations.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <p class="eyebrow">What borrowers should feel after the first review</p>
+  <div class="step-grid">
+    <article class="step-card">
+      <span class="step-card__number">1</span>
+      <h3>More clarity</h3>
+      <p>A better sense of which products are realistic and which ones are likely to waste time.</p>
+    </article>
+    <article class="step-card">
+      <span class="step-card__number">2</span>
+      <h3>Less noise</h3>
+      <p>Fewer generic options and a cleaner view of the real underwriting pressure points.</p>
+    </article>
+    <article class="step-card">
+      <span class="step-card__number">3</span>
+      <h3>Better preparation</h3>
+      <p>A more credible file and a clearer next move into the right lender or structure.</p>
     </article>
   </div>
 </section>

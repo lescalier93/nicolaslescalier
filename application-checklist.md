@@ -12,6 +12,30 @@ layout: default
 </section>
 
 <section class="section">
+  <div class="section-band">
+    <div class="section-band__panel">
+      <p class="eyebrow">Why this matters</p>
+      <h2>A cleaner file does more than save time. It changes the quality of the answer you get.</h2>
+      <p>Most financing conversations go sideways because the borrower starts with a product request but not enough context around timing, revenue profile, use of proceeds, or existing constraints.</p>
+      <div class="section-band__actions">
+        <a class="button" href="/contact/">Send the basics</a>
+        <a class="button button--secondary" href="/services/">Compare products first</a>
+      </div>
+    </div>
+    <div class="mini-grid">
+      <article class="mini-card">
+        <h3>Enough is better than perfect</h3>
+        <p>You do not need a perfect package on day one. You need a coherent summary that lets the first review be useful.</p>
+      </article>
+      <article class="mini-card">
+        <h3>Context beats random uploads</h3>
+        <p>A short explanation of the need is often more valuable than sending multiple documents with no framing.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <div class="grid grid--2">
     <article class="service-card">
       <span class="card-label">1. Deal Basics</span>
@@ -66,6 +90,27 @@ layout: default
   <div class="proof-card">
     <p class="eyebrow">What helps</p>
     <p>A short, organized summary of the business and the need is often more valuable at the start than sending too many random documents without context.</p>
+  </div>
+</section>
+
+<section class="section">
+  <p class="eyebrow">Simple prep sequence</p>
+  <div class="step-grid">
+    <article class="step-card">
+      <span class="step-card__number">1</span>
+      <h3>Summarize the need</h3>
+      <p>State the amount, why it is needed, and how quickly the capital has to land.</p>
+    </article>
+    <article class="step-card">
+      <span class="step-card__number">2</span>
+      <h3>Support the story</h3>
+      <p>Add the business profile, revenue visibility, and any documents that directly support the request.</p>
+    </article>
+    <article class="step-card">
+      <span class="step-card__number">3</span>
+      <h3>Flag constraints early</h3>
+      <p>Existing debt, liens, seasonality, or collateral issues are better surfaced early than discovered mid-process.</p>
+    </article>
   </div>
 </section>
 

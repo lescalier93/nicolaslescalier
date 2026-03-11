@@ -24,6 +24,30 @@ layout: default
 </section>
 
 <section class="section">
+  <div class="section-band">
+    <div class="section-band__panel">
+      <p class="eyebrow">Where this matters most</p>
+      <h2>Many U.S. borrowers are not rejected because the need is weak. They are rejected because the structure is mismatched.</h2>
+      <p>The best first step is usually narrowing the financing family that fits the business model, timeline, and repayment reality before the file is pushed into underwriting.</p>
+      <div class="section-band__actions">
+        <a class="button" href="/services/">See all financing products</a>
+        <a class="button button--secondary" href="/contact/">Talk through your file</a>
+      </div>
+    </div>
+    <div class="mini-grid">
+      <article class="mini-card">
+        <h3>Typical pressure points</h3>
+        <p>Timing gaps, documentation friction, collateral limits, uneven cash flow, or a borrower choosing the wrong product too early.</p>
+      </article>
+      <article class="mini-card">
+        <h3>What improves the outcome</h3>
+        <p>Better product fit, cleaner expectations, and a more disciplined application path from the start.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <p class="eyebrow">Products</p>
   <h2>Common financing paths I help U.S. borrowers evaluate.</h2>
   <div class="grid grid--3">
@@ -57,5 +81,26 @@ layout: default
       <a class="button" href="/contact/">Discuss your situation</a>
       <a class="button button--secondary" href="/services/">See all services</a>
     </div>
+  </div>
+</section>
+
+<section class="section">
+  <p class="eyebrow">Simple process</p>
+  <div class="step-grid">
+    <article class="step-card">
+      <span class="step-card__number">1</span>
+      <h3>Define the need</h3>
+      <p>Clarify whether the issue is speed, working capital rhythm, asset acquisition, or longer-term refinance.</p>
+    </article>
+    <article class="step-card">
+      <span class="step-card__number">2</span>
+      <h3>Narrow the product family</h3>
+      <p>Choose between short-term, revolving, asset-backed, invoice-based, or real-estate structures based on fit.</p>
+    </article>
+    <article class="step-card">
+      <span class="step-card__number">3</span>
+      <h3>Prepare the file credibly</h3>
+      <p>Present the deal with cleaner context so the first real review is more useful and less noisy.</p>
+    </article>
   </div>
 </section>
