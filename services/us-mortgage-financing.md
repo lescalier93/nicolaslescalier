@@ -23,6 +23,29 @@ permalink: /services/us-mortgage-financing/
 </section>
 
 <section class="section">
+  <p class="eyebrow">FAQ</p>
+  <h2>Common commercial mortgage questions.</h2>
+  <div class="grid grid--2">
+    <article class="service-card">
+      <h3>Is mortgage financing the same as refinance?</h3>
+      <p>No. Refinance is one use case. Acquisition, bridge takeout, construction, recapitalization, and repositioning can all require different structures.</p>
+    </article>
+    <article class="service-card">
+      <h3>What matters most in a CRE file?</h3>
+      <p>Property quality, leverage, debt coverage, sponsor strength, timeline, and the hold or exit plan.</p>
+    </article>
+    <article class="service-card">
+      <h3>When is bridge debt the better path?</h3>
+      <p>When the timing pressure is real and the permanent debt or sale path is credible but not ready yet.</p>
+    </article>
+    <article class="service-card">
+      <h3>What should I send first?</h3>
+      <p>Property type, estimated value, requested amount, current debt if any, and whether the goal is acquisition, refinance, or transitional financing.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
   <div class="cta-panel">
     <p class="eyebrow">Real Estate Path</p>
     <h2>Start with the asset, the leverage target, and the exit or hold plan.</h2>

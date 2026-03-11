@@ -110,6 +110,29 @@ permalink: /
 </section>
 
 <section class="section">
+  <p class="eyebrow">FAQ</p>
+  <h2>Common questions before borrowers reach out.</h2>
+  <div class="grid grid--2">
+    <article class="service-card">
+      <h3>How fast can funding happen?</h3>
+      <p>That depends on the product. MCAs and some working-capital structures can move inside days. SBA and more documentation-heavy files usually take longer.</p>
+    </article>
+    <article class="service-card">
+      <h3>Do I need to know the exact product first?</h3>
+      <p>No. In many cases the better starting point is the use of proceeds, timeline, and repayment tolerance rather than the product name.</p>
+    </article>
+    <article class="service-card">
+      <h3>What usually matters most for approval?</h3>
+      <p>Revenue visibility, time in business, documentation quality, credit profile, collateral where relevant, and whether the structure fits the actual need.</p>
+    </article>
+    <article class="service-card">
+      <h3>What should I send before the first call?</h3>
+      <p>The amount needed, use of proceeds, timing, and basic business profile are enough to start. The <a href="/application-checklist/">application checklist</a> shows the best prep.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
   <div class="cta-panel">
     <p class="eyebrow">Next step</p>
     <h2>Tell me what you need capital for and how fast you need it.</h2>

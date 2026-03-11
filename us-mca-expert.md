@@ -63,6 +63,29 @@ permalink: /services/us-mca-expert/
 </section>
 
 <section class="section">
+  <p class="eyebrow">FAQ</p>
+  <h2>Common MCA questions.</h2>
+  <div class="grid grid--2">
+    <article class="service-card">
+      <h3>How fast can an MCA fund?</h3>
+      <p>Some MCA files can move within 24 to 72 hours if deposits are clear and the documentation is ready.</p>
+    </article>
+    <article class="service-card">
+      <h3>Is an MCA always expensive?</h3>
+      <p>It is often more expensive than term debt, but the real question is whether the timing value and repayment cadence make sense for the business.</p>
+    </article>
+    <article class="service-card">
+      <h3>Who is usually a bad fit for an MCA?</h3>
+      <p>Borrowers with thin deposits, tight margins, or no room for frequent remittances are often better served by another structure.</p>
+    </article>
+    <article class="service-card">
+      <h3>Should I compare more than one offer?</h3>
+      <p>Yes. Factor rate alone is not enough. Compare total payback, remittance pace, term, and whether the deal can be absorbed cleanly.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
   <div class="cta-panel">
     <p class="eyebrow">Decision Tool</p>
     <h2>Use the calculator, then compare the structure before signing.</h2>

@@ -63,6 +63,29 @@ permalink: /services/us-term-loans-approach/
 </section>
 
 <section class="section">
+  <p class="eyebrow">FAQ</p>
+  <h2>Common term loan questions.</h2>
+  <div class="grid grid--2">
+    <article class="service-card">
+      <h3>How long does a term loan usually take?</h3>
+      <p>It depends on the lender path. Bank and SBA files take longer than many non-bank term structures because the documentation burden is heavier.</p>
+    </article>
+    <article class="service-card">
+      <h3>What matters more than the headline rate?</h3>
+      <p>Payment supportability, amortization, fees, collateral terms, and whether the structure limits future flexibility.</p>
+    </article>
+    <article class="service-card">
+      <h3>Is a term loan better than an MCA?</h3>
+      <p>Usually for longer-duration needs, yes. But if the timing is too tight or the documentation is not there, a term loan may not be realistic right now.</p>
+    </article>
+    <article class="service-card">
+      <h3>What should I prepare?</h3>
+      <p>Expect to need stronger financial visibility than short-term products require. The <a href="/application-checklist/">application checklist</a> is the best place to start.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
   <div class="cta-panel">
     <p class="eyebrow">Compare Options</p>
     <h2>Run the numbers before you choose between a term loan and a short-term product.</h2>
