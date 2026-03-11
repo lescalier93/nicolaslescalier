@@ -3,6 +3,15 @@ layout: default
 title: "Purchase Order Financing | Nicolas Lescalier"
 description: "See when purchase order financing is the right structure for businesses that need capital to fulfill large customer orders."
 permalink: /services/us-po-financing/
+faq:
+  - question: "When is PO financing a good fit?"
+    answer: "PO financing is usually a good fit when a real customer order exists but the business needs capital to source or produce the goods before payment arrives."
+  - question: "What matters most in a PO file?"
+    answer: "Order quality, customer credibility, supplier path, margin, and execution visibility all matter heavily."
+  - question: "Can PO financing work without strong margins?"
+    answer: "Usually not. Thin margins make the structure much harder to justify."
+  - question: "Should I compare PO financing with factoring?"
+    answer: "Yes. In some cases the better path is to combine or sequence the structures depending on how the order and invoice flow works."
 ---
 
 <section class="section split">
@@ -19,6 +28,29 @@ permalink: /services/us-po-financing/
       <li>Import/export and product-sourcing situations</li>
       <li>Businesses with strong counterparties but limited liquidity</li>
     </ul>
+  </div>
+</section>
+
+<section class="section">
+  <p class="eyebrow">FAQ</p>
+  <h2>Common PO financing questions.</h2>
+  <div class="grid grid--2">
+    <article class="service-card">
+      <h3>When is PO financing a good fit?</h3>
+      <p>PO financing is usually a good fit when a real customer order exists but the business needs capital to source or produce the goods before payment arrives.</p>
+    </article>
+    <article class="service-card">
+      <h3>What matters most in a PO file?</h3>
+      <p>Order quality, customer credibility, supplier path, margin, and execution visibility all matter heavily.</p>
+    </article>
+    <article class="service-card">
+      <h3>Can PO financing work without strong margins?</h3>
+      <p>Usually not. Thin margins make the structure much harder to justify.</p>
+    </article>
+    <article class="service-card">
+      <h3>Should I compare PO financing with factoring?</h3>
+      <p>Yes. In some cases the better path is to combine or sequence the structures depending on how the order and invoice flow works.</p>
+    </article>
   </div>
 </section>
 

@@ -3,6 +3,15 @@ layout: default
 title: "Equipment Financing | Nicolas Lescalier"
 description: "See when equipment financing is the right structure for vehicles, machinery, medical tools, and asset-backed business purchases."
 permalink: /services/us-equipment-financing/
+faq:
+  - question: "When is equipment financing better than using working capital?"
+    answer: "When the purchase is a durable asset that should be repaid over time instead of draining operating cash all at once."
+  - question: "What can usually be financed?"
+    answer: "Vehicles, machinery, medical devices, production tools, restaurant equipment, and other business-use assets are common examples."
+  - question: "What usually matters most?"
+    answer: "The equipment type, the borrower's business profile, the budget, and whether the asset helps generate revenue or operating efficiency."
+  - question: "Should I compare equipment financing with a term loan?"
+    answer: "Yes. In some cases the asset-backed path is cleaner, but in others a broader term structure may fit the business better."
 ---
 
 <section class="section split">
@@ -19,6 +28,29 @@ permalink: /services/us-equipment-financing/
       <li>Medical and dental equipment</li>
       <li>Restaurant and hospitality equipment</li>
     </ul>
+  </div>
+</section>
+
+<section class="section">
+  <p class="eyebrow">FAQ</p>
+  <h2>Common equipment financing questions.</h2>
+  <div class="grid grid--2">
+    <article class="service-card">
+      <h3>When is equipment financing better than using working capital?</h3>
+      <p>When the purchase is a durable asset that should be repaid over time instead of draining operating cash all at once.</p>
+    </article>
+    <article class="service-card">
+      <h3>What can usually be financed?</h3>
+      <p>Vehicles, machinery, medical devices, production tools, restaurant equipment, and other business-use assets are common examples.</p>
+    </article>
+    <article class="service-card">
+      <h3>What usually matters most?</h3>
+      <p>The equipment type, the borrower&apos;s business profile, the budget, and whether the asset helps generate revenue or operating efficiency.</p>
+    </article>
+    <article class="service-card">
+      <h3>Should I compare equipment financing with a term loan?</h3>
+      <p>Yes. In some cases the asset-backed path is cleaner, but in others a broader term structure may fit the business better.</p>
+    </article>
   </div>
 </section>
 
