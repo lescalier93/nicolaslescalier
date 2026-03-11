@@ -13,7 +13,7 @@ redirect_from:
     <p class="eyebrow">About Nicolas Lescalier</p>
     <h1>Direct financing guidance for operators who need clarity fast.</h1>
     <p>I work with U.S. business owners and commercial real estate borrowers who need practical help choosing the right financing structure. My role is not to push every file into the same product. It is to narrow the realistic path, flag the weak spots early, and help the borrower move with more confidence.</p>
-    <p>My work spans merchant cash advances, lines of credit, term loans, equipment financing, invoice-driven solutions, SBA paths, bridge financing, and broader commercial mortgage scenarios.</p>
+    <p>My work spans working capital loans, lines of credit, term loans, equipment financing, invoice-driven solutions, SBA paths, bridge financing, and broader commercial mortgage scenarios.</p>
   </div>
   <div class="proof-card">
     <p class="eyebrow">What clients usually need from me</p>

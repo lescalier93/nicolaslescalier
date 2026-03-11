@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "MCA Deal Comparison | Nicolas Lescalier"
-description: "Compare two merchant cash advance offers by factor rate, payback, remittance pace, monthly drag, and which structure is easier to carry."
+title: "Working Capital Offer Comparison | Nicolas Lescalier"
+description: "Compare two short-term working capital offers by factor rate, payback, remittance pace, monthly drag, and which structure is easier to carry."
 permalink: /merchant-cash-advance-calculator.html
 ---
 
@@ -368,10 +368,10 @@ permalink: /merchant-cash-advance-calculator.html
   <section class="section tool-intro">
     <div class="panel">
       <p class="eyebrow">Calculator</p>
-      <h1>Compare MCA offers by real repayment pressure, not just headline speed.</h1>
-      <p>MCA pricing gets misread when the discussion stops at factor rate. This page turns two offers into the numbers that matter most in practice: total payback, cost of capital, payment cadence, and monthly drag on the business.</p>
+      <h1>Compare working capital offers by real repayment pressure, not just headline speed.</h1>
+      <p>Short-term working capital pricing gets misread when the discussion stops at factor rate. This page turns two offers into the numbers that matter most in practice: total payback, cost of capital, payment cadence, and monthly drag on the business.</p>
       <div class="cta-row">
-        <a class="button" href="/services/us-mca-expert/">Read the MCA guide</a>
+        <a class="button" href="/services/us-mca-expert/">Read the working capital guide</a>
         <a class="button button--secondary" href="/apply/">Start application</a>
       </div>
     </div>
@@ -381,7 +381,7 @@ permalink: /merchant-cash-advance-calculator.html
       <ul class="plain-list">
         <li>Lower factor rate can still create worse pressure if the term is compressed.</li>
         <li>Daily remittance often matters more than the headline offer size.</li>
-        <li>The cleaner MCA is the one the business can absorb without creating the next problem.</li>
+        <li>The cleaner working capital offer is the one the business can absorb without creating the next problem.</li>
       </ul>
     </aside>
   </section>
@@ -391,7 +391,7 @@ permalink: /merchant-cash-advance-calculator.html
       <div class="calculator-band__intro">
         <div>
           <p class="eyebrow">Deal compare</p>
-          <h2 class="page-title">MCA Deal Comparison</h2>
+          <h2 class="page-title">Working Capital Offer Comparison</h2>
           <p>Use the actual advance, factor rate, and term. If you want a fast demo first, load an example pair and see how cost and pressure can point to different answers.</p>
         </div>
         <div class="preset-row">
@@ -625,7 +625,7 @@ permalink: /merchant-cash-advance-calculator.html
       </article>
       <article class="insight-card">
         <h3>Use the outputs as a screen</h3>
-        <p>The better offer still depends on remittance mechanics, renewal pressure, documentation requirements, and whether MCA is the right product at all.</p>
+        <p>The better offer still depends on remittance mechanics, renewal pressure, documentation requirements, and whether this type of working capital is the right product at all.</p>
       </article>
     </div>
   </section>
@@ -634,12 +634,12 @@ permalink: /merchant-cash-advance-calculator.html
     <div class="advisor-band">
       <div>
         <p class="eyebrow">Advisor lens</p>
-        <h2 class="page-title">When I would actually like MCA, and when I would slow the file down.</h2>
+        <h2 class="page-title">When I would actually like this kind of working capital, and when I would slow the file down.</h2>
       </div>
       <div class="insight-grid">
         <article class="insight-card">
-          <h3>When MCA can be the right tool</h3>
-          <p>Short-term timing gaps, inventory turns, bridge payroll, or urgent receivables mismatches can justify MCA if the business can clearly carry the remittance rhythm.</p>
+          <h3>When working capital can be the right tool</h3>
+          <p>Short-term timing gaps, inventory turns, bridge payroll, or urgent receivables mismatches can justify this kind of working capital if the business can clearly carry the remittance rhythm.</p>
         </article>
         <article class="insight-card">
           <h3>When I start pushing back</h3>
@@ -780,9 +780,9 @@ permalink: /merchant-cash-advance-calculator.html
 
   function buildApplyHref(result, label) {
     const params = new URLSearchParams({
-      product_interest: "Merchant cash advance",
+      product_interest: "Working capital loan",
       amount_requested: amountRange(result.advanceAmount),
-      use_of_proceeds: "Comparing merchant cash advance offers for a working capital request.",
+      use_of_proceeds: "Comparing short-term working capital offers for a business financing request.",
       additional_context: `${label}: $${formatCurrency(result.advanceAmount)} advance, factor ${result.factorRate.toFixed(2)}, ${result.termLabel}, total payback $${formatCurrency(result.totalPayback)}, monthly drag about $${formatCurrency(result.monthlyBurden)}.`,
       lead_source: "mca_calculator",
       scenario_origin: label,
@@ -931,7 +931,7 @@ permalink: /merchant-cash-advance-calculator.html
       fields.costBar.style.width = `${costSignal.width}%`;
       fields.costBar.className = costSignal.fillClass;
       fields.costText.textContent = result.costRatio <= 0.15
-        ? "The cost load is relatively contained for an MCA structure."
+        ? "The cost load is relatively contained for this type of working capital structure."
         : result.costRatio <= 0.3
           ? "The price may be acceptable if the speed genuinely matters."
           : "The cost load is heavy enough to compare against cleaner products.";
@@ -998,7 +998,7 @@ permalink: /merchant-cash-advance-calculator.html
       }
       trackEvent("calculator_apply_click", {
         source: label,
-        recommended_product: "Merchant cash advance",
+        recommended_product: "Working capital loan",
       });
     });
   }
@@ -1044,12 +1044,12 @@ permalink: /merchant-cash-advance-calculator.html
       preferredLabel = cheaper;
     } else if (cheaper === "Tie" && lowerBurden === "Tie") {
       headline.textContent = "The offers are effectively tied on the core cost metrics.";
-      body.textContent = "At that point the real decision moves to remittance mechanics, lender behavior, renewal pressure, and whether MCA is the right structure at all.";
+      body.textContent = "At that point the real decision moves to remittance mechanics, lender behavior, renewal pressure, and whether short-term working capital is the right structure at all.";
       preferredDeal = dealA;
       preferredLabel = "Deal A";
     } else {
       headline.textContent = `${cheaper} is cheaper overall, but ${lowerBurden} is easier to carry month to month.`;
-      body.textContent = `This is the common MCA tradeoff: one offer costs less on paper, while the other puts less immediate strain on the business. If the cash flow is tight, monthly drag usually matters more than a modest cost advantage.`;
+      body.textContent = "This is the common short-term working capital tradeoff: one offer costs less on paper, while the other puts less immediate strain on the business. If the cash flow is tight, monthly drag usually matters more than a modest cost advantage.";
     }
 
     apply.href = buildApplyHref(preferredDeal, preferredLabel);
@@ -1098,7 +1098,7 @@ permalink: /merchant-cash-advance-calculator.html
         fields.costBar.style.width = `${costSignal.width}%`;
         fields.costBar.className = costSignal.fillClass;
         fields.costText.textContent = result.costRatio <= 0.15
-          ? "The cost load is relatively contained for an MCA structure."
+          ? "The cost load is relatively contained for this type of working capital structure."
           : result.costRatio <= 0.3
             ? "The price may be acceptable if the speed genuinely matters."
             : "The cost load is heavy enough to compare against cleaner products.";
@@ -1117,7 +1117,7 @@ permalink: /merchant-cash-advance-calculator.html
   document.getElementById("comparisonApply").addEventListener("click", () => {
     trackEvent("calculator_apply_click", {
       source: "comparison_recommendation",
-      recommended_product: "Merchant cash advance",
+      recommended_product: "Working capital loan",
     });
   });
   document.getElementById("mca-reset-all").addEventListener("click", () => {

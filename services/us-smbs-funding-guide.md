@@ -17,7 +17,7 @@ redirect_from:
 <section class="section">
   <div class="grid grid--2">
     <article class="service-card">
-      <span class="card-label">MCA</span>
+      <span class="card-label">Working Capital</span>
       <h3>Best for speed and receivables-driven repayment</h3>
       <p>Useful when time is tight and the business has deposit or card volume that supports daily or weekly remittances.</p>
       <a href="/services/us-mca-expert/">Learn about MCAs</a>

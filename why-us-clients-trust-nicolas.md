@@ -63,7 +63,7 @@ layout: default
       <li>Choosing a product based on advertised speed instead of repayment fit</li>
       <li>Underestimating documentation or collateral constraints</li>
       <li>Comparing offers without understanding the real cost structure</li>
-      <li>Assuming approval logic is the same across MCA, LOC, SBA, invoice finance, and CRE debt</li>
+      <li>Assuming approval logic is the same across working capital loans, LOC, SBA, invoice finance, and CRE debt</li>
     </ul>
     <p>The goal is to compress that uncertainty early, so the borrower spends time only on realistic options.</p>
   </div>

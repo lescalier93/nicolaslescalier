@@ -1,6 +1,6 @@
 ---
 title: "U.S. Business Financing | Nicolas Lescalier"
-description: "Alternative financing solutions for U.S. businesses, including merchant cash advances, term loans, bridge loans, and commercial real estate financing."
+description: "Alternative financing solutions for U.S. businesses, including working capital loans, term loans, bridge loans, and commercial real estate financing."
 permalink: /us/
 layout: default
 ---
@@ -53,9 +53,9 @@ layout: default
   <div class="grid grid--3">
     <article class="service-card">
       <span class="card-label">Speed</span>
-      <h3>Merchant cash advances</h3>
+      <h3>Working capital loans</h3>
       <p>Useful when a business needs fast working capital and repayment can be tied to receivables or sales activity.</p>
-      <a href="/services/us-mca-expert/">Learn about MCAs</a>
+      <a href="/services/us-mca-expert/">Learn about working capital loans</a>
     </article>
     <article class="service-card">
       <span class="card-label">Structure</span>

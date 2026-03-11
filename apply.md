@@ -58,7 +58,7 @@ layout: default
     const humanizeLeadSource = (value) => {
       const sourceMap = {
         website: "the website",
-        mca_calculator: "the MCA calculator",
+        mca_calculator: "the working capital calculator",
         term_calculator: "the term calculator",
       };
       return sourceMap[value] || String(value || "the website").replace(/_/g, " ");
@@ -159,7 +159,7 @@ layout: default
   <h2>Business financing request</h2>
   <p class="section-intro">Fill in what you know. A precise, coherent summary is more useful than trying to guess every underwriting question perfectly.</p>
   <div class="pill-row">
-    <span class="pill">Structured for MCA, term, LOC, SBA, equipment, bridge, and CRE</span>
+    <span class="pill">Structured for working capital loans, term, LOC, SBA, equipment, bridge, and CRE</span>
     <span class="pill">Built for faster first review</span>
     <span class="pill">Usually 2-3 minutes to complete</span>
     <span class="pill">No SSN requested on-page</span>
@@ -196,9 +196,9 @@ layout: default
       </div>
       <div class="choice-grid">
         <div class="choice-card">
-          <input type="radio" id="product_mca" name="product_interest" value="Merchant cash advance">
-          <label for="product_mca">
-            <strong>Merchant cash advance</strong>
+          <input type="radio" id="product_working_capital" name="product_interest" value="Working capital loan">
+          <label for="product_working_capital">
+            <strong>Working capital loans</strong>
             <span>Fast working capital and short-term speed</span>
           </label>
         </div>
@@ -596,19 +596,11 @@ layout: default
     </div>
 
     <div class="notice-card">
-      <p class="eyebrow">Consent</p>
+      <p class="eyebrow">Text message consent</p>
       <div class="checkbox-list">
-        <label for="consent_contact">
-          <input type="checkbox" id="consent_contact" name="consent_contact" required>
-          <span>I consent to be contacted about this financing request by phone, email, or text.</span>
-        </label>
         <label for="consent_sms_marketing">
           <input type="checkbox" id="consent_sms_marketing" name="consent_sms_marketing">
-          <span>By checking this box, you agree to receive marketing text messages, including payment reminders, promotional offers, and customer care messages, at the mobile number provided. Message frequency varies. Consent is not a condition of any purchase. Message and data rates may apply. Reply STOP to unsubscribe or HELP for assistance. For support, use the <a href="/contact/">contact page</a>. Information gathered in this SMS program will not be shared with third parties or affiliates for marketing purposes. I have read and agree to the <a href="/terms-and-conditions/">Terms and Conditions</a> and <a href="/privacy-policy/">Privacy Policy</a>.</span>
-        </label>
-        <label for="consent_truthful">
-          <input type="checkbox" id="consent_truthful" name="consent_truthful" required>
-          <span>I confirm the information submitted here is accurate to the best of my knowledge.</span>
+          <span>By checking this box, you agree to receive marketing text messages (e.g., payment reminders, promotional offers, customer care) at the cell number provided. Message frequency varies. Consent is not a condition of any purchase. Message &amp; data rates may apply. Reply STOP to unsubscribe or HELP for assistance. For support, contact us at 305.699.3636. Information gathered in this SMS program will not be shared with third parties or affiliates for marketing purposes. I have read and agree to the <a href="/terms-and-conditions/">Terms and Conditions</a> and <a href="/privacy-policy/">Privacy Policy</a>.</span>
         </label>
       </div>
       <p class="input-help">Sensitive items such as SSN, full bank statements, tax returns, and IDs should not be submitted through this form unless requested separately through a secure next step.</p>

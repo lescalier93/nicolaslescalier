@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Financing Products | Nicolas Lescalier"
-description: "Compare business financing products with Nicolas Lescalier, including MCA, line of credit, term loans, equipment financing, factoring, PO finance, SBA 7(a), and commercial mortgage options."
+description: "Compare business financing products with Nicolas Lescalier, including working capital loans, lines of credit, term loans, equipment financing, factoring, PO finance, SBA 7(a), and commercial mortgage options."
 permalink: /services/
 ---
 
@@ -22,7 +22,7 @@ permalink: /services/
     <div class="mini-grid">
       <article class="mini-card">
         <h3>Usually speed-driven</h3>
-        <p>MCA, line of credit, bridge, or invoice-based structures when timing matters more than headline rate alone.</p>
+        <p>Working capital loans, line of credit, bridge, or invoice-based structures when timing matters more than headline rate alone.</p>
       </article>
       <article class="mini-card">
         <h3>Usually structure-driven</h3>
@@ -33,9 +33,9 @@ permalink: /services/
   <div class="grid grid--3">
     <article class="service-card">
       <span class="card-label">Fast Access</span>
-      <h3>Merchant cash advance</h3>
+      <h3>Working capital loans</h3>
       <p>For urgent working capital, inventory, payroll, repairs, or seasonal swings when traditional bank timing is too slow.</p>
-      <a href="{{ '/services/us-mca-expert/' | relative_url }}">View MCA details</a>
+      <a href="{{ '/services/us-mca-expert/' | relative_url }}">View working capital details</a>
     </article>
     <article class="service-card">
       <span class="card-label">Flexible Access</span>
@@ -94,7 +94,7 @@ permalink: /services/
     <div class="signal-list">
       <div>
         <strong>If speed is the main issue</strong>
-        <span>Focus first on MCA, line of credit, bridge, or receivables-based options.</span>
+        <span>Focus first on working capital loans, line of credit, bridge, or receivables-based options.</span>
       </div>
       <div>
         <strong>If repayment fit is the main issue</strong>

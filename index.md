@@ -1,11 +1,11 @@
 ---
 layout: default
 title: "Nicolas Lescalier | U.S. Business Financing Specialist"
-description: "Nicolas Lescalier helps U.S. businesses secure merchant cash advances, lines of credit, equipment financing, term loans, factoring, PO financing, SBA 7(a), bridge loans, and commercial mortgage financing."
+description: "Nicolas Lescalier helps U.S. businesses secure working capital loans, lines of credit, equipment financing, term loans, factoring, PO financing, SBA 7(a), bridge loans, and commercial mortgage financing."
 permalink: /
 faq:
   - question: "How fast can funding happen?"
-    answer: "That depends on the product. MCAs and some working-capital structures can move inside days. SBA and more documentation-heavy files usually take longer."
+    answer: "That depends on the product. Working capital loans and some short-term structures can move inside days. SBA and more documentation-heavy files usually take longer."
   - question: "Do I need to know the exact product first?"
     answer: "No. In many cases the better starting point is the use of proceeds, timeline, and repayment tolerance rather than the product name."
   - question: "What usually matters most for approval?"
@@ -27,7 +27,7 @@ faq:
       <div class="trust-strip">
         <div class="trust-chip">
           <span class="trust-chip__label">Products</span>
-          <span class="trust-chip__value">MCA, LOC, term, equipment, invoice, SBA, CRE</span>
+          <span class="trust-chip__value">Working capital, LOC, term, equipment, invoice, SBA, CRE</span>
         </div>
         <div class="trust-chip">
           <span class="trust-chip__label">Industries</span>
@@ -107,9 +107,9 @@ faq:
   <div class="grid grid--3">
     <article class="service-card">
       <span class="card-label">Working Capital</span>
-      <h3>Merchant cash advance</h3>
+      <h3>Working capital loans</h3>
       <p>Fast capital for businesses that need speed and can support frequent remittances tied to real revenue activity.</p>
-      <a href="/services/us-mca-expert/">See MCA options</a>
+      <a href="/services/us-mca-expert/">See working capital options</a>
     </article>
     <article class="service-card">
       <span class="card-label">Flexible Access</span>
@@ -157,9 +157,9 @@ faq:
     </article>
     <article class="service-card">
       <span class="card-label">Calculator</span>
-      <h3>MCA calculator</h3>
-      <p>Compare two MCA offers by real repayment pressure instead of treating factor rate as the only decision point.</p>
-      <a href="/merchant-cash-advance-calculator.html">Open MCA calculator</a>
+      <h3>Working capital calculator</h3>
+      <p>Compare two short-term working capital offers by real repayment pressure instead of treating factor rate as the only decision point.</p>
+      <a href="/merchant-cash-advance-calculator.html">Open working capital calculator</a>
     </article>
     <article class="service-card">
       <span class="card-label">Calculator</span>
@@ -177,7 +177,7 @@ faq:
   <div class="grid grid--3">
     <article class="proof-card proof-card--outcome">
       <span class="card-label">Hospitality | Florida</span>
-      <h3>$300,000 MCA in 72 hours</h3>
+      <h3>$300,000 working capital loan in 72 hours</h3>
       <div class="proof-meta">
         <span>Use: upgrades + marketing</span>
         <span>Fit: speed-sensitive working capital</span>

@@ -15,7 +15,7 @@ layout: default
   <div class="grid grid--2">
     <article class="service-card">
       <span class="card-label">Hospitality | Florida</span>
-      <h3>$300,000 MCA for a restaurant group</h3>
+      <h3>$300,000 working capital loan for a restaurant group</h3>
       <p><strong>Situation:</strong> The business needed fast working capital after a slow season and could not get clean traction through bank channels.</p>
       <p><strong>Result:</strong> Funding landed within 72 hours, supporting upgrades and marketing that helped revenue recover before the next cycle.</p>
     </article>

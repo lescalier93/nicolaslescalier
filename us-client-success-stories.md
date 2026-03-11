@@ -17,9 +17,9 @@ redirect_from:
   <div class="grid grid--2">
     <article class="service-card">
       <span class="card-label">Restaurant Expansion</span>
-      <h3>$150,000 merchant cash advance</h3>
+      <h3>$150,000 working capital loan</h3>
       <p><strong>Situation:</strong> A Texas restaurant group needed fast capital to secure a fourth location and start buildout before losing the site.</p>
-      <p><strong>Structure:</strong> MCA with a 1.25 factor and a 9-month term, tied to card-based revenue patterns.</p>
+      <p><strong>Structure:</strong> Working capital structure with a 1.25 factor and a 9-month term, tied to card-based revenue patterns.</p>
       <p><strong>Outcome:</strong> The location opened within six weeks and annual revenue increased materially after launch.</p>
     </article>
     <article class="service-card">

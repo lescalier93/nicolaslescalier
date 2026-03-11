@@ -12,7 +12,7 @@ faq:
     answer: "It depends on the lender path. Bank and SBA files take longer than many non-bank term structures because the documentation burden is heavier."
   - question: "What matters more than the headline rate?"
     answer: "Payment supportability, amortization, fees, collateral terms, and whether the structure limits future flexibility."
-  - question: "Is a term loan better than an MCA?"
+  - question: "Is a term loan better than a short-term working capital loan?"
     answer: "Usually for longer-duration needs, yes. But if the timing is too tight or the documentation is not there, a term loan may not be realistic right now."
   - question: "What should I prepare?"
     answer: "Expect to need stronger financial visibility than short-term products require. The application checklist is the best place to start."
@@ -46,7 +46,7 @@ faq:
     </article>
     <article class="service-card">
       <span class="card-label">Documentation</span>
-      <p>Lenders usually care more about financial statements, tax returns, debt service, and operating history than MCA lenders do.</p>
+      <p>Lenders usually care more about financial statements, tax returns, debt service, and operating history than short-term working capital lenders do.</p>
     </article>
     <article class="service-card">
       <span class="card-label">Use of Proceeds</span>
@@ -88,7 +88,7 @@ faq:
       <p>Payment supportability, amortization, fees, collateral terms, and whether the structure limits future flexibility.</p>
     </article>
     <article class="service-card">
-      <h3>Is a term loan better than an MCA?</h3>
+      <h3>Is a term loan better than a short-term working capital loan?</h3>
       <p>Usually for longer-duration needs, yes. But if the timing is too tight or the documentation is not there, a term loan may not be realistic right now.</p>
     </article>
     <article class="service-card">

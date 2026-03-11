@@ -1,6 +1,6 @@
 ---
 title: "Contact Nicolas Lescalier | U.S. Business Financing"
-description: "Contact Nicolas Lescalier to review merchant cash advances, lines of credit, equipment finance, term loans, factoring, SBA 7(a), mortgage financing, and other funding options."
+description: "Contact Nicolas Lescalier to review working capital loans, lines of credit, equipment finance, term loans, factoring, SBA 7(a), mortgage financing, and other funding options."
 permalink: "/contact/"
 layout: default
 ---
@@ -9,7 +9,7 @@ layout: default
   <div class="contact-card">
     <p class="eyebrow">Contact</p>
     <h1>Start with the deal basics.</h1>
-    <p>Send the funding target, what the capital is for, and how quickly you need it. That is enough to identify whether an MCA, line of credit, term loan, equipment facility, factoring, SBA, mortgage, or another option is the right first path.</p>
+    <p>Send the funding target, what the capital is for, and how quickly you need it. That is enough to identify whether a working capital loan, line of credit, term loan, equipment facility, factoring, SBA, mortgage, or another option is the right first path.</p>
     <div class="signal-list">
       <div>
         <strong>Best first message</strong>
@@ -64,6 +64,11 @@ layout: default
       </div>
 
       <div>
+        <label for="mobile_phone">Mobile phone</label>
+        <input type="tel" id="mobile_phone" name="mobile_phone" placeholder="Your mobile number">
+      </div>
+
+      <div>
         <label for="need">What best describes the need?</label>
         <input type="text" id="need" name="need" placeholder="Working capital, term loan, equipment, factoring, bridge, SBA, mortgage, or not sure">
       </div>
@@ -71,6 +76,16 @@ layout: default
       <div>
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="7" required placeholder="Tell me about the business, the amount you need, the timeline, and the product you are considering."></textarea>
+      </div>
+
+      <div class="notice-card">
+        <p class="eyebrow">Text message consent</p>
+        <div class="checkbox-list">
+          <label for="contact_consent_sms_marketing">
+            <input type="checkbox" id="contact_consent_sms_marketing" name="consent_sms_marketing">
+            <span>By checking this box, you agree to receive marketing text messages (e.g., payment reminders, promotional offers, customer care) at the cell number provided. Message frequency varies. Consent is not a condition of any purchase. Message &amp; data rates may apply. Reply STOP to unsubscribe or HELP for assistance. For support, contact us at 305.699.3636. Information gathered in this SMS program will not be shared with third parties or affiliates for marketing purposes. I have read and agree to the <a href="/terms-and-conditions/">Terms and Conditions</a> and <a href="/privacy-policy/">Privacy Policy</a>.</span>
+          </label>
+        </div>
       </div>
 
       <button class="button" type="submit">Send Message</button>

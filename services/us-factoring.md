@@ -18,7 +18,7 @@ faq:
   <div class="panel">
     <p class="eyebrow">Factoring</p>
     <h1>Accelerate invoice cash flow when the customer is good but the payment timing is slow.</h1>
-    <p>Factoring can be a strong fit for businesses with reliable invoices and creditworthy customers that need cash now instead of waiting 30, 60, or 90 days. The key is to judge customer quality, margin, and whether invoice finance is cleaner than using an MCA or line of credit.</p>
+    <p>Factoring can be a strong fit for businesses with reliable invoices and creditworthy customers that need cash now instead of waiting 30, 60, or 90 days. The key is to judge customer quality, margin, and whether invoice finance is cleaner than using a working capital loan or line of credit.</p>
   </div>
   <div class="proof-card">
     <p class="eyebrow">Best fit</p>
