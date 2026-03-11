@@ -34,17 +34,17 @@ layout: default
     <article class="step-card">
       <span class="step-card__number">1</span>
       <h3>Choose the likely financing lane</h3>
-      <p>Start with the closest fit, even if you are not fully sure yet. That makes the first review cleaner.</p>
+      <p>Start with the closest fit, even if you are not fully sure yet.</p>
     </article>
     <article class="step-card">
       <span class="step-card__number">2</span>
       <h3>Give enough operating context</h3>
-      <p>Revenue, time in business, industry, and current friction points usually matter more than generic pitch language.</p>
+      <p>Revenue, time in business, and the funding problem matter most.</p>
     </article>
     <article class="step-card">
       <span class="step-card__number">3</span>
       <h3>Get a cleaner fit review</h3>
-      <p>If the scenario is workable, I can respond with a better view of fit, urgency, and what should happen next.</p>
+      <p>If it is workable, I can respond with a better next step.</p>
     </article>
   </div>
 </section>
@@ -159,6 +159,18 @@ layout: default
           <label for="mobile_phone">Mobile phone</label>
           <input type="tel" id="mobile_phone" name="mobile_phone" required placeholder="(305) 555-1212">
         </div>
+        <div>
+          <label for="best_time">Best time to reach you</label>
+          <select id="best_time" name="best_time">
+            <option value="">Select preferred time</option>
+            <option>Morning</option>
+            <option>Midday</option>
+            <option>Afternoon</option>
+            <option>After 4pm</option>
+            <option>Text first</option>
+            <option>Email first</option>
+          </select>
+        </div>
       </div>
     </div>
 
@@ -174,10 +186,6 @@ layout: default
         <div>
           <label for="legal_company_name">Legal company name</label>
           <input type="text" id="legal_company_name" name="legal_company_name" required placeholder="Smith Roofing LLC">
-        </div>
-        <div>
-          <label for="business_phone">Business phone</label>
-          <input type="tel" id="business_phone" name="business_phone" placeholder="(305) 555-9898">
         </div>
         <div>
           <label for="business_start_date">Business start date</label>
@@ -229,18 +237,6 @@ layout: default
           </select>
         </div>
         <div>
-          <label for="company_website">Company website</label>
-          <input type="url" id="company_website" name="company_website" placeholder="https://example.com">
-        </div>
-        <div>
-          <label for="ownership_percent">Ownership percentage</label>
-          <input type="text" id="ownership_percent" name="ownership_percent" placeholder="100%">
-        </div>
-        <div>
-          <label for="employees">Number of employees</label>
-          <input type="number" id="employees" name="employees" min="0" placeholder="12">
-        </div>
-        <div>
           <label for="fico_range">Estimated FICO range</label>
           <select id="fico_range" name="fico_range">
             <option value="">Select estimated range</option>
@@ -267,7 +263,16 @@ layout: default
       <div class="form-grid--application">
         <div>
           <label for="amount_requested">Amount requested</label>
-          <input type="text" id="amount_requested" name="amount_requested" required placeholder="$150,000">
+          <select id="amount_requested" name="amount_requested" required>
+            <option value="">Select amount range</option>
+            <option>Under $25,000</option>
+            <option>$25,000-$50,000</option>
+            <option>$50,000-$100,000</option>
+            <option>$100,000-$250,000</option>
+            <option>$250,000-$500,000</option>
+            <option>$500,000-$1,000,000</option>
+            <option>$1,000,000+</option>
+          </select>
         </div>
         <div>
           <label for="timeline">Preferred timeline</label>
@@ -319,25 +324,13 @@ layout: default
       <div class="form-section__header">
         <span class="form-section__number">5</span>
         <div>
-          <h3 class="form-section__title">Business and owner address</h3>
-          <p class="form-section__copy">Enough location detail to understand the operating base and jurisdiction.</p>
+          <h3 class="form-section__title">Final context</h3>
+          <p class="form-section__copy">A few short selectors usually tell me more than a long intake.</p>
         </div>
       </div>
       <div class="form-grid--application">
-        <div class="form-group--full">
-          <label for="address_line_1">Address line 1</label>
-          <input type="text" id="address_line_1" name="address_line_1" required placeholder="42 Railroad St">
-        </div>
-        <div class="form-group--full">
-          <label for="address_line_2">Address line 2</label>
-          <input type="text" id="address_line_2" name="address_line_2" placeholder="Suite 200">
-        </div>
         <div>
-          <label for="city">City</label>
-          <input type="text" id="city" name="city" required placeholder="Miami">
-        </div>
-        <div>
-          <label for="state">State</label>
+          <label for="state">Operating state</label>
           <select id="state" name="state" required>
             <option value="">Select state</option>
             <option>Florida</option>
@@ -353,30 +346,16 @@ layout: default
           </select>
         </div>
         <div>
-          <label for="zip">ZIP</label>
-          <input type="text" id="zip" name="zip" required placeholder="33101">
-        </div>
-        <div>
-          <label for="homeowner_status">Do you own home property?</label>
-          <select id="homeowner_status" name="homeowner_status">
-            <option value="">Select option</option>
-            <option>Yes</option>
-            <option>No</option>
-            <option>Prefer not to say</option>
+          <label for="time_in_business">Time in business</label>
+          <select id="time_in_business" name="time_in_business">
+            <option value="">Select time in business</option>
+            <option>Under 6 months</option>
+            <option>6-12 months</option>
+            <option>1-2 years</option>
+            <option>2-5 years</option>
+            <option>5+ years</option>
           </select>
         </div>
-      </div>
-    </div>
-
-    <div class="form-section">
-      <div class="form-section__header">
-        <span class="form-section__number">6</span>
-        <div>
-          <h3 class="form-section__title">Final context</h3>
-          <p class="form-section__copy">Short answers here often improve the first review more than extra attachments.</p>
-        </div>
-      </div>
-      <div class="form-grid--application">
         <div>
           <label for="card_processing">Do you process credit cards?</label>
           <select id="card_processing" name="card_processing">
@@ -394,28 +373,18 @@ layout: default
           </select>
         </div>
         <div>
-          <label for="home_based">Is the business home based?</label>
-          <select id="home_based" name="home_based">
+          <label for="existing_balance">Any existing advance or loan balance?</label>
+          <select id="existing_balance" name="existing_balance">
             <option value="">Select option</option>
-            <option>Yes</option>
-            <option>No</option>
-          </select>
-        </div>
-        <div>
-          <label for="best_time">Best time to reach you</label>
-          <select id="best_time" name="best_time">
-            <option value="">Select preferred time</option>
-            <option>Morning</option>
-            <option>Midday</option>
-            <option>Afternoon</option>
-            <option>After 4pm</option>
-            <option>Text first</option>
-            <option>Email first</option>
+            <option>No existing debt</option>
+            <option>Yes, manageable</option>
+            <option>Yes, heavy payment pressure</option>
+            <option>Not sure</option>
           </select>
         </div>
         <div class="form-group--full">
           <label for="additional_context">Anything else that matters?</label>
-          <textarea id="additional_context" name="additional_context" rows="5" placeholder="Add anything important that would help me understand the file quickly."></textarea>
+          <textarea id="additional_context" name="additional_context" rows="4" placeholder="Optional. Add anything important that would help me understand the file quickly."></textarea>
         </div>
       </div>
     </div>
