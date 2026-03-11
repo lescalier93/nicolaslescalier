@@ -1,16 +1,16 @@
 ---
 layout: default
 title: "Nicolas Lescalier | U.S. Business Financing Specialist"
-description: "Trusted U.S. business financing specialist offering merchant cash advances, term loans, bridge loans, and commercial real estate financing to small and mid-sized companies across the United States."
+description: "Nicolas Lescalier helps U.S. businesses secure merchant cash advances, lines of credit, equipment financing, term loans, factoring, PO financing, SBA 7(a), bridge loans, and commercial mortgage financing."
 permalink: /
 ---
 
 <section class="hero">
   <div class="hero__grid">
     <div>
-      <p class="eyebrow">Fast capital, clearly structured</p>
+      <p class="eyebrow">Broad product access, direct guidance</p>
       <h1>Funding that fits the business you are actually running.</h1>
-      <p class="lede">I help U.S. operators secure working capital, term loans, bridge loans, and commercial real estate financing without wasting weeks in the wrong process. The goal is simple: match the deal structure to your timeline, cash flow, and growth plan.</p>
+      <p class="lede">I help U.S. operators secure working capital, lines of credit, equipment financing, term loans, factoring, PO financing, SBA 7(a), bridge loans, and commercial real estate capital without wasting weeks in the wrong process. The goal is simple: match the structure to your timeline, cash flow, and growth plan.</p>
       <div class="hero__actions">
         <a class="button" href="/contact/">Book a Free Consultation</a>
         <a class="button button--secondary" href="/services/">Explore Financing Options</a>
@@ -26,7 +26,7 @@ permalink: /
         </div>
         <div class="stat">
           <strong>Nationwide</strong>
-          <span>Lender relationships built for U.S. borrowers across multiple industries.</span>
+          <span>Coverage across operating businesses, invoice-driven companies, and CRE borrowers.</span>
         </div>
       </div>
     </div>
@@ -36,7 +36,7 @@ permalink: /
       <ul class="check-list">
         <li>Clarify the use of proceeds before choosing a product.</li>
         <li>Pressure-test repayment fit against real cash flow.</li>
-        <li>Prioritize speed only when speed actually matters.</li>
+        <li>Use specialized products only when the business actually fits them.</li>
         <li>Keep communication direct so decisions happen faster.</li>
       </ul>
     </aside>
@@ -44,27 +44,45 @@ permalink: /
 </section>
 
 <section class="section">
-  <p class="eyebrow">Core solutions</p>
-  <h2>Financing products built around the situation, not a template.</h2>
-  <p class="section-intro">Different funding problems require different instruments. A payroll gap, a location expansion, and a property refinance should not go through the same playbook.</p>
+  <p class="eyebrow">Core products</p>
+  <h2>The financing products clients most often ask me to compare.</h2>
+  <p class="section-intro">A payroll gap, large purchase order, invoice backlog, equipment purchase, or property acquisition should not go through the same playbook. Different situations need different capital.</p>
   <div class="grid grid--3">
     <article class="service-card">
       <span class="card-label">Working Capital</span>
-      <h3>Merchant cash advances</h3>
-      <p>Best for businesses that need speed, flexibility, and approvals tied more to receivables than traditional underwriting.</p>
+      <h3>Merchant cash advance</h3>
+      <p>Fast capital for businesses that need speed and can support frequent remittances tied to real revenue activity.</p>
       <a href="/services/us-mca-expert/">See MCA options</a>
     </article>
     <article class="service-card">
+      <span class="card-label">Flexible Access</span>
+      <h3>Line of credit</h3>
+      <p>Revolving access for inventory cycles, seasonal swings, and short-term operating gaps that repeat.</p>
+      <a href="/services/us-line-of-credit/">Explore lines of credit</a>
+    </article>
+    <article class="service-card">
       <span class="card-label">Growth Capital</span>
-      <h3>Term loans and credit lines</h3>
-      <p>Useful for expansion, equipment, hiring, or acquisitions when predictable repayment matters more than pure speed.</p>
-      <a href="/services/us-term-loans-approach/">Review term loan approach</a>
+      <h3>Term loans</h3>
+      <p>Predictable repayment for expansion, hiring, acquisitions, refinance, and longer-duration business investment.</p>
+      <a href="/services/us-term-loans-approach/">Review term loans</a>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Asset-backed</span>
+      <h3>Equipment financing</h3>
+      <p>For vehicles, machinery, medical devices, and other purchases that should be repaid over the useful life of the asset.</p>
+      <a href="/services/us-equipment-financing/">See equipment financing</a>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Receivables</span>
+      <h3>Factoring and PO financing</h3>
+      <p>For businesses that need to accelerate invoices or fulfill strong purchase orders without draining working capital.</p>
+      <a href="/services/us-factoring/">Explore invoice and PO solutions</a>
     </article>
     <article class="service-card">
       <span class="card-label">Real Estate</span>
-      <h3>Bridge and CRE financing</h3>
-      <p>Designed for acquisitions, refinances, and transition periods where timing and structure both matter.</p>
-      <a href="/services/us-bridge-financing/">Explore bridge financing</a>
+      <h3>SBA, bridge, and mortgage financing</h3>
+      <p>For stronger borrowers, time-sensitive deals, acquisitions, refinance, and broader commercial real estate capital needs.</p>
+      <a href="/services/us-mortgage-financing/">Explore real estate and SBA options</a>
     </article>
   </div>
 </section>
@@ -75,9 +93,10 @@ permalink: /
     <h2>A financing advisor who is comfortable with nuance.</h2>
     <p>Most borrowers do not need more lender noise. They need help narrowing the right product, avoiding bad-fit offers, and getting to a decision quickly. I work with small and mid-sized U.S. companies that want clarity on tradeoffs before signing anything.</p>
     <ul class="plain-list">
+      <li>Coverage across working capital, asset-backed, invoice-driven, SBA, and CRE products</li>
       <li>Direct access by phone and email</li>
       <li>Product selection based on timeline and repayment reality</li>
-      <li>Support for retail, construction, medical, logistics, hospitality, and investor-led deals</li>
+      <li>Support for retail, construction, medical, logistics, hospitality, distribution, and investor-led deals</li>
     </ul>
   </div>
   <div class="proof-card">
@@ -94,7 +113,7 @@ permalink: /
   <div class="cta-panel">
     <p class="eyebrow">Next step</p>
     <h2>Tell me what you need capital for and how fast you need it.</h2>
-    <p>If the deal is a fit, I will help you identify the most realistic financing path, the likely documentation, and the tradeoffs you should expect before you commit time.</p>
+    <p>If the deal is a fit, I will help you identify the most realistic financing path, the likely documentation, and the tradeoffs you should expect before you apply.</p>
     <div class="cta-row">
       <a class="button" href="/contact/">Start the conversation</a>
       <a class="button button--secondary" href="tel:+13056993636">Call (305) 699-3636</a>

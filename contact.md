@@ -1,6 +1,6 @@
 ---
 title: "Contact Nicolas Lescalier | U.S. Business Financing"
-description: "Get in touch with Nicolas Lescalier for personalized business financing solutions in the United States. Book a consultation or send a message today."
+description: "Contact Nicolas Lescalier to review merchant cash advances, lines of credit, equipment finance, term loans, factoring, SBA 7(a), mortgage financing, and other funding options."
 permalink: "/contact/"
 layout: default
 ---
@@ -9,7 +9,7 @@ layout: default
   <div class="contact-card">
     <p class="eyebrow">Contact</p>
     <h1>Start with the deal basics.</h1>
-    <p>Send the funding target, what the capital is for, and how quickly you need it. That is enough to identify whether an MCA, term loan, bridge structure, or another option is the right first path.</p>
+    <p>Send the funding target, what the capital is for, and how quickly you need it. That is enough to identify whether an MCA, line of credit, term loan, equipment facility, factoring, SBA, mortgage, or another option is the right first path.</p>
     <div class="grid">
       <div>
         <h3>Direct contact</h3>
@@ -21,6 +21,7 @@ layout: default
           <li>Requested amount or range</li>
           <li>Use of proceeds</li>
           <li>Preferred timeline</li>
+          <li>Product you think you need, if you already have one in mind</li>
           <li>Any collateral or existing debt constraints</li>
         </ul>
       </div>
@@ -44,7 +45,7 @@ layout: default
 
       <div>
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="7" required placeholder="Tell me about the business, the amount you need, and the timeline."></textarea>
+        <textarea id="message" name="message" rows="7" required placeholder="Tell me about the business, the amount you need, the timeline, and the product you are considering."></textarea>
       </div>
 
       <button class="button" type="submit">Send Message</button>
