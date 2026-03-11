@@ -9,8 +9,8 @@ layout: default
   <div class="section-band">
     <div class="section-band__panel">
       <p class="eyebrow">Application</p>
-      <h1>Start a structured financing application.</h1>
-      <p>This page is designed to give me enough context to review the situation quickly and point you toward the most realistic financing path. It is intentionally more detailed than the contact page, but still cleaner than a full underwriting package.</p>
+      <h1>Start a financing application that feels closer to a real deal intake.</h1>
+      <p>This page is designed to feel more like a lender-style first step: structured, fast to scan, and focused on the details that actually help narrow the right capital path. It is intentionally more visual and more guided than the contact page.</p>
       <div class="section-band__actions">
         <a class="button" href="#application-form">Start the application</a>
         <a class="button button--secondary" href="/contact/">Prefer a call first?</a>
@@ -33,18 +33,18 @@ layout: default
   <div class="step-grid">
     <article class="step-card">
       <span class="step-card__number">1</span>
-      <h3>Share the basics</h3>
-      <p>Tell me who you are, what business needs funding, and what the capital is meant to solve.</p>
+      <h3>Choose the likely financing lane</h3>
+      <p>Start with the closest fit, even if you are not fully sure yet. That makes the first review cleaner.</p>
     </article>
     <article class="step-card">
       <span class="step-card__number">2</span>
-      <h3>Give enough business context</h3>
-      <p>Revenue, time in business, ownership, industry, and current constraints usually matter more than broad sales language.</p>
+      <h3>Give enough operating context</h3>
+      <p>Revenue, time in business, industry, and current friction points usually matter more than generic pitch language.</p>
     </article>
     <article class="step-card">
       <span class="step-card__number">3</span>
-      <h3>Get a cleaner first review</h3>
-      <p>If the scenario is workable, I can respond with a better sense of fit, likely product path, and what to prepare next.</p>
+      <h3>Get a cleaner fit review</h3>
+      <p>If the scenario is workable, I can respond with a better view of fit, urgency, and what should happen next.</p>
     </article>
   </div>
 </section>
@@ -53,13 +53,95 @@ layout: default
   <p class="eyebrow">Application Form</p>
   <h2>Business financing request</h2>
   <p class="section-intro">Fill in what you know. A precise, coherent summary is more useful than trying to guess every underwriting question perfectly.</p>
+  <div class="pill-row">
+    <span class="pill">Structured for MCA, term, LOC, SBA, equipment, bridge, and CRE</span>
+    <span class="pill">Built for faster first review</span>
+    <span class="pill">No SSN requested on-page</span>
+  </div>
 
   <form class="contact-form" action="https://formspree.io/f/maypkwyo" method="POST">
     <input type="hidden" name="_subject" value="New financing application from nicolaslescalier.com">
 
+    <div class="form-section form-section--accent">
+      <div class="form-section__header">
+        <span class="form-section__number">1</span>
+        <div>
+          <h3 class="form-section__title">What are you most likely applying for?</h3>
+          <p class="form-section__copy">Pick the closest fit. This does not lock the file into that product.</p>
+        </div>
+      </div>
+      <div class="choice-grid">
+        <div class="choice-card">
+          <input type="radio" id="product_mca" name="product_interest" value="Merchant cash advance">
+          <label for="product_mca">
+            <strong>Merchant cash advance</strong>
+            <span>Fast working capital and short-term speed</span>
+          </label>
+        </div>
+        <div class="choice-card">
+          <input type="radio" id="product_loc" name="product_interest" value="Line of credit">
+          <label for="product_loc">
+            <strong>Line of credit</strong>
+            <span>Flexible repeat-use working capital</span>
+          </label>
+        </div>
+        <div class="choice-card">
+          <input type="radio" id="product_term" name="product_interest" value="Term loan">
+          <label for="product_term">
+            <strong>Term loan</strong>
+            <span>Growth, refinance, and fixed repayment</span>
+          </label>
+        </div>
+        <div class="choice-card">
+          <input type="radio" id="product_equipment" name="product_interest" value="Equipment financing">
+          <label for="product_equipment">
+            <strong>Equipment financing</strong>
+            <span>Vehicles, machinery, devices, tools</span>
+          </label>
+        </div>
+        <div class="choice-card">
+          <input type="radio" id="product_factoring" name="product_interest" value="Factoring or invoice finance">
+          <label for="product_factoring">
+            <strong>Factoring</strong>
+            <span>Receivables-based working capital</span>
+          </label>
+        </div>
+        <div class="choice-card">
+          <input type="radio" id="product_po" name="product_interest" value="PO financing">
+          <label for="product_po">
+            <strong>PO financing</strong>
+            <span>Large purchase order fulfillment</span>
+          </label>
+        </div>
+        <div class="choice-card">
+          <input type="radio" id="product_sba" name="product_interest" value="SBA 7(a)">
+          <label for="product_sba">
+            <strong>SBA 7(a)</strong>
+            <span>Longer-term lower-cost structure</span>
+          </label>
+        </div>
+        <div class="choice-card">
+          <input type="radio" id="product_cre" name="product_interest" value="Bridge or mortgage financing">
+          <label for="product_cre">
+            <strong>Bridge / mortgage</strong>
+            <span>CRE, refinance, acquisition, timing gap</span>
+          </label>
+        </div>
+      </div>
+      <div>
+        <label for="product_interest_other">Or describe it in your own words</label>
+        <input type="text" id="product_interest_other" name="product_interest_other" placeholder="Not sure yet, comparing options, or a more specific scenario">
+      </div>
+    </div>
+
     <div class="form-section">
-      <h3 class="form-section__title">Applicant contact</h3>
-      <p class="form-section__copy">Who should I contact first about this request?</p>
+      <div class="form-section__header">
+        <span class="form-section__number">2</span>
+        <div>
+          <h3 class="form-section__title">Applicant contact</h3>
+          <p class="form-section__copy">Who should I contact first about this request?</p>
+        </div>
+      </div>
       <div class="form-grid--application">
         <div>
           <label for="first_name">First name</label>
@@ -81,8 +163,13 @@ layout: default
     </div>
 
     <div class="form-section">
-      <h3 class="form-section__title">Business details</h3>
-      <p class="form-section__copy">This is the minimum business profile needed for a useful first review.</p>
+      <div class="form-section__header">
+        <span class="form-section__number">3</span>
+        <div>
+          <h3 class="form-section__title">Business details</h3>
+          <p class="form-section__copy">This is the minimum business profile needed for a useful first review.</p>
+        </div>
+      </div>
       <div class="form-grid--application">
         <div>
           <label for="legal_company_name">Legal company name</label>
@@ -98,15 +185,48 @@ layout: default
         </div>
         <div>
           <label for="industry">Industry</label>
-          <input type="text" id="industry" name="industry" required placeholder="Construction, retail, hospitality, logistics, etc.">
+          <select id="industry" name="industry" required>
+            <option value="">Select industry</option>
+            <option>Construction</option>
+            <option>Retail</option>
+            <option>Hospitality / restaurant</option>
+            <option>Medical / healthcare</option>
+            <option>Transportation / logistics</option>
+            <option>Manufacturing</option>
+            <option>Wholesale / distribution</option>
+            <option>Professional services</option>
+            <option>Real estate / investor</option>
+            <option>E-commerce</option>
+            <option>Other</option>
+          </select>
         </div>
         <div>
           <label for="state_of_incorporation">State of incorporation</label>
-          <input type="text" id="state_of_incorporation" name="state_of_incorporation" required placeholder="Florida">
+          <select id="state_of_incorporation" name="state_of_incorporation" required>
+            <option value="">Select state</option>
+            <option>Florida</option>
+            <option>Texas</option>
+            <option>California</option>
+            <option>New York</option>
+            <option>Georgia</option>
+            <option>Illinois</option>
+            <option>Arizona</option>
+            <option>Nevada</option>
+            <option>North Carolina</option>
+            <option>Other</option>
+          </select>
         </div>
         <div>
           <label for="entity_type">Entity type</label>
-          <input type="text" id="entity_type" name="entity_type" placeholder="LLC, Corp, S-Corp, Sole Prop">
+          <select id="entity_type" name="entity_type">
+            <option value="">Select entity type</option>
+            <option>LLC</option>
+            <option>Corporation</option>
+            <option>S-Corp</option>
+            <option>Partnership</option>
+            <option>Sole Proprietorship</option>
+            <option>Nonprofit</option>
+          </select>
         </div>
         <div>
           <label for="company_website">Company website</label>
@@ -122,14 +242,28 @@ layout: default
         </div>
         <div>
           <label for="fico_range">Estimated FICO range</label>
-          <input type="text" id="fico_range" name="fico_range" placeholder="620-660">
+          <select id="fico_range" name="fico_range">
+            <option value="">Select estimated range</option>
+            <option>Below 550</option>
+            <option>550-599</option>
+            <option>600-649</option>
+            <option>650-699</option>
+            <option>700-749</option>
+            <option>750+</option>
+            <option>Not sure</option>
+          </select>
         </div>
       </div>
     </div>
 
-    <div class="form-section">
-      <h3 class="form-section__title">Funding request</h3>
-      <p class="form-section__copy">This is usually the most important section for product fit.</p>
+    <div class="form-section form-section--accent">
+      <div class="form-section__header">
+        <span class="form-section__number">4</span>
+        <div>
+          <h3 class="form-section__title">Funding request</h3>
+          <p class="form-section__copy">This is usually the most important section for product fit.</p>
+        </div>
+      </div>
       <div class="form-grid--application">
         <div>
           <label for="amount_requested">Amount requested</label>
@@ -137,15 +271,38 @@ layout: default
         </div>
         <div>
           <label for="timeline">Preferred timeline</label>
-          <input type="text" id="timeline" name="timeline" required placeholder="3 days, 2 weeks, 45 days, etc.">
-        </div>
-        <div>
-          <label for="product_interest">Product you think you need</label>
-          <input type="text" id="product_interest" name="product_interest" placeholder="MCA, LOC, term loan, equipment, SBA, bridge, mortgage, not sure">
+          <select id="timeline" name="timeline" required>
+            <option value="">Select timing</option>
+            <option>Need it in 24-72 hours</option>
+            <option>Need it within 1 week</option>
+            <option>Need it within 2-4 weeks</option>
+            <option>Need it within 30-60 days</option>
+            <option>Planning ahead / exploring</option>
+          </select>
         </div>
         <div>
           <label for="monthly_revenue">Estimated monthly revenue</label>
-          <input type="text" id="monthly_revenue" name="monthly_revenue" placeholder="$80,000">
+          <select id="monthly_revenue" name="monthly_revenue">
+            <option value="">Select revenue range</option>
+            <option>Under $20,000</option>
+            <option>$20,000-$50,000</option>
+            <option>$50,000-$100,000</option>
+            <option>$100,000-$250,000</option>
+            <option>$250,000-$500,000</option>
+            <option>$500,000+</option>
+          </select>
+        </div>
+        <div>
+          <label for="use_case_priority">What matters most right now?</label>
+          <select id="use_case_priority" name="use_case_priority">
+            <option value="">Select priority</option>
+            <option>Speed</option>
+            <option>Lowest payment pressure</option>
+            <option>Highest approval odds</option>
+            <option>Longer-term structure</option>
+            <option>Bridge or timing solution</option>
+            <option>Not sure yet</option>
+          </select>
         </div>
         <div class="form-group--full">
           <label for="use_of_proceeds">Use of proceeds</label>
@@ -159,8 +316,13 @@ layout: default
     </div>
 
     <div class="form-section">
-      <h3 class="form-section__title">Business and owner address</h3>
-      <p class="form-section__copy">Enough location detail to understand the operating base and jurisdiction.</p>
+      <div class="form-section__header">
+        <span class="form-section__number">5</span>
+        <div>
+          <h3 class="form-section__title">Business and owner address</h3>
+          <p class="form-section__copy">Enough location detail to understand the operating base and jurisdiction.</p>
+        </div>
+      </div>
       <div class="form-grid--application">
         <div class="form-group--full">
           <label for="address_line_1">Address line 1</label>
@@ -176,7 +338,19 @@ layout: default
         </div>
         <div>
           <label for="state">State</label>
-          <input type="text" id="state" name="state" required placeholder="Florida">
+          <select id="state" name="state" required>
+            <option value="">Select state</option>
+            <option>Florida</option>
+            <option>Texas</option>
+            <option>California</option>
+            <option>New York</option>
+            <option>Georgia</option>
+            <option>Illinois</option>
+            <option>Arizona</option>
+            <option>Nevada</option>
+            <option>North Carolina</option>
+            <option>Other</option>
+          </select>
         </div>
         <div>
           <label for="zip">ZIP</label>
@@ -184,30 +358,60 @@ layout: default
         </div>
         <div>
           <label for="homeowner_status">Do you own home property?</label>
-          <input type="text" id="homeowner_status" name="homeowner_status" placeholder="Yes / No / Prefer not to say">
+          <select id="homeowner_status" name="homeowner_status">
+            <option value="">Select option</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Prefer not to say</option>
+          </select>
         </div>
       </div>
     </div>
 
     <div class="form-section">
-      <h3 class="form-section__title">Final context</h3>
-      <p class="form-section__copy">Short answers here often improve the first review more than extra attachments.</p>
+      <div class="form-section__header">
+        <span class="form-section__number">6</span>
+        <div>
+          <h3 class="form-section__title">Final context</h3>
+          <p class="form-section__copy">Short answers here often improve the first review more than extra attachments.</p>
+        </div>
+      </div>
       <div class="form-grid--application">
         <div>
           <label for="card_processing">Do you process credit cards?</label>
-          <input type="text" id="card_processing" name="card_processing" placeholder="Yes / No">
+          <select id="card_processing" name="card_processing">
+            <option value="">Select option</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
         </div>
         <div>
           <label for="multiple_businesses">Do you own multiple businesses?</label>
-          <input type="text" id="multiple_businesses" name="multiple_businesses" placeholder="Yes / No">
+          <select id="multiple_businesses" name="multiple_businesses">
+            <option value="">Select option</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
         </div>
         <div>
           <label for="home_based">Is the business home based?</label>
-          <input type="text" id="home_based" name="home_based" placeholder="Yes / No">
+          <select id="home_based" name="home_based">
+            <option value="">Select option</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
         </div>
         <div>
           <label for="best_time">Best time to reach you</label>
-          <input type="text" id="best_time" name="best_time" placeholder="Morning, afternoon, after 4pm, etc.">
+          <select id="best_time" name="best_time">
+            <option value="">Select preferred time</option>
+            <option>Morning</option>
+            <option>Midday</option>
+            <option>Afternoon</option>
+            <option>After 4pm</option>
+            <option>Text first</option>
+            <option>Email first</option>
+          </select>
         </div>
         <div class="form-group--full">
           <label for="additional_context">Anything else that matters?</label>
