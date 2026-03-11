@@ -1,36 +1,69 @@
 ---
-title: "Why U.S. Clients Trust Nicolas Lescalier for Business Financing"
-description: "Learn why entrepreneurs across the United States rely on Nicolas Lescalier for merchant cash advances, term loans and bridge financing.  Discover his ethical approach, industry expertise and proven results."
+title: "Why U.S. Clients Trust Nicolas Lescalier"
+description: "See why U.S. business owners and investors choose Nicolas Lescalier for business financing advice, lender access, and clear deal execution."
 permalink: "/why-us-clients-trust-nicolas/"
 layout: default
 ---
 
-# Why U.S. Clients Trust Nicolas Lescalier for Business Financing
+<section class="section">
+  <p class="eyebrow">Trust</p>
+  <h1>Borrowers trust clarity more than hype.</h1>
+  <p class="section-intro">Financing is a high-friction decision. The main reason clients keep coming back is not marketing language. It is knowing how the process will work, what the lender will care about, and where the risks sit before the deal moves forward.</p>
+</section>
 
-Reputation matters, especially when money is on the line.  In an industry where predatory lenders and hidden fees are all too common, I strive to be a funding partner U.S. entrepreneurs can trust.  This article explains the values and practices that set me apart and details how I protect the interests of my clients.
+<section class="section">
+  <div class="grid grid--3">
+    <article class="service-card">
+      <span class="card-label">1. Transparency</span>
+      <h3>No hidden positioning</h3>
+      <p>I aim to surface fees, repayment expectations, collateral pressure, and lender constraints early so clients can make an informed decision.</p>
+    </article>
+    <article class="service-card">
+      <span class="card-label">2. Relevance</span>
+      <h3>Products matched to the real situation</h3>
+      <p>A short-term cash gap, an equipment purchase, and a property transition should not be treated as the same type of file.</p>
+    </article>
+    <article class="service-card">
+      <span class="card-label">3. Execution</span>
+      <h3>Active support through the process</h3>
+      <p>I stay involved from initial review through funding so documentation, lender communication, and timelines stay aligned.</p>
+    </article>
+  </div>
+</section>
 
-## Ethical financing and transparency
+<section class="section split">
+  <div class="panel">
+    <p class="eyebrow">Why this matters</p>
+    <h2>Borrowers usually lose time in the same places.</h2>
+    <ul class="plain-list">
+      <li>Submitting to lenders before the use of proceeds is clearly defined</li>
+      <li>Choosing a product based on advertised speed instead of repayment fit</li>
+      <li>Underestimating documentation or collateral constraints</li>
+      <li>Comparing offers without understanding the actual cost structure</li>
+    </ul>
+    <p>The goal is to compress that uncertainty early, so the borrower spends time only on realistic options.</p>
+  </div>
+  <div class="proof-card">
+    <p class="eyebrow">Client feedback</p>
+    <blockquote class="quote">
+      Nicolas made the funding process simple. He explained every fee and answered all our questions. We felt confident signing the contract and the capital arrived within two days.
+      <footer>Jake R., Franchise Owner</footer>
+    </blockquote>
+    <blockquote class="quote" style="margin-top: 1rem;">
+      After a poor experience with a different broker, we reached out to Nicolas. He brought us three offers with clear terms and no hidden surprises.
+      <footer>Linda K., Landscaping Business Owner</footer>
+    </blockquote>
+  </div>
+</section>
 
-From the start, I’ve believed that **openness builds loyalty**.  When you request funding, I disclose all fees, repayment terms and lender requirements up front.  I never recommend a product that doesn’t suit your business model.  This commitment to transparency has earned me repeat clients across the United States, including manufacturers, franchise owners and professional services firms.
-
-## National expertise with local insight
-
-Although based in Toronto, I’ve spent years studying U.S. lending laws, state regulations and industry nuances.  Whether you’re in California navigating the California Financing Law (CFL) or in New York dealing with UCC filings, I anticipate regulatory challenges.  My network spans regional banks, national alternative lenders and private investors, giving you access to funding options most businesses never hear about.  Wherever you are in the U.S., I can connect you with local resources while leveraging nationwide capital.
-
-## Proven track record
-
-Over the past five years I have structured more than **$150 million** in capital for U.S. companies.  This includes merchant cash advances from $20,000 to $500,000, term loans up to $5 million and bridge loans exceeding $10 million.  Clients appreciate that I stay involved from application to funding, explaining each step and ensuring a smooth process.
-
-## Personalized service
-
-Big financial institutions rely on algorithms; I rely on listening.  Every business has unique cash‑flow cycles, risk tolerance and growth plans.  During our initial call I ask about your goals and challenges and then match you with the right lender.  My job doesn’t end when funds are disbursed—I continue to support you by monitoring repayment, negotiating renewals and identifying future opportunities.  Many clients return for additional funding or refer friends because they value this relationship.
-
-## Client testimonials
-
-> “Nicolas made the funding process simple.  He explained every fee and answered all our questions.  We felt confident signing the contract and the capital arrived within two days.” — **Jake R., Franchise Owner**
->
-> “After a poor experience with a different broker, we reached out to Nicolas.  He brought us three offers with clear terms and no hidden surprises.  We will work with him again.” — **Linda K., Landscaping Business Owner**
-
-## How to start
-
-Trust grows through communication.  To discuss your financing needs, you can **[book a consultation](/contact/)** via my website, call me at **(305) 699‑3636**, or connect on [LinkedIn](https://www.linkedin.com/in/nicolaslescalier/).  If you’re researching negative press, read my client reviews and success stories—judge me by the results I deliver.  I’m committed to providing American entrepreneurs with ethical, transparent and effective financing solutions.
+<section class="section">
+  <div class="cta-panel">
+    <p class="eyebrow">Start</p>
+    <h2>If you want a clean read on your financing options, start the conversation.</h2>
+    <p>Share the size of the request, the use of funds, and the timing pressure. I will help you determine what is realistic and where to focus first.</p>
+    <div class="cta-row">
+      <a class="button" href="/contact/">Contact Nicolas</a>
+      <a class="button button--secondary" href="/services/us-client-success-stories/">Read success stories</a>
+    </div>
+  </div>
+</section>
