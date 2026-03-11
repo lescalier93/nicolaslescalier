@@ -798,8 +798,15 @@ h3 {
 }
 
 .checkbox-list input[type="checkbox"] {
-  width: auto;
+  appearance: auto;
+  -webkit-appearance: checkbox;
+  width: 1.2rem;
+  height: 1.2rem;
+  padding: 0;
   margin-top: 0.2rem;
+  accent-color: var(--brand);
+  cursor: pointer;
+  flex: 0 0 auto;
 }
 
 .checkbox-list__legal {
