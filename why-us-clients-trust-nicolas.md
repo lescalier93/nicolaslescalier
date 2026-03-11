@@ -1,14 +1,14 @@
 ---
-title: "Why U.S. Clients Trust Nicolas Lescalier"
-description: "See why U.S. business owners and investors choose Nicolas Lescalier for business financing advice, lender access, and clear deal execution."
+title: "Why Clients Trust Nicolas Lescalier"
+description: "See why borrowers choose Nicolas Lescalier for clearer financing guidance, stronger product fit, and more disciplined deal execution."
 permalink: "/why-us-clients-trust-nicolas/"
 layout: default
 ---
 
 <section class="section">
-  <p class="eyebrow">Trust</p>
+  <p class="eyebrow">Why Clients Trust Nicolas Lescalier</p>
   <h1>Borrowers trust clarity more than hype.</h1>
-  <p class="section-intro">Financing is a high-friction decision. The main reason clients keep coming back is not marketing language. It is knowing how the process will work, what the lender will care about, and where the risks sit before the deal moves forward.</p>
+  <p class="section-intro">Financing is a high-friction decision. The reason clients keep coming back is not marketing language. It is knowing how the process will work, what the lender will care about, and where the risks sit before the deal moves forward.</p>
 </section>
 
 <section class="section">
@@ -16,12 +16,12 @@ layout: default
     <article class="service-card">
       <span class="card-label">1. Transparency</span>
       <h3>No hidden positioning</h3>
-      <p>I aim to surface fees, repayment expectations, collateral pressure, and lender constraints early so clients can make an informed decision.</p>
+      <p>I aim to surface fees, repayment expectations, collateral pressure, documentation friction, and lender constraints early so clients can make an informed decision.</p>
     </article>
     <article class="service-card">
       <span class="card-label">2. Relevance</span>
       <h3>Products matched to the real situation</h3>
-      <p>A short-term cash gap, an equipment purchase, and a property transition should not be treated as the same type of file.</p>
+      <p>A short-term cash gap, an equipment purchase, an invoice bottleneck, and a property transition should not be treated as the same type of file.</p>
     </article>
     <article class="service-card">
       <span class="card-label">3. Execution</span>
@@ -33,37 +33,58 @@ layout: default
 
 <section class="section split">
   <div class="panel">
-    <p class="eyebrow">Why this matters</p>
-    <h2>Borrowers usually lose time in the same places.</h2>
+    <p class="eyebrow">Where borrowers usually lose time</p>
     <ul class="plain-list">
       <li>Submitting to lenders before the use of proceeds is clearly defined</li>
       <li>Choosing a product based on advertised speed instead of repayment fit</li>
       <li>Underestimating documentation or collateral constraints</li>
-      <li>Comparing offers without understanding the actual cost structure</li>
+      <li>Comparing offers without understanding the real cost structure</li>
+      <li>Assuming approval logic is the same across MCA, LOC, SBA, invoice finance, and CRE debt</li>
     </ul>
     <p>The goal is to compress that uncertainty early, so the borrower spends time only on realistic options.</p>
   </div>
   <div class="proof-card">
-    <p class="eyebrow">Client feedback</p>
-    <blockquote class="quote">
-      Nicolas made the funding process simple. He explained every fee and answered all our questions. We felt confident signing the contract and the capital arrived within two days.
-      <footer>Jake R., Franchise Owner</footer>
-    </blockquote>
-    <blockquote class="quote" style="margin-top: 1rem;">
-      After a poor experience with a different broker, we reached out to Nicolas. He brought us three offers with clear terms and no hidden surprises.
-      <footer>Linda K., Landscaping Business Owner</footer>
-    </blockquote>
+    <p class="eyebrow">What clients consistently seem to value</p>
+    <ul class="plain-list">
+      <li>Fast response and direct communication</li>
+      <li>Clear explanation of tradeoffs instead of pure sales language</li>
+      <li>Product recommendations tied to business reality</li>
+      <li>Support that continues through funding, not just lead generation</li>
+    </ul>
   </div>
 </section>
 
 <section class="section">
-  <div class="cta-panel">
-    <p class="eyebrow">Start</p>
-    <h2>If you want a clean read on your financing options, start the conversation.</h2>
-    <p>Share the size of the request, the use of funds, and the timing pressure. I will help you determine what is realistic and where to focus first.</p>
+  <p class="eyebrow">Trust signals</p>
+  <div class="grid grid--2">
+    <article class="service-card">
+      <span class="card-label">Branded Search</span>
+      <h3>Consistent public positioning</h3>
+      <p>The site is intentionally structured so people searching for Nicolas Lescalier can quickly find background, process, reviews, success stories, and a direct contact path instead of weak or low-context search results.</p>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Application Readiness</span>
+      <h3>Prepared borrowers convert faster</h3>
+      <p>Borrowers who understand the likely product path and have the right documents ready tend to get better traction and fewer dead-end conversations.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section split">
+  <div class="panel">
+    <p class="eyebrow">Related pages</p>
+    <p>If you are assessing credibility before applying, these are the best next pages to read.</p>
     <div class="cta-row">
-      <a class="button" href="/contact/">Contact Nicolas</a>
-      <a class="button button--secondary" href="/services/us-client-success-stories/">Read success stories</a>
+      <a class="button" href="/about-nicolas-lescalier-us/">About Nicolas</a>
+      <a class="button button--secondary" href="/reviews-us-funding/">Reviews and outcomes</a>
+    </div>
+  </div>
+  <div class="proof-card">
+    <p class="eyebrow">Practical next step</p>
+    <p>If you already know your funding target and timeline, the most useful next page is the application checklist.</p>
+    <div class="cta-row">
+      <a class="button" href="/application-checklist/">Open checklist</a>
+      <a class="button button--secondary" href="/contact/">Contact Nicolas</a>
     </div>
   </div>
 </section>

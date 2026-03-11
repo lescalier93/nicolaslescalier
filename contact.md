@@ -24,6 +24,7 @@ layout: default
           <li>Product you think you need, if you already have one in mind</li>
           <li>Any collateral or existing debt constraints</li>
         </ul>
+        <p><a href="/application-checklist/">See the full application checklist</a></p>
       </div>
     </div>
   </div>
