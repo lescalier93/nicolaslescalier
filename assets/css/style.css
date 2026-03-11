@@ -680,6 +680,35 @@ h3 {
   gap: 1rem;
 }
 
+.application-frame {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.application-intro-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem 1rem;
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(22, 32, 42, 0.08);
+  background: linear-gradient(135deg, rgba(27, 77, 62, 0.08), rgba(217, 122, 51, 0.08));
+  box-shadow: var(--shadow-soft);
+}
+
+.application-intro-card strong {
+  display: block;
+  font-size: 0.98rem;
+}
+
+.application-intro-card span {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
 .form-grid--application .form-group--full {
   grid-column: 1 / -1;
 }
@@ -787,6 +816,7 @@ label {
 input,
 select,
 textarea {
+  appearance: none;
   width: 100%;
   padding: 0.9rem 1rem;
   border-radius: var(--radius-sm);
@@ -794,6 +824,18 @@ textarea {
   background: rgba(255, 255, 255, 0.92);
   color: var(--ink);
   font: inherit;
+}
+
+select {
+  padding-right: 2.8rem;
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgba(22, 32, 42, 0.55) 50%),
+    linear-gradient(135deg, rgba(22, 32, 42, 0.55) 50%, transparent 50%);
+  background-position:
+    calc(100% - 1.15rem) calc(50% - 0.15rem),
+    calc(100% - 0.8rem) calc(50% - 0.15rem);
+  background-size: 0.38rem 0.38rem, 0.38rem 0.38rem;
+  background-repeat: no-repeat;
 }
 
 input:focus,

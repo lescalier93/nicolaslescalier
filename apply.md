@@ -60,6 +60,18 @@ layout: default
     <span class="pill">No SSN requested on-page</span>
   </div>
 
+  <div class="application-frame">
+    <div class="application-intro-card">
+      <div>
+        <strong>Best results come from concise answers</strong>
+        <span>Choose the closest dropdown option and use text fields only where context actually helps.</span>
+      </div>
+      <div>
+        <strong>Goal of this form</strong>
+        <span>Get you to the right financing path faster, not bury you in underwriting too early.</span>
+      </div>
+    </div>
+
   <form class="contact-form" action="https://formspree.io/f/mgonknak" method="POST">
     <input type="hidden" name="_subject" value="New financing application from nicolaslescalier.com">
 
@@ -197,16 +209,16 @@ layout: default
           <select id="industry" name="industry" required>
             <option value="">Select industry</option>
             <option>Construction</option>
-            <option>Retail</option>
+            <option>E-commerce</option>
             <option>Hospitality / restaurant</option>
-            <option>Medical / healthcare</option>
-            <option>Transportation / logistics</option>
             <option>Manufacturing</option>
-            <option>Wholesale / distribution</option>
+            <option>Medical / healthcare</option>
+            <option>Other</option>
             <option>Professional services</option>
             <option>Real estate / investor</option>
-            <option>E-commerce</option>
-            <option>Other</option>
+            <option>Retail</option>
+            <option>Transportation / logistics</option>
+            <option>Wholesale / distribution</option>
           </select>
         </div>
         <div>
@@ -270,12 +282,12 @@ layout: default
           <label for="entity_type">Entity type</label>
           <select id="entity_type" name="entity_type">
             <option value="">Select entity type</option>
-            <option>LLC</option>
             <option>Corporation</option>
-            <option>S-Corp</option>
-            <option>Partnership</option>
-            <option>Sole Proprietorship</option>
+            <option>LLC</option>
             <option>Nonprofit</option>
+            <option>Partnership</option>
+            <option>S-Corp</option>
+            <option>Sole Proprietorship</option>
           </select>
         </div>
         <div>
@@ -496,4 +508,5 @@ layout: default
       <a class="button button--secondary" href="/contact/">Prefer a shorter first message?</a>
     </div>
   </form>
+  </div>
 </section>
