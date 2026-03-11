@@ -62,7 +62,41 @@ faq:
         <li>Use specialized products only when the business actually fits them.</li>
         <li>Keep communication direct so decisions happen faster.</li>
       </ul>
+      <div class="feature-list">
+        <div class="feature-item">
+          <strong>Best for borrowers who need clarity fast</strong>
+          <span>Urgent working capital, expansion, invoice friction, or a real estate timing gap.</span>
+        </div>
+        <div class="feature-item">
+          <strong>What you get early</strong>
+          <span>A faster read on fit, likely documentation, and where the file could stall.</span>
+        </div>
+      </div>
     </aside>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-band">
+    <div class="section-band__panel">
+      <p class="eyebrow">Why this site exists</p>
+      <h2>Borrowers do not need more noise. They need a faster path to the right structure.</h2>
+      <p>If you are looking at financing, the real problem is usually not access to offers. It is choosing the product that fits repayment reality, timing pressure, and the next step for the business.</p>
+      <div class="section-band__actions">
+        <a class="button" href="/contact/">Talk through your deal</a>
+        <a class="button button--secondary" href="/application-checklist/">Open application checklist</a>
+      </div>
+    </div>
+    <div class="mini-grid">
+      <article class="mini-card">
+        <h3>Who this site is best for</h3>
+        <p>Owner-led businesses, operators, and investors who need practical financing direction rather than generic lead routing.</p>
+      </article>
+      <article class="mini-card">
+        <h3>How credibility is built here</h3>
+        <p>Specific products, real use cases, cleaner preparation guidance, and direct contact rather than vague claims.</p>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -149,6 +183,28 @@ faq:
   <div class="cta-row">
     <a class="button button--secondary" href="/reviews-us-funding/">Read more reviews</a>
     <a class="button button--secondary" href="/services/us-client-success-stories/">Read more success stories</a>
+  </div>
+</section>
+
+<section class="section">
+  <p class="eyebrow">Process</p>
+  <h2>What working with me should feel like.</h2>
+  <div class="step-grid">
+    <article class="step-card">
+      <span class="step-card__number">1</span>
+      <h3>Start with the facts</h3>
+      <p>Amount, use of proceeds, timing, and where the file may already be constrained by debt, credit, or collateral.</p>
+    </article>
+    <article class="step-card">
+      <span class="step-card__number">2</span>
+      <h3>Narrow the fit</h3>
+      <p>Choose the financing path based on repayment reality and execution speed instead of defaulting to the first product mentioned.</p>
+    </article>
+    <article class="step-card">
+      <span class="step-card__number">3</span>
+      <h3>Move into the right process</h3>
+      <p>Prepare the file cleanly, avoid mismatched applications, and improve the odds of a faster, more credible review.</p>
+    </article>
   </div>
 </section>
 

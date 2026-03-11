@@ -8,6 +8,27 @@ permalink: /services/
   <p class="eyebrow">Products</p>
   <h1>Financing products for different operating realities.</h1>
   <p class="section-intro">This site is strongest when it stays focused on the products that help clients get funded. These are the main financing products worth featuring prominently.</p>
+  <div class="section-band">
+    <div class="section-band__panel">
+      <p class="eyebrow">How to use this page</p>
+      <h2>Pick the financing family that best matches the business problem.</h2>
+      <p>Do not start with product names if you are unsure. Start with what the capital is solving, how fast it is needed, and what repayment structure the business can support.</p>
+      <div class="section-band__actions">
+        <a class="button" href="/contact/">Review your scenario</a>
+        <a class="button button--secondary" href="/services/us-smbs-funding-guide/">Compare products first</a>
+      </div>
+    </div>
+    <div class="mini-grid">
+      <article class="mini-card">
+        <h3>Usually speed-driven</h3>
+        <p>MCA, line of credit, bridge, or invoice-based structures when timing matters more than headline rate alone.</p>
+      </article>
+      <article class="mini-card">
+        <h3>Usually structure-driven</h3>
+        <p>Term, SBA, equipment, or mortgage products when repayment shape and longer-term fit matter more.</p>
+      </article>
+    </div>
+  </div>
   <div class="grid grid--3">
     <article class="service-card">
       <span class="card-label">Fast Access</span>
@@ -63,5 +84,34 @@ permalink: /services/
       <p>For owners comparing products, documentation, lender expectations, and timing before they submit a file.</p>
       <a href="{{ '/services/us-smbs-funding-guide/' | relative_url }}">Read the guide</a>
     </article>
+  </div>
+</section>
+
+<section class="section split">
+  <div class="panel">
+    <p class="eyebrow">Best use of this site</p>
+    <div class="signal-list">
+      <div>
+        <strong>If speed is the main issue</strong>
+        <span>Focus first on MCA, line of credit, bridge, or receivables-based options.</span>
+      </div>
+      <div>
+        <strong>If repayment fit is the main issue</strong>
+        <span>Compare term, equipment, SBA, or mortgage structures before choosing a faster short-term product.</span>
+      </div>
+      <div>
+        <strong>If you are not sure which product fits</strong>
+        <span>Start with the funding guide or contact page instead of guessing wrong.</span>
+      </div>
+    </div>
+  </div>
+  <div class="proof-card">
+    <p class="eyebrow">Next step</p>
+    <h3>Need help narrowing the right path?</h3>
+    <p>The highest-value conversation usually happens before an application is submitted, when the file can still be steered toward the structure that fits best.</p>
+    <div class="cta-row">
+      <a class="button" href="/contact/">Talk to Nicolas</a>
+      <a class="button button--secondary" href="/application-checklist/">Prepare your file</a>
+    </div>
   </div>
 </section>

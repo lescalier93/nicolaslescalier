@@ -10,6 +10,20 @@ layout: default
     <p class="eyebrow">Contact</p>
     <h1>Start with the deal basics.</h1>
     <p>Send the funding target, what the capital is for, and how quickly you need it. That is enough to identify whether an MCA, line of credit, term loan, equipment facility, factoring, SBA, mortgage, or another option is the right first path.</p>
+    <div class="signal-list">
+      <div>
+        <strong>Best first message</strong>
+        <span>Amount needed, timing, use of proceeds, and whether revenue, collateral, or receivables are part of the file.</span>
+      </div>
+      <div>
+        <strong>What the first review should answer</strong>
+        <span>Fit, likely path, key friction points, and what documents matter most next.</span>
+      </div>
+      <div>
+        <strong>What to avoid</strong>
+        <span>Submitting the wrong product application first and creating unnecessary underwriting noise.</span>
+      </div>
+    </div>
     <div class="grid">
       <div>
         <h3>Direct contact</h3>
@@ -45,11 +59,36 @@ layout: default
       </div>
 
       <div>
+        <label for="need">What best describes the need?</label>
+        <input type="text" id="need" name="need" placeholder="Working capital, term loan, equipment, factoring, bridge, SBA, mortgage, or not sure">
+      </div>
+
+      <div>
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="7" required placeholder="Tell me about the business, the amount you need, the timeline, and the product you are considering."></textarea>
       </div>
 
       <button class="button" type="submit">Send Message</button>
     </form>
+  </div>
+</section>
+
+<section class="section">
+  <div class="step-grid">
+    <article class="step-card">
+      <span class="step-card__number">1</span>
+      <h3>Send the basics</h3>
+      <p>Enough detail to understand the situation without overloading the first conversation.</p>
+    </article>
+    <article class="step-card">
+      <span class="step-card__number">2</span>
+      <h3>Get a fit read</h3>
+      <p>Identify whether the structure, timing, and repayment profile make sense before deeper process begins.</p>
+    </article>
+    <article class="step-card">
+      <span class="step-card__number">3</span>
+      <h3>Prepare the file cleanly</h3>
+      <p>Move toward the right documents and the right product rather than a rushed, noisy application path.</p>
+    </article>
   </div>
 </section>

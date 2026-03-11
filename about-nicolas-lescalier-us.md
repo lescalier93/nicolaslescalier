@@ -24,6 +24,30 @@ layout: default
 </section>
 
 <section class="section">
+  <div class="section-band">
+    <div class="section-band__panel">
+      <p class="eyebrow">Working style</p>
+      <h2>The value is not just access to lenders. It is judgment before the file loses momentum.</h2>
+      <p>Good financing advice means saying when a product is too expensive, too rigid, too slow, or simply not matched to the actual use of proceeds. That filtering is part of the service.</p>
+      <div class="section-band__actions">
+        <a class="button" href="/contact/">Discuss your deal</a>
+        <a class="button button--secondary" href="/why-us-clients-trust-nicolas/">Why clients trust Nicolas</a>
+      </div>
+    </div>
+    <div class="mini-grid">
+      <article class="mini-card">
+        <h3>What borrowers tend to value</h3>
+        <p>Direct communication, faster clarity, realistic expectations, and less wasted motion through the wrong process.</p>
+      </article>
+      <article class="mini-card">
+        <h3>What this avoids</h3>
+        <p>Lead-broker language, vague promises, and treating every file like a generic rate-shopping exercise.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <p class="eyebrow">Background</p>
   <h2>Built around financing execution, not generic consulting.</h2>
   <div class="grid grid--2">
@@ -86,6 +110,27 @@ layout: default
       <a class="button" href="/why-us-clients-trust-nicolas/">Why clients trust Nicolas</a>
       <a class="button button--secondary" href="/reviews-us-funding/">Read reviews and outcomes</a>
     </div>
+  </div>
+</section>
+
+<section class="section">
+  <p class="eyebrow">What working together should feel like</p>
+  <div class="step-grid">
+    <article class="step-card">
+      <span class="step-card__number">1</span>
+      <h3>Direct intake</h3>
+      <p>Start with the business need, timeline, and constraints rather than forcing a product-first conversation.</p>
+    </article>
+    <article class="step-card">
+      <span class="step-card__number">2</span>
+      <h3>Realistic filtering</h3>
+      <p>Pressure-test fit early so the business does not burn time on a path that was weak from the start.</p>
+    </article>
+    <article class="step-card">
+      <span class="step-card__number">3</span>
+      <h3>Cleaner execution</h3>
+      <p>Move into the right file prep and documentation process only after the financing path makes sense.</p>
+    </article>
   </div>
 </section>
 
