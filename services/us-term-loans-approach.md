@@ -101,7 +101,7 @@ faq:
     <p>Use the term loan calculator to model payment pressure, then compare it against faster but more expensive alternatives if speed is part of the equation.</p>
     <div class="cta-row">
       <a class="button" href="/term-loan-calculator.html">Open term loan calculator</a>
-      <a class="button button--secondary" href="/contact/">Review your financing path</a>
+      <a class="button button--secondary" href="/apply/">Start application</a>
     </div>
   </div>
 </section>

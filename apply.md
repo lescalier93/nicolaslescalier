@@ -213,12 +213,12 @@ layout: default
             <option>Hospitality / restaurant</option>
             <option>Manufacturing</option>
             <option>Medical / healthcare</option>
-            <option>Other</option>
             <option>Professional services</option>
             <option>Real estate / investor</option>
             <option>Retail</option>
             <option>Transportation / logistics</option>
             <option>Wholesale / distribution</option>
+            <option>Other</option>
           </select>
         </div>
         <div>

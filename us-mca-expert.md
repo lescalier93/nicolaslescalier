@@ -101,7 +101,7 @@ faq:
     <p>An MCA can look simple until you translate the factor and term into actual repayment pressure. Use the calculator to compare offers, then reach out if you want a second view on the structure.</p>
     <div class="cta-row">
       <a class="button" href="/merchant-cash-advance-calculator.html">Open MCA calculator</a>
-      <a class="button button--secondary" href="/contact/">Discuss your options</a>
+      <a class="button button--secondary" href="/apply/">Start application</a>
     </div>
   </div>
 </section>

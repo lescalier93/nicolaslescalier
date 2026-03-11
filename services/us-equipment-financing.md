@@ -60,7 +60,7 @@ faq:
     <h2>Start with the equipment, the budget, and the revenue impact.</h2>
     <p>I can help decide whether the asset should support its own financing structure or whether another product fits better.</p>
     <div class="cta-row">
-      <a class="button" href="/contact/">Review an equipment deal</a>
+      <a class="button" href="/apply/">Start application</a>
       <a class="button button--secondary" href="/services/us-term-loans-approach/">Compare with term loans</a>
     </div>
   </div>

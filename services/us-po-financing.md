@@ -60,7 +60,7 @@ faq:
     <h2>PO finance works only when the order, supplier path, and margin all make sense.</h2>
     <p>I can help evaluate whether the purchase order is financeable and whether PO financing or factoring is the cleaner approach.</p>
     <div class="cta-row">
-      <a class="button" href="/contact/">Review a purchase order</a>
+      <a class="button" href="/apply/">Start application</a>
       <a class="button button--secondary" href="/services/us-factoring/">Compare with factoring</a>
     </div>
   </div>

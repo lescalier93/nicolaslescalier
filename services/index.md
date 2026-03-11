@@ -16,7 +16,7 @@ permalink: /services/
       <p>Do not start with product names if you are unsure. Start with what the capital is solving, how fast it is needed, and what repayment structure the business can support.</p>
       <div class="section-band__actions">
         <a class="button" href="/apply/">Start application</a>
-        <a class="button button--secondary" href="/services/us-smbs-funding-guide/">Compare products first</a>
+        <a class="button button--secondary" href="/resources.html">Open tools and calculators</a>
       </div>
     </div>
     <div class="mini-grid">
@@ -102,7 +102,7 @@ permalink: /services/
       </div>
       <div>
         <strong>If you are not sure which product fits</strong>
-        <span>Start with the funding guide or contact page instead of guessing wrong.</span>
+        <span>Start with the funding guide or resources hub instead of guessing wrong.</span>
       </div>
     </div>
   </div>
@@ -112,7 +112,7 @@ permalink: /services/
     <p>The highest-value conversation usually happens before an application is submitted, when the file can still be steered toward the structure that fits best.</p>
     <div class="cta-row">
       <a class="button" href="/apply/">Start application</a>
-      <a class="button button--secondary" href="/application-checklist/">Prepare your file</a>
+      <a class="button button--secondary" href="/resources.html">Open tools and calculators</a>
     </div>
   </div>
 </section>

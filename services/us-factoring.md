@@ -60,7 +60,7 @@ faq:
     <h2>Start with the invoice profile and customer quality.</h2>
     <p>I can help determine whether factoring is the right receivables tool or whether a line of credit or another structure is better.</p>
     <div class="cta-row">
-      <a class="button" href="/contact/">Review your invoices</a>
+      <a class="button" href="/apply/">Start application</a>
       <a class="button button--secondary" href="/services/us-line-of-credit/">Compare with line of credit</a>
     </div>
   </div>

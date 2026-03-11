@@ -60,7 +60,7 @@ faq:
     <h2>If you are not sure whether you need a line or a lump sum, start with the use of funds.</h2>
     <p>I can help determine whether a revolving facility is cleaner than an MCA or term loan for the way your business actually uses cash.</p>
     <div class="cta-row">
-      <a class="button" href="/contact/">Discuss a line of credit</a>
+      <a class="button" href="/apply/">Start application</a>
       <a class="button button--secondary" href="/services/us-term-loans-approach/">Compare with term loans</a>
     </div>
   </div>

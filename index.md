@@ -22,7 +22,7 @@ faq:
       <p class="lede">I help U.S. operators secure working capital, lines of credit, equipment financing, term loans, factoring, PO financing, SBA 7(a), bridge loans, and commercial real estate capital without wasting weeks in the wrong process. The goal is simple: match the structure to your timeline, cash flow, and growth plan.</p>
       <div class="hero__actions">
         <a class="button" href="/apply/">Start Application</a>
-        <a class="button button--secondary" href="/contact/">Book a Free Consultation</a>
+        <a class="button button--secondary" href="/resources.html">Open Tools & Calculators</a>
       </div>
       <div class="trust-strip">
         <div class="trust-chip">
@@ -140,6 +140,32 @@ faq:
       <h3>SBA, bridge, and mortgage financing</h3>
       <p>For stronger borrowers, time-sensitive deals, acquisitions, refinance, and broader commercial real estate capital needs.</p>
       <a href="/services/us-mortgage-financing/">Explore real estate and SBA options</a>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <p class="eyebrow">Tools and guides</p>
+  <h2>If you want to compare options before you apply, start here.</h2>
+  <p class="section-intro">The site should not force you to guess which page matters. These are the fastest routes into the calculators, product comparisons, and prep material that actually help before a financing decision.</p>
+  <div class="grid grid--3">
+    <article class="service-card">
+      <span class="card-label">Hub</span>
+      <h3>Resources and tools</h3>
+      <p>Open the full hub for calculators, product guides, checklist pages, and decision support links.</p>
+      <a href="/resources.html">Open resources</a>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Calculator</span>
+      <h3>MCA calculator</h3>
+      <p>Compare two MCA offers by real repayment pressure instead of treating factor rate as the only decision point.</p>
+      <a href="/merchant-cash-advance-calculator.html">Open MCA calculator</a>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Calculator</span>
+      <h3>Term loan calculator</h3>
+      <p>Model payment load and amortization before choosing a longer-term debt structure for growth or refinance.</p>
+      <a href="/term-loan-calculator.html">Open term loan calculator</a>
     </article>
   </div>
 </section>

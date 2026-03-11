@@ -88,7 +88,7 @@ permalink: /services/us-smbs-funding-guide/
     <h2>Send the size of the request, the use of funds, and the time pressure.</h2>
     <p>I will help you narrow the realistic financing paths and flag where the weak assumptions are before you spend time with lenders.</p>
     <div class="cta-row">
-      <a class="button" href="/contact/">Get a funding review</a>
+      <a class="button" href="/apply/">Start application</a>
       <a class="button button--secondary" href="/resources.html">Open resources hub</a>
     </div>
   </div>

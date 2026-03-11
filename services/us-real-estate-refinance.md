@@ -64,7 +64,7 @@ permalink: /services/us-real-estate-refinance/
     <h2>If you are considering a refinance, start with the current debt and the target outcome.</h2>
     <p>Send the property type, estimated value, current loan terms, and whether the goal is savings, cash-out, or permanent financing after a bridge period.</p>
     <div class="cta-row">
-      <a class="button" href="/contact/">Evaluate a refinance</a>
+      <a class="button" href="/apply/">Start application</a>
       <a class="button button--secondary" href="/services/us-bridge-financing/">Compare with bridge debt</a>
     </div>
   </div>

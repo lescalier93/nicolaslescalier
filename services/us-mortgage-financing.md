@@ -60,7 +60,7 @@ faq:
     <h2>Start with the asset, the leverage target, and the exit or hold plan.</h2>
     <p>I can help determine whether the right path is refinance, bridge, acquisition debt, or a more specialized CRE structure.</p>
     <div class="cta-row">
-      <a class="button" href="/contact/">Review a CRE scenario</a>
+      <a class="button" href="/apply/">Start application</a>
       <a class="button button--secondary" href="/services/us-real-estate-refinance/">See refinance guide</a>
     </div>
   </div>

@@ -60,7 +60,7 @@ faq:
     <h2>Start with readiness, not just rate expectations.</h2>
     <p>I can help determine whether your situation is SBA-ready or whether another product is more realistic for the current timeline.</p>
     <div class="cta-row">
-      <a class="button" href="/contact/">Review SBA readiness</a>
+      <a class="button" href="/apply/">Start application</a>
       <a class="button button--secondary" href="/services/us-term-loans-approach/">Compare with term loans</a>
     </div>
   </div>

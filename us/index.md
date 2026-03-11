@@ -31,7 +31,7 @@ layout: default
       <p>The best first step is usually narrowing the financing family that fits the business model, timeline, and repayment reality before the file is pushed into underwriting.</p>
       <div class="section-band__actions">
         <a class="button" href="/services/">See all financing products</a>
-        <a class="button button--secondary" href="/contact/">Talk through your file</a>
+        <a class="button button--secondary" href="/apply/">Start application</a>
       </div>
     </div>
     <div class="mini-grid">
@@ -78,7 +78,7 @@ layout: default
     <h2>If the file is complex, the structure matters more than the pitch.</h2>
     <p>I help borrowers evaluate the tradeoffs between cost, speed, documentation, and repayment pressure before they commit to a lender path.</p>
     <div class="cta-row">
-      <a class="button" href="/contact/">Discuss your situation</a>
+      <a class="button" href="/apply/">Start a financing review</a>
       <a class="button button--secondary" href="/services/">See all services</a>
     </div>
   </div>

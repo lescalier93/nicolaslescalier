@@ -30,7 +30,7 @@ layout: default
       <h2>The value is not just access to lenders. It is judgment before the file loses momentum.</h2>
       <p>Good financing advice means saying when a product is too expensive, too rigid, too slow, or simply not matched to the actual use of proceeds. That filtering is part of the service.</p>
       <div class="section-band__actions">
-        <a class="button" href="/contact/">Discuss your deal</a>
+        <a class="button" href="/apply/">Start application</a>
         <a class="button button--secondary" href="/why-us-clients-trust-nicolas/">Why clients trust Nicolas</a>
       </div>
     </div>
@@ -140,7 +140,7 @@ layout: default
     <h2>If you are evaluating a financing move, start with the facts of the deal.</h2>
     <p>Send the amount, use of proceeds, timing, and the product you think you need. I will help narrow the likely paths quickly and tell you where the weak spots are.</p>
     <div class="cta-row">
-      <a class="button" href="/contact/">Book a consultation</a>
+      <a class="button" href="/apply/">Start a financing review</a>
       <a class="button button--secondary" href="/application-checklist/">See application checklist</a>
     </div>
   </div>

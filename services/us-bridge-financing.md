@@ -66,7 +66,7 @@ permalink: /services/us-bridge-financing/
     <h2>If you need bridge debt, start with the asset and the exit plan.</h2>
     <p>Send the purchase or project timeline, collateral details, and the expected takeout path. I will tell you quickly whether the bridge structure is realistic.</p>
     <div class="cta-row">
-      <a class="button" href="/contact/">Discuss a bridge scenario</a>
+      <a class="button" href="/apply/">Start application</a>
       <a class="button button--secondary" href="/services/us-real-estate-refinance/">See refinance options</a>
     </div>
   </div>
