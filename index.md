@@ -110,25 +110,45 @@ faq:
   </div>
 </section>
 
-<section class="section split">
-  <div class="panel">
-    <p class="eyebrow">Why clients hire me</p>
-    <h2>A financing advisor who is comfortable with nuance.</h2>
-    <p>Most borrowers do not need more lender noise. They need help narrowing the right product, avoiding bad-fit offers, and getting to a decision quickly. I work with small and mid-sized U.S. companies that want clarity on tradeoffs before signing anything.</p>
-    <ul class="plain-list">
-      <li>Coverage across working capital, asset-backed, invoice-driven, SBA, and CRE products</li>
-      <li>Direct access by phone and email</li>
-      <li>Product selection based on timeline and repayment reality</li>
-      <li>Support for retail, construction, medical, logistics, hospitality, distribution, and investor-led deals</li>
-    </ul>
+<section class="section">
+  <p class="eyebrow">Why clients hire me</p>
+  <h2>A financing advisor who is comfortable with nuance.</h2>
+  <p class="section-intro">Most borrowers do not need more lender noise. They need help narrowing the right product, avoiding bad-fit offers, and getting to a decision quickly. I work with small and mid-sized U.S. companies that want clarity on tradeoffs before signing anything.</p>
+  <div class="grid grid--3">
+    <article class="proof-card proof-card--outcome">
+      <span class="card-label">Hospitality | Florida</span>
+      <h3>$300,000 MCA in 72 hours</h3>
+      <div class="proof-meta">
+        <span>Use: upgrades + marketing</span>
+        <span>Fit: speed-sensitive working capital</span>
+      </div>
+      <p>A restaurant group needed capital quickly after a slow season and did not have time for a bank process that was moving too slowly.</p>
+      <p><strong>Outcome:</strong> The file closed inside three days, helped the group refresh operations, and gave the business room to recover revenue before the next cycle.</p>
+    </article>
+    <article class="proof-card proof-card--outcome">
+      <span class="card-label">Manufacturing | Ohio</span>
+      <h3>$500,000 term loan for expansion</h3>
+      <div class="proof-meta">
+        <span>Use: equipment growth</span>
+        <span>Fit: fixed repayment, cleaner collateral</span>
+      </div>
+      <p>An industrial supplier needed expansion capital but wanted to avoid an overly aggressive collateral structure that would restrict the business later.</p>
+      <p><strong>Outcome:</strong> The loan supported capacity growth with manageable monthly payments and a structure better aligned with a longer operating timeline.</p>
+    </article>
+    <article class="proof-card proof-card--outcome">
+      <span class="card-label">Real Estate | Arizona</span>
+      <h3>Bridge financing for a timing gap</h3>
+      <div class="proof-meta">
+        <span>Use: keep transaction moving</span>
+        <span>Fit: short-term bridge to permanent debt</span>
+      </div>
+      <p>A developer needed fast bridge capital while waiting for longer-term financing to be finalized and could not afford deal slippage.</p>
+      <p><strong>Outcome:</strong> Bridge execution preserved the transaction timeline and later transitioned into longer-term commercial real estate debt.</p>
+    </article>
   </div>
-  <div class="proof-card">
-    <p class="eyebrow">Client snapshot</p>
-    <blockquote class="quote">
-      Nicolas secured a $300,000 MCA for our Miami-based restaurant group in 72 hours, allowing us to renovate and reopen on schedule.
-      <footer>Sarah P., Restaurateur</footer>
-    </blockquote>
-    <p><a href="/services/us-client-success-stories/">Read more success stories</a></p>
+  <div class="cta-row">
+    <a class="button button--secondary" href="/reviews-us-funding/">Read more reviews</a>
+    <a class="button button--secondary" href="/services/us-client-success-stories/">Read more success stories</a>
   </div>
 </section>
 
