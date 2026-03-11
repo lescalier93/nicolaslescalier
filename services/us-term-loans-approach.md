@@ -3,6 +3,10 @@ title: "Term Loans for U.S. Businesses | Nicolas Lescalier"
 description: "See when term loans make sense for U.S. businesses, how repayment compares to MCAs, and how Nicolas Lescalier structures term lending decisions."
 layout: default
 permalink: /services/us-term-loans-approach/
+redirect_from:
+  - /blog/term-loans-vs-mca.html
+  - /us-term-loans-approach/
+  - /us-term-loans-approach.html
 faq:
   - question: "How long does a term loan usually take?"
     answer: "It depends on the lender path. Bank and SBA files take longer than many non-bank term structures because the documentation burden is heavier."

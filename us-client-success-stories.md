@@ -3,6 +3,8 @@ title: "Client Success Stories | Nicolas Lescalier"
 description: "Examples of U.S. business financing outcomes arranged by Nicolas Lescalier across working capital, term loans, bridge financing, and commercial real estate."
 layout: default
 permalink: /services/us-client-success-stories/
+redirect_from:
+  - /client-success-stories/
 ---
 
 <section class="section">

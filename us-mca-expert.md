@@ -3,6 +3,8 @@ title: "U.S. Merchant Cash Advance | Nicolas Lescalier"
 description: "Learn when a merchant cash advance makes sense, how repayment works, and how Nicolas Lescalier helps U.S. businesses evaluate MCA offers responsibly."
 layout: default
 permalink: /services/us-mca-expert/
+redirect_from:
+  - /blog/merchant-cash-advance-basics.html
 faq:
   - question: "How fast can an MCA fund?"
     answer: "Some MCA files can move within 24 to 72 hours if deposits are clear and the documentation is ready."

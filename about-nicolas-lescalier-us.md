@@ -3,6 +3,9 @@ title: "About Nicolas Lescalier | U.S. Business Financing Specialist"
 description: "Learn about Nicolas Lescalier, his background in U.S. business financing, and the way he helps operators and investors evaluate funding options."
 permalink: "/about-nicolas-lescalier-us/"
 layout: default
+redirect_from:
+  - /about/
+  - /about.html
 ---
 
 <section class="section split">
