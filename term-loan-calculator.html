@@ -676,6 +676,35 @@ permalink: /term-loan-calculator.html
     input.value = raw > 0 ? fmt(raw) : "";
   }
 
+  function selectFieldOnFocus(input) {
+    let preventMouseupReset = false;
+
+    input.addEventListener("focus", () => {
+      if (input.readOnly) {
+        preventMouseupReset = false;
+        return;
+      }
+      preventMouseupReset = true;
+      requestAnimationFrame(() => {
+        if (document.activeElement === input) {
+          input.setSelectionRange(0, input.value.length);
+        }
+      });
+    });
+
+    input.addEventListener("mouseup", (event) => {
+      if (!preventMouseupReset) {
+        return;
+      }
+      event.preventDefault();
+      preventMouseupReset = false;
+    });
+
+    input.addEventListener("blur", () => {
+      preventMouseupReset = false;
+    });
+  }
+
   function stripFormattingOnFocus(id) {
     const input = $(id);
     input.addEventListener("focus", () => {
@@ -683,6 +712,7 @@ permalink: /term-loan-calculator.html
       input.value = raw > 0 ? raw.toFixed(2) : "";
     });
     input.addEventListener("blur", () => formatFieldOnBlur(id));
+    selectFieldOnFocus(input);
   }
 
   function solveScenario(state) {

@@ -644,6 +644,31 @@ permalink: /merchant-cash-advance-calculator.html
     return `/apply/?${params.toString()}`;
   }
 
+  function selectFieldOnFocus(input) {
+    let preventMouseupReset = false;
+
+    input.addEventListener("focus", () => {
+      preventMouseupReset = true;
+      requestAnimationFrame(() => {
+        if (document.activeElement === input && typeof input.setSelectionRange === "function") {
+          input.setSelectionRange(0, input.value.length);
+        }
+      });
+    });
+
+    input.addEventListener("mouseup", (event) => {
+      if (!preventMouseupReset) {
+        return;
+      }
+      event.preventDefault();
+      preventMouseupReset = false;
+    });
+
+    input.addEventListener("blur", () => {
+      preventMouseupReset = false;
+    });
+  }
+
   function setAdvanceFormatting(input) {
     input.addEventListener("focus", () => {
       const rawValue = parseCurrency(input.value);
@@ -693,6 +718,7 @@ permalink: /merchant-cash-advance-calculator.html
     };
 
     setAdvanceFormatting(advanceInput);
+    [advanceInput, factorInput, termInput].forEach(selectFieldOnFocus);
 
     function currentState() {
       return {
