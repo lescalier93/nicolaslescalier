@@ -618,6 +618,73 @@ h3 {
   gap: 0.9rem;
 }
 
+.notice-card {
+  padding: 1.2rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(22, 32, 42, 0.08);
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: var(--shadow-soft);
+}
+
+.notice-card p:last-child,
+.notice-card ul:last-child {
+  margin-bottom: 0;
+}
+
+.form-section {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.4rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(22, 32, 42, 0.08);
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: var(--shadow-soft);
+}
+
+.form-section__title {
+  margin: 0;
+}
+
+.form-section__copy {
+  margin: 0;
+  color: var(--muted);
+}
+
+.form-grid--application {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.form-grid--application .form-group--full {
+  grid-column: 1 / -1;
+}
+
+.input-help {
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.checkbox-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.checkbox-list label {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 0.75rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.checkbox-list input[type="checkbox"] {
+  width: auto;
+  margin-top: 0.2rem;
+}
+
 label {
   display: block;
   margin-bottom: 0.35rem;
@@ -744,5 +811,9 @@ button {
 
   .section-band__actions .button {
     width: 100%;
+  }
+
+  .form-grid--application {
+    grid-template-columns: 1fr;
   }
 }

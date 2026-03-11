@@ -41,6 +41,10 @@ layout: default
         <p><a href="/application-checklist/">See the full application checklist</a></p>
       </div>
     </div>
+    <div class="cta-row">
+      <a class="button" href="/apply/">Open full application</a>
+      <a class="button button--secondary" href="/application-checklist/">Checklist first</a>
+    </div>
   </div>
 
   <div class="contact-form">

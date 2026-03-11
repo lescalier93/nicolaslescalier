@@ -21,8 +21,8 @@ faq:
       <h1>Funding that fits the business you are actually running.</h1>
       <p class="lede">I help U.S. operators secure working capital, lines of credit, equipment financing, term loans, factoring, PO financing, SBA 7(a), bridge loans, and commercial real estate capital without wasting weeks in the wrong process. The goal is simple: match the structure to your timeline, cash flow, and growth plan.</p>
       <div class="hero__actions">
-        <a class="button" href="/contact/">Book a Free Consultation</a>
-        <a class="button button--secondary" href="/services/">Explore Financing Options</a>
+        <a class="button" href="/apply/">Start Application</a>
+        <a class="button button--secondary" href="/contact/">Book a Free Consultation</a>
       </div>
       <div class="trust-strip">
         <div class="trust-chip">
@@ -83,7 +83,7 @@ faq:
       <h2>Borrowers do not need more noise. They need a faster path to the right structure.</h2>
       <p>If you are looking at financing, the real problem is usually not access to offers. It is choosing the product that fits repayment reality, timing pressure, and the next step for the business.</p>
       <div class="section-band__actions">
-        <a class="button" href="/contact/">Talk through your deal</a>
+        <a class="button" href="/apply/">Start the application</a>
         <a class="button button--secondary" href="/application-checklist/">Open application checklist</a>
       </div>
     </div>
@@ -180,10 +180,10 @@ faq:
       <p><strong>Outcome:</strong> Bridge execution preserved the transaction timeline and later transitioned into longer-term commercial real estate debt.</p>
     </article>
   </div>
-  <div class="cta-row">
-    <a class="button button--secondary" href="/reviews-us-funding/">Read more reviews</a>
-    <a class="button button--secondary" href="/services/us-client-success-stories/">Read more success stories</a>
-  </div>
+    <div class="cta-row">
+      <a class="button button--secondary" href="/reviews-us-funding/">Read more reviews</a>
+      <a class="button button--secondary" href="/services/us-client-success-stories/">Read more success stories</a>
+    </div>
 </section>
 
 <section class="section">
@@ -237,7 +237,7 @@ faq:
     <h2>Tell me what you need capital for and how fast you need it.</h2>
     <p>If the deal is a fit, I will help you identify the most realistic financing path, the likely documentation, and the tradeoffs you should expect before you apply.</p>
     <div class="cta-row">
-      <a class="button" href="/contact/">Start the conversation</a>
+      <a class="button" href="/apply/">Start the application</a>
       <a class="button button--secondary" href="tel:+13056993636">Call (305) 699-3636</a>
     </div>
   </div>
