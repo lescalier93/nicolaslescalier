@@ -396,6 +396,10 @@ layout: default
           <input type="checkbox" id="consent_contact" name="consent_contact" required>
           <span>I consent to be contacted about this financing request by phone, email, or text.</span>
         </label>
+        <label for="consent_sms_marketing">
+          <input type="checkbox" id="consent_sms_marketing" name="consent_sms_marketing">
+          <span>By checking this box, you agree to receive marketing text messages, including payment reminders, promotional offers, and customer care messages, at the mobile number provided. Message frequency varies. Consent is not a condition of any purchase. Message and data rates may apply. Reply STOP to unsubscribe or HELP for assistance. For support, contact us at <a href="tel:+13056993636">(305) 699-3636</a>. Information gathered in this SMS program will not be shared with third parties or affiliates for marketing purposes. I have read and agree to the <a href="/terms-and-conditions/">Terms and Conditions</a> and <a href="/privacy-policy/">Privacy Policy</a>.</span>
+        </label>
         <label for="consent_truthful">
           <input type="checkbox" id="consent_truthful" name="consent_truthful" required>
           <span>I confirm the information submitted here is accurate to the best of my knowledge.</span>
