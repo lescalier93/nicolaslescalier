@@ -677,31 +677,45 @@ permalink: /term-loan-calculator.html
   }
 
   function selectFieldOnFocus(input) {
-    let preventMouseupReset = false;
+    let pointerPrimed = false;
+
+    input.addEventListener("pointerdown", (event) => {
+      if (input.readOnly) {
+        pointerPrimed = false;
+        return;
+      }
+      pointerPrimed = true;
+      if (document.activeElement !== input) {
+        event.preventDefault();
+        input.focus();
+      }
+    });
 
     input.addEventListener("focus", () => {
       if (input.readOnly) {
-        preventMouseupReset = false;
+        pointerPrimed = false;
         return;
       }
-      preventMouseupReset = true;
       requestAnimationFrame(() => {
         if (document.activeElement === input) {
-          input.setSelectionRange(0, input.value.length);
+          input.select();
         }
       });
     });
 
     input.addEventListener("mouseup", (event) => {
-      if (!preventMouseupReset) {
+      if (!pointerPrimed) {
         return;
       }
       event.preventDefault();
-      preventMouseupReset = false;
+      pointerPrimed = false;
+      if (document.activeElement === input && !input.readOnly) {
+        input.select();
+      }
     });
 
     input.addEventListener("blur", () => {
-      preventMouseupReset = false;
+      pointerPrimed = false;
     });
   }
 
@@ -875,6 +889,13 @@ permalink: /term-loan-calculator.html
     }
   }
 
+  let calculateTimer = null;
+
+  function scheduleCalculate() {
+    window.clearTimeout(calculateTimer);
+    calculateTimer = window.setTimeout(calculate, 180);
+  }
+
   function resetCalculator() {
     $("loanAmount").value = "350,000.00";
     $("interestRate").value = "10.50";
@@ -964,7 +985,8 @@ permalink: /term-loan-calculator.html
 
   ["loanAmount", "interestRate", "loanTerm", "payment"].forEach((id) => {
     stripFormattingOnFocus(id);
-    $(id).addEventListener("input", calculate);
+    $(id).addEventListener("input", scheduleCalculate);
+    $(id).addEventListener("blur", calculate);
   });
 
   document.querySelectorAll('input[name="solveField"]').forEach((input) => {

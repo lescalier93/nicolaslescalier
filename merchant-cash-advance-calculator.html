@@ -645,27 +645,37 @@ permalink: /merchant-cash-advance-calculator.html
   }
 
   function selectFieldOnFocus(input) {
-    let preventMouseupReset = false;
+    let pointerPrimed = false;
+
+    input.addEventListener("pointerdown", (event) => {
+      pointerPrimed = true;
+      if (document.activeElement !== input) {
+        event.preventDefault();
+        input.focus();
+      }
+    });
 
     input.addEventListener("focus", () => {
-      preventMouseupReset = true;
       requestAnimationFrame(() => {
-        if (document.activeElement === input && typeof input.setSelectionRange === "function") {
-          input.setSelectionRange(0, input.value.length);
+        if (document.activeElement === input && typeof input.select === "function") {
+          input.select();
         }
       });
     });
 
     input.addEventListener("mouseup", (event) => {
-      if (!preventMouseupReset) {
+      if (!pointerPrimed) {
         return;
       }
       event.preventDefault();
-      preventMouseupReset = false;
+      pointerPrimed = false;
+      if (document.activeElement === input && typeof input.select === "function") {
+        input.select();
+      }
     });
 
     input.addEventListener("blur", () => {
-      preventMouseupReset = false;
+      pointerPrimed = false;
     });
   }
 
