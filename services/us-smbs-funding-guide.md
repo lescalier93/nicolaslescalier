@@ -1,57 +1,71 @@
 ---
-title: "How U.S. SMBs Get Funding Fast: Guide by Nicolas Lescalier"
-description: "Discover practical strategies for obtaining business financing quickly, from merchant cash advances to term loans and bridge funding, tailored for U.S. entrepreneurs."
+title: "How U.S. SMBs Get Funding Fast | Nicolas Lescalier"
+description: "A practical guide to choosing between MCAs, term loans, bridge financing, and refinance options when a U.S. business needs capital quickly."
 layout: default
 permalink: /services/us-smbs-funding-guide/
 ---
 
-# How U.S. SMBs Get Funding Fast
+<section class="section">
+  <p class="eyebrow">Funding Guide</p>
+  <h1>Fast funding starts with the right product choice, not just the fastest lender.</h1>
+  <p class="section-intro">When a business needs capital quickly, the biggest mistake is often choosing a structure before clarifying the actual problem. Payroll stress, equipment growth, and property transition do not belong in the same financing bucket.</p>
+</section>
 
-Securing funding for a small or mid‑sized business can be a challenge—especially when you need capital quickly. Traditional bank loans often require extensive documentation and weeks of underwriting. Many entrepreneurs turn to alternative lenders to bridge cash flow gaps, finance expansions or respond to unexpected opportunities.
+<section class="section">
+  <div class="grid grid--2">
+    <article class="service-card">
+      <span class="card-label">MCA</span>
+      <h3>Best for speed and receivables-driven repayment</h3>
+      <p>Useful when time is tight and the business has deposit or card volume that supports daily or weekly remittances.</p>
+      <a href="/services/us-mca-expert/">Learn about MCAs</a>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Term Loan</span>
+      <h3>Best for larger investments and predictable repayment</h3>
+      <p>Better suited for expansion, equipment, acquisitions, and structured working capital with cleaner monthly payment visibility.</p>
+      <a href="/services/us-term-loans-approach/">See term loans</a>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Bridge</span>
+      <h3>Best for timing gaps with a clear exit</h3>
+      <p>Used when an opportunity is real, the timeline is compressed, and a refinance, sale, or receivable event can take out the debt.</p>
+      <a href="/services/us-bridge-financing/">See bridge financing</a>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Refinance</span>
+      <h3>Best for improving debt on an existing asset</h3>
+      <p>Useful for reducing debt cost, extending maturity, or unlocking equity when the property economics support it.</p>
+      <a href="/services/us-real-estate-refinance/">See refinance options</a>
+    </article>
+  </div>
+</section>
 
-## Know your funding options
+<section class="section split">
+  <div class="panel">
+    <p class="eyebrow">What lenders look at</p>
+    <ul class="plain-list">
+      <li>Cash flow supportability</li>
+      <li>Credit profile and operating history</li>
+      <li>Collateral strength where relevant</li>
+      <li>Clarity on use of proceeds and timing</li>
+    </ul>
+    <p>The stronger the story across those four areas, the better the odds of getting a structure that helps instead of hurts.</p>
+  </div>
+  <div class="proof-card">
+    <p class="eyebrow">Operating rule</p>
+    <h3>Choose for fit, then optimize for speed.</h3>
+    <p>Borrowers often reverse that order. The result is usually wasted submissions, weak offers, or expensive capital used for the wrong purpose.</p>
+  </div>
+</section>
 
-Before approaching lenders, it helps to understand the main types of financing available to U.S. businesses:
-
-### Merchant Cash Advances
-
-MCAs involve selling a percentage of your future card receipts for a lump sum payment today. Payments fluctuate with your sales volume. They’re ideal for businesses with strong daily card revenue who need funds fast. Learn more in our [U.S. Merchant Cash Advance Expert guide](/services/us-mca-expert/).
-
-### Term Loans
-
-Fixed‑term loans provide a lump sum repaid over a set schedule, often monthly. They are suited to equipment purchases, renovations or larger working capital needs. See [Term Loans for U.S. Businesses](/services/us-term-loans-approach/) for details.
-
-### Lines of credit
-
-Revolving credit facilities give you a credit limit you can draw down as needed. You only pay interest on what you use. LOCs are useful for managing seasonal fluctuations or covering inventory purchases.
-
-### Bridge financing
-
-Short‑term bridge loans cover time‑sensitive opportunities such as closing real estate deals, waiting for SBA approvals or funding major orders. Because they are secured by collateral or future proceeds, they can close quickly.
-
-### Real estate refinance
-
-If you own commercial property, refinancing can unlock equity for growth. By reducing your rate or extending the term, you can lower monthly payments and free cash for other investments.
-
-## What lenders look for
-
-When you apply for financing, U.S. lenders will evaluate:
-
-- **Cash flow**: Do you have sufficient daily or monthly revenue to service debt?
-- **Credit history**: While MCAs focus on sales rather than credit, term loans and lines of credit will consider your credit profile.
-- **Collateral**: For bridge loans or real estate refinance, lenders may secure the loan with property or other assets.
-- **Time in business**: Most products require at least six to twelve months of operating history.
-
-## Why choose Nicolas Lescalier
-
-Nicolas Lescalier specializes in helping U.S. business owners navigate these options. He reviews your cash flow statements, discusses your goals and matches you with the right product—whether that’s an MCA to cover payroll or a term loan for expansion. By working with a network of lenders across the United States, Nicolas can secure approvals in days, not weeks.
-
-> “We had a rush order and needed $200k fast. Nicolas found us a bridge loan that closed in 72 hours—saving the deal and our client relationship.” – Retail owner in Texas
-
-### External resources
-
-For more details on federal funding programs, visit the U.S. Small Business Administration’s [funding programs overview](https://www.sba.gov/funding-programs).
-
-## Ready to secure your funding?
-
-Visit our [contact page](/contact/) or call to discuss your financing needs. We’ll provide a free consultation and recommend the fastest path to funding.
+<section class="section">
+  <div class="cta-panel">
+    <p class="eyebrow">Next Step</p>
+    <h2>Send the size of the request, the use of funds, and the time pressure.</h2>
+    <p>I will help you narrow the realistic financing paths and flag where the weak assumptions are before you spend time with lenders.</p>
+    <div class="cta-row">
+      <a class="button" href="/contact/">Get a funding review</a>
+      <a class="button button--secondary" href="/resources.html">Open resources hub</a>
+    </div>
+  </div>
+</section>

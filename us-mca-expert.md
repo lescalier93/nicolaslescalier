@@ -1,46 +1,75 @@
 ---
-title: "Nicolas Lescalier | U.S. Merchant Cash Advance Expert"
-description: "Learn how Nicolas Lescalier helps U.S. small business owners secure merchant cash advances (MCAs) quickly and responsibly."
+title: "U.S. Merchant Cash Advance | Nicolas Lescalier"
+description: "Learn when a merchant cash advance makes sense, how repayment works, and how Nicolas Lescalier helps U.S. businesses evaluate MCA offers responsibly."
 layout: default
 permalink: /services/us-mca-expert/
 ---
 
-# U.S. Merchant Cash Advance Expert
+<section class="section split">
+  <div class="panel">
+    <p class="eyebrow">Merchant Cash Advance</p>
+    <h1>Fast working capital when timing matters more than perfect bank paper.</h1>
+    <p>A merchant cash advance can be useful when a business needs capital quickly and repayment needs to track receivables more closely than a fixed monthly loan. It is often the right tool for urgent inventory, payroll, repairs, marketing, or location-related spend, but only when the repayment pressure actually fits the business.</p>
+    <p>I help borrowers determine whether an MCA solves the problem cleanly or whether another product would create less drag on cash flow.</p>
+  </div>
+  <div class="proof-card">
+    <p class="eyebrow">Best fit</p>
+    <ul class="plain-list">
+      <li>Strong recent deposits or card volume</li>
+      <li>Need for funding inside days, not weeks</li>
+      <li>Short-term opportunity or working capital gap</li>
+      <li>Business can absorb frequent remittances</li>
+    </ul>
+  </div>
+</section>
 
-Merchant Cash Advances (MCAs) are a form of working capital that provides U.S. business owners with fast access to funds by selling a portion of their future card revenue. Unlike traditional term loans, MCAs are structured around daily or weekly debits tied to sales volume, so payments fluctuate with your cash flow.
+<section class="section">
+  <p class="eyebrow">How it works</p>
+  <h2>Repayment is driven by the structure, not just the advance amount.</h2>
+  <div class="grid grid--3">
+    <article class="service-card">
+      <span class="card-label">Advance</span>
+      <p>You receive a lump sum based largely on recent receivables and deposit history.</p>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Payback</span>
+      <p>Total repayment is typically set by a factor rate, which is why the effective cost depends heavily on speed and term.</p>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Remittance</span>
+      <p>Payments are usually daily or weekly, so the right question is whether your operating cash flow can handle the cadence.</p>
+    </article>
+  </div>
+</section>
 
-## Why choose an MCA?
+<section class="section split">
+  <div class="panel">
+    <p class="eyebrow">My approach</p>
+    <h2>Speed is useful. Overfunding is not.</h2>
+    <ul class="plain-list">
+      <li>Review deposits, receivables, and recent trends</li>
+      <li>Compare MCA cost against term loan or line alternatives</li>
+      <li>Pressure-test payment cadence against actual operating needs</li>
+      <li>Look for flexibility on renewals, reconciliation, and prepayment where available</li>
+    </ul>
+    <p>The goal is to secure enough capital to solve the problem without letting repayment choke the business right after funding.</p>
+  </div>
+  <div class="proof-card">
+    <p class="eyebrow">Example</p>
+    <blockquote class="quote">
+      A California boutique hotel needed $100,000 to complete room upgrades before peak season. We structured an MCA that funded within two days, aligned remittances with card activity, and let the property reopen in time for the seasonal demand spike.
+    </blockquote>
+  </div>
+</section>
 
-An MCA can be ideal for businesses with strong card receipts and seasonal sales. They are used by restaurants, retail shops, contractors, e‑commerce sellers and service providers to:
-
-- Cover payroll or rent during slow months
-- Purchase inventory or supplies when opportunity knocks
-- Fund marketing campaigns and growth initiatives
-
-Because MCA approvals focus on sales rather than credit scores, approvals are often faster than bank loans. Many deals fund within 24 to 48 hours.
-
-## Nicolas’s approach
-
-As a funding manager, Nicolas Lescalier helps U.S. entrepreneurs determine whether an MCA is right for their situation. He analyzes cash flow statements, looks at card receipts, and compares the cost of an advance to other options like term loans or lines of credit. This consultative process helps clients avoid overfunding and ensures the capital structure aligns with their objectives.
-
-Nicolas works with a network of reputable funders to secure competitive factor rates and flexible terms. Prepayment discounts and renewal options are clearly disclosed at the outset. By leveraging multiple lenders, he ensures clients receive offers tailored to their industry and revenue profile.
-
-## MCA versus term loans
-
-While MCAs are quick, they are not always the cheapest option. Term loans may offer lower annualized rates but have fixed repayment schedules. Nicolas educates clients on both structures so they understand the trade‑offs. The right solution depends on how fast you need the capital, the purpose of the funds, and how predictable your revenue is.
-
-For more on term loans, see [Term Loans for U.S. Businesses](/services/us-term-loans-approach/).
-
-## A case study
-
-A boutique hotel in California needed $100,000 to refurbish rooms before the busy season. Traditional financing would have taken 6–8 weeks, but Nicolas structured an MCA that funded within two days. By matching the advance to credit card receipts, repayments were high during peak months and lower in the off‑season. The hotel completed renovations in time for summer, leading to record bookings and revenue growth.
-
-For more success stories, see [Client Success Stories — U.S. Businesses](/services/us-client-success-stories/).
-
-## External resources
-
-To learn more about MCAs from an independent source, visit the U.S. Small Business Administration’s overview of [financing options for small businesses](https://www.sba.gov/funding-programs).
-
-## Get started
-
-If you're considering a merchant cash advance, Nicolas Lescalier can provide a detailed review of your sales history and discuss whether an MCA or another product is best. [Contact Nicolas](/contact/) to schedule a consultation today.
+<section class="section">
+  <div class="cta-panel">
+    <p class="eyebrow">Decision Tool</p>
+    <h2>Use the calculator, then compare the structure before signing.</h2>
+    <p>An MCA can look simple until you translate the factor and term into actual repayment pressure. Use the calculator to compare offers, then reach out if you want a second view on the structure.</p>
+    <div class="cta-row">
+      <a class="button" href="/merchant-cash-advance-calculator.html">Open MCA calculator</a>
+      <a class="button button--secondary" href="/contact/">Discuss your options</a>
+    </div>
+  </div>
+</section>

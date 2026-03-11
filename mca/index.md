@@ -1,18 +1,18 @@
 ---
 layout: default
-title: "Merchant Cash Advance"
-description: "Learn about merchant cash advances for U.S. businesses, including requirements, funding speed, and how they work."
-permalink: /services/us-mca-expert/
+title: "Merchant Cash Advance Guide"
+description: "Overview page for merchant cash advances with a direct path to Nicolas Lescalier's full U.S. MCA service page."
+permalink: /mca/
+redirect_from:
+  - /merchant-cash-advance/
 ---
 
-# Merchant Cash Advance
-
-Merchant cash advances provide fast working capital based on your future receivables. They're ideal for businesses with consistent deposits that need immediate funding without lengthy approvals.
-
-**Who it’s for:** Businesses with steady revenue looking for flexible, short-term capital.
-
-**Docs required:** 3‑6 months of bank statements, driver ID, and a void cheque.
-
-**Funding speed:** 24‑72 hours after submitting complete documentation.
-
-[Book a Consultation](https://calendly.com/YOUR_HANDLE/consultation){: class="call-to-action"}
+<section class="section">
+  <p class="eyebrow">MCA Guide</p>
+  <h1>Merchant cash advances can solve a timing problem fast, but structure matters.</h1>
+  <p class="section-intro">If you are evaluating an MCA, the full guide below is the better starting point because it covers fit, repayment cadence, and how to compare the cost against other capital options.</p>
+  <div class="cta-row">
+    <a class="button" href="/services/us-mca-expert/">Go to full MCA guide</a>
+    <a class="button button--secondary" href="/merchant-cash-advance-calculator.html">Open MCA calculator</a>
+  </div>
+</section>

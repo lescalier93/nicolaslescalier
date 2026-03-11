@@ -1,50 +1,71 @@
 ---
-title: "Real Estate Refinance U.S. — Case Studies"
-description: "Learn how refinancing commercial real estate can unlock equity and improve cash flow for U.S. businesses, with examples from Nicolas Lescalier’s clients."
+title: "Commercial Real Estate Refinance | Nicolas Lescalier"
+description: "Learn when commercial real estate refinancing makes sense, what savings or cash-out opportunities to evaluate, and how Nicolas Lescalier structures refinance decisions."
 layout: default
 permalink: /services/us-real-estate-refinance/
 ---
 
-# Real Estate Refinance U.S. — Case Studies
+<section class="section split">
+  <div class="panel">
+    <p class="eyebrow">Commercial Refinance</p>
+    <h1>Refinance commercial property when the new structure improves the asset, not just the monthly payment.</h1>
+    <p>Commercial real estate refinancing can reduce debt cost, extend term, replace a bridge loan, or unlock equity for improvements and new investments. The key is to compare the real savings and strategic benefit against closing costs, leverage, covenants, and prepayment friction.</p>
+    <p>I help borrowers evaluate whether a refinance improves the capital stack or just creates a new set of constraints.</p>
+  </div>
+  <div class="proof-card">
+    <p class="eyebrow">Common reasons</p>
+    <ul class="plain-list">
+      <li>Lower rate or better amortization</li>
+      <li>Cash-out for improvements or expansion</li>
+      <li>Transition from bridge or construction debt</li>
+      <li>Reset of maturity pressure or restrictive covenants</li>
+    </ul>
+  </div>
+</section>
 
-Refinancing commercial real estate can lower your interest rate, extend your repayment term or tap equity for growth. By restructuring debt on owner‑occupied or investment property, you can free working capital and stabilize cash flow.
+<section class="section">
+  <p class="eyebrow">Decision factors</p>
+  <h2>Refinance decisions should be judged on total position, not just quoted rate.</h2>
+  <div class="grid grid--3">
+    <article class="service-card">
+      <span class="card-label">Property</span>
+      <p>Current value, NOI, occupancy, and property type all affect lender appetite and the shape of the refinance.</p>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Leverage</span>
+      <p>Cash-out can be useful, but pushing leverage too far can weaken flexibility later if rates or operations move against you.</p>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Net Benefit</span>
+      <p>Closing costs, penalties, reserves, and timeline need to be weighed against the real economic benefit of the new debt.</p>
+    </article>
+  </div>
+</section>
 
-## Why refinance?
+<section class="section split">
+  <div class="panel">
+    <p class="eyebrow">Examples</p>
+    <ul class="plain-list">
+      <li>Chicago office refinance that reduced monthly payments and improved hiring capacity</li>
+      <li>Phoenix retail center refinance that added cash-out for a new project while extending maturity</li>
+      <li>Owner-occupied industrial refinance used to fund automation and operating efficiency</li>
+    </ul>
+    <p>The right refinance should improve the operating position or investor flexibility in a measurable way.</p>
+  </div>
+  <div class="proof-card">
+    <p class="eyebrow">My role</p>
+    <p>I review the current loan, market options, property performance, and target outcome before recommending whether to refinance now, wait, or pursue a different structure entirely.</p>
+  </div>
+</section>
 
-- **Lower rates**: If your property has appreciated or rates have fallen, refinancing can reduce monthly payments.
-- **Cash out equity**: Pull cash from the property to fund expansion, pay down high‑cost debt or invest in new opportunities.
-- **Shorten or extend term**: Reduce overall interest paid by shortening the term or improve cash flow by extending it.
-- **Transition to permanent financing**: Replace a bridge loan or construction loan with long-term financing.
-
-## Nicolas Lescalier’s refinance process
-
-1. **Property and loan analysis**: Nicolas reviews current loan terms, appraisal values and market rates to calculate potential savings.
-2. **Equity assessment**: Determine how much cash can be withdrawn without overleveraging the property.
-3. **Lender match**: Identify lenders—banks, credit unions and private lenders—offering competitive rates for your property type.
-4. **Documentation and closing**: Guide you through ordering appraisals, gathering financial statements and navigating closing.
-
-## Case studies
-
-### Office building refinance — Chicago, IL
-
-A professional services firm owned a 10,000 sq ft office building financed at 8.5% APR. Nicolas arranged a refinance at 6.25% fixed with a 20-year amortization, saving $2,300 per month. The firm used the savings to hire additional staff.
-
-### Retail center cash-out — Phoenix, AZ
-
-A family-owned retail center valued at $3 million had a $1.5 million loan maturing in 12 months. Nicolas secured a $2.2 million refinance at 70% LTV, allowing the owners to pay off the existing note and extract $500,000 for a new project. The rate dropped from 9% to 7.1% and the term extended to 15 years.
-
-### Owner‑occupied industrial property — Atlanta, GA
-
-A manufacturing company needed capital to automate its production line. Nicolas facilitated a cash‑out refinance on its industrial facility, unlocking $700,000. The company reinvested the funds, increasing productivity and profit margins.
-
-## Benefits and considerations
-
-Refinancing offers tangible benefits, but it’s important to consider closing costs, prepayment penalties and the impact on long‑term leverage. Nicolas will help you evaluate whether the savings outweigh the costs.
-
-## Related guides
-
-To explore other financing options, read about [term loans](/services/us-term-loans-approach/), [bridge financing](/services/us-bridge-financing/) and our [funding guide for SMBs](/services/us-smbs-funding-guide/). You can also review this [SBA guide to commercial real estate loans](https://www.sba.gov/funding-programs/loans/real-estate) for background.
-
-## Start your refinance journey
-
-Contact Nicolas Lescalier via our [contact page](/contact/) to schedule a consultation. He will evaluate your property, discuss your goals and determine if a refinance is right for you.
+<section class="section">
+  <div class="cta-panel">
+    <p class="eyebrow">Review the Asset</p>
+    <h2>If you are considering a refinance, start with the current debt and the target outcome.</h2>
+    <p>Send the property type, estimated value, current loan terms, and whether the goal is savings, cash-out, or permanent financing after a bridge period.</p>
+    <div class="cta-row">
+      <a class="button" href="/contact/">Evaluate a refinance</a>
+      <a class="button button--secondary" href="/services/us-bridge-financing/">Compare with bridge debt</a>
+    </div>
+  </div>
+</section>

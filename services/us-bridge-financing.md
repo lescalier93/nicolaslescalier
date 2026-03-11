@@ -1,46 +1,73 @@
 ---
-title: "Bridge Financing in U.S. Markets"
-description: "Understand how bridge financing helps U.S. businesses seize time-sensitive opportunities and how Nicolas Lescalier structures deals that close fast."
+title: "Bridge Financing in U.S. Markets | Nicolas Lescalier"
+description: "Understand when bridge financing works, what lenders care about, and how Nicolas Lescalier structures short-term bridge loans for U.S. businesses and real estate deals."
 layout: default
 permalink: /services/us-bridge-financing/
 ---
 
-# Bridge Financing in U.S. Markets
+<section class="section split">
+  <div class="panel">
+    <p class="eyebrow">Bridge Financing</p>
+    <h1>Short-term capital for deals that cannot wait for long-term underwriting.</h1>
+    <p>Bridge loans are designed for timing problems: acquisitions, rehab periods, receivable gaps, or transition windows where the borrower knows the permanent solution but cannot get there in time. These deals can move quickly, but only if the collateral and exit are clear.</p>
+    <p>I help borrowers determine when bridge debt preserves an opportunity and when it simply adds expensive pressure without a credible exit.</p>
+  </div>
+  <div class="proof-card">
+    <p class="eyebrow">Best fit</p>
+    <ul class="plain-list">
+      <li>Real estate acquisitions and transitional assets</li>
+      <li>Construction or renovation periods</li>
+      <li>Receivable gaps tied to contract or invoice timing</li>
+      <li>Situations with a defined takeout plan or sale path</li>
+    </ul>
+  </div>
+</section>
 
-Bridge financing—or bridge loans—are short-term, asset-backed loans designed to “bridge” the gap between immediate capital needs and longer-term financing solutions. They’re used by real estate developers closing on property, retailers purchasing large inventory orders, and contractors covering project expenses until payments arrive.
+<section class="section">
+  <p class="eyebrow">Core underwrite</p>
+  <h2>Bridge lenders care about collateral, speed, and exit.</h2>
+  <div class="grid grid--3">
+    <article class="service-card">
+      <span class="card-label">Collateral</span>
+      <p>Asset value and advance rate drive how much a lender can move and how fast they can get comfortable.</p>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Exit Strategy</span>
+      <p>Sale, refinance, invoice collection, or permanent debt needs to be thought through before closing, not after.</p>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Timeline</span>
+      <p>Bridge loans earn their keep when the timing pressure is real and the delay cost is higher than the bridge cost.</p>
+    </article>
+  </div>
+</section>
 
-## How bridge financing works
+<section class="section split">
+  <div class="panel">
+    <p class="eyebrow">Execution</p>
+    <h2>Most weak bridge files break on one of two points.</h2>
+    <ul class="plain-list">
+      <li>The collateral story is not documented cleanly enough</li>
+      <li>The exit is vague, optimistic, or dependent on too many assumptions</li>
+    </ul>
+    <p>My role is to tighten both. That means reviewing value, timing, documentation, and the most realistic next capital event before the borrower commits.</p>
+  </div>
+  <div class="proof-card">
+    <p class="eyebrow">Example</p>
+    <blockquote class="quote">
+      A Houston investor needed $1.2 million in five days to close on an auction property. With the right asset-backed lender and a clear refinance path after rehab, the deal closed on time and rolled into longer-term financing after value was created.
+    </blockquote>
+  </div>
+</section>
 
-Bridge loans are typically secured by property, equipment, receivables or other collateral. Because lenders have collateral to fall back on, they can fund quickly—often within days. Loans last anywhere from a few weeks to 18 months, with interest-only payments during the term and a balloon payment at maturity. Some lenders roll the bridge into permanent financing once long-term funding is secured.
-
-## Common uses for bridge loans
-
-- **Real estate acquisitions**: Investors use bridge loans to purchase commercial properties while arranging for long-term mortgages or refinancing.  
-- **Construction and renovation**: Developers bridge cash gaps during the build or rehab phase until they qualify for conventional financing.  
-- **Inventory and purchase orders**: Wholesalers or retailers bridge large orders ahead of seasonal sales peaks.  
-- **Business transitions**: Companies use bridge loans to cover operations during mergers, buyouts or recapitalizations.
-
-### Case study: Real estate investor
-
-A Houston-based investor identified a mixed-use property at auction but needed $1.2 million in five days to complete the purchase. Traditional lenders could not underwrite in time. Nicolas Lescalier connected the client with a private lender who offered a 12-month bridge loan secured by the property. After renovations, the property appraised 30% higher and was refinanced into a long-term loan with a commercial bank.
-
-## Nicolas Lescalier’s bridge financing expertise
-
-Nicolas maintains relationships with private lenders and institutional investors that specialize in bridge lending. He evaluates the collateral, exit strategy and timing to ensure clients obtain bridge funds only when they make sense. His process includes:
-
-1. **Collateral review**: Determining the asset’s current and future value to structure the loan amount and advance rate.  
-2. **Exit planning**: Identifying the take-out financing—whether SBA, term loan, or sale—before the bridge loan closes.  
-3. **Speed and transparency**: Managing expectations around timing, fees and required documentation.  
-
-## Pros and cons of bridge financing
-
-- **Pros**: Fast funding, flexible terms, minimal documentation, preserves deals that would otherwise be lost.  
-- **Cons**: Higher interest rates and fees than long-term loans; must have a clear exit strategy.  
-
-## Related resources
-
-For an overview of bridge financing mechanics, see this [Investopedia article](https://www.investopedia.com/terms/b/bridgeloan.asp). To compare bridge loans with other funding options, review our guides on [term loans](/services/us-term-loans-approach/) and [real estate refinancing](/services/us-real-estate-refinance/).
-
-## Ready to bridge the gap?
-
-Contact Nicolas Lescalier through our [contact page](/contact/) to discuss whether a bridge loan is right for your situation. He will assess your collateral and timeline to recommend the best course.
+<section class="section">
+  <div class="cta-panel">
+    <p class="eyebrow">Next Step</p>
+    <h2>If you need bridge debt, start with the asset and the exit plan.</h2>
+    <p>Send the purchase or project timeline, collateral details, and the expected takeout path. I will tell you quickly whether the bridge structure is realistic.</p>
+    <div class="cta-row">
+      <a class="button" href="/contact/">Discuss a bridge scenario</a>
+      <a class="button button--secondary" href="/services/us-real-estate-refinance/">See refinance options</a>
+    </div>
+  </div>
+</section>

@@ -4,10 +4,11 @@ title: "Term Loans"
 permalink: /term-loans/
 ---
 
-# Term Loans
-
-**Who it’s for:** Businesses that prefer monthly payments and longer amortization  
-**Docs:** Bank statements + basic financials  
-**Amounts:** $25k–$1M+ depending on profile
-
-[Book a consultation](https://calendly.com/YOUR_HANDLE/consultation)
+<section class="section">
+  <p class="eyebrow">Term Loans</p>
+  <h1>The detailed term loan guide lives on the updated service page.</h1>
+  <div class="cta-row">
+    <a class="button" href="/services/us-term-loans-approach/">Go to term loan guide</a>
+    <a class="button button--secondary" href="/term-loan-calculator.html">Use calculator</a>
+  </div>
+</section>
