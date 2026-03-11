@@ -81,10 +81,13 @@ layout: default
       <div class="notice-card">
         <p class="eyebrow">Text message consent</p>
         <div class="checkbox-list">
-          <label for="contact_consent_sms_marketing">
+          <div class="checkbox-list__item">
             <input type="checkbox" id="contact_consent_sms_marketing" name="consent_sms_marketing">
-            <span>By checking this box, you agree to receive marketing text messages (e.g., payment reminders, promotional offers, customer care) at the cell number provided. Message frequency varies. Consent is not a condition of any purchase. Message &amp; data rates may apply. Reply STOP to unsubscribe or HELP for assistance. For support, contact us at 305.699.3636. Information gathered in this SMS program will not be shared with third parties or affiliates for marketing purposes. I have read and agree to the <a href="/terms-and-conditions/">Terms and Conditions</a> and <a href="/privacy-policy/">Privacy Policy</a>.</span>
-          </label>
+            <div class="checkbox-list__copy">
+              <label class="checkbox-list__label" for="contact_consent_sms_marketing">By checking this box, you agree to receive marketing text messages (e.g., payment reminders, promotional offers, customer care) at the cell number provided. Message frequency varies. Consent is not a condition of any purchase. Message &amp; data rates may apply. Reply STOP to unsubscribe or HELP for assistance.</label>
+              <p class="checkbox-list__legal">For support, contact us at <a href="tel:+13056993636">305.699.3636</a>. Information gathered in this SMS program will not be shared with third parties or affiliates for marketing purposes. I have read and agree to the <a href="/terms-and-conditions/">Terms and Conditions</a> and <a href="/privacy-policy/">Privacy Policy</a>.</p>
+            </div>
+          </div>
         </div>
       </div>
 

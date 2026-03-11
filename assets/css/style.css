@@ -780,11 +780,19 @@ h3 {
   gap: 0.9rem;
 }
 
-.checkbox-list label {
+.checkbox-list__item {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: start;
   gap: 0.75rem;
+}
+
+.checkbox-list__copy {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.checkbox-list__label {
   margin: 0;
   font-weight: 600;
 }
@@ -792,6 +800,13 @@ h3 {
 .checkbox-list input[type="checkbox"] {
   width: auto;
   margin-top: 0.2rem;
+}
+
+.checkbox-list__legal {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
 }
 
 .choice-grid {
