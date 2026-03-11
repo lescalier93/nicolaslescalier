@@ -30,6 +30,26 @@ permalink: /services/
       </article>
     </div>
   </div>
+  <div class="mini-grid mini-grid--3">
+    <article class="mini-card">
+      <span class="card-label">Fastest route</span>
+      <h3>If timing is the real issue</h3>
+      <p>Start with working capital, revolving credit, receivables-based financing, or bridge structures before chasing a slower product that cannot move in time.</p>
+      <a href="{{ '/services/us-working-capital-loans/' | relative_url }}">Start with faster options</a>
+    </article>
+    <article class="mini-card">
+      <span class="card-label">Lower pressure</span>
+      <h3>If payment shape matters most</h3>
+      <p>Start with term, equipment, SBA, or mortgage structures when the business can wait slightly longer for a better long-term repayment profile.</p>
+      <a href="{{ '/services/us-term-loans-approach/' | relative_url }}">Compare structured options</a>
+    </article>
+    <article class="mini-card">
+      <span class="card-label">Not sure yet</span>
+      <h3>If you are still narrowing fit</h3>
+      <p>Use the resources hub and calculators first, then move into the application once the product family and urgency are clearer.</p>
+      <a href="{{ '/resources.html' | relative_url }}">Open tools and guides</a>
+    </article>
+  </div>
   <div class="grid grid--3">
     <article class="service-card">
       <span class="card-label">Fast Access</span>
