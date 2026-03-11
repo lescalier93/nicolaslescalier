@@ -159,6 +159,46 @@ permalink: /term-loan-calculator.html
     color: rgba(22, 32, 42, 0.68);
     font-size: 0.92rem;
   }
+  .fit-strip {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 1rem 2rem 0;
+  }
+  .fit-card {
+    padding: 1rem 1.1rem;
+    border-radius: 18px;
+    border: 1px solid rgba(22, 32, 42, 0.08);
+    background: rgba(255, 255, 255, 0.72);
+    display: grid;
+    gap: 0.45rem;
+  }
+  .fit-card--accent {
+    background: linear-gradient(135deg, rgba(255, 250, 242, 0.98), rgba(244, 232, 214, 0.88));
+  }
+  .fit-meter {
+    position: relative;
+    height: 0.65rem;
+    border-radius: 999px;
+    background: rgba(22, 32, 42, 0.08);
+    overflow: hidden;
+  }
+  .fit-meter__fill {
+    display: block;
+    height: 100%;
+    width: 0;
+    border-radius: inherit;
+    transition: width 0.25s ease;
+  }
+  .fit-meter__fill--good {
+    background: linear-gradient(90deg, #3c8a68, #1b4d3e);
+  }
+  .fit-meter__fill--warn {
+    background: linear-gradient(90deg, #d89e4f, #b56922);
+  }
+  .fit-meter__fill--risk {
+    background: linear-gradient(90deg, #d8795d, #9f3f2a);
+  }
   .validation-note {
     margin: 1rem 2rem 0;
     padding: 0.95rem 1rem;
@@ -303,6 +343,7 @@ permalink: /term-loan-calculator.html
   @media (max-width: 980px) {
     .tool-intro,
     .insight-grid,
+    .fit-strip,
     .summary-strip,
     .form-grid {
       grid-template-columns: 1fr;
@@ -422,6 +463,38 @@ permalink: /term-loan-calculator.html
 
     <p class="validation-note" id="loanMessage">Select the field to solve for. The other three values must describe a realistic loan structure.</p>
 
+    <div class="fit-strip" id="fitStrip" hidden>
+      <article class="fit-card">
+        <span class="summary-label">Payment intensity</span>
+        <strong class="summary-value" id="fitPaymentLabel"></strong>
+        <div class="fit-meter">
+          <span class="fit-meter__fill" id="fitPaymentMeter"></span>
+        </div>
+        <span class="summary-note" id="fitPaymentText"></span>
+      </article>
+      <article class="fit-card">
+        <span class="summary-label">Interest load</span>
+        <strong class="summary-value" id="fitInterestLabel"></strong>
+        <div class="fit-meter">
+          <span class="fit-meter__fill" id="fitInterestMeter"></span>
+        </div>
+        <span class="summary-note" id="fitInterestText"></span>
+      </article>
+      <article class="fit-card">
+        <span class="summary-label">Commitment length</span>
+        <strong class="summary-value" id="fitDurationLabel"></strong>
+        <div class="fit-meter">
+          <span class="fit-meter__fill" id="fitDurationMeter"></span>
+        </div>
+        <span class="summary-note" id="fitDurationText"></span>
+      </article>
+      <article class="fit-card fit-card--accent">
+        <span class="summary-label">Advisor read</span>
+        <strong class="summary-value" id="fitVerdictLabel"></strong>
+        <span class="summary-note" id="fitVerdictText"></span>
+      </article>
+    </div>
+
     <div class="form-grid">
       <div class="form-group">
         <label for="loanAmount">Loan amount ($)</label>
@@ -513,6 +586,24 @@ permalink: /term-loan-calculator.html
       </div>
     </div>
   </section>
+
+  <section class="section">
+    <p class="eyebrow">Advisor lens</p>
+    <div class="insight-grid">
+      <article class="insight-card">
+        <h3>When term debt usually wins</h3>
+        <p>Clear use of proceeds, stable monthly cash flow, and a repayment horizon that does not force the business into renewal mode are usually good signs for a term structure.</p>
+      </article>
+      <article class="insight-card">
+        <h3>When I look for another structure</h3>
+        <p>If the payment only works in peak months, or the total interest starts crowding the project return, I would compare LOC, SBA, equipment finance, or a smaller request.</p>
+      </article>
+      <article class="insight-card">
+        <h3>What makes the review cleaner</h3>
+        <p>Recent financials, current debt schedule, and a credible explanation of how the capital improves the business usually matter more than trying to maximize the ask.</p>
+      </article>
+    </div>
+  </section>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -542,6 +633,37 @@ permalink: /term-loan-calculator.html
     if (amount < 500000) return "$250,000-$500,000";
     if (amount < 1000000) return "$500,000-$1,000,000";
     return "$1,000,000+";
+  }
+
+  function trackEvent(eventName, params = {}) {
+    if (typeof window.nicolasTrack === "function") {
+      window.nicolasTrack(eventName, {
+        calculator: "term",
+        ...params,
+      });
+    }
+  }
+
+  function bandSignal(value, thresholds, labels) {
+    if (value <= thresholds[0]) {
+      return {
+        label: labels[0],
+        width: Math.min((value / thresholds[0]) * 45, 45),
+        fillClass: "fit-meter__fill fit-meter__fill--good",
+      };
+    }
+    if (value <= thresholds[1]) {
+      return {
+        label: labels[1],
+        width: Math.min(45 + ((value - thresholds[0]) / (thresholds[1] - thresholds[0])) * 30, 75),
+        fillClass: "fit-meter__fill fit-meter__fill--warn",
+      };
+    }
+    return {
+      label: labels[2],
+      width: Math.min(75 + ((value - thresholds[1]) / thresholds[1]) * 25, 100),
+      fillClass: "fit-meter__fill fit-meter__fill--risk",
+    };
   }
 
   function paymentFromLoan(amount, monthlyRate, months) {
@@ -643,6 +765,8 @@ permalink: /term-loan-calculator.html
       amount_requested: amountRange(result.amount),
       use_of_proceeds: "Evaluating whether a term loan payment fits the business and repayment timeline.",
       additional_context: `Term scenario: $${fmt(result.amount)} amount, ${fmt(result.rateAnnual)}% annual rate, ${fmt(result.termYears)} years, monthly payment $${fmt(result.payment)}, total interest $${fmt(result.totalInterest)}.`,
+      lead_source: "term_calculator",
+      scenario_origin: result.solveField,
     });
     return `/apply/?${params.toString()}`;
   }
@@ -859,6 +983,56 @@ permalink: /term-loan-calculator.html
     $("termBottomApplyLink").href = applyHref;
   }
 
+  function renderFitStrip(result) {
+    const paymentRatio = result.amount > 0 ? result.payment / result.amount : 0;
+    const interestRatio = result.amount > 0 ? result.totalInterest / result.amount : 0;
+    const durationRatio = Math.min(result.termYears / 10, 1);
+
+    const paymentSignal = bandSignal(paymentRatio, [0.03, 0.06], ["Light", "Balanced", "Heavy"]);
+    const interestSignal = bandSignal(interestRatio, [0.15, 0.35], ["Lean", "Moderate", "Heavy"]);
+    const durationSignal = bandSignal(durationRatio, [0.3, 0.7], ["Short", "Standard", "Extended"]);
+
+    $("fitPaymentLabel").textContent = paymentSignal.label;
+    $("fitPaymentMeter").style.width = `${paymentSignal.width}%`;
+    $("fitPaymentMeter").className = paymentSignal.fillClass;
+    $("fitPaymentText").textContent = paymentRatio <= 0.03
+      ? "A lighter monthly load relative to the requested principal."
+      : paymentRatio <= 0.06
+        ? "Usually workable if margins and seasonality are controlled."
+        : "This monthly load deserves a tougher cash-flow check.";
+
+    $("fitInterestLabel").textContent = interestSignal.label;
+    $("fitInterestMeter").style.width = `${interestSignal.width}%`;
+    $("fitInterestMeter").className = interestSignal.fillClass;
+    $("fitInterestText").textContent = interestRatio <= 0.15
+      ? "The long-run interest cost is relatively contained."
+      : interestRatio <= 0.35
+        ? "Reasonable only if the use of proceeds clearly earns it."
+        : "The interest burden is high enough to compare alternatives.";
+
+    $("fitDurationLabel").textContent = durationSignal.label;
+    $("fitDurationMeter").style.width = `${durationSignal.width}%`;
+    $("fitDurationMeter").className = durationSignal.fillClass;
+    $("fitDurationText").textContent = result.termYears <= 3
+      ? "Shorter commitment with faster principal recovery."
+      : result.termYears <= 7
+        ? "A standard term range for many business-use cases."
+        : "A longer commitment that should match a durable business need.";
+
+    if (paymentRatio <= 0.04 && interestRatio <= 0.3) {
+      $("fitVerdictLabel").textContent = "Clean first look";
+      $("fitVerdictText").textContent = "This structure looks like a reasonable starting point if the borrower can document stable operating cash flow.";
+    } else if (paymentRatio <= 0.06 && interestRatio <= 0.45) {
+      $("fitVerdictLabel").textContent = "Workable with discipline";
+      $("fitVerdictText").textContent = "The structure may still fit, but the file should be checked against existing debt and real monthly volatility.";
+    } else {
+      $("fitVerdictLabel").textContent = "Pressure-test alternatives";
+      $("fitVerdictText").textContent = "This is where I would compare LOC, SBA, equipment finance, or a smaller ask before treating term debt as the obvious answer.";
+    }
+
+    $("fitStrip").hidden = false;
+  }
+
   function clearSummary() {
     $("summaryPayment").textContent = "$0.00";
     $("summaryPaymentNote").textContent = "Updated as inputs change.";
@@ -870,12 +1044,14 @@ permalink: /term-loan-calculator.html
     $("summaryHorizonNote").textContent = "Annual view groups the same monthly schedule.";
     $("termScenarioLink").href = "/apply/";
     $("termBottomApplyLink").href = "/apply/";
+    $("fitStrip").hidden = true;
   }
 
   function calculate() {
     try {
       const solved = solveScenario(getState());
       renderSummary(solved);
+      renderFitStrip(solved);
       renderSchedule(solved);
       $("download").disabled = false;
       setMessage(`Scenario updated. ${$("hdrPeriod").textContent === "Month" ? "Monthly" : "Annual"} schedule view is live.`, "success");
@@ -939,12 +1115,17 @@ permalink: /term-loan-calculator.html
     document.querySelector(`input[name="solveField"][value="${preset.solveField}"]`).checked = true;
     setEditableState();
     calculate();
+    trackEvent("term_preset_loaded", { preset: name });
   }
 
   $("download").addEventListener("click", () => {
     if (!window.__loanResult) {
       return;
     }
+
+    trackEvent("term_pdf_downloaded", {
+      solve_field: window.__loanResult.solveField,
+    });
 
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF({ unit: "pt", format: "a4" });
@@ -993,6 +1174,29 @@ permalink: /term-loan-calculator.html
     input.addEventListener("change", () => {
       setEditableState();
       calculate();
+      trackEvent("term_solve_field_changed", { solve_field: input.value });
+    });
+  });
+
+  $("termScenarioLink").addEventListener("click", () => {
+    if (!window.__loanResult) {
+      return;
+    }
+    trackEvent("calculator_apply_click", {
+      source: "top_cta",
+      solve_field: window.__loanResult.solveField,
+      recommended_product: "Term loan",
+    });
+  });
+
+  $("termBottomApplyLink").addEventListener("click", () => {
+    if (!window.__loanResult) {
+      return;
+    }
+    trackEvent("calculator_apply_click", {
+      source: "bottom_cta",
+      solve_field: window.__loanResult.solveField,
+      recommended_product: "Term loan",
     });
   });
 

@@ -231,6 +231,48 @@ permalink: /merchant-cash-advance-calculator.html
   .results-foot p {
     margin: 0;
   }
+  .signal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+  }
+  .signal-card {
+    padding: 1rem;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(22, 32, 42, 0.08);
+    display: grid;
+    gap: 0.45rem;
+  }
+  .signal-card__value {
+    display: block;
+    color: #16202a;
+    font-size: 1.15rem;
+    line-height: 1.1;
+  }
+  .signal-bar {
+    position: relative;
+    height: 0.65rem;
+    border-radius: 999px;
+    background: rgba(22, 32, 42, 0.08);
+    overflow: hidden;
+  }
+  .signal-bar__fill {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    width: 0;
+    transition: width 0.25s ease;
+  }
+  .signal-bar__fill--good {
+    background: linear-gradient(90deg, #3c8a68, #1b4d3e);
+  }
+  .signal-bar__fill--warn {
+    background: linear-gradient(90deg, #d89e4f, #b56922);
+  }
+  .signal-bar__fill--risk {
+    background: linear-gradient(90deg, #d8795d, #9f3f2a);
+  }
   .comparison-summary {
     padding: 1.25rem;
     border-radius: 24px;
@@ -273,6 +315,15 @@ permalink: /merchant-cash-advance-calculator.html
   .summary-callout p {
     margin: 0;
   }
+  .advisor-band {
+    padding: 1.25rem;
+    border-radius: 24px;
+    border: 1px solid rgba(22, 32, 42, 0.08);
+    background: rgba(255, 252, 247, 0.92);
+    box-shadow: 0 18px 48px rgba(34, 36, 38, 0.12);
+    display: grid;
+    gap: 1rem;
+  }
   .insight-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -294,6 +345,7 @@ permalink: /merchant-cash-advance-calculator.html
     .tool-intro,
     .comparison-row,
     .comparison-grid,
+    .signal-grid,
     .insight-grid {
       grid-template-columns: 1fr;
     }
@@ -410,6 +462,24 @@ permalink: /merchant-cash-advance-calculator.html
                 <span class="metric-note metric-note--tone" id="pressureNote1"></span>
               </article>
             </div>
+            <div class="signal-grid">
+              <article class="signal-card">
+                <span class="metric-label">Carry intensity</span>
+                <strong class="signal-card__value" id="carryLabel1"></strong>
+                <div class="signal-bar">
+                  <span class="signal-bar__fill" id="carryBar1"></span>
+                </div>
+                <span class="metric-note" id="carryText1"></span>
+              </article>
+              <article class="signal-card">
+                <span class="metric-label">Cost load</span>
+                <strong class="signal-card__value" id="costLabel1"></strong>
+                <div class="signal-bar">
+                  <span class="signal-bar__fill" id="costBar1"></span>
+                </div>
+                <span class="metric-note" id="costText1"></span>
+              </article>
+            </div>
             <div class="results-foot">
               <p id="dealNarrative1"></p>
               <div class="cta-row">
@@ -481,6 +551,24 @@ permalink: /merchant-cash-advance-calculator.html
                 <span class="metric-note metric-note--tone" id="pressureNote2"></span>
               </article>
             </div>
+            <div class="signal-grid">
+              <article class="signal-card">
+                <span class="metric-label">Carry intensity</span>
+                <strong class="signal-card__value" id="carryLabel2"></strong>
+                <div class="signal-bar">
+                  <span class="signal-bar__fill" id="carryBar2"></span>
+                </div>
+                <span class="metric-note" id="carryText2"></span>
+              </article>
+              <article class="signal-card">
+                <span class="metric-label">Cost load</span>
+                <strong class="signal-card__value" id="costLabel2"></strong>
+                <div class="signal-bar">
+                  <span class="signal-bar__fill" id="costBar2"></span>
+                </div>
+                <span class="metric-note" id="costText2"></span>
+              </article>
+            </div>
             <div class="results-foot">
               <p id="dealNarrative2"></p>
               <div class="cta-row">
@@ -541,6 +629,29 @@ permalink: /merchant-cash-advance-calculator.html
       </article>
     </div>
   </section>
+
+  <section class="section">
+    <div class="advisor-band">
+      <div>
+        <p class="eyebrow">Advisor lens</p>
+        <h2 class="page-title">When I would actually like MCA, and when I would slow the file down.</h2>
+      </div>
+      <div class="insight-grid">
+        <article class="insight-card">
+          <h3>When MCA can be the right tool</h3>
+          <p>Short-term timing gaps, inventory turns, bridge payroll, or urgent receivables mismatches can justify MCA if the business can clearly carry the remittance rhythm.</p>
+        </article>
+        <article class="insight-card">
+          <h3>When I start pushing back</h3>
+          <p>If the monthly drag is already crowding payroll, taxes, or vendor terms, a fast approval is not enough. That is when LOC, factoring, or a smaller structure may be cleaner.</p>
+        </article>
+        <article class="insight-card">
+          <h3>What makes the file stronger</h3>
+          <p>Recent bank statements, a coherent use of proceeds, and a realistic payback story matter more than trying to sound polished. Good files usually look consistent, not dramatic.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 </div>
 
 <script>
@@ -584,6 +695,37 @@ permalink: /merchant-cash-advance-calculator.html
       months: "month",
     }[unit];
     return `${length} ${unitLabel}${length === 1 ? "" : "s"}`;
+  }
+
+  function trackEvent(eventName, params = {}) {
+    if (typeof window.nicolasTrack === "function") {
+      window.nicolasTrack(eventName, {
+        calculator: "mca",
+        ...params,
+      });
+    }
+  }
+
+  function ratioSignal(ratio, thresholds, labels) {
+    if (ratio <= thresholds[0]) {
+      return {
+        label: labels[0],
+        width: Math.min((ratio / thresholds[0]) * 45, 45),
+        fillClass: "signal-bar__fill signal-bar__fill--good",
+      };
+    }
+    if (ratio <= thresholds[1]) {
+      return {
+        label: labels[1],
+        width: Math.min(45 + ((ratio - thresholds[0]) / (thresholds[1] - thresholds[0])) * 30, 75),
+        fillClass: "signal-bar__fill signal-bar__fill--warn",
+      };
+    }
+    return {
+      label: labels[2],
+      width: Math.min(75 + ((ratio - thresholds[1]) / thresholds[1]) * 25, 100),
+      fillClass: "signal-bar__fill signal-bar__fill--risk",
+    };
   }
 
   function pressureProfile(monthlyBurden, advanceAmount) {
@@ -630,6 +772,8 @@ permalink: /merchant-cash-advance-calculator.html
       monthlyCost,
       costPercent,
       paybackMultiple,
+      carryRatio: advanceAmount > 0 ? monthlyBurden / advanceAmount : 0,
+      costRatio: advanceAmount > 0 ? capitalCost / advanceAmount : 0,
       pressure,
     };
   }
@@ -640,6 +784,8 @@ permalink: /merchant-cash-advance-calculator.html
       amount_requested: amountRange(result.advanceAmount),
       use_of_proceeds: "Comparing merchant cash advance offers for a working capital request.",
       additional_context: `${label}: $${formatCurrency(result.advanceAmount)} advance, factor ${result.factorRate.toFixed(2)}, ${result.termLabel}, total payback $${formatCurrency(result.totalPayback)}, monthly drag about $${formatCurrency(result.monthlyBurden)}.`,
+      lead_source: "mca_calculator",
+      scenario_origin: label,
     });
     return `/apply/?${params.toString()}`;
   }
@@ -721,6 +867,12 @@ permalink: /merchant-cash-advance-calculator.html
         periodicNote: document.getElementById(`periodicNote${suffix}`),
         monthlyBurden: document.getElementById(`monthlyBurden${suffix}`),
         pressureNote: document.getElementById(`pressureNote${suffix}`),
+        carryLabel: document.getElementById(`carryLabel${suffix}`),
+        carryBar: document.getElementById(`carryBar${suffix}`),
+        carryText: document.getElementById(`carryText${suffix}`),
+        costLabel: document.getElementById(`costLabel${suffix}`),
+        costBar: document.getElementById(`costBar${suffix}`),
+        costText: document.getElementById(`costText${suffix}`),
         narrative: document.getElementById(`dealNarrative${suffix}`),
         apply: document.getElementById(`applyDeal${suffix}`),
       },
@@ -755,6 +907,8 @@ permalink: /merchant-cash-advance-calculator.html
 
     function renderDeal(result) {
       const { fields } = deals[suffix];
+      const carrySignal = ratioSignal(result.carryRatio, [0.2, 0.35], ["Lighter carry", "Firm carry", "Aggressive carry"]);
+      const costSignal = ratioSignal(result.costRatio, [0.15, 0.3], ["Lean cost", "Elevated cost", "Expensive cost"]);
 
       fields.totalPayback.textContent = `$${formatCurrency(result.totalPayback)}`;
       fields.paybackNote.textContent = `${result.paybackMultiple.toFixed(2)}x of the amount advanced`;
@@ -765,6 +919,22 @@ permalink: /merchant-cash-advance-calculator.html
       fields.monthlyBurden.textContent = `$${formatCurrency(result.monthlyBurden)}`;
       fields.pressureNote.textContent = `${result.pressure.text} | about $${formatCurrency(result.monthlyCost)}/month in cost`;
       fields.pressureNote.className = `metric-note metric-note--tone ${result.pressure.className}`;
+      fields.carryLabel.textContent = carrySignal.label;
+      fields.carryBar.style.width = `${carrySignal.width}%`;
+      fields.carryBar.className = carrySignal.fillClass;
+      fields.carryText.textContent = result.carryRatio <= 0.2
+        ? "This repayment pace is comparatively lighter against the advance size."
+        : result.carryRatio <= 0.35
+          ? "This can work, but the business needs stable deposits and margin."
+          : "This deserves a tougher cash-flow screen before moving forward.";
+      fields.costLabel.textContent = costSignal.label;
+      fields.costBar.style.width = `${costSignal.width}%`;
+      fields.costBar.className = costSignal.fillClass;
+      fields.costText.textContent = result.costRatio <= 0.15
+        ? "The cost load is relatively contained for an MCA structure."
+        : result.costRatio <= 0.3
+          ? "The price may be acceptable if the speed genuinely matters."
+          : "The cost load is heavy enough to compare against cleaner products.";
       fields.narrative.textContent = `${label} asks the business to absorb roughly $${formatCurrency(result.monthlyBurden)} per month over about ${result.months.toFixed(1)} months. That is the fast way to judge whether speed is worth the carry.`;
       fields.apply.href = buildApplyHref(result, label);
 
@@ -801,6 +971,13 @@ permalink: /merchant-cash-advance-calculator.html
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       calculateAndRender();
+      if (deals[suffix].result) {
+        trackEvent("mca_offer_updated", {
+          deal: label,
+          carry_profile: deals[suffix].result.pressure.text,
+          term_unit: deals[suffix].result.termUnit,
+        });
+      }
     });
 
     clearButton.addEventListener("click", () => {
@@ -813,6 +990,16 @@ permalink: /merchant-cash-advance-calculator.html
       results.hidden = true;
       deals[suffix].result = null;
       renderComparison();
+    });
+
+    deals[suffix].fields.apply.addEventListener("click", () => {
+      if (!deals[suffix].result) {
+        return;
+      }
+      trackEvent("calculator_apply_click", {
+        source: label,
+        recommended_product: "Merchant cash advance",
+      });
     });
   }
 
@@ -897,17 +1084,42 @@ permalink: /merchant-cash-advance-calculator.html
         fields.monthlyBurden.textContent = `$${formatCurrency(result.monthlyBurden)}`;
         fields.pressureNote.textContent = `${result.pressure.text} | about $${formatCurrency(result.monthlyCost)}/month in cost`;
         fields.pressureNote.className = `metric-note metric-note--tone ${result.pressure.className}`;
+        const carrySignal = ratioSignal(result.carryRatio, [0.2, 0.35], ["Lighter carry", "Firm carry", "Aggressive carry"]);
+        const costSignal = ratioSignal(result.costRatio, [0.15, 0.3], ["Lean cost", "Elevated cost", "Expensive cost"]);
+        fields.carryLabel.textContent = carrySignal.label;
+        fields.carryBar.style.width = `${carrySignal.width}%`;
+        fields.carryBar.className = carrySignal.fillClass;
+        fields.carryText.textContent = result.carryRatio <= 0.2
+          ? "This repayment pace is comparatively lighter against the advance size."
+          : result.carryRatio <= 0.35
+            ? "This can work, but the business needs stable deposits and margin."
+            : "This deserves a tougher cash-flow screen before moving forward.";
+        fields.costLabel.textContent = costSignal.label;
+        fields.costBar.style.width = `${costSignal.width}%`;
+        fields.costBar.className = costSignal.fillClass;
+        fields.costText.textContent = result.costRatio <= 0.15
+          ? "The cost load is relatively contained for an MCA structure."
+          : result.costRatio <= 0.3
+            ? "The price may be acceptable if the speed genuinely matters."
+            : "The cost load is heavy enough to compare against cleaner products.";
         fields.narrative.textContent = `${deal.label} asks the business to absorb roughly $${formatCurrency(result.monthlyBurden)} per month over about ${result.months.toFixed(1)} months. That is the fast way to judge whether speed is worth the carry.`;
       }
     });
 
     renderComparison();
+    trackEvent("mca_example_loaded");
   }
 
   initDeal("1", "Deal A");
   initDeal("2", "Deal B");
 
   document.getElementById("mca-example").addEventListener("click", loadExampleDeals);
+  document.getElementById("comparisonApply").addEventListener("click", () => {
+    trackEvent("calculator_apply_click", {
+      source: "comparison_recommendation",
+      recommended_product: "Merchant cash advance",
+    });
+  });
   document.getElementById("mca-reset-all").addEventListener("click", () => {
     ["1", "2"].forEach((suffix) => {
       document.querySelector(`[data-clear-deal="${suffix}"]`).click();

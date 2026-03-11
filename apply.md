@@ -32,9 +32,9 @@ layout: default
 <script>
   window.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
-    if (!params.toString()) {
-      return;
-    }
+    const form = document.querySelector(".contact-form");
+    const scenarioCarryover = document.getElementById("scenarioCarryover");
+    const scenarioCarryoverText = document.getElementById("scenarioCarryoverText");
 
     const setFieldValue = (id, value) => {
       const field = document.getElementById(id);
@@ -55,6 +55,20 @@ layout: default
       }
     };
 
+    setFieldValue("lead_source", params.get("lead_source") || "website");
+    setFieldValue("scenario_origin", params.get("scenario_origin") || "");
+
+    if (!params.toString()) {
+      form?.addEventListener("submit", () => {
+        if (typeof window.nicolasTrack === "function") {
+          window.nicolasTrack("application_submit_started", {
+            lead_source: "website",
+          });
+        }
+      });
+      return;
+    }
+
     const productInterest = params.get("product_interest");
     if (productInterest) {
       const radio = Array.from(document.querySelectorAll('input[name="product_interest"]')).find(
@@ -71,6 +85,33 @@ layout: default
     setSelectByText("amount_requested", params.get("amount_requested"));
     setFieldValue("use_of_proceeds", params.get("use_of_proceeds"));
     setFieldValue("additional_context", params.get("additional_context"));
+
+    const leadSource = params.get("lead_source") || "website";
+    const scenarioOrigin = params.get("scenario_origin");
+
+    if (scenarioCarryover && scenarioCarryoverText && (leadSource !== "website" || scenarioOrigin)) {
+      scenarioCarryover.hidden = false;
+      scenarioCarryoverText.textContent = scenarioOrigin
+        ? `Calculator context has been carried into this form from ${leadSource.replace(/_/g, " ")} using the "${scenarioOrigin}" scenario.`
+        : `Calculator context has been carried into this form from ${leadSource.replace(/_/g, " ")}.`;
+    }
+
+    if (typeof window.nicolasTrack === "function") {
+      window.nicolasTrack("application_prefill_loaded", {
+        lead_source: leadSource,
+        product_interest: productInterest || "",
+        scenario_origin: scenarioOrigin || "",
+      });
+    }
+
+    form?.addEventListener("submit", () => {
+      if (typeof window.nicolasTrack === "function") {
+        window.nicolasTrack("application_submit_started", {
+          lead_source: leadSource,
+          product_interest: productInterest || "",
+        });
+      }
+    });
   });
 </script>
 
@@ -116,9 +157,15 @@ layout: default
         <span>Get you to the right financing path faster, not bury you in underwriting too early.</span>
       </div>
     </div>
+    <div class="notice-card" id="scenarioCarryover" hidden>
+      <p class="eyebrow">Carried over from a calculator</p>
+      <p id="scenarioCarryoverText">Your calculator scenario has been carried into the application.</p>
+    </div>
 
   <form class="contact-form" action="https://formspree.io/f/mgonknak" method="POST">
     <input type="hidden" name="_subject" value="New financing application from nicolaslescalier.com">
+    <input type="hidden" id="lead_source" name="lead_source" value="website">
+    <input type="hidden" id="scenario_origin" name="scenario_origin" value="">
 
     <div class="form-section form-section--accent">
       <div class="form-section__header">

@@ -1,0 +1,44 @@
+{% if site.google_analytics_id %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "{{ site.google_analytics_id }}", {
+    anonymize_ip: true,
+  });
+</script>
+{% endif %}
+<script>
+  (() => {
+    window.dataLayer = window.dataLayer || [];
+
+    window.nicolasTrack = (eventName, params = {}) => {
+      const payload = {
+        page_path: window.location.pathname,
+        page_title: document.title,
+        ...params,
+      };
+
+      try {
+        window.dataLayer.push({ event: eventName, ...payload });
+      } catch (error) {
+        console.debug("Tracking push failed", error);
+      }
+
+      if (typeof window.gtag === "function") {
+        window.gtag("event", eventName, payload);
+      }
+
+      if (typeof window.plausible === "function") {
+        window.plausible(eventName, { props: payload });
+      }
+
+      window.dispatchEvent(new CustomEvent("nicolas-track", {
+        detail: { eventName, payload },
+      }));
+    };
+  })();
+</script>
