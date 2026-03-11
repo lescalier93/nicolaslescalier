@@ -27,20 +27,26 @@
         </div>
       </div>
       <header class="site-header">
-        <div class="wrap site-header__inner">
+        <div class="wrap site-header__inner" data-nav-shell data-nav-open="false">
           <a class="brand" href="{{ '/' | relative_url }}">
             <span class="brand__eyebrow">U.S. Business Financing</span>
             <span class="brand__name">Nicolas Lescalier</span>
           </a>
-          <nav class="site-nav" aria-label="Primary">
-            <a href="{{ '/services/' | relative_url }}">Services</a>
-            <a href="{{ '/resources.html' | relative_url }}">Resources</a>
-            <a href="{{ '/services/us-client-success-stories/' | relative_url }}">Success Stories</a>
-            <a href="{{ '/reviews-us-funding/' | relative_url }}">Reviews</a>
-            <a href="{{ '/about-nicolas-lescalier-us/' | relative_url }}">About</a>
-            <a href="{{ '/contact/' | relative_url }}">Contact</a>
-          </nav>
-          <a class="button button--nav" href="{{ '/apply/' | relative_url }}">Start Application</a>
+          <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-panel" data-nav-toggle>
+            <span>Menu</span>
+            <span class="site-nav-toggle__icon" aria-hidden="true"></span>
+          </button>
+          <div class="site-header__actions" id="site-nav-panel" data-nav-panel>
+            <nav class="site-nav" aria-label="Primary">
+              <a href="{{ '/services/' | relative_url }}">Services</a>
+              <a href="{{ '/resources.html' | relative_url }}">Resources</a>
+              <a href="{{ '/services/us-client-success-stories/' | relative_url }}">Success Stories</a>
+              <a href="{{ '/reviews-us-funding/' | relative_url }}">Reviews</a>
+              <a href="{{ '/about-nicolas-lescalier-us/' | relative_url }}">About</a>
+              <a href="{{ '/contact/' | relative_url }}">Contact</a>
+            </nav>
+            <a class="button button--nav" href="{{ '/apply/' | relative_url }}">Start Application</a>
+          </div>
         </div>
       </header>
 
@@ -71,5 +77,39 @@
         </div>
       </footer>
     </div>
+    <script>
+      (() => {
+        const shell = document.querySelector("[data-nav-shell]");
+        const toggle = document.querySelector("[data-nav-toggle]");
+        const panel = document.querySelector("[data-nav-panel]");
+
+        if (!shell || !toggle || !panel) {
+          return;
+        }
+
+        const closeMenu = () => {
+          shell.dataset.navOpen = "false";
+          toggle.setAttribute("aria-expanded", "false");
+        };
+
+        const toggleMenu = () => {
+          const isOpen = shell.dataset.navOpen === "true";
+          shell.dataset.navOpen = isOpen ? "false" : "true";
+          toggle.setAttribute("aria-expanded", isOpen ? "false" : "true");
+        };
+
+        toggle.addEventListener("click", toggleMenu);
+
+        panel.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
+
+        window.addEventListener("resize", () => {
+          if (window.innerWidth > 900) {
+            closeMenu();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
