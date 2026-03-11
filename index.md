@@ -3,6 +3,15 @@ layout: default
 title: "Nicolas Lescalier | U.S. Business Financing Specialist"
 description: "Nicolas Lescalier helps U.S. businesses secure merchant cash advances, lines of credit, equipment financing, term loans, factoring, PO financing, SBA 7(a), bridge loans, and commercial mortgage financing."
 permalink: /
+faq:
+  - question: "How fast can funding happen?"
+    answer: "That depends on the product. MCAs and some working-capital structures can move inside days. SBA and more documentation-heavy files usually take longer."
+  - question: "Do I need to know the exact product first?"
+    answer: "No. In many cases the better starting point is the use of proceeds, timeline, and repayment tolerance rather than the product name."
+  - question: "What usually matters most for approval?"
+    answer: "Revenue visibility, time in business, documentation quality, credit profile, collateral where relevant, and whether the structure fits the actual need."
+  - question: "What should I send before the first call?"
+    answer: "The amount needed, use of proceeds, timing, and basic business profile are enough to start. The application checklist shows the best prep."
 ---
 
 <section class="hero">

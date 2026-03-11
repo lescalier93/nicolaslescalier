@@ -3,6 +3,15 @@ layout: default
 title: "Commercial Mortgage Financing | Nicolas Lescalier"
 description: "Review commercial mortgage financing options including acquisition, refinance, construction, bridge takeout, recapitalization, and related CRE structures."
 permalink: /services/us-mortgage-financing/
+faq:
+  - question: "Is mortgage financing the same as refinance?"
+    answer: "No. Refinance is one use case. Acquisition, bridge takeout, construction, recapitalization, and repositioning can all require different structures."
+  - question: "What matters most in a CRE file?"
+    answer: "Property quality, leverage, debt coverage, sponsor strength, timeline, and the hold or exit plan."
+  - question: "When is bridge debt the better path?"
+    answer: "When the timing pressure is real and the permanent debt or sale path is credible but not ready yet."
+  - question: "What should I send first?"
+    answer: "Property type, estimated value, requested amount, current debt if any, and whether the goal is acquisition, refinance, or transitional financing."
 ---
 
 <section class="section split">

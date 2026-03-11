@@ -3,6 +3,15 @@ title: "U.S. Merchant Cash Advance | Nicolas Lescalier"
 description: "Learn when a merchant cash advance makes sense, how repayment works, and how Nicolas Lescalier helps U.S. businesses evaluate MCA offers responsibly."
 layout: default
 permalink: /services/us-mca-expert/
+faq:
+  - question: "How fast can an MCA fund?"
+    answer: "Some MCA files can move within 24 to 72 hours if deposits are clear and the documentation is ready."
+  - question: "Is an MCA always expensive?"
+    answer: "It is often more expensive than term debt, but the real question is whether the timing value and repayment cadence make sense for the business."
+  - question: "Who is usually a bad fit for an MCA?"
+    answer: "Borrowers with thin deposits, tight margins, or no room for frequent remittances are often better served by another structure."
+  - question: "Should I compare more than one offer?"
+    answer: "Yes. Factor rate alone is not enough. Compare total payback, remittance pace, term, and whether the deal can be absorbed cleanly."
 ---
 
 <section class="section split">

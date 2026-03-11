@@ -3,6 +3,15 @@ layout: default
 title: "Business Line of Credit | Nicolas Lescalier"
 description: "Learn when a business line of credit fits better than a term loan or MCA, and how Nicolas Lescalier helps clients evaluate revolving capital."
 permalink: /services/us-line-of-credit/
+faq:
+  - question: "When is a line better than a term loan?"
+    answer: "When the need repeats. Inventory cycles, recurring working-capital gaps, and seasonal borrowing are usually cleaner with a line."
+  - question: "Do I pay interest on the full limit?"
+    answer: "Usually not. Revolving structures typically charge based on the amount drawn, not just the total approved limit."
+  - question: "Can a line replace an MCA?"
+    answer: "Sometimes. If the borrower has enough support for a revolving facility, it can be a cleaner option than repeated short-term advances."
+  - question: "What usually weakens a line request?"
+    answer: "Thin revenue, poor repayment visibility, uneven bank activity, or a use of proceeds that actually belongs in a different product."
 ---
 
 <section class="section split">
