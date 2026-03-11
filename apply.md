@@ -281,7 +281,7 @@ layout: default
         </div>
         <div>
           <label for="mobile_phone">Mobile phone</label>
-          <input type="tel" id="mobile_phone" name="mobile_phone" required placeholder="(305) 555-1212">
+          <input type="tel" id="mobile_phone" name="mobile_phone" required placeholder="Your mobile number">
         </div>
         <div>
           <label for="best_time">Best time to reach you</label>
