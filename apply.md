@@ -60,7 +60,7 @@ layout: default
     <span class="pill">No SSN requested on-page</span>
   </div>
 
-  <form class="contact-form" action="https://formspree.io/f/maypkwyo" method="POST">
+  <form class="contact-form" action="https://formspree.io/f/mgonknak" method="POST">
     <input type="hidden" name="_subject" value="New financing application from nicolaslescalier.com">
 
     <div class="form-section form-section--accent">
