@@ -411,6 +411,8 @@
                   form_target: form.getAttribute("action") || "",
                   success_url: successUrl || "",
                   conversion_type: conversionType,
+                  submission_page: window.location.pathname,
+                  submission_title: document.title,
                   submitted_at: Date.now(),
                   ...readAttribution(),
                 };
@@ -451,6 +453,8 @@
                   form_name: formName,
                   form_target: form.getAttribute("action") || "",
                   error_type: response.status || "response_error",
+                  submission_page: window.location.pathname,
+                  submission_title: document.title,
                   ...readAttribution(),
                 });
               }
@@ -462,6 +466,8 @@
                   form_name: formName,
                   form_target: form.getAttribute("action") || "",
                   error_type: "network_error",
+                  submission_page: window.location.pathname,
+                  submission_title: document.title,
                   ...readAttribution(),
                 });
               }
