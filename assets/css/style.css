@@ -814,6 +814,8 @@ h3 {
 }
 
 .form-honeypot {
+  display: none !important;
+  visibility: hidden;
   position: absolute;
   left: -9999px;
   width: 1px;
