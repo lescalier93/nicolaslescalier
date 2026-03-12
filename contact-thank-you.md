@@ -12,7 +12,7 @@ sitemap: false
     <div>
       <p class="eyebrow">Inquiry received</p>
       <h1>Your message is in.</h1>
-      <p class="lede">The best next step depends on how ready the request already is. If you want to move faster, use one of the direct paths below instead of waiting passively.</p>
+      <p class="lede">The best route depends on how ready the request already is. If you want to move faster, use one of the direct paths below instead of waiting passively.</p>
       <div class="hero__actions">
         <a class="button" href="/apply/">Open full application</a>
         <a class="button button--secondary" href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call</a>
@@ -32,14 +32,14 @@ sitemap: false
 
 <section class="section split">
   <div class="panel">
-    <p class="eyebrow">Prepare the next step</p>
+    <p class="eyebrow">Prepare the follow-through</p>
     <div class="signal-list">
       <div>
         <strong>Ready for a real review</strong>
         <span>Use the full application when you already know the amount, timing, and use of proceeds.</span>
       </div>
       <div>
-        <strong>Still pressure-testing the fit</strong>
+        <strong>Still comparing the structure</strong>
         <span>Use the calculators and financing guides before you move deeper into the process.</span>
       </div>
       <div>
@@ -53,6 +53,18 @@ sitemap: false
     <div class="cta-row">
       <a class="button" href="/application-checklist/">Application checklist</a>
       <a class="button button--secondary" href="/resources.html">Tools and calculators</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="cta-panel">
+    <p class="eyebrow">Prefer to talk it through live?</p>
+    <h2>A short call is the cleanest path when the structure is still unclear.</h2>
+    <p>If the financing route still needs to be narrowed, book a short call instead of sending multiple fragmented follow-ups.</p>
+    <div class="cta-row">
+      <a class="button" href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call</a>
+      <a class="button button--secondary" href="/services/">Review financing products</a>
     </div>
   </div>
 </section>

@@ -3,6 +3,7 @@ title: "Business Financing Application | Nicolas Lescalier"
 description: "Submit a structured business financing application to Nicolas Lescalier for working capital, term loans, equipment financing, factoring, SBA, bridge, and mortgage scenarios."
 permalink: /apply/
 layout: default
+image: "/assets/social-apply.svg"
 ---
 
 <section class="section">
@@ -185,6 +186,12 @@ layout: default
     <input type="hidden" name="_subject" value="New financing application from nicolaslescalier.com">
     <input type="hidden" id="lead_source" name="lead_source" value="website">
     <input type="hidden" id="scenario_origin" name="scenario_origin" value="">
+    <input type="hidden" name="utm_source">
+    <input type="hidden" name="utm_medium">
+    <input type="hidden" name="utm_campaign">
+    <input type="hidden" name="utm_content">
+    <input type="hidden" name="utm_term">
+    <input type="hidden" name="gclid">
     <div class="form-honeypot" aria-hidden="true">
       <label for="application_company">Company</label>
       <input type="text" id="application_company" name="_gotcha" tabindex="-1" autocomplete="off">

@@ -1,0 +1,32 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" rx="32" fill="#F6EFE4"/>
+  <circle cx="1038" cy="120" r="196" fill="url(#applyPaint0)" fill-opacity="0.88"/>
+  <circle cx="162" cy="74" r="182" fill="url(#applyPaint1)" fill-opacity="0.84"/>
+  <rect x="56" y="56" width="1088" height="518" rx="30" fill="url(#applyPaint2)" stroke="#16202A" stroke-opacity="0.08"/>
+  <text x="88" y="184" fill="#16202A" font-family="Manrope, Arial, sans-serif" font-size="72" font-weight="800">Business Financing Application</text>
+  <text x="88" y="238" fill="#D97A33" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="4">STRUCTURED FIRST REVIEW</text>
+  <text x="88" y="334" fill="#16202A" font-family="Manrope, Arial, sans-serif" font-size="34" font-weight="700">Choose the financing lane, add the basics,</text>
+  <text x="88" y="380" fill="#16202A" font-family="Manrope, Arial, sans-serif" font-size="34" font-weight="700">and move into a cleaner review path.</text>
+  <g>
+    <rect x="744" y="116" width="332" height="392" rx="28" fill="#17302B" fill-opacity="0.96"/>
+    <text x="782" y="188" fill="#FFF8EF" font-family="Instrument Serif, Georgia, serif" font-size="46">Best use</text>
+    <text x="782" y="258" fill="#F3E7D6" font-family="Manrope, Arial, sans-serif" font-size="25" font-weight="700">- Full financing request</text>
+    <text x="782" y="302" fill="#F3E7D6" font-family="Manrope, Arial, sans-serif" font-size="25" font-weight="700">- Faster lender-style intake</text>
+    <text x="782" y="346" fill="#F3E7D6" font-family="Manrope, Arial, sans-serif" font-size="25" font-weight="700">- Cleaner path after calculators</text>
+    <text x="782" y="426" fill="#C8D2D0" font-family="Manrope, Arial, sans-serif" font-size="21" font-weight="600">nicolaslescalier.com/apply/</text>
+  </g>
+  <defs>
+    <radialGradient id="applyPaint0" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1038 120) rotate(90) scale(196)">
+      <stop stop-color="#D97A33"/>
+      <stop offset="1" stop-color="#D97A33" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="applyPaint1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(162 74) rotate(90) scale(182)">
+      <stop stop-color="#1B4D3E"/>
+      <stop offset="1" stop-color="#1B4D3E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="applyPaint2" x1="88" y1="88" x2="1096" y2="574" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8F0"/>
+      <stop offset="1" stop-color="#F3E5D5"/>
+    </linearGradient>
+  </defs>
+</svg>

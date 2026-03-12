@@ -12,7 +12,7 @@ sitemap: false
     <div>
       <p class="eyebrow">Application received</p>
       <h1>Your financing request has been submitted.</h1>
-      <p class="lede">The strongest follow-through after an application is clean preparation. If the request is workable, the next step is usually clarifying documents, timing, and the structure that best fits the business.</p>
+      <p class="lede">The strongest follow-through after an application is clean preparation. If the request is workable, the next move is usually clarifying documents, timing, and the structure that best fits the business.</p>
       <div class="hero__actions">
         <a class="button" href="/application-checklist/">Review checklist</a>
         <a class="button button--secondary" href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call</a>
@@ -51,5 +51,17 @@ sitemap: false
       <p>If the structure needs live discussion, use Calendly instead of sending multiple fragmented messages.</p>
       <a href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book the call</a>
     </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="cta-panel">
+    <p class="eyebrow">Need to talk through timing or structure?</p>
+    <h2>Use a short call only when it helps move the request faster.</h2>
+    <p>If the scenario still needs live clarification, book a short call instead of creating a long back-and-forth over email.</p>
+    <div class="cta-row">
+      <a class="button" href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call</a>
+      <a class="button button--secondary" href="/reviews-us-funding/">See reviews and outcomes</a>
+    </div>
   </div>
 </section>

@@ -1,0 +1,32 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" rx="32" fill="#F6EFE4"/>
+  <circle cx="1068" cy="126" r="196" fill="url(#contactPaint0)" fill-opacity="0.88"/>
+  <circle cx="146" cy="82" r="186" fill="url(#contactPaint1)" fill-opacity="0.82"/>
+  <rect x="56" y="56" width="1088" height="518" rx="30" fill="url(#contactPaint2)" stroke="#16202A" stroke-opacity="0.08"/>
+  <text x="88" y="184" fill="#16202A" font-family="Manrope, Arial, sans-serif" font-size="72" font-weight="800">Contact Nicolas Lescalier</text>
+  <text x="88" y="238" fill="#D97A33" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="4">DIRECT FINANCING INQUIRY</text>
+  <text x="88" y="334" fill="#16202A" font-family="Manrope, Arial, sans-serif" font-size="34" font-weight="700">Send the amount, timing, and use of proceeds.</text>
+  <text x="88" y="380" fill="#16202A" font-family="Manrope, Arial, sans-serif" font-size="34" font-weight="700">Then move into the right structure faster.</text>
+  <g>
+    <rect x="742" y="116" width="334" height="392" rx="28" fill="#17302B" fill-opacity="0.96"/>
+    <text x="780" y="188" fill="#FFF8EF" font-family="Instrument Serif, Georgia, serif" font-size="46">Best use</text>
+    <text x="780" y="258" fill="#F3E7D6" font-family="Manrope, Arial, sans-serif" font-size="25" font-weight="700">- Lighter first conversation</text>
+    <text x="780" y="302" fill="#F3E7D6" font-family="Manrope, Arial, sans-serif" font-size="25" font-weight="700">- Faster product narrowing</text>
+    <text x="780" y="346" fill="#F3E7D6" font-family="Manrope, Arial, sans-serif" font-size="25" font-weight="700">- Direct route into apply or call</text>
+    <text x="780" y="426" fill="#C8D2D0" font-family="Manrope, Arial, sans-serif" font-size="21" font-weight="600">nicolaslescalier.com/contact/</text>
+  </g>
+  <defs>
+    <radialGradient id="contactPaint0" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1068 126) rotate(90) scale(196)">
+      <stop stop-color="#D97A33"/>
+      <stop offset="1" stop-color="#D97A33" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="contactPaint1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(146 82) rotate(90) scale(186)">
+      <stop stop-color="#1B4D3E"/>
+      <stop offset="1" stop-color="#1B4D3E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="contactPaint2" x1="88" y1="88" x2="1096" y2="574" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8F0"/>
+      <stop offset="1" stop-color="#F3E5D5"/>
+    </linearGradient>
+  </defs>
+</svg>

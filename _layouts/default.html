@@ -159,7 +159,11 @@
         const currentPath = normalizePath(window.location.pathname);
         let activePath = currentPath;
 
-        if (currentPath.startsWith("/services/us-client-success-stories/")) {
+        if (currentPath === "/contact-thank-you/") {
+          activePath = "/contact/";
+        } else if (currentPath === "/application-received/") {
+          activePath = "/apply/";
+        } else if (currentPath.startsWith("/services/us-client-success-stories/")) {
           activePath = "/services/us-client-success-stories/";
         } else if (currentPath.startsWith("/services/")) {
           activePath = "/services/";
@@ -228,10 +232,37 @@
     <script>
       (() => {
         const forms = document.querySelectorAll("form[data-ajax-form='true']");
+        const attributionKeys = [
+          "utm_source",
+          "utm_medium",
+          "utm_campaign",
+          "utm_content",
+          "utm_term",
+          "gclid",
+        ];
 
         if (!forms.length || typeof window.fetch !== "function" || typeof window.FormData !== "function") {
           return;
         }
+
+        const searchParams = new URLSearchParams(window.location.search);
+        const readAttributionValue = (key) => {
+          if (searchParams.has(key)) {
+            const value = searchParams.get(key) || "";
+            try {
+              window.sessionStorage.setItem(`nicolas_attribution_${key}`, value);
+            } catch (error) {
+              console.debug("Attribution session storage failed", error);
+            }
+            return value;
+          }
+
+          try {
+            return window.sessionStorage.getItem(`nicolas_attribution_${key}`) || "";
+          } catch (error) {
+            return "";
+          }
+        };
 
         const setStatus = (node, state, message) => {
           if (!node) {
@@ -243,14 +274,61 @@
         };
 
         forms.forEach((form) => {
+          let invalidFocusHandled = false;
           const submitButton = form.querySelector("button[type='submit'], input[type='submit']");
           const statusNode = form.querySelector("[data-form-status]");
           const successUrl = form.dataset.successUrl;
           const originalButtonLabel = submitButton ? submitButton.textContent : "";
+          const readAttribution = () => attributionKeys.reduce((payload, key) => {
+            const field = form.querySelector(`[name="${key}"]`);
+            if (field?.value) {
+              payload[key] = field.value;
+            }
+            return payload;
+          }, {});
+          const focusFirstInvalidField = () => {
+            if (invalidFocusHandled) {
+              return;
+            }
+            invalidFocusHandled = true;
+            setStatus(statusNode, "error", "Please review the highlighted field and try again.");
+
+            window.requestAnimationFrame(() => {
+              const invalidField = form.querySelector(":invalid");
+              if (invalidField && typeof invalidField.focus === "function") {
+                invalidField.focus({ preventScroll: true });
+                invalidField.scrollIntoView({ behavior: "smooth", block: "center" });
+              }
+              window.setTimeout(() => {
+                invalidFocusHandled = false;
+              }, 120);
+            });
+          };
+
+          attributionKeys.forEach((key) => {
+            const field = form.querySelector(`[name="${key}"]`);
+            if (field) {
+              field.value = readAttributionValue(key);
+            }
+          });
+
+          form.addEventListener("invalid", focusFirstInvalidField, true);
+          form.addEventListener("input", () => {
+            if (statusNode?.dataset.state === "error") {
+              setStatus(statusNode, "", "");
+            }
+          }, true);
 
           form.addEventListener("submit", async (event) => {
             if (form.dataset.submitting === "true") {
               event.preventDefault();
+              return;
+            }
+
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              focusFirstInvalidField();
+              form.reportValidity();
               return;
             }
 
@@ -280,6 +358,7 @@
                   window.nicolasTrack("form_submit_success", {
                     form_name: form.getAttribute("name") || form.id || "form",
                     form_target: form.getAttribute("action") || "",
+                    ...readAttribution(),
                   });
                 }
 
@@ -304,6 +383,7 @@
                   form_name: form.getAttribute("name") || form.id || "form",
                   form_target: form.getAttribute("action") || "",
                   error_type: response.status || "response_error",
+                  ...readAttribution(),
                 });
               }
 
@@ -314,6 +394,7 @@
                   form_name: form.getAttribute("name") || form.id || "form",
                   form_target: form.getAttribute("action") || "",
                   error_type: "network_error",
+                  ...readAttribution(),
                 });
               }
 

@@ -3,6 +3,7 @@ title: "Contact Nicolas Lescalier | U.S. Business Financing"
 description: "Contact Nicolas Lescalier to review working capital loans, lines of credit, equipment finance, term loans, factoring, SBA 7(a), mortgage financing, and other funding options."
 permalink: "/contact/"
 layout: default
+image: "/assets/social-contact.svg"
 ---
 
 <section class="section split">
@@ -55,6 +56,12 @@ layout: default
     <p>I review inquiries personally. If the scenario is a fit, I will outline the most likely financing path and next documents required. If you would rather talk through it live, you can also <a href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">book a short call</a>.</p>
     <form name="contact_inquiry" action="https://formspree.io/f/maypkwyo" method="POST" data-ajax-form="true" data-success-url="/contact-thank-you/">
       <input type="hidden" name="_subject" value="New contact inquiry from nicolaslescalier.com">
+      <input type="hidden" name="utm_source">
+      <input type="hidden" name="utm_medium">
+      <input type="hidden" name="utm_campaign">
+      <input type="hidden" name="utm_content">
+      <input type="hidden" name="utm_term">
+      <input type="hidden" name="gclid">
       <div class="form-honeypot" aria-hidden="true">
         <label for="contact_company">Company</label>
         <input type="text" id="contact_company" name="_gotcha" tabindex="-1" autocomplete="off">
