@@ -25,7 +25,7 @@
     {% include structured_data.html %}
     {% include faq_structured_data.html %}
   </head>
-  <body>
+  <body{% if page.conversion_page %} data-conversion-page="{{ page.conversion_page }}"{% endif %}>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-shell">
       <div class="topbar">
@@ -300,6 +300,13 @@
           const statusNode = form.querySelector("[data-form-status]");
           const successUrl = form.dataset.successUrl;
           const originalButtonLabel = submitButton ? submitButton.textContent : "";
+          const formName = form.getAttribute("name") || form.id || "form";
+          const conversionType = formName === "financing_application"
+            ? "application"
+            : (formName === "contact_inquiry" ? "contact" : "form");
+          const successEventName = formName === "financing_application"
+            ? "application_submit_success"
+            : (formName === "contact_inquiry" ? "contact_submit_success" : "");
           const readAttribution = () => {
             const payload = attributionKeys.reduce((memo, key) => {
               const field = form.querySelector(`[name="${key}"]`);
@@ -399,12 +406,28 @@
               const result = await response.json().catch(() => ({}));
 
               if (response.ok) {
+                const successPayload = {
+                  form_name: formName,
+                  form_target: form.getAttribute("action") || "",
+                  success_url: successUrl || "",
+                  conversion_type: conversionType,
+                  submitted_at: Date.now(),
+                  ...readAttribution(),
+                };
+
+                try {
+                  window.sessionStorage.setItem("nicolas_last_submission", JSON.stringify(successPayload));
+                  window.sessionStorage.setItem(`nicolas_thank_you_tracked_${conversionType}`, "false");
+                } catch (error) {
+                  console.debug("Submission session storage failed", error);
+                }
+
                 if (typeof window.nicolasTrack === "function") {
-                  window.nicolasTrack("form_submit_success", {
-                    form_name: form.getAttribute("name") || form.id || "form",
-                    form_target: form.getAttribute("action") || "",
-                    ...readAttribution(),
-                  });
+                  window.nicolasTrack("form_submit_success", successPayload);
+                  window.nicolasTrack("generate_lead", successPayload);
+                  if (successEventName) {
+                    window.nicolasTrack(successEventName, successPayload);
+                  }
                 }
 
                 setStatus(statusNode, "success", "Submission received. Redirecting...");
@@ -425,7 +448,7 @@
 
               if (typeof window.nicolasTrack === "function") {
                 window.nicolasTrack("form_submit_error", {
-                  form_name: form.getAttribute("name") || form.id || "form",
+                  form_name: formName,
                   form_target: form.getAttribute("action") || "",
                   error_type: response.status || "response_error",
                   ...readAttribution(),
@@ -436,7 +459,7 @@
             } catch (error) {
               if (typeof window.nicolasTrack === "function") {
                 window.nicolasTrack("form_submit_error", {
-                  form_name: form.getAttribute("name") || form.id || "form",
+                  form_name: formName,
                   form_target: form.getAttribute("action") || "",
                   error_type: "network_error",
                   ...readAttribution(),

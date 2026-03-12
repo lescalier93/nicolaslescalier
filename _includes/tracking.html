@@ -15,6 +15,20 @@
   (() => {
     window.dataLayer = window.dataLayer || [];
     const startedForms = new WeakSet();
+    const safeSessionGet = (key) => {
+      try {
+        return window.sessionStorage.getItem(key);
+      } catch (error) {
+        return null;
+      }
+    };
+    const safeSessionSet = (key, value) => {
+      try {
+        window.sessionStorage.setItem(key, value);
+      } catch (error) {
+        console.debug("Tracking session storage failed", error);
+      }
+    };
 
     window.nicolasTrack = (eventName, params = {}) => {
       const payload = {
@@ -112,12 +126,20 @@
         return;
       }
 
-      window.nicolasTrack(isNav && !isCta ? "nav_click" : "cta_click", {
+      const trackingPayload = {
         cta_label: text || "Unnamed CTA",
         cta_target: sanitizeTarget(href),
         cta_type: classifyTarget(href),
         cta_section: sectionLabel(target),
-      });
+      };
+
+      window.nicolasTrack(isNav && !isCta ? "nav_click" : "cta_click", trackingPayload);
+
+      if (trackingPayload.cta_type === "booking") {
+        window.nicolasTrack("booking_click", trackingPayload);
+      } else if (trackingPayload.cta_type === "phone") {
+        window.nicolasTrack("phone_click", trackingPayload);
+      }
     });
 
     document.addEventListener("focusin", (event) => {
@@ -142,5 +164,34 @@
         form_target: sanitizeTarget(form.getAttribute("action") || ""),
       });
     });
+
+    const conversionPage = document.body?.dataset?.conversionPage;
+    if (conversionPage) {
+      let lastSubmission = null;
+
+      try {
+        lastSubmission = JSON.parse(safeSessionGet("nicolas_last_submission") || "null");
+      } catch (error) {
+        lastSubmission = null;
+      }
+
+      const thankYouKey = `nicolas_thank_you_tracked_${conversionPage}`;
+      if (safeSessionGet(thankYouKey) !== "true") {
+        const payload = {
+          conversion_type: conversionPage,
+          ...(lastSubmission || {}),
+        };
+
+        window.nicolasTrack("thank_you_view", payload);
+
+        if (conversionPage === "contact") {
+          window.nicolasTrack("contact_thank_you_view", payload);
+        } else if (conversionPage === "application") {
+          window.nicolasTrack("application_thank_you_view", payload);
+        }
+
+        safeSessionSet(thankYouKey, "true");
+      }
+    }
   })();
 </script>
