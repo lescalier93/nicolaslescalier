@@ -254,9 +254,20 @@
         }
 
         const searchParams = new URLSearchParams(window.location.search);
+        const attributionParamAliases = {
+          utm_source: ["ns_source", "nsrc"],
+          utm_medium: ["ns_medium", "nmed"],
+          utm_campaign: ["ns_campaign", "ncmp"],
+          utm_content: ["ns_content", "ncnt"],
+          utm_term: ["ns_term", "nterm"],
+          gclid: ["ns_click_id", "ngclid"],
+        };
         const readAttributionValue = (key) => {
-          if (searchParams.has(key)) {
-            const value = searchParams.get(key) || "";
+          const possibleKeys = [key, ...(attributionParamAliases[key] || [])];
+          const matchedKey = possibleKeys.find((candidate) => searchParams.has(candidate));
+
+          if (matchedKey) {
+            const value = searchParams.get(matchedKey) || "";
             try {
               window.sessionStorage.setItem(`nicolas_attribution_${key}`, value);
             } catch (error) {
