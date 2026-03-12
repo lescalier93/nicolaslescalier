@@ -1,6 +1,6 @@
 ---
-title: "Nicolas Lescalier Reviews and Outcomes | U.S. Business Financing"
-description: "Read financing reviews and case-style outcomes across working capital, term loans, invoice finance, bridge debt, and commercial real estate transactions."
+title: "Nicolas Lescalier Reviews and Feedback Themes | U.S. Business Financing"
+description: "Read borrower feedback themes across working capital, term loans, invoice finance, bridge debt, and commercial real estate transactions."
 permalink: "/reviews-us-funding/"
 layout: default
 breadcrumb_title: Reviews
@@ -9,7 +9,7 @@ breadcrumb_title: Reviews
 <section class="section">
   <div class="section-band">
     <div class="section-band__panel">
-      <p class="eyebrow">Reviews and Outcomes</p>
+      <p class="eyebrow">Reviews and Feedback Themes</p>
       <h1>What borrowers tend to value after the process is over.</h1>
       <p>This page is about borrower experience and recurring feedback themes: clarity, response speed, realistic fit, and whether the process stayed useful instead of turning noisy. If you want deal-by-deal breakdowns, the success-stories page is the better route.</p>
       <div class="section-band__actions">
@@ -58,8 +58,8 @@ breadcrumb_title: Reviews
 </section>
 
 <section class="section">
-  <p class="eyebrow">Outcome snapshots</p>
-  <h2>Short proof points tied to those themes.</h2>
+  <p class="eyebrow">Borrower-read snapshots</p>
+  <h2>Short examples that reinforce those themes.</h2>
   <div class="grid grid--3">
     <article class="service-card">
       <span class="card-label">Hospitality | Florida</span>

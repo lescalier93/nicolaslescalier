@@ -3,6 +3,7 @@ title: "Why Clients Trust Nicolas Lescalier | U.S. Business Financing"
 description: "See why borrowers choose Nicolas Lescalier for clearer financing guidance, stronger product fit, and more disciplined deal execution."
 permalink: "/why-us-clients-trust-nicolas/"
 layout: default
+breadcrumb_title: Why Clients Trust Nicolas
 ---
 
 <section class="section">

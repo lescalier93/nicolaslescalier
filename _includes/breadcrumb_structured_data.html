@@ -1,5 +1,5 @@
 {% assign current_url = page.url | default: '/' %}
-{% assign page_label = page.title | split: ' | ' | first %}
+{% assign page_label = page.breadcrumb_title | default: page.title | split: ' | ' | first %}
 {% unless current_url == '/' %}
 <script type="application/ld+json">
 {
