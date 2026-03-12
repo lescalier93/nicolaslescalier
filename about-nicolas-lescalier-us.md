@@ -3,6 +3,7 @@ title: "About Nicolas Lescalier | U.S. Business Financing Specialist"
 description: "Learn about Nicolas Lescalier, his background in U.S. business financing, and the way he helps operators and investors evaluate funding options."
 permalink: "/about-nicolas-lescalier-us/"
 layout: default
+breadcrumb_title: About
 redirect_from:
   - /about/
   - /about.html
@@ -111,7 +112,7 @@ redirect_from:
     <p>If you want to evaluate credibility and process before reaching out, start with the trust and reviews pages below.</p>
     <div class="cta-row">
       <a class="button" href="/why-us-clients-trust-nicolas/">Why clients trust Nicolas</a>
-      <a class="button button--secondary" href="/reviews-us-funding/">Read reviews and outcomes</a>
+      <a class="button button--secondary" href="/reviews-us-funding/">Read reviews and feedback themes</a>
     </div>
   </div>
 </section>

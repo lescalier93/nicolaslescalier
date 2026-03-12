@@ -3,6 +3,7 @@ title: "Terms and Conditions | Nicolas Lescalier"
 description: "Terms and conditions for visitors, inquiries, applications, and communications submitted through nicolaslescalier.com."
 permalink: /terms-and-conditions/
 layout: default
+breadcrumb_title: Terms and Conditions
 ---
 
 <section class="section">

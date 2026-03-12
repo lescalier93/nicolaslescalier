@@ -3,6 +3,7 @@ layout: default
 title: "Purchase Order Financing | Nicolas Lescalier"
 description: "See when purchase order financing is the right structure for businesses that need capital to fulfill large customer orders."
 permalink: /services/us-po-financing/
+breadcrumb_title: PO Financing
 faq:
   - question: "When is PO financing a good fit?"
     answer: "PO financing is usually a good fit when a real customer order exists but the business needs capital to source or produce the goods before payment arrives."

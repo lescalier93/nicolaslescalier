@@ -6,6 +6,7 @@ permalink: /application-received/
 noindex: true
 sitemap: false
 conversion_page: application
+breadcrumb_title: Application Received
 ---
 
 <section class="hero">
@@ -62,7 +63,7 @@ conversion_page: application
     <p>If the scenario still needs live clarification, book a short call instead of creating a long back-and-forth over email.</p>
     <div class="cta-row">
       <a class="button" href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call</a>
-      <a class="button button--secondary" href="/reviews-us-funding/">See reviews and outcomes</a>
+      <a class="button button--secondary" href="/reviews-us-funding/">Read feedback themes</a>
     </div>
   </div>
 </section>

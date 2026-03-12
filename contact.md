@@ -4,13 +4,14 @@ description: "Contact Nicolas Lescalier to review working capital loans, lines o
 permalink: "/contact/"
 layout: default
 image: "/assets/social-contact.svg"
+breadcrumb_title: Contact
 ---
 
 <section class="section split">
   <div class="contact-card">
     <p class="eyebrow">Contact</p>
     <h1>Start with the deal basics.</h1>
-    <p>Send the funding target, what the capital is for, and how quickly you need it. That is enough to identify whether a working capital loan, line of credit, term loan, equipment facility, factoring, SBA, mortgage, or another option is the right first path.</p>
+    <p>Send the amount, use of proceeds, and timing. That is usually enough to identify the most realistic financing path before the process gets noisier than it needs to be.</p>
     <div class="signal-list">
       <div>
         <strong>Best first message</strong>
@@ -25,7 +26,7 @@ image: "/assets/social-contact.svg"
         <span>Submitting the wrong product application first and creating unnecessary underwriting noise.</span>
       </div>
     </div>
-    <div class="grid">
+    <div class="grid grid--2">
       <div>
         <h3>Best channel</h3>
         <p>Use the message form on this page for a lighter first conversation, book a short call if you want to talk through the situation live, or go straight to the full application if you already have a financing request ready.</p>
@@ -121,7 +122,7 @@ image: "/assets/social-contact.svg"
       </div>
 
       <p class="form-status" data-form-status hidden aria-live="polite"></p>
-      <button class="button" type="submit">Send Message</button>
+      <button class="button" type="submit">Send inquiry</button>
     </form>
   </div>
 </section>

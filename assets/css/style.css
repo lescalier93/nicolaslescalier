@@ -258,34 +258,49 @@ img {
 }
 
 .site-main {
-  padding: 2.2rem 0 5rem;
+  padding: 1.85rem 0 4.25rem;
 }
 
 .breadcrumbs {
-  margin: 0 0 1rem;
+  display: inline-flex;
+  max-width: 100%;
+  margin: 0 0 0.95rem;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid rgba(22, 32, 42, 0.08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 10px 24px rgba(18, 30, 38, 0.05);
+  overflow: hidden;
 }
 
 .breadcrumbs__list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.4rem;
   margin: 0;
   padding: 0;
   list-style: none;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
 .breadcrumbs__list li {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
+  white-space: nowrap;
 }
 
 .breadcrumbs__list li:not(:last-child)::after {
   content: "/";
   color: rgba(22, 32, 42, 0.38);
+}
+
+.breadcrumbs__list::-webkit-scrollbar {
+  display: none;
 }
 
 .breadcrumbs__list a {
@@ -356,7 +371,7 @@ button:focus-visible,
 .hero {
   position: relative;
   overflow: hidden;
-  padding: clamp(2.4rem, 5vw, 4.35rem);
+  padding: clamp(2.15rem, 4.6vw, 3.95rem);
   border: 1px solid rgba(22, 32, 42, 0.07);
   border-radius: var(--radius-lg);
   background:
@@ -381,7 +396,7 @@ button:focus-visible,
 .hero__grid {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
-  gap: 2.2rem;
+  gap: 2rem;
   align-items: start;
 }
 
@@ -436,7 +451,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
-  margin-top: 1.6rem;
+  margin-top: 1.35rem;
 }
 
 .hero-note {
@@ -450,7 +465,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.9rem;
-  margin-top: 1.2rem;
+  margin-top: 1rem;
 }
 
 .trust-chip {
@@ -483,7 +498,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.9rem;
-  margin-top: 1.8rem;
+  margin-top: 1.5rem;
 }
 
 .stat {
@@ -561,8 +576,8 @@ h3 {
 .section {
   position: relative;
   overflow: hidden;
-  margin-top: 1.6rem;
-  padding: clamp(1.55rem, 3vw, 2.15rem);
+  margin-top: 1.35rem;
+  padding: clamp(1.35rem, 2.6vw, 1.95rem);
   border-radius: var(--radius-lg);
   background: rgba(255, 251, 246, 0.76);
   border: 1px solid rgba(22, 32, 42, 0.06);
@@ -573,7 +588,7 @@ h3 {
   content: "";
   position: absolute;
   inset: 0 auto auto 1.25rem;
-  width: 3.75rem;
+  width: 3.35rem;
   height: 3px;
   border-radius: 999px;
   background: linear-gradient(90deg, rgba(27, 77, 62, 0.95), rgba(217, 122, 51, 0.95));
@@ -598,7 +613,7 @@ h3 {
 .contact-card,
 .contact-form,
 .cta-panel {
-  padding: 1.4rem;
+  padding: 1.25rem;
 }
 
 .service-card,
@@ -707,7 +722,7 @@ h3 {
 .case-study {
   position: relative;
   overflow: hidden;
-  padding: 1.35rem;
+  padding: 1.2rem;
   border-radius: var(--radius-md);
   border: 1px solid rgba(22, 32, 42, 0.08);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(249, 244, 237, 0.84));
@@ -804,13 +819,13 @@ h3 {
 .feature-list {
   display: grid;
   gap: 0.85rem;
-  margin-top: 1.2rem;
+  margin-top: 1rem;
 }
 
 .feature-item {
   display: grid;
   gap: 0.2rem;
-  padding: 1rem 1.05rem;
+  padding: 0.95rem 1rem;
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(22, 32, 42, 0.08);
@@ -832,7 +847,7 @@ h3 {
 }
 
 .step-card {
-  padding: 1.4rem;
+  padding: 1.25rem;
   border-radius: var(--radius-md);
   border: 1px solid rgba(22, 32, 42, 0.08);
   background:
@@ -871,7 +886,7 @@ h3 {
 .section-band__panel {
   position: relative;
   overflow: hidden;
-  padding: 1.75rem;
+  padding: 1.55rem;
   border-radius: var(--radius-md);
   background: linear-gradient(135deg, rgba(22, 32, 42, 0.96), rgba(31, 54, 69, 0.94));
   color: #fff;
@@ -908,7 +923,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
-  margin-top: 1.2rem;
+  margin-top: 1rem;
 }
 
 .mini-grid {
@@ -917,7 +932,7 @@ h3 {
 }
 
 .mini-card {
-  padding: 1.15rem;
+  padding: 1rem;
   border-radius: var(--radius-md);
   border: 1px solid rgba(22, 32, 42, 0.08);
   background: rgba(255, 255, 255, 0.84);
@@ -937,7 +952,7 @@ h3 {
 
 .mini-grid--3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin: 1.15rem 0 1.25rem;
+  margin: 1rem 0 1.1rem;
 }
 
 .mini-card a {
@@ -989,7 +1004,7 @@ h3 {
 }
 
 .notice-card {
-  padding: 1.2rem 1.25rem;
+  padding: 1.05rem 1.1rem;
   border-radius: var(--radius-md);
   border: 1px solid rgba(22, 32, 42, 0.08);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(249, 244, 237, 0.82));
@@ -1004,7 +1019,7 @@ h3 {
 .form-section {
   display: grid;
   gap: 0.75rem;
-  padding: 1.4rem;
+  padding: 1.25rem;
   border-radius: var(--radius-md);
   border: 1px solid rgba(22, 32, 42, 0.08);
   background: rgba(255, 255, 255, 0.8);
@@ -1053,7 +1068,7 @@ h3 {
 .application-frame {
   display: grid;
   gap: 1rem;
-  margin-top: 1.2rem;
+  margin-top: 1rem;
 }
 
 .application-intro-card {
@@ -1062,7 +1077,7 @@ h3 {
   align-items: center;
   justify-content: space-between;
   gap: 0.8rem 1rem;
-  padding: 1rem 1.1rem;
+  padding: 0.95rem 1rem;
   border-radius: var(--radius-md);
   border: 1px solid rgba(22, 32, 42, 0.08);
   background: linear-gradient(135deg, rgba(27, 77, 62, 0.1), rgba(217, 122, 51, 0.1));
@@ -1310,7 +1325,7 @@ button {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(180px, 0.8fr)) minmax(0, 1fr);
   gap: 1rem;
-  padding: 1.7rem;
+  padding: 1.45rem;
   border-radius: var(--radius-lg);
   border: 1px solid rgba(22, 32, 42, 0.08);
   background:
@@ -1465,12 +1480,18 @@ button {
   }
 
   .site-main {
-    padding-top: 1rem;
+    padding-top: 0.9rem;
   }
 
   .hero,
   .section {
-    padding: 1.2rem;
+    padding: 1.1rem;
+  }
+
+  .breadcrumbs {
+    display: flex;
+    padding: 0.5rem 0.7rem;
+    margin-bottom: 0.8rem;
   }
 
   .section::before {

@@ -4,17 +4,18 @@ description: "Submit a structured business financing application to Nicolas Lesc
 permalink: /apply/
 layout: default
 image: "/assets/social-apply.svg"
+breadcrumb_title: Application
 ---
 
 <section class="section">
   <div class="section-band">
     <div class="section-band__panel">
       <p class="eyebrow">Application</p>
-      <h1>Start a financing application that feels closer to a real deal intake.</h1>
-      <p>This page is designed to feel more like a lender-style first step: structured, fast to scan, and focused on the details that actually help narrow the right capital path. It is intentionally more visual and more guided than the contact page.</p>
+      <h1>Start a structured financing request.</h1>
+      <p>Use this when you want a real fit review. The form stays focused on the details that usually determine the next step: timing, product lane, revenue context, and current constraints.</p>
       <div class="section-band__actions">
         <a class="button" href="#application-form">Start the application</a>
-        <a class="button button--secondary" href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Prefer to book a call?</a>
+        <a class="button button--secondary" href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call instead</a>
       </div>
     </div>
     <div class="mini-grid">
@@ -156,7 +157,7 @@ image: "/assets/social-apply.svg"
 </section>
 
 <section class="section" id="application-form">
-  <p class="eyebrow">Application Form</p>
+  <p class="eyebrow">Financing request</p>
   <h2>Business financing request</h2>
   <p class="section-intro">Fill in what you know. A precise, coherent summary is more useful than trying to guess every underwriting question perfectly.</p>
   <div class="pill-row">
@@ -620,13 +621,13 @@ image: "/assets/social-apply.svg"
           </div>
         </div>
       </div>
-      <p class="input-help">Sensitive items such as SSN, full bank statements, tax returns, and IDs should not be submitted through this form unless requested separately through a secure next step.</p>
+      <p class="input-help">Do not submit SSN, full bank statements, tax returns, or IDs through this form. If needed, sensitive documents can be requested later through a secure step.</p>
     </div>
 
     <div class="cta-row">
       <p class="form-status" data-form-status hidden aria-live="polite"></p>
       <button class="button" type="submit">Submit application</button>
-      <a class="button button--secondary" href="/contact/">Prefer a shorter first message?</a>
+      <a class="button button--secondary" href="/contact/">Not ready for the full form?</a>
     </div>
   </form>
   </div>

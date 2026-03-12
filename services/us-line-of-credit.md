@@ -3,6 +3,7 @@ layout: default
 title: "Business Line of Credit | Nicolas Lescalier"
 description: "Learn when a business line of credit fits better than a term loan or short-term working capital loan, and how Nicolas Lescalier helps clients evaluate revolving capital."
 permalink: /services/us-line-of-credit/
+breadcrumb_title: Line of Credit
 faq:
   - question: "When is a line better than a term loan?"
     answer: "When the need repeats. Inventory cycles, recurring working-capital gaps, and seasonal borrowing are usually cleaner with a line."

@@ -3,6 +3,7 @@ layout: default
 title: "SBA 7(a) Loans | Nicolas Lescalier"
 description: "Understand when SBA 7(a) loans are worth pursuing for acquisition, expansion, refinance, or long-term working capital."
 permalink: /services/us-sba-7a-loans/
+breadcrumb_title: SBA 7(a)
 faq:
   - question: "When is SBA 7(a) worth pursuing?"
     answer: "SBA 7(a) is often worth pursuing when the borrower has a strong enough file to justify the slower process in exchange for lower-cost, longer-term capital."

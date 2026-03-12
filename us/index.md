@@ -3,6 +3,7 @@ title: "U.S. Business Financing | Nicolas Lescalier"
 description: "Alternative financing solutions for U.S. businesses, including working capital loans, term loans, bridge loans, and commercial real estate financing."
 permalink: /us/
 layout: default
+breadcrumb_title: U.S. Market
 ---
 
 <section class="section split">

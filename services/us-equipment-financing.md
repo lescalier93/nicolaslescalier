@@ -3,6 +3,7 @@ layout: default
 title: "Equipment Financing | Nicolas Lescalier"
 description: "See when equipment financing is the right structure for vehicles, machinery, medical tools, and asset-backed business purchases."
 permalink: /services/us-equipment-financing/
+breadcrumb_title: Equipment Financing
 faq:
   - question: "When is equipment financing better than using working capital?"
     answer: "When the purchase is a durable asset that should be repaid over time instead of draining operating cash all at once."

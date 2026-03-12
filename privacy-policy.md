@@ -3,6 +3,7 @@ title: "Privacy Policy | Nicolas Lescalier"
 description: "Privacy policy for information submitted through nicolaslescalier.com, including contact forms, application forms, and SMS marketing consent."
 permalink: /privacy-policy/
 layout: default
+breadcrumb_title: Privacy Policy
 ---
 
 <section class="section">

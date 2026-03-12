@@ -3,6 +3,7 @@ title: "Business Financing Application Checklist | Nicolas Lescalier"
 description: "Prepare the right details before applying for working capital, term loans, invoice finance, SBA, or commercial real estate financing."
 permalink: "/application-checklist/"
 layout: default
+breadcrumb_title: Checklist
 ---
 
 <section class="section">

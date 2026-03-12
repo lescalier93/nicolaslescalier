@@ -3,6 +3,7 @@ title: "Term Loans for U.S. Businesses | Nicolas Lescalier"
 description: "See when term loans make sense for U.S. businesses, how repayment compares to short-term working capital loans, and how Nicolas Lescalier structures term lending decisions."
 layout: default
 permalink: /services/us-term-loans-approach/
+breadcrumb_title: Term Loans
 redirect_from:
   - /blog/term-loans-vs-mca.html
   - /us-term-loans-approach/

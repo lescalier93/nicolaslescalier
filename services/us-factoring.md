@@ -3,6 +3,7 @@ layout: default
 title: "Invoice Factoring | Nicolas Lescalier"
 description: "Understand when factoring makes sense for businesses waiting on invoices and how it compares with other working capital options."
 permalink: /services/us-factoring/
+breadcrumb_title: Factoring
 faq:
   - question: "When is factoring a good fit?"
     answer: "Factoring is often a good fit when the business has strong invoices and creditworthy customers but cannot wait for normal payment timing."

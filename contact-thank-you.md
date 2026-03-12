@@ -6,6 +6,7 @@ permalink: /contact-thank-you/
 noindex: true
 sitemap: false
 conversion_page: contact
+breadcrumb_title: Inquiry Received
 ---
 
 <section class="hero">

@@ -3,6 +3,7 @@ title: "How U.S. SMBs Get Funding Fast | Nicolas Lescalier"
 description: "A practical guide to choosing between working capital loans, lines of credit, term loans, equipment financing, factoring, PO financing, SBA 7(a), and commercial real estate options."
 layout: default
 permalink: /services/us-smbs-funding-guide/
+breadcrumb_title: Funding Guide
 redirect_from:
   - /us-smbs-funding-guide/
   - /us-smbs-funding-guide.html

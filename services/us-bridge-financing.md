@@ -3,6 +3,7 @@ title: "Bridge Financing in U.S. Markets | Nicolas Lescalier"
 description: "Understand when bridge financing works, what lenders care about, and how Nicolas Lescalier structures short-term bridge loans for U.S. businesses and real estate deals."
 layout: default
 permalink: /services/us-bridge-financing/
+breadcrumb_title: Bridge Financing
 redirect_from:
   - /blog/bridge-loans-explained.html
   - /blog/blog/bridge-loans-explained.html

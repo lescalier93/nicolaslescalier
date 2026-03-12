@@ -3,6 +3,7 @@ title: "U.S. Working Capital Loans | Nicolas Lescalier"
 description: "Learn when a short-term working capital loan makes sense, how repayment works, and how Nicolas Lescalier helps U.S. businesses evaluate fast-turn working capital offers responsibly."
 layout: default
 permalink: /services/us-working-capital-loans/
+breadcrumb_title: Working Capital Loans
 redirect_from:
   - /services/us-mca-expert/
   - /blog/merchant-cash-advance-basics.html
