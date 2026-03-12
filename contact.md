@@ -28,7 +28,7 @@ layout: default
       <div>
         <h3>Best channel</h3>
         <p>Use the message form on this page for a lighter first conversation, or go straight to the full application if the file is already warm.</p>
-        <p><a href="/apply/">Open full application</a><br><a href="/application-checklist/">Application checklist</a><br><a href="https://www.linkedin.com/in/nicolaslescalier/">LinkedIn profile</a></p>
+        <p class="link-stack"><a href="/apply/">Open full application</a><a href="/application-checklist/">Application checklist</a><a href="https://www.linkedin.com/in/nicolaslescalier/">LinkedIn profile</a></p>
       </div>
       <div>
         <h3>What to include</h3>
