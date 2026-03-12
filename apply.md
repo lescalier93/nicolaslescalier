@@ -181,7 +181,7 @@ layout: default
       <p id="scenarioCarryoverText">Your calculator scenario has been carried into the application.</p>
     </div>
 
-  <form class="contact-form" name="financing_application" action="https://formspree.io/f/mgonknak" method="POST">
+  <form class="contact-form" name="financing_application" action="https://formspree.io/f/mgonknak" method="POST" data-ajax-form="true" data-success-url="/application-received/">
     <input type="hidden" name="_subject" value="New financing application from nicolaslescalier.com">
     <input type="hidden" id="lead_source" name="lead_source" value="website">
     <input type="hidden" id="scenario_origin" name="scenario_origin" value="">
@@ -614,6 +614,7 @@ layout: default
     </div>
 
     <div class="cta-row">
+      <p class="form-status" data-form-status hidden aria-live="polite"></p>
       <button class="button" type="submit">Submit application</button>
       <a class="button button--secondary" href="/contact/">Prefer a shorter first message?</a>
     </div>

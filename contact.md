@@ -53,7 +53,7 @@ layout: default
     <p class="eyebrow">Message</p>
     <h2>Send a direct financing inquiry</h2>
     <p>I review inquiries personally. If the scenario is a fit, I will outline the most likely financing path and next documents required. If you would rather talk through it live, you can also <a href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">book a short call</a>.</p>
-    <form name="contact_inquiry" action="https://formspree.io/f/maypkwyo" method="POST">
+    <form name="contact_inquiry" action="https://formspree.io/f/maypkwyo" method="POST" data-ajax-form="true" data-success-url="/contact-thank-you/">
       <input type="hidden" name="_subject" value="New contact inquiry from nicolaslescalier.com">
       <div class="form-honeypot" aria-hidden="true">
         <label for="contact_company">Company</label>
@@ -110,6 +110,7 @@ layout: default
         </div>
       </div>
 
+      <p class="form-status" data-form-status hidden aria-live="polite"></p>
       <button class="button" type="submit">Send Message</button>
     </form>
   </div>
