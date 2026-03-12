@@ -261,6 +261,47 @@ img {
   padding: 2.2rem 0 5rem;
 }
 
+.breadcrumbs {
+  margin: 0 0 1rem;
+}
+
+.breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.breadcrumbs__list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.breadcrumbs__list li:not(:last-child)::after {
+  content: "/";
+  color: rgba(22, 32, 42, 0.38);
+}
+
+.breadcrumbs__list a {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.breadcrumbs__list a:hover {
+  color: var(--brand);
+}
+
+.breadcrumbs__current {
+  color: var(--ink);
+  font-weight: 700;
+}
+
 .button {
   display: inline-flex;
   align-items: center;

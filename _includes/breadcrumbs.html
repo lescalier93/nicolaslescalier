@@ -1,0 +1,26 @@
+{% assign current_url = page.url | default: '/' %}
+{% assign page_label = page.title | split: ' | ' | first %}
+{% unless current_url == '/' %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol class="breadcrumbs__list">
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    {% if current_url == '/services/' %}
+    <li class="breadcrumbs__current" aria-current="page">Services</li>
+    {% elsif current_url contains '/services/' %}
+    <li><a href="{{ '/services/' | relative_url }}">Services</a></li>
+    <li class="breadcrumbs__current" aria-current="page">{{ page_label }}</li>
+    {% elsif current_url == '/working-capital-calculator.html' or current_url == '/term-loan-calculator.html' %}
+    <li><a href="{{ '/resources.html' | relative_url }}">Resources</a></li>
+    <li class="breadcrumbs__current" aria-current="page">{{ page_label }}</li>
+    {% elsif current_url == '/contact-thank-you/' %}
+    <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+    <li class="breadcrumbs__current" aria-current="page">{{ page_label }}</li>
+    {% elsif current_url == '/application-received/' %}
+    <li><a href="{{ '/apply/' | relative_url }}">Application</a></li>
+    <li class="breadcrumbs__current" aria-current="page">{{ page_label }}</li>
+    {% else %}
+    <li class="breadcrumbs__current" aria-current="page">{{ page_label }}</li>
+    {% endif %}
+  </ol>
+</nav>
+{% endunless %}

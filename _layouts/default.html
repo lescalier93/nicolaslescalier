@@ -23,6 +23,7 @@
     <link rel="shortcut icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
     {% include structured_data.html %}
+    {% include breadcrumb_structured_data.html %}
     {% include faq_structured_data.html %}
   </head>
   <body{% if page.conversion_page %} data-conversion-page="{{ page.conversion_page }}"{% endif %}>
@@ -64,6 +65,7 @@
 
       <main class="site-main" id="main-content">
         <div class="wrap">
+          {% include breadcrumbs.html %}
           {{ content }}
         </div>
       </main>
