@@ -7,6 +7,9 @@ breadcrumb_title: Working Capital Loans
 redirect_from:
   - /services/us-mca-expert/
   - /blog/merchant-cash-advance-basics.html
+  - /mca/
+  - /mca.html
+  - /merchant-cash-advance/
 faq:
   - question: "How fast can a working capital loan fund?"
     answer: "Some working capital files can move within 24 to 72 hours if deposits are clear and the documentation is ready."

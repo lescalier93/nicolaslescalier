@@ -6,6 +6,8 @@ permalink: /services/us-mortgage-financing/
 breadcrumb_title: Mortgage Financing
 redirect_from:
   - /blog/commercial-real-estate-financing-guide.html
+  - /cre/
+  - /cre.html
 faq:
   - question: "Is mortgage financing the same as refinance?"
     answer: "No. Refinance is one use case. Acquisition, bridge takeout, construction, recapitalization, and repositioning can all require different structures."

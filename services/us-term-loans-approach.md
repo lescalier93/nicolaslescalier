@@ -8,6 +8,8 @@ redirect_from:
   - /blog/term-loans-vs-mca.html
   - /us-term-loans-approach/
   - /us-term-loans-approach.html
+  - /term-loans/
+  - /term-loans.html
 faq:
   - question: "How long does a term loan usually take?"
     answer: "It depends on the lender path. Bank and SBA files take longer than many non-bank term structures because the documentation burden is heavier."

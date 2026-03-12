@@ -9,6 +9,8 @@ redirect_from:
   - /blog/blog/bridge-loans-explained.html
   - /us-bridge-financing/
   - /us-bridge-financing.html
+  - /bridge-loans/
+  - /bridge-loans.html
 ---
 
 <section class="section split">
