@@ -262,6 +262,10 @@
           utm_term: ["ns_term", "nterm"],
           gclid: ["ns_click_id", "ngclid"],
         };
+        const hasAttributionInUrl = attributionKeys.some((key) => {
+          const possibleKeys = [key, ...(attributionParamAliases[key] || [])];
+          return possibleKeys.some((candidate) => searchParams.has(candidate));
+        });
         const readAttributionValue = (key) => {
           const possibleKeys = [key, ...(attributionParamAliases[key] || [])];
           const matchedKey = possibleKeys.find((candidate) => searchParams.has(candidate));
@@ -283,9 +287,11 @@
           }
         };
 
-        const ensureSessionValue = (key, value) => {
+        const ensureSessionValue = (key, value, forceUpdate = false) => {
           try {
-            if (value && !window.sessionStorage.getItem(`nicolas_attribution_${key}`)) {
+            if (forceUpdate && value) {
+              window.sessionStorage.setItem(`nicolas_attribution_${key}`, value);
+            } else if (value && !window.sessionStorage.getItem(`nicolas_attribution_${key}`)) {
               window.sessionStorage.setItem(`nicolas_attribution_${key}`, value);
             }
             return window.sessionStorage.getItem(`nicolas_attribution_${key}`) || value || "";
@@ -294,9 +300,9 @@
           }
         };
 
-        const entryPath = ensureSessionValue("entry_path", window.location.pathname);
-        const landingPage = ensureSessionValue("landing_page", window.location.href);
-        const referrerUrl = ensureSessionValue("referrer_url", document.referrer);
+        const entryPath = ensureSessionValue("entry_path", window.location.pathname, hasAttributionInUrl);
+        const landingPage = ensureSessionValue("landing_page", window.location.href, hasAttributionInUrl);
+        const referrerUrl = ensureSessionValue("referrer_url", document.referrer, hasAttributionInUrl);
 
         const setStatus = (node, state, message) => {
           if (!node) {
