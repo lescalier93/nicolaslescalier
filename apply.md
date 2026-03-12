@@ -23,7 +23,7 @@ layout: default
       </article>
       <article class="mini-card">
         <h3>Security note</h3>
-        <p>Do not submit SSN, full tax returns, bank login credentials, or highly sensitive IDs through this public form. If the file is a fit, sensitive documents can be requested separately.</p>
+        <p>Do not submit SSN, full tax returns, bank login credentials, or highly sensitive IDs through this public form. If the request is a fit, sensitive documents can be requested separately.</p>
       </article>
     </div>
   </div>
@@ -185,13 +185,17 @@ layout: default
     <input type="hidden" name="_subject" value="New financing application from nicolaslescalier.com">
     <input type="hidden" id="lead_source" name="lead_source" value="website">
     <input type="hidden" id="scenario_origin" name="scenario_origin" value="">
+    <div class="form-honeypot" aria-hidden="true">
+      <label for="application_company">Company</label>
+      <input type="text" id="application_company" name="_gotcha" tabindex="-1" autocomplete="off">
+    </div>
 
     <div class="form-section form-section--accent">
       <div class="form-section__header">
         <span class="form-section__number">1</span>
         <div>
           <h3 class="form-section__title">What are you most likely applying for?</h3>
-          <p class="form-section__copy">Pick the closest fit. This does not lock the file into that product.</p>
+          <p class="form-section__copy">Pick the closest fit. This does not lock the request into that product.</p>
         </div>
       </div>
       <div class="choice-grid">
@@ -254,7 +258,7 @@ layout: default
       </div>
       <div>
         <label for="product_interest_other">Or describe it in your own words</label>
-        <input type="text" id="product_interest_other" name="product_interest_other" placeholder="Not sure yet, comparing options, or a more specific scenario">
+        <input type="text" id="product_interest_other" name="product_interest_other" placeholder="Not sure yet, comparing options, or a more specific scenario" autocomplete="off">
       </div>
     </div>
 
@@ -269,19 +273,19 @@ layout: default
       <div class="form-grid--application">
         <div>
           <label for="first_name">First name</label>
-          <input type="text" id="first_name" name="first_name" required placeholder="John">
+          <input type="text" id="first_name" name="first_name" required placeholder="John" autocomplete="given-name">
         </div>
         <div>
           <label for="last_name">Last name</label>
-          <input type="text" id="last_name" name="last_name" required placeholder="Doe">
+          <input type="text" id="last_name" name="last_name" required placeholder="Doe" autocomplete="family-name">
         </div>
         <div>
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="email@business.com">
+          <input type="email" id="email" name="email" required placeholder="email@business.com" autocomplete="email" inputmode="email" spellcheck="false">
         </div>
         <div>
           <label for="mobile_phone">Mobile phone</label>
-          <input type="tel" id="mobile_phone" name="mobile_phone" required placeholder="Your mobile number">
+          <input type="tel" id="mobile_phone" name="mobile_phone" required placeholder="Your mobile number" autocomplete="tel" inputmode="tel">
         </div>
         <div>
           <label for="best_time">Best time to reach you</label>
@@ -309,7 +313,7 @@ layout: default
       <div class="form-grid--application">
         <div>
           <label for="legal_company_name">Legal company name</label>
-          <input type="text" id="legal_company_name" name="legal_company_name" required placeholder="Smith Roofing LLC">
+          <input type="text" id="legal_company_name" name="legal_company_name" required placeholder="Smith Roofing LLC" autocomplete="organization">
         </div>
         <div>
           <label for="business_start_date">Business start date</label>
@@ -476,11 +480,11 @@ layout: default
         </div>
         <div class="form-group--full">
           <label for="use_of_proceeds">Use of proceeds</label>
-          <textarea id="use_of_proceeds" name="use_of_proceeds" rows="4" required placeholder="What the capital will be used for, why it is needed now, and what happens if the timing slips."></textarea>
+          <textarea id="use_of_proceeds" name="use_of_proceeds" rows="4" required placeholder="What the capital will be used for, why it is needed now, and what happens if the timing slips." autocomplete="off"></textarea>
         </div>
         <div class="form-group--full">
           <label for="current_constraints">Current constraints or existing debt</label>
-          <textarea id="current_constraints" name="current_constraints" rows="4" placeholder="Existing advances, loans, liens, collateral issues, tax issues, seasonality, or anything else that could affect approval."></textarea>
+          <textarea id="current_constraints" name="current_constraints" rows="4" placeholder="Existing advances, loans, liens, collateral issues, tax issues, seasonality, or anything else that could affect approval." autocomplete="off"></textarea>
         </div>
       </div>
     </div>
@@ -590,7 +594,7 @@ layout: default
         </div>
         <div class="form-group--full">
           <label for="additional_context">Anything else that matters?</label>
-          <textarea id="additional_context" name="additional_context" rows="4" placeholder="Optional. Add anything important that would help me understand the file quickly."></textarea>
+          <textarea id="additional_context" name="additional_context" rows="4" placeholder="Optional. Add anything important that would help me understand the file quickly." autocomplete="off"></textarea>
         </div>
       </div>
     </div>

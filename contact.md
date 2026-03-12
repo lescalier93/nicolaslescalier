@@ -13,7 +13,7 @@ layout: default
     <div class="signal-list">
       <div>
         <strong>Best first message</strong>
-        <span>Amount needed, timing, use of proceeds, and whether revenue, collateral, or receivables are part of the file.</span>
+        <span>Amount needed, timing, use of proceeds, and whether revenue, collateral, or receivables are part of the picture.</span>
       </div>
       <div>
         <strong>What the first review should answer</strong>
@@ -27,7 +27,7 @@ layout: default
     <div class="grid">
       <div>
         <h3>Best channel</h3>
-        <p>Use the message form on this page for a lighter first conversation, book a short call if you want to talk through the file live, or go straight to the full application if you already have a financing request ready.</p>
+        <p>Use the message form on this page for a lighter first conversation, book a short call if you want to talk through the situation live, or go straight to the full application if you already have a financing request ready.</p>
         <p class="link-stack"><a href="/apply/">Open full application</a><a href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call on Calendly</a><a href="/application-checklist/">Application checklist</a><a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></p>
       </div>
       <div>
@@ -54,24 +54,41 @@ layout: default
     <h2>Send a direct financing inquiry</h2>
     <p>I review inquiries personally. If the scenario is a fit, I will outline the most likely financing path and next documents required. If you would rather talk through it live, you can also <a href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">book a short call</a>.</p>
     <form action="https://formspree.io/f/maypkwyo" method="POST">
+      <div class="form-honeypot" aria-hidden="true">
+        <label for="contact_company">Company</label>
+        <input type="text" id="contact_company" name="_gotcha" tabindex="-1" autocomplete="off">
+      </div>
+
       <div>
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" required placeholder="Your name">
+        <input type="text" id="name" name="name" required placeholder="Your name" autocomplete="name">
       </div>
 
       <div>
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" required placeholder="you@example.com">
+        <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email" inputmode="email" spellcheck="false">
       </div>
 
       <div>
         <label for="mobile_phone">Mobile phone</label>
-        <input type="tel" id="mobile_phone" name="mobile_phone" placeholder="Your mobile number">
+        <input type="tel" id="mobile_phone" name="mobile_phone" placeholder="Your mobile number" autocomplete="tel" inputmode="tel">
+        <p class="input-help">Required only if you want text message updates.</p>
       </div>
 
       <div>
         <label for="need">What best describes the need?</label>
-        <input type="text" id="need" name="need" placeholder="Working capital, term loan, equipment, factoring, bridge, SBA, mortgage, or not sure">
+        <select id="need" name="need">
+          <option value="">Select the closest fit</option>
+          <option>Working capital loan</option>
+          <option>Line of credit</option>
+          <option>Term loan</option>
+          <option>Equipment financing</option>
+          <option>Factoring or invoice finance</option>
+          <option>PO financing</option>
+          <option>SBA 7(a)</option>
+          <option>Bridge or mortgage financing</option>
+          <option>Not sure yet</option>
+        </select>
       </div>
 
       <div>
@@ -111,7 +128,7 @@ layout: default
     </article>
     <article class="step-card">
       <span class="step-card__number">3</span>
-      <h3>Prepare the file cleanly</h3>
+      <h3>Prepare the request cleanly</h3>
       <p>Move toward the right documents and the right product rather than a rushed, noisy application path.</p>
     </article>
   </div>

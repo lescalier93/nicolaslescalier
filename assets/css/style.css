@@ -813,6 +813,14 @@ h3 {
   gap: 0.9rem;
 }
 
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .notice-card {
   padding: 1.2rem 1.25rem;
   border-radius: var(--radius-md);

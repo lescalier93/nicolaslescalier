@@ -102,7 +102,7 @@ permalink: /services/
     <article class="service-card">
       <span class="card-label">Reference</span>
       <h3>Funding guide</h3>
-      <p>For owners comparing products, documentation, lender expectations, and timing before they submit a file.</p>
+      <p>For owners comparing products, documentation, lender expectations, and timing before they submit a request.</p>
       <a href="{{ '/services/us-smbs-funding-guide/' | relative_url }}">Read the guide</a>
     </article>
   </div>
@@ -129,7 +129,7 @@ permalink: /services/
   <div class="proof-card">
     <p class="eyebrow">Next step</p>
     <h3>Need help narrowing the right path?</h3>
-    <p>The highest-value conversation usually happens before an application is submitted, when the file can still be steered toward the structure that fits best.</p>
+    <p>The highest-value conversation usually happens before an application is submitted, when the request can still be steered toward the structure that fits best.</p>
     <div class="cta-row">
       <a class="button" href="/apply/">Start application</a>
       <a class="button button--secondary" href="/resources.html">Open tools and calculators</a>

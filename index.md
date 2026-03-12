@@ -70,7 +70,7 @@ faq:
         </div>
         <div class="feature-item">
           <strong>What you get early</strong>
-          <span>A faster read on fit, likely documentation, and where the file could stall.</span>
+          <span>A faster read on fit, likely documentation, and where the process could stall.</span>
         </div>
       </div>
     </aside>
@@ -230,7 +230,7 @@ faq:
     <article class="step-card">
       <span class="step-card__number">3</span>
       <h3>Move into the right process</h3>
-      <p>Prepare the file cleanly, avoid mismatched applications, and improve the odds of a faster, more credible review.</p>
+      <p>Prepare the request cleanly, avoid mismatched applications, and improve the odds of a faster, more credible review.</p>
     </article>
   </div>
 </section>

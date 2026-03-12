@@ -63,11 +63,13 @@
       if (!target) return "button";
       if (target.includes("/apply/")) return "apply";
       if (target.includes("/contact/")) return "contact";
+      if (target.includes("calendly.com")) return "booking";
       if (target.includes("calculator")) return "calculator";
       if (target.includes("/services/")) return "service";
       if (target.includes("/resources")) return "resource";
       if (target.includes("/application-checklist/")) return "checklist";
       if (target.includes("linkedin.com")) return "profile";
+      if (target.startsWith("tel:")) return "phone";
       return target.startsWith("#") ? "jump_link" : "link";
     };
 
@@ -94,7 +96,9 @@
         || isNav
         || href.includes("/apply/")
         || href.includes("/contact/")
+        || href.includes("calendly.com")
         || href.includes("calculator")
+        || href.startsWith("tel:")
         || href.includes("linkedin.com");
 
       if (target.matches("[data-nav-toggle]")) {
