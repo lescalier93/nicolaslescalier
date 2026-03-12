@@ -44,6 +44,20 @@ breadcrumb_title: Contact
         <p><a href="/application-checklist/">See the full application checklist</a></p>
       </div>
     </div>
+    <div class="feature-list">
+      <div class="feature-item">
+        <strong>1. Send the basics</strong>
+        <span>Enough detail to understand the amount, timing, and likely financing lane.</span>
+      </div>
+      <div class="feature-item">
+        <strong>2. Get a real fit read</strong>
+        <span>Pressure-test structure, timing, and document needs before the process gets noisier.</span>
+      </div>
+      <div class="feature-item">
+        <strong>3. Move to the cleanest next step</strong>
+        <span>Stay with a message, move into the full application, or book a call if live review is the fastest path.</span>
+      </div>
+    </div>
     <div class="cta-row">
       <a class="button" href="/apply/">Open full application</a>
       <a class="button button--secondary" href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call</a>
@@ -124,25 +138,5 @@ breadcrumb_title: Contact
       <p class="form-status" data-form-status hidden aria-live="polite"></p>
       <button class="button" type="submit">Send inquiry</button>
     </form>
-  </div>
-</section>
-
-<section class="section">
-  <div class="step-grid">
-    <article class="step-card">
-      <span class="step-card__number">1</span>
-      <h3>Send the basics</h3>
-      <p>Enough detail to understand the situation without overloading the first conversation.</p>
-    </article>
-    <article class="step-card">
-      <span class="step-card__number">2</span>
-      <h3>Get a fit read</h3>
-      <p>Identify whether the structure, timing, and repayment profile make sense before deeper process begins.</p>
-    </article>
-    <article class="step-card">
-      <span class="step-card__number">3</span>
-      <h3>Prepare the request cleanly</h3>
-      <p>Move toward the right documents and the right product rather than a rushed, noisy application path.</p>
-    </article>
   </div>
 </section>
