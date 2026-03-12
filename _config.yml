@@ -5,6 +5,7 @@ url: "https://nicolaslescalier.com"
 title: "Nicolas Lescalier | U.S. Business Financing"
 description: "Trusted U.S. business financing specialist helping small and mid-sized companies secure working capital loans, term loans, bridge loans and commercial real estate financing."
 google_analytics_id: "G-F2SD579BRL"
+social_image: "/assets/social-card.svg"
 
 # Plugins to automatically generate SEO metadata and sitemap
 plugins:

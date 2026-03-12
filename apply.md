@@ -181,7 +181,7 @@ layout: default
       <p id="scenarioCarryoverText">Your calculator scenario has been carried into the application.</p>
     </div>
 
-  <form class="contact-form" action="https://formspree.io/f/mgonknak" method="POST">
+  <form class="contact-form" name="financing_application" action="https://formspree.io/f/mgonknak" method="POST">
     <input type="hidden" name="_subject" value="New financing application from nicolaslescalier.com">
     <input type="hidden" id="lead_source" name="lead_source" value="website">
     <input type="hidden" id="scenario_origin" name="scenario_origin" value="">
