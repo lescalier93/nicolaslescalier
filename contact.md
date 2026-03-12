@@ -27,7 +27,7 @@ layout: default
     <div class="grid">
       <div>
         <h3>Best channel</h3>
-        <p>Use the message form on this page for a lighter first conversation, or go straight to the full application if the file is already warm.</p>
+        <p>Use the message form on this page for a lighter first conversation, or go straight to the full application if you already have a financing request ready.</p>
         <p class="link-stack"><a href="/apply/">Open full application</a><a href="/application-checklist/">Application checklist</a><a href="https://www.linkedin.com/in/nicolaslescalier/">LinkedIn profile</a></p>
       </div>
       <div>
@@ -50,7 +50,7 @@ layout: default
 
   <div class="contact-form">
     <p class="eyebrow">Message</p>
-    <h2>Book a free consultation</h2>
+    <h2>Send a direct financing inquiry</h2>
     <p>I review inquiries personally. If the scenario is a fit, I will outline the most likely financing path and next documents required.</p>
     <form action="https://formspree.io/f/maypkwyo" method="POST">
       <div>

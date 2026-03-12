@@ -44,7 +44,7 @@ redirect_from:
       </article>
       <article class="mini-card">
         <h3>What this avoids</h3>
-        <p>Lead-broker language, vague promises, and treating every file like a generic rate-shopping exercise.</p>
+        <p>Generic broker language, vague promises, and treating every file like a generic rate-shopping exercise.</p>
       </article>
     </div>
   </div>

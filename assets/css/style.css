@@ -280,6 +280,11 @@ img {
   white-space: nowrap;
 }
 
+.button--nav[aria-current="page"] {
+  background: var(--brand-deep);
+  box-shadow: 0 12px 26px rgba(18, 53, 42, 0.22);
+}
+
 .hero {
   position: relative;
   overflow: hidden;

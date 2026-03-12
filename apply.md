@@ -13,7 +13,7 @@ layout: default
       <p>This page is designed to feel more like a lender-style first step: structured, fast to scan, and focused on the details that actually help narrow the right capital path. It is intentionally more visual and more guided than the contact page.</p>
       <div class="section-band__actions">
         <a class="button" href="#application-form">Start the application</a>
-        <a class="button button--secondary" href="/contact/">Prefer a call first?</a>
+        <a class="button button--secondary" href="/contact/">Prefer a shorter message first?</a>
       </div>
     </div>
     <div class="mini-grid">

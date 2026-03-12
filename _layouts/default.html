@@ -143,16 +143,38 @@
         };
 
         const currentPath = normalizePath(window.location.pathname);
+        let activePath = currentPath;
+
+        if (currentPath.startsWith("/services/us-client-success-stories/")) {
+          activePath = "/services/us-client-success-stories/";
+        } else if (currentPath.startsWith("/services/")) {
+          activePath = "/services/";
+        } else if (
+          currentPath === "/working-capital-calculator.html" ||
+          currentPath === "/term-loan-calculator.html" ||
+          currentPath === "/application-checklist/"
+        ) {
+          activePath = "/resources.html";
+        }
+
         document.querySelectorAll(".site-nav a").forEach((link) => {
           const href = link.getAttribute("href");
           if (!href || href.startsWith("http")) {
             return;
           }
           const targetPath = normalizePath(new URL(href, window.location.origin).pathname);
-          if (targetPath === currentPath) {
+          if (targetPath === activePath) {
             link.setAttribute("aria-current", "page");
           }
         });
+
+        const primaryCta = document.querySelector(".button--nav");
+        if (primaryCta) {
+          const ctaPath = normalizePath(new URL(primaryCta.getAttribute("href"), window.location.origin).pathname);
+          if (ctaPath === activePath) {
+            primaryCta.setAttribute("aria-current", "page");
+          }
+        }
 
         window.addEventListener("resize", () => {
           if (window.innerWidth > 900) {

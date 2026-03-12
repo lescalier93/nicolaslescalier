@@ -24,7 +24,7 @@ faq:
         <a class="button" href="/apply/">Start Application</a>
         <a class="button button--secondary" href="/resources.html">Open Tools & Calculators</a>
       </div>
-      <p class="hero-note">Apply if the file is already warm. Use the calculators and guides first if you are still pressure-testing cost, speed, or repayment fit.</p>
+      <p class="hero-note">Apply if you already have a financing request ready. Use the calculators and guides first if you are still pressure-testing cost, speed, or repayment fit.</p>
       <div class="trust-strip">
         <div class="trust-chip">
           <span class="trust-chip__label">Products</span>
