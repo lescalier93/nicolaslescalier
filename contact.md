@@ -27,8 +27,8 @@ layout: default
     <div class="grid">
       <div>
         <h3>Best channel</h3>
-        <p>Use the message form on this page for a lighter first conversation, or go straight to the full application if you already have a financing request ready.</p>
-        <p class="link-stack"><a href="/apply/">Open full application</a><a href="/application-checklist/">Application checklist</a><a href="https://www.linkedin.com/in/nicolaslescalier/">LinkedIn profile</a></p>
+        <p>Use the message form on this page for a lighter first conversation, book a short call if you want to talk through the file live, or go straight to the full application if you already have a financing request ready.</p>
+        <p class="link-stack"><a href="/apply/">Open full application</a><a href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call on Calendly</a><a href="/application-checklist/">Application checklist</a><a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></p>
       </div>
       <div>
         <h3>What to include</h3>
@@ -44,6 +44,7 @@ layout: default
     </div>
     <div class="cta-row">
       <a class="button" href="/apply/">Open full application</a>
+      <a class="button button--secondary" href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call</a>
       <a class="button button--secondary" href="/application-checklist/">Checklist first</a>
     </div>
   </div>
@@ -51,7 +52,7 @@ layout: default
   <div class="contact-form">
     <p class="eyebrow">Message</p>
     <h2>Send a direct financing inquiry</h2>
-    <p>I review inquiries personally. If the scenario is a fit, I will outline the most likely financing path and next documents required.</p>
+    <p>I review inquiries personally. If the scenario is a fit, I will outline the most likely financing path and next documents required. If you would rather talk through it live, you can also <a href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">book a short call</a>.</p>
     <form action="https://formspree.io/f/maypkwyo" method="POST">
       <div>
         <label for="name">Name</label>
