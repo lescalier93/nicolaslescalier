@@ -34,6 +34,45 @@ faq:
 </section>
 
 <section class="section">
+  <p class="eyebrow">What usually decides a CRE execution path</p>
+  <h2>The asset story and the sponsor story have to support the same structure.</h2>
+  <div class="grid grid--3">
+    <article class="service-card">
+      <span class="card-label">Property quality</span>
+      <p>Asset type, occupancy, condition, and market story drive whether permanent debt, bridge debt, or a transitional structure is realistic.</p>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Debt support</span>
+      <p>Leverage, coverage, reserves, and exit assumptions matter more than headline rate talk early in the process.</p>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Sponsor plan</span>
+      <p>The hold period, refinance path, rehab plan, or sale path needs to be credible enough for the lender to believe the structure will resolve cleanly.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section split">
+  <div class="panel">
+    <p class="eyebrow">When bridge is better than permanent debt</p>
+    <ul class="plain-list">
+      <li>The asset needs time to stabilize before a long-term lender will really like it</li>
+      <li>The acquisition or construction timeline is too tight for conventional underwriting</li>
+      <li>The exit path is clear enough that paying for temporary speed still makes economic sense</li>
+    </ul>
+    <p>If the property is already stabilized and the objective is long-term hold, refinance or permanent mortgage debt is usually the cleaner route.</p>
+  </div>
+  <div class="proof-card">
+    <p class="eyebrow">Compare next</p>
+    <p>The right next page depends on whether the deal is transitional or stabilized.</p>
+    <div class="cta-row">
+      <a class="button" href="/services/us-bridge-financing/">Bridge financing guide</a>
+      <a class="button button--secondary" href="/services/us-real-estate-refinance/">Refinance guide</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <p class="eyebrow">FAQ</p>
   <h2>Common commercial mortgage questions.</h2>
   <div class="grid grid--2">

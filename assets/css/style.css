@@ -25,6 +25,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 body {
@@ -49,6 +50,24 @@ a {
 
 a:hover {
   color: var(--brand-deep);
+}
+
+.skip-link {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 30;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  background: var(--surface-dark);
+  color: #fff;
+  font-weight: 800;
+  transform: translateY(-160%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 
 img {
@@ -283,6 +302,14 @@ img {
 .button--nav[aria-current="page"] {
   background: var(--brand-deep);
   box-shadow: 0 12px 26px rgba(18, 53, 42, 0.22);
+}
+
+a:focus-visible,
+button:focus-visible,
+.button:focus-visible,
+.site-nav-toggle:focus-visible {
+  outline: 2px solid rgba(27, 77, 62, 0.3);
+  outline-offset: 3px;
 }
 
 .hero {
@@ -1035,6 +1062,11 @@ h3 {
   box-shadow: 0 20px 42px rgba(27, 77, 62, 0.12);
 }
 
+.choice-card input:focus-visible + label {
+  outline: 2px solid rgba(27, 77, 62, 0.25);
+  outline-offset: 3px;
+}
+
 .pill-row {
   display: flex;
   flex-wrap: wrap;
@@ -1270,6 +1302,20 @@ button {
 
   h1 {
     max-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

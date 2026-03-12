@@ -32,6 +32,45 @@ faq:
 </section>
 
 <section class="section">
+  <p class="eyebrow">What makes a PO request financeable</p>
+  <h2>These files usually win or lose on order quality, margin, and execution visibility.</h2>
+  <div class="grid grid--3">
+    <article class="service-card">
+      <span class="card-label">Customer order</span>
+      <p>The PO has to be legitimate, well documented, and tied to a customer the capital provider believes will actually perform and pay.</p>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Supplier path</span>
+      <p>The sourcing or manufacturing chain needs to be clear. Uncertain suppliers or weak delivery visibility can break the file quickly.</p>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Margin</span>
+      <p>PO finance is hard to justify when gross margin is too thin to absorb the structure and still leave the deal economically worthwhile.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section split">
+  <div class="panel">
+    <p class="eyebrow">Where PO finance usually breaks</p>
+    <ul class="plain-list">
+      <li>The purchase order is soft, cancelable, or not backed by a credible customer</li>
+      <li>The supplier path is too messy or too international to document cleanly</li>
+      <li>The borrower really needs post-invoice liquidity, which points more toward factoring</li>
+    </ul>
+    <p>Good PO finance files are execution-heavy. The strongest next move is to compare the order flow and invoice flow before choosing the product.</p>
+  </div>
+  <div class="proof-card">
+    <p class="eyebrow">Compare next</p>
+    <p>If the bottleneck changes after fulfillment, the right comparison is usually PO finance versus factoring, not just PO finance alone.</p>
+    <div class="cta-row">
+      <a class="button" href="/services/us-factoring/">Compare with factoring</a>
+      <a class="button button--secondary" href="/apply/">Start application</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <p class="eyebrow">FAQ</p>
   <h2>Common PO financing questions.</h2>
   <div class="grid grid--2">

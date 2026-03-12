@@ -32,6 +32,45 @@ faq:
 </section>
 
 <section class="section">
+  <p class="eyebrow">What usually makes SBA worth it</p>
+  <h2>The value is not just the rate. It is the combination of term, payment relief, and strategic fit.</h2>
+  <div class="grid grid--3">
+    <article class="service-card">
+      <span class="card-label">Readiness</span>
+      <p>SBA is strongest when the borrower has the documents, tax history, and operating clarity to tolerate a deeper review process.</p>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Use of proceeds</span>
+      <p>Acquisition, expansion, partner buyout, refinance, and larger long-term growth uses are usually more natural SBA cases than quick short-term gaps.</p>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Payment shape</span>
+      <p>Borrowers usually pursue SBA because the longer amortization and lower monthly pressure can materially improve what the business can carry.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section split">
+  <div class="panel">
+    <p class="eyebrow">When I would not push SBA first</p>
+    <ul class="plain-list">
+      <li>The deal has real timing pressure and cannot wait through a slower review</li>
+      <li>The documentation is too thin for the borrower to survive the process cleanly</li>
+      <li>The request is smaller and more urgent than the SBA path is built for</li>
+    </ul>
+    <p>In those situations, a term loan, line of credit, or working capital structure can be more realistic now, even if SBA is the better long-term destination later.</p>
+  </div>
+  <div class="proof-card">
+    <p class="eyebrow">Compare next</p>
+    <p>SBA becomes clearer when you compare it directly with the faster term-loan path and the document checklist needed to support it.</p>
+    <div class="cta-row">
+      <a class="button" href="/services/us-term-loans-approach/">Compare with term loans</a>
+      <a class="button button--secondary" href="/application-checklist/">Open checklist</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <p class="eyebrow">FAQ</p>
   <h2>Common SBA 7(a) questions.</h2>
   <div class="grid grid--2">

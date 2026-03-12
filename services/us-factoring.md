@@ -32,6 +32,45 @@ faq:
 </section>
 
 <section class="section">
+  <p class="eyebrow">What a factor is really underwriting</p>
+  <h2>The invoice matters, but the customer and the paper trail matter just as much.</h2>
+  <div class="grid grid--3">
+    <article class="service-card">
+      <span class="card-label">Customer quality</span>
+      <p>The payer has to be credible. Strong customers make factoring cleaner because the factor is ultimately leaning on collectability.</p>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Invoice quality</span>
+      <p>Clear delivery, acceptance, and non-disputed invoices matter more than a vague promise that a customer will pay later.</p>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Margin and dilution</span>
+      <p>Thin margins, credits, chargebacks, or invoice disputes can make a file much weaker even when sales volume looks good on the surface.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section split">
+  <div class="panel">
+    <p class="eyebrow">When I would like factoring more than a loan</p>
+    <ul class="plain-list">
+      <li>The business is fundamentally healthy but cash is trapped in slow-paying receivables</li>
+      <li>The customer base is stronger than the borrower profile on paper</li>
+      <li>The business needs liquidity now without forcing a broader short-term debt structure onto the whole company</li>
+    </ul>
+    <p>If the receivables are weak, disputed, or too concentrated, a line of credit or another structure may be cleaner.</p>
+  </div>
+  <div class="proof-card">
+    <p class="eyebrow">Compare next</p>
+    <p>Factoring is often strongest when compared directly against revolving credit and purchase-order finance, not viewed in isolation.</p>
+    <div class="cta-row">
+      <a class="button" href="/services/us-line-of-credit/">Compare with line of credit</a>
+      <a class="button button--secondary" href="/services/us-po-financing/">Compare with PO financing</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <p class="eyebrow">FAQ</p>
   <h2>Common factoring questions.</h2>
   <div class="grid grid--2">
@@ -58,10 +97,10 @@ faq:
   <div class="cta-panel">
     <p class="eyebrow">Next Step</p>
     <h2>Start with the invoice profile and customer quality.</h2>
-    <p>I can help determine whether factoring is the right receivables tool or whether a line of credit or another structure is better.</p>
+    <p>I can help determine whether factoring is the right receivables tool or whether a line of credit or another structure is better. If the business also has purchase-order pressure, compare both structures before you move.</p>
     <div class="cta-row">
       <a class="button" href="/apply/">Start application</a>
-      <a class="button button--secondary" href="/services/us-line-of-credit/">Compare with line of credit</a>
+      <a class="button button--secondary" href="/services/us-po-financing/">Compare with PO financing</a>
     </div>
   </div>
 </section>

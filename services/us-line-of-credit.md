@@ -32,6 +32,45 @@ faq:
 </section>
 
 <section class="section">
+  <p class="eyebrow">What usually makes a line stronger</p>
+  <h2>Revolving debt works best when the need actually repeats.</h2>
+  <div class="grid grid--3">
+    <article class="service-card">
+      <span class="card-label">Recurring use</span>
+      <p>The best line requests solve inventory cycles, payroll timing, receivables gaps, or recurring seasonal needs, not a one-time long-term purchase.</p>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Clean bank activity</span>
+      <p>Lenders want to see deposits, account behavior, and revenue flow that support a revolving facility without immediate stress.</p>
+    </article>
+    <article class="service-card">
+      <span class="card-label">Borrowing discipline</span>
+      <p>A line is strongest when the business can use only what it needs, repay it, and avoid turning a flexible product into permanent debt.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section split">
+  <div class="panel">
+    <p class="eyebrow">When I would slow the file down</p>
+    <ul class="plain-list">
+      <li>The request is really for equipment, refinance, or another long-duration use</li>
+      <li>Cash flow is too uneven for a lender to get comfortable with ongoing draws</li>
+      <li>The borrower needs speed now but is asking for a revolving product that may take longer to secure</li>
+    </ul>
+    <p>Those are the situations where a term loan, working capital loan, or bridge structure can be cleaner than forcing a line of credit request.</p>
+  </div>
+  <div class="proof-card">
+    <p class="eyebrow">Compare next</p>
+    <p>If you are choosing between flexibility and speed, compare revolving credit against the pages below before submitting the wrong request.</p>
+    <div class="cta-row">
+      <a class="button" href="/services/us-working-capital-loans/">Compare with working capital</a>
+      <a class="button button--secondary" href="/services/us-term-loans-approach/">Compare with term loans</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <p class="eyebrow">FAQ</p>
   <h2>Common line of credit questions.</h2>
   <div class="grid grid--2">
@@ -58,10 +97,10 @@ faq:
   <div class="cta-panel">
     <p class="eyebrow">Next Step</p>
     <h2>If you are not sure whether you need a line or a lump sum, start with the use of funds.</h2>
-    <p>I can help determine whether a revolving facility is cleaner than a short-term working capital loan or term loan for the way your business actually uses cash.</p>
+    <p>I can help determine whether a revolving facility is cleaner than a short-term working capital loan or term loan for the way your business actually uses cash. If repayment structure is the main question, the term calculator is also worth using before you apply.</p>
     <div class="cta-row">
       <a class="button" href="/apply/">Start application</a>
-      <a class="button button--secondary" href="/services/us-term-loans-approach/">Compare with term loans</a>
+      <a class="button button--secondary" href="/term-loan-calculator.html">Open term loan calculator</a>
     </div>
   </div>
 </section>
