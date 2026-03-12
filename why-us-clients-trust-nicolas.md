@@ -19,7 +19,7 @@ layout: default
       <p>That means being direct about speed, cost pressure, documentation, collateral, and whether the chosen structure is solving the right problem in the first place.</p>
       <div class="section-band__actions">
         <a class="button" href="/apply/">Start application</a>
-        <a class="button button--secondary" href="/reviews-us-funding/">See outcomes first</a>
+        <a class="button button--secondary" href="/reviews-us-funding/">See review themes first</a>
       </div>
     </div>
     <div class="mini-grid">
@@ -68,12 +68,12 @@ layout: default
     <p>The goal is to compress that uncertainty early, so the borrower spends time only on realistic options.</p>
   </div>
   <div class="proof-card">
-    <p class="eyebrow">What clients consistently seem to value</p>
+    <p class="eyebrow">What trust looks like in practice</p>
     <ul class="plain-list">
-      <li>Fast response and direct communication</li>
-      <li>Clear explanation of tradeoffs instead of pure sales language</li>
-      <li>Product recommendations tied to business reality</li>
-      <li>Support that continues through funding, not just lead generation</li>
+      <li>A quick initial read on whether the file is realistic</li>
+      <li>Honest pushback when a product looks wrong for the business</li>
+      <li>Tradeoffs explained before documentation starts flying</li>
+      <li>Steadier execution once the borrower is in motion</li>
     </ul>
   </div>
 </section>
@@ -118,10 +118,10 @@ layout: default
 <section class="section split">
   <div class="panel">
     <p class="eyebrow">Related pages</p>
-    <p>If you are assessing credibility before applying, these are the best next pages to read.</p>
+    <p>If you are assessing credibility before applying, use reviews for process quality and success stories for case-style deal breakdowns.</p>
     <div class="cta-row">
       <a class="button" href="/about-nicolas-lescalier-us/">About Nicolas</a>
-      <a class="button button--secondary" href="/reviews-us-funding/">Reviews and outcomes</a>
+      <a class="button button--secondary" href="/reviews-us-funding/">Reviews and feedback themes</a>
     </div>
   </div>
   <div class="proof-card">
