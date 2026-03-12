@@ -240,6 +240,11 @@
           "utm_term",
           "gclid",
         ];
+        const fallbackKeys = [
+          "landing_page",
+          "referrer_url",
+          "entry_path",
+        ];
 
         if (!forms.length || typeof window.fetch !== "function" || typeof window.FormData !== "function") {
           return;
@@ -264,6 +269,21 @@
           }
         };
 
+        const ensureSessionValue = (key, value) => {
+          try {
+            if (value && !window.sessionStorage.getItem(`nicolas_attribution_${key}`)) {
+              window.sessionStorage.setItem(`nicolas_attribution_${key}`, value);
+            }
+            return window.sessionStorage.getItem(`nicolas_attribution_${key}`) || value || "";
+          } catch (error) {
+            return value || "";
+          }
+        };
+
+        const entryPath = ensureSessionValue("entry_path", window.location.pathname);
+        const landingPage = ensureSessionValue("landing_page", window.location.href);
+        const referrerUrl = ensureSessionValue("referrer_url", document.referrer);
+
         const setStatus = (node, state, message) => {
           if (!node) {
             return;
@@ -279,13 +299,24 @@
           const statusNode = form.querySelector("[data-form-status]");
           const successUrl = form.dataset.successUrl;
           const originalButtonLabel = submitButton ? submitButton.textContent : "";
-          const readAttribution = () => attributionKeys.reduce((payload, key) => {
-            const field = form.querySelector(`[name="${key}"]`);
-            if (field?.value) {
-              payload[key] = field.value;
-            }
+          const readAttribution = () => {
+            const payload = attributionKeys.reduce((memo, key) => {
+              const field = form.querySelector(`[name="${key}"]`);
+              if (field?.value) {
+                memo[key] = field.value;
+              }
+              return memo;
+            }, {});
+
+            fallbackKeys.forEach((key) => {
+              const field = form.querySelector(`[name="${key}"]`);
+              if (field?.value) {
+                payload[key] = field.value;
+              }
+            });
+
             return payload;
-          }, {});
+          };
           const focusFirstInvalidField = () => {
             if (invalidFocusHandled) {
               return;
@@ -309,6 +340,19 @@
             const field = form.querySelector(`[name="${key}"]`);
             if (field) {
               field.value = readAttributionValue(key);
+            }
+          });
+
+          const fallbackValues = {
+            landing_page: landingPage,
+            referrer_url: referrerUrl,
+            entry_path: entryPath,
+          };
+
+          fallbackKeys.forEach((key) => {
+            const field = form.querySelector(`[name="${key}"]`);
+            if (field) {
+              field.value = fallbackValues[key] || "";
             }
           });
 

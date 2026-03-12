@@ -62,6 +62,9 @@ image: "/assets/social-contact.svg"
       <input type="hidden" name="utm_content">
       <input type="hidden" name="utm_term">
       <input type="hidden" name="gclid">
+      <input type="hidden" name="landing_page">
+      <input type="hidden" name="referrer_url">
+      <input type="hidden" name="entry_path">
       <div class="form-honeypot" aria-hidden="true">
         <label for="contact_company">Company</label>
         <input type="text" id="contact_company" name="_gotcha" tabindex="-1" autocomplete="off">

@@ -192,6 +192,9 @@ image: "/assets/social-apply.svg"
     <input type="hidden" name="utm_content">
     <input type="hidden" name="utm_term">
     <input type="hidden" name="gclid">
+    <input type="hidden" name="landing_page">
+    <input type="hidden" name="referrer_url">
+    <input type="hidden" name="entry_path">
     <div class="form-honeypot" aria-hidden="true">
       <label for="application_company">Company</label>
       <input type="text" id="application_company" name="_gotcha" tabindex="-1" autocomplete="off">
