@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "SBA 7(a) Loans | Nicolas Lescalier"
+title: "SBA 7(a) Business Loans"
 description: "Understand when SBA 7(a) loans are worth pursuing for acquisition, expansion, refinance, or long-term working capital."
 permalink: /services/us-sba-7a-loans/
 breadcrumb_title: SBA 7(a)
@@ -104,4 +104,8 @@ faq:
       <a class="button button--secondary" href="/services/us-term-loans-approach/">Compare with term loans</a>
     </div>
   </div>
+</section>
+
+<section class="section">
+  <p class="content-note"><strong>Official program information:</strong> Eligibility, permitted uses, maximum loan amounts, guaranty structure, and lender requirements can change. Confirm current rules directly with the <a href="https://www.sba.gov/funding-programs/loans/7a-loans" target="_blank" rel="noopener noreferrer">U.S. Small Business Administration’s 7(a) program page</a> and the participating lender.</p>
 </section>

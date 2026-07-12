@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Working Capital Offer Comparison | Nicolas Lescalier"
+title: "Working Capital Offer Comparison"
 description: "Compare two short-term working capital offers by factor rate, payback, remittance pace, monthly drag, and which structure is easier to carry."
 permalink: /working-capital-calculator.html
 breadcrumb_title: Working Capital Calculator
@@ -372,7 +372,7 @@ redirect_from:
     <div class="panel">
       <p class="eyebrow">Calculator</p>
       <h1>Compare working capital offers by real repayment pressure, not just headline speed.</h1>
-      <p>Short-term working capital pricing gets misread when the discussion stops at factor rate. This page turns two offers into the numbers that matter most in practice: total payback, cost of capital, payment cadence, and monthly drag on the business.</p>
+      <p>Short-term working capital pricing gets misread when the discussion stops at factor rate. This page turns two offers into the numbers that matter most in practice: total payback, fixed financing fee, payment cadence, and estimated monthly drag on the business.</p>
       <div class="cta-row">
         <a class="button" href="/services/us-working-capital-loans/">Read the working capital guide</a>
         <a class="button button--secondary" href="/apply/">Start application</a>
@@ -387,6 +387,10 @@ redirect_from:
         <li>The cleaner working capital offer is the one the business can absorb without creating the next problem.</li>
       </ul>
     </aside>
+  </section>
+
+  <section class="section">
+    <p class="content-note"><strong>Important:</strong> A factor rate is not an annual percentage rate. The calculator models fixed payback and estimated payment cadence only; it does not include reconciliation rights, fees outside the factor, holidays, defaults, renewals, or provider-specific contract terms.</p>
   </section>
 
   <section class="section">
@@ -439,7 +443,7 @@ redirect_from:
               <button type="submit" id="calculate1" class="btn-primary" disabled>Update results</button>
               <button class="mini-button mini-button--ghost" type="button" data-clear-deal="1">Clear</button>
             </div>
-            <p class="input-help">Business days are converted using 20 business days = 1 month for the monthly drag estimate.</p>
+            <p class="input-help">Business days are converted using 260 business days per year (about 21.67 per month). Actual holiday and remittance schedules vary.</p>
           </form>
 
           <div class="results" id="results1" hidden>
@@ -450,7 +454,7 @@ redirect_from:
                 <span class="metric-note" id="paybackNote1"></span>
               </article>
               <article class="metric-card">
-                <span class="metric-label">Cost of capital</span>
+                <span class="metric-label">Fixed financing fee</span>
                 <strong class="metric-value" id="capitalCost1"></strong>
                 <span class="metric-note" id="capitalCostNote1"></span>
               </article>
@@ -475,7 +479,7 @@ redirect_from:
                 <span class="metric-note" id="carryText1"></span>
               </article>
               <article class="signal-card">
-                <span class="metric-label">Cost load</span>
+                <span class="metric-label">Fixed fee load</span>
                 <strong class="signal-card__value" id="costLabel1"></strong>
                 <div class="signal-bar">
                   <span class="signal-bar__fill" id="costBar1"></span>
@@ -539,7 +543,7 @@ redirect_from:
                 <span class="metric-note" id="paybackNote2"></span>
               </article>
               <article class="metric-card">
-                <span class="metric-label">Cost of capital</span>
+                <span class="metric-label">Fixed financing fee</span>
                 <strong class="metric-value" id="capitalCost2"></strong>
                 <span class="metric-note" id="capitalCostNote2"></span>
               </article>
@@ -564,7 +568,7 @@ redirect_from:
                 <span class="metric-note" id="carryText2"></span>
               </article>
               <article class="signal-card">
-                <span class="metric-label">Cost load</span>
+                <span class="metric-label">Fixed fee load</span>
                 <strong class="signal-card__value" id="costLabel2"></strong>
                 <div class="signal-bar">
                   <span class="signal-bar__fill" id="costBar2"></span>
@@ -665,7 +669,7 @@ redirect_from:
   };
 
   const periodCounts = {
-    days: 20,
+    days: 260 / 12,
     weeks: 4.345,
     months: 1,
   };
@@ -734,12 +738,12 @@ redirect_from:
   function pressureProfile(monthlyBurden, advanceAmount) {
     const ratio = advanceAmount > 0 ? monthlyBurden / advanceAmount : 0;
     if (ratio <= 0.2) {
-      return { text: "Lower carry pressure", className: "tone--good" };
+      return { text: "Lower modeled payment intensity", className: "tone--good" };
     }
     if (ratio <= 0.35) {
-      return { text: "Moderate carry pressure", className: "tone--warn" };
+      return { text: "Higher modeled payment intensity", className: "tone--warn" };
     }
-    return { text: "High carry pressure", className: "tone--risk" };
+    return { text: "Very high modeled payment intensity", className: "tone--risk" };
   }
 
   function toMonths(termLength, termUnit) {
@@ -916,28 +920,28 @@ redirect_from:
       fields.totalPayback.textContent = `$${formatCurrency(result.totalPayback)}`;
       fields.paybackNote.textContent = `${result.paybackMultiple.toFixed(2)}x of the amount advanced`;
       fields.capitalCost.textContent = `$${formatCurrency(result.capitalCost)}`;
-      fields.capitalCostNote.textContent = `${result.costPercent.toFixed(1)}% cost of capital`;
+      fields.capitalCostNote.textContent = `${result.costPercent.toFixed(1)}% of the advance; this is not APR`;
       fields.periodicPayment.textContent = `$${formatCurrency(result.periodicPayment)}`;
       fields.periodicNote.textContent = `${periodLabels[result.termUnit]} for ${result.termLabel}`;
       fields.monthlyBurden.textContent = `$${formatCurrency(result.monthlyBurden)}`;
-      fields.pressureNote.textContent = `${result.pressure.text} | about $${formatCurrency(result.monthlyCost)}/month in cost`;
+      fields.pressureNote.textContent = `${result.pressure.text} | about $${formatCurrency(result.monthlyCost)}/month of fixed fee`;
       fields.pressureNote.className = `metric-note metric-note--tone ${result.pressure.className}`;
       fields.carryLabel.textContent = carrySignal.label;
       fields.carryBar.style.width = `${carrySignal.width}%`;
       fields.carryBar.className = carrySignal.fillClass;
       fields.carryText.textContent = result.carryRatio <= 0.2
-        ? "This repayment pace is comparatively lighter against the advance size."
+        ? "This is comparatively lighter against the advance size, but it still must be checked against actual free cash flow."
         : result.carryRatio <= 0.35
-          ? "This can work, but the business needs stable deposits and margin."
-          : "This deserves a tougher cash-flow screen before moving forward.";
+          ? "This modeled pace is substantial and should be compared with revenue volatility and existing debt."
+          : "This modeled pace is very high relative to the advance and requires a full cash-flow screen.";
       fields.costLabel.textContent = costSignal.label;
       fields.costBar.style.width = `${costSignal.width}%`;
       fields.costBar.className = costSignal.fillClass;
       fields.costText.textContent = result.costRatio <= 0.15
-        ? "The cost load is relatively contained for this type of working capital structure."
+        ? "The fixed fee is comparatively lower, but factor pricing should not be read as an annual interest rate."
         : result.costRatio <= 0.3
-          ? "The price may be acceptable if the speed genuinely matters."
-          : "The cost load is heavy enough to compare against cleaner products.";
+          ? "The fixed fee is meaningful enough to compare with term, LOC, or invoice-based alternatives."
+          : "The fixed fee is high and should be compared with lower-cost product families where timing permits.";
       fields.narrative.textContent = `${label} asks the business to absorb roughly $${formatCurrency(result.monthlyBurden)} per month over about ${result.months.toFixed(1)} months. That is the fast way to judge whether speed is worth the carry.`;
       fields.apply.href = buildApplyHref(result, label);
 
@@ -1081,11 +1085,11 @@ redirect_from:
         fields.totalPayback.textContent = `$${formatCurrency(result.totalPayback)}`;
         fields.paybackNote.textContent = `${result.paybackMultiple.toFixed(2)}x of the amount advanced`;
         fields.capitalCost.textContent = `$${formatCurrency(result.capitalCost)}`;
-        fields.capitalCostNote.textContent = `${result.costPercent.toFixed(1)}% cost of capital`;
+        fields.capitalCostNote.textContent = `${result.costPercent.toFixed(1)}% of the advance; this is not APR`;
         fields.periodicPayment.textContent = `$${formatCurrency(result.periodicPayment)}`;
         fields.periodicNote.textContent = `${periodLabels[result.termUnit]} for ${result.termLabel}`;
         fields.monthlyBurden.textContent = `$${formatCurrency(result.monthlyBurden)}`;
-        fields.pressureNote.textContent = `${result.pressure.text} | about $${formatCurrency(result.monthlyCost)}/month in cost`;
+        fields.pressureNote.textContent = `${result.pressure.text} | about $${formatCurrency(result.monthlyCost)}/month of fixed fee`;
         fields.pressureNote.className = `metric-note metric-note--tone ${result.pressure.className}`;
         const carrySignal = ratioSignal(result.carryRatio, [0.2, 0.35], ["Lighter carry", "Firm carry", "Aggressive carry"]);
         const costSignal = ratioSignal(result.costRatio, [0.15, 0.3], ["Lean cost", "Elevated cost", "Expensive cost"]);
@@ -1093,18 +1097,18 @@ redirect_from:
         fields.carryBar.style.width = `${carrySignal.width}%`;
         fields.carryBar.className = carrySignal.fillClass;
         fields.carryText.textContent = result.carryRatio <= 0.2
-          ? "This repayment pace is comparatively lighter against the advance size."
+          ? "This is comparatively lighter against the advance size, but it still must be checked against actual free cash flow."
           : result.carryRatio <= 0.35
-            ? "This can work, but the business needs stable deposits and margin."
-            : "This deserves a tougher cash-flow screen before moving forward.";
+            ? "This modeled pace is substantial and should be compared with revenue volatility and existing debt."
+            : "This modeled pace is very high relative to the advance and requires a full cash-flow screen.";
         fields.costLabel.textContent = costSignal.label;
         fields.costBar.style.width = `${costSignal.width}%`;
         fields.costBar.className = costSignal.fillClass;
         fields.costText.textContent = result.costRatio <= 0.15
-          ? "The cost load is relatively contained for this type of working capital structure."
+          ? "The fixed fee is comparatively lower, but factor pricing should not be read as an annual interest rate."
           : result.costRatio <= 0.3
-            ? "The price may be acceptable if the speed genuinely matters."
-            : "The cost load is heavy enough to compare against cleaner products.";
+            ? "The fixed fee is meaningful enough to compare with term, LOC, or invoice-based alternatives."
+            : "The fixed fee is high and should be compared with lower-cost product families where timing permits.";
         fields.narrative.textContent = `${deal.label} asks the business to absorb roughly $${formatCurrency(result.monthlyBurden)} per month over about ${result.months.toFixed(1)} months. That is the fast way to judge whether speed is worth the carry.`;
       }
     });

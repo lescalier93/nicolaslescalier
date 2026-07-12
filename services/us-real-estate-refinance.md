@@ -1,6 +1,6 @@
 ---
-title: "Commercial Real Estate Refinance | Nicolas Lescalier"
-description: "Learn when commercial real estate refinancing makes sense, what savings or cash-out opportunities to evaluate, and how Nicolas Lescalier structures refinance decisions."
+title: "Commercial Real Estate Refinance"
+description: "Learn when a CRE refinance fits, how to evaluate debt-service savings and cash-out proceeds, and which property metrics lenders typically review."
 layout: default
 permalink: /services/us-real-estate-refinance/
 breadcrumb_title: CRE Refinance

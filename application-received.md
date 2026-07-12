@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Application Received | Nicolas Lescalier"
+title: "Application Received"
 description: "Your financing application has been received. Use the next-step links to prepare documents, review calculators, or book a short call."
 permalink: /application-received/
 noindex: true
@@ -63,7 +63,7 @@ breadcrumb_title: Application Received
     <p>If the scenario still needs live clarification, book a short call instead of creating a long back-and-forth over email.</p>
     <div class="cta-row">
       <a class="button" href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call</a>
-      <a class="button button--secondary" href="/reviews-us-funding/">Read feedback themes</a>
+      <a class="button button--secondary" href="/reviews-us-funding/">Review client experience</a>
     </div>
   </div>
 </section>

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Equipment Financing | Nicolas Lescalier"
+title: "Business Equipment Financing"
 description: "See when equipment financing is the right structure for vehicles, machinery, medical tools, and asset-backed business purchases."
 permalink: /services/us-equipment-financing/
 breadcrumb_title: Equipment Financing

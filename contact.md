@@ -1,9 +1,9 @@
 ---
-title: "Contact Nicolas Lescalier | U.S. Business Financing"
-description: "Contact Nicolas Lescalier to review working capital loans, lines of credit, equipment finance, term loans, factoring, SBA 7(a), mortgage financing, and other funding options."
+title: "Contact Nicolas Lescalier"
+description: "Contact commercial finance broker Nicolas Lescalier to discuss a working capital, term loan, SBA, equipment, invoice finance, bridge, or CRE request."
 permalink: "/contact/"
 layout: default
-image: "/assets/social-contact.svg"
+image: "/assets/social-contact.png"
 breadcrumb_title: Contact
 ---
 
@@ -30,7 +30,7 @@ breadcrumb_title: Contact
       <div>
         <h3>Best channel</h3>
         <p>Use the message form on this page for a lighter first conversation, book a short call if you want to talk through the situation live, or go straight to the full application if you already have a financing request ready.</p>
-        <p class="link-stack"><a href="/apply/">Open full application</a><a href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call on Calendly</a><a href="/application-checklist/">Application checklist</a><a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></p>
+        <p class="link-stack"><a href="mailto:nlescalier@pmfus.com">nlescalier@pmfus.com</a><a href="/apply/">Open full application</a><a href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call on Calendly</a><a href="/application-checklist/">Application checklist</a><a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></p>
       </div>
       <div>
         <h3>What to include</h3>
@@ -67,8 +67,8 @@ breadcrumb_title: Contact
 
   <div class="contact-form">
     <p class="eyebrow">Message</p>
-    <h2>Send a direct financing inquiry</h2>
-    <p>I review inquiries personally. If the scenario is a fit, I will outline the most likely financing path and next documents required. If you would rather talk through it live, you can also <a href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">book a short call</a>.</p>
+    <h2>Send a commercial finance inquiry</h2>
+    <p>I review inquiries personally as a commercial finance broker and Senior Funding Advisor at Premium Merchant Funding. If the scenario is workable, I will outline the most likely financing path and next information required. You can also <a href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">book a short call</a>.</p>
     <form name="contact_inquiry" action="https://formspree.io/f/maypkwyo" method="POST" data-ajax-form="true" data-success-url="/contact-thank-you/">
       <input type="hidden" name="_subject" value="New contact inquiry from nicolaslescalier.com">
       <input type="hidden" name="utm_source">
@@ -128,13 +128,14 @@ breadcrumb_title: Contact
           <div class="checkbox-list__item">
             <input type="checkbox" id="contact_consent_sms_marketing" name="consent_sms_marketing">
             <div class="checkbox-list__copy">
-              <label class="checkbox-list__label" for="contact_consent_sms_marketing">By checking this box, you agree to receive marketing text messages (e.g., payment reminders, promotional offers, customer care) at the cell number provided. Message frequency varies. Consent is not a condition of any purchase. Message &amp; data rates may apply. Reply STOP to unsubscribe or HELP for assistance.</label>
-              <p class="checkbox-list__legal">For support, contact us at <a href="tel:+13056993636">305.699.3636</a>. Information gathered in this SMS program will not be shared with third parties or affiliates for marketing purposes. I have read and agree to the <a href="/terms-and-conditions/">Terms and Conditions</a> and <a href="/privacy-policy/">Privacy Policy</a>.</p>
+              <label class="checkbox-list__label" for="contact_consent_sms_marketing">I agree to receive recurring marketing text messages from Nicolas Lescalier and Premium Merchant Funding at the mobile number provided. Message frequency varies. Consent is not a condition of financing. Message and data rates may apply. Reply STOP to opt out or HELP for assistance.</label>
+              <p class="checkbox-list__legal">Support: <a href="tel:+13056993636">305.699.3636</a>. SMS consent data will not be shared with third parties or affiliates for their own marketing purposes. See the <a href="/terms-and-conditions/">Terms</a> and <a href="/privacy-policy/">Privacy Policy</a>.</p>
             </div>
           </div>
         </div>
       </div>
 
+      <p class="form-submit-note">By submitting, you authorize Nicolas Lescalier and Premium Merchant Funding to contact you by phone or email about this request and to share the submitted business information with appropriate financing providers for evaluation. Submission does not guarantee approval or authorize a credit pull.</p>
       <p class="form-status" data-form-status hidden aria-live="polite"></p>
       <button class="button" type="submit">Send inquiry</button>
     </form>

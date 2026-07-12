@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Invoice Factoring | Nicolas Lescalier"
+title: "Invoice Factoring for Businesses"
 description: "Understand when factoring makes sense for businesses waiting on invoices and how it compares with other working capital options."
 permalink: /services/us-factoring/
 breadcrumb_title: Factoring

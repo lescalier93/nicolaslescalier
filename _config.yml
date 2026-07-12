@@ -2,15 +2,21 @@
 
 # Basic settings
 url: "https://nicolaslescalier.com"
-title: "Nicolas Lescalier | U.S. Business Financing"
-description: "Trusted U.S. business financing specialist helping small and mid-sized companies secure working capital loans, term loans, bridge loans and commercial real estate financing."
+title: "Nicolas Lescalier"
+tagline: "U.S. Business Financing"
+description: "Commercial finance guidance for U.S. businesses comparing working capital, lines of credit, term loans, SBA, equipment, invoice finance, and CRE options."
 google_analytics_id: "G-F2SD579BRL"
-social_image: "/assets/social-card.svg"
-asset_version: "20260312-1"
+social_image: "/assets/social-card.png"
+social_image_width: 1200
+social_image_height: 630
+asset_version: "20260712-1"
 
-# Plugins to automatically generate SEO metadata and sitemap
+author:
+  name: "Nicolas Lescalier"
+  url: "https://nicolaslescalier.com/about-nicolas-lescalier-us/"
+
+# Plugins for sitemap generation and legacy URL redirects
 plugins:
-  - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-redirect-from
 

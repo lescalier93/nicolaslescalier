@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Inquiry Received | Nicolas Lescalier"
+title: "Inquiry Received"
 description: "Your financing inquiry has been received. Use the next-step links to book a call, start a full application, or prepare the details that matter most."
 permalink: /contact-thank-you/
 noindex: true

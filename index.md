@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Nicolas Lescalier | U.S. Business Financing Specialist"
-description: "Nicolas Lescalier helps U.S. businesses secure working capital loans, lines of credit, equipment financing, term loans, factoring, PO financing, SBA 7(a), bridge loans, and commercial mortgage financing."
+title: "U.S. Business Financing Specialist"
+description: "Compare working capital, lines of credit, term loans, SBA, equipment, invoice finance, and CRE options with commercial finance broker Nicolas Lescalier."
 permalink: /
 faq:
   - question: "How fast can funding happen?"
@@ -19,7 +19,7 @@ faq:
     <div>
       <p class="eyebrow">Broad product access, direct guidance</p>
       <h1>Funding that fits the business you are actually running.</h1>
-      <p class="lede">I help U.S. operators secure working capital, lines of credit, equipment financing, term loans, factoring, PO financing, SBA 7(a), bridge loans, and commercial real estate capital without wasting weeks in the wrong process. The goal is simple: match the structure to your timeline, cash flow, and growth plan.</p>
+      <p class="lede">I help U.S. operators compare working capital, lines of credit, equipment financing, term loans, factoring, PO financing, SBA 7(a), bridge loans, and commercial real estate capital without wasting weeks in the wrong process. The goal is simple: match the structure to your timeline, cash flow, and growth plan.</p>
       <div class="hero__actions">
         <a class="button" href="/apply/">Start Application</a>
         <a class="button button--secondary" href="/resources.html">Open Tools & Calculators</a>
@@ -49,8 +49,8 @@ faq:
           <span>Experience structuring alternative financing for operating businesses.</span>
         </div>
         <div class="stat">
-          <strong>Nationwide</strong>
-          <span>Coverage across operating businesses, invoice-driven companies, and CRE borrowers.</span>
+          <strong>U.S. business coverage</strong>
+          <span>Product availability depends on provider, state, industry, and applicant qualifications.</span>
         </div>
       </div>
     </div>
@@ -74,6 +74,19 @@ faq:
         </div>
       </div>
     </aside>
+  </div>
+</section>
+
+<section class="section">
+  <div class="identity-card">
+    <p class="eyebrow">Professional role</p>
+    <p class="identity-card__role">Nicolas Lescalier — Senior Funding Advisor at Premium Merchant Funding</p>
+    <p>I am a commercial finance broker, not a direct lender. I help business owners prepare requests, compare realistic product paths, and communicate with third-party capital providers. Final approval, pricing, and documentation are determined by the provider.</p>
+    <p class="identity-card__links">
+      <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>
+      <a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:nlescalier@pmfus.com">nlescalier@pmfus.com</a>
+    </p>
   </div>
 </section>
 
@@ -172,9 +185,9 @@ faq:
 </section>
 
 <section class="section">
-  <p class="eyebrow">Why clients hire me</p>
-  <h2>A financing advisor who is comfortable with nuance.</h2>
-  <p class="section-intro">Most borrowers do not need more lender noise. They need help narrowing the right product, avoiding bad-fit offers, and getting to a decision quickly. I work with small and mid-sized U.S. companies that want clarity on tradeoffs before signing anything.</p>
+  <p class="eyebrow">Representative scenarios</p>
+  <h2>How product fit can change a financing outcome.</h2>
+  <p class="section-intro">Most borrowers do not need more lender noise. They need help narrowing the right product, avoiding bad-fit offers, and getting to a decision quickly. These simplified scenarios show the kind of tradeoffs that matter; they are educational examples, not testimonials or promises of identical results.</p>
   <div class="grid grid--3">
     <article class="proof-card proof-card--outcome">
       <span class="card-label">Hospitality | Florida</span>
@@ -184,7 +197,7 @@ faq:
         <span>Fit: speed-sensitive working capital</span>
       </div>
       <p>A restaurant group needed capital quickly after a slow season and did not have time for a bank process that was moving too slowly.</p>
-      <p><strong>Outcome:</strong> The file closed inside three days, helped the group refresh operations, and gave the business room to recover revenue before the next cycle.</p>
+      <p><strong>Structure objective:</strong> Move quickly enough to protect the operating plan while confirming that projected revenue can support the frequent payment.</p>
     </article>
     <article class="proof-card proof-card--outcome">
       <span class="card-label">Manufacturing | Ohio</span>
@@ -194,7 +207,7 @@ faq:
         <span>Fit: fixed repayment, cleaner collateral</span>
       </div>
       <p>An industrial supplier needed expansion capital but wanted to avoid an overly aggressive collateral structure that would restrict the business later.</p>
-      <p><strong>Outcome:</strong> The loan supported capacity growth with manageable monthly payments and a structure better aligned with a longer operating timeline.</p>
+      <p><strong>Structure objective:</strong> Match repayment to the equipment’s useful life and avoid using short-duration capital for a longer-lived asset.</p>
     </article>
     <article class="proof-card proof-card--outcome">
       <span class="card-label">Real Estate | Arizona</span>
@@ -204,12 +217,12 @@ faq:
         <span>Fit: short-term bridge to permanent debt</span>
       </div>
       <p>A developer needed fast bridge capital while waiting for longer-term financing to be finalized and could not afford deal slippage.</p>
-      <p><strong>Outcome:</strong> Bridge execution preserved the transaction timeline and later transitioned into longer-term commercial real estate debt.</p>
+      <p><strong>Structure objective:</strong> Preserve the transaction timeline while maintaining a documented exit into sale proceeds or longer-term commercial real estate debt.</p>
     </article>
   </div>
     <div class="cta-row">
-      <a class="button button--secondary" href="/reviews-us-funding/">Read more reviews</a>
-      <a class="button button--secondary" href="/services/us-client-success-stories/">Read more success stories</a>
+      <a class="button button--secondary" href="/reviews-us-funding/">Review the client experience standard</a>
+      <a class="button button--secondary" href="/services/us-client-success-stories/">Review more case examples</a>
     </div>
 </section>
 

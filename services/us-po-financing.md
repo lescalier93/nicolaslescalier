@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Purchase Order Financing | Nicolas Lescalier"
+title: "Purchase Order Financing"
 description: "See when purchase order financing is the right structure for businesses that need capital to fulfill large customer orders."
 permalink: /services/us-po-financing/
 breadcrumb_title: PO Financing

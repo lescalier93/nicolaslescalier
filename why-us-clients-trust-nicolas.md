@@ -1,14 +1,14 @@
 ---
-title: "Why Clients Trust Nicolas Lescalier | U.S. Business Financing"
-description: "See why borrowers choose Nicolas Lescalier for clearer financing guidance, stronger product fit, and more disciplined deal execution."
+title: "Why Clients Work With Nicolas Lescalier"
+description: "See how Nicolas Lescalier approaches commercial finance requests with transparent tradeoffs, product fit, preparation, and direct communication."
 permalink: "/why-us-clients-trust-nicolas/"
 layout: default
 breadcrumb_title: Why Clients Trust Nicolas
 ---
 
 <section class="section">
-  <p class="eyebrow">Why Clients Trust Nicolas Lescalier</p>
-  <h1>Borrowers trust clarity more than hype.</h1>
+  <p class="eyebrow">Working with Nicolas Lescalier</p>
+  <h1>Commercial financing should be explained without hype.</h1>
   <p class="section-intro">Financing is a high-friction decision. The reason clients keep coming back is not marketing language. It is knowing how the process will work, what the lender will care about, and where the risks sit before the deal moves forward.</p>
 </section>
 
@@ -20,7 +20,7 @@ breadcrumb_title: Why Clients Trust Nicolas
       <p>That means being direct about speed, cost pressure, documentation, collateral, and whether the chosen structure is solving the right problem in the first place.</p>
       <div class="section-band__actions">
         <a class="button" href="/apply/">Start application</a>
-        <a class="button button--secondary" href="/reviews-us-funding/">See review themes first</a>
+        <a class="button button--secondary" href="/reviews-us-funding/">Review the client experience standard</a>
       </div>
     </div>
     <div class="mini-grid">
@@ -80,17 +80,17 @@ breadcrumb_title: Why Clients Trust Nicolas
 </section>
 
 <section class="section">
-  <p class="eyebrow">Trust signals</p>
+  <p class="eyebrow">Professional transparency</p>
   <div class="grid grid--2">
     <article class="service-card">
-      <span class="card-label">Branded Search</span>
-      <h3>Consistent public positioning</h3>
-      <p>The site is intentionally structured so people searching for Nicolas Lescalier can quickly find background, process, reviews, success stories, and a direct contact path instead of weak or low-context search results.</p>
+      <span class="card-label">Role</span>
+      <h3>Broker status stated clearly</h3>
+      <p>Nicolas is a commercial finance broker and Senior Funding Advisor at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>, not a direct lender. Third-party providers make final approval and pricing decisions.</p>
     </article>
     <article class="service-card">
-      <span class="card-label">Application Readiness</span>
-      <h3>Prepared borrowers convert faster</h3>
-      <p>Borrowers who understand the likely product path and have the right documents ready tend to get better traction and fewer dead-end conversations.</p>
+      <span class="card-label">Contact</span>
+      <h3>Verifiable professional channels</h3>
+      <p>Borrowers can verify the professional affiliation, review the public <a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>, and contact Nicolas directly at <a href="mailto:nlescalier@pmfus.com">nlescalier@pmfus.com</a>.</p>
     </article>
   </div>
 </section>
@@ -119,10 +119,10 @@ breadcrumb_title: Why Clients Trust Nicolas
 <section class="section split">
   <div class="panel">
     <p class="eyebrow">Related pages</p>
-    <p>If you are assessing credibility before applying, use reviews for process quality and success stories for case-style deal breakdowns.</p>
+    <p>If you are assessing the process before applying, use the client-experience page for working standards and case examples for structure breakdowns.</p>
     <div class="cta-row">
       <a class="button" href="/about-nicolas-lescalier-us/">About Nicolas</a>
-      <a class="button button--secondary" href="/reviews-us-funding/">Reviews and feedback themes</a>
+      <a class="button button--secondary" href="/reviews-us-funding/">Client experience standard</a>
     </div>
   </div>
   <div class="proof-card">
