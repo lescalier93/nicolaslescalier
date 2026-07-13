@@ -7,27 +7,27 @@ image: "/assets/social-apply.png"
 breadcrumb_title: Application
 ---
 
-<section class="section">
-  <div class="section-band">
-    <div class="section-band__panel">
+<section class="section application-hero">
+  <div class="application-hero__grid">
+    <div>
       <p class="eyebrow">Business financing application</p>
       <h1>Start with the facts that determine product fit.</h1>
-      <p>This concise intake covers the amount, timing, revenue, use of proceeds, and current constraints. It is enough for an initial broker review without collecting sensitive documents on a public form.</p>
-      <div class="section-band__actions">
+      <p class="application-hero__copy">Nine required fields cover the amount, timing, revenue, use of proceeds, and contact details needed for an initial broker review. Sensitive documents are never requested on this public form.</p>
+      <div class="hero__actions">
         <a class="button" href="#application-form">Start application</a>
         <a class="button button--secondary" href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call instead</a>
       </div>
     </div>
-    <div class="mini-grid">
-      <article class="mini-card">
-        <h3>Usually about 3 minutes</h3>
-        <p>Nine required fields plus focused selectors. Optional underwriting context stays collapsed unless you want to add it.</p>
-      </article>
-      <article class="mini-card">
-        <h3>No sensitive documents</h3>
-        <p>Do not submit SSN, tax returns, bank statements, login credentials, government ID, or bank-account information here.</p>
-      </article>
-    </div>
+    <aside class="application-hero__facts" aria-label="Application overview">
+      <div class="application-hero__fact">
+        <strong>About 3 minutes</strong>
+        <span>Optional underwriting context stays collapsed unless you want to add it.</span>
+      </div>
+      <div class="application-hero__fact">
+        <strong>No sensitive documents</strong>
+        <span>Do not enter SSN, tax returns, bank statements, credentials, IDs, or bank-account information.</span>
+      </div>
+    </aside>
   </div>
 </section>
 
