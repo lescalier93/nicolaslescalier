@@ -1,6 +1,6 @@
 ---
-title: "About Nicolas Lescalier | U.S. Business Financing Specialist"
-description: "Learn about Nicolas Lescalier, his background in U.S. business financing, and the way he helps operators and investors evaluate funding options."
+title: "About Nicolas Lescalier"
+description: "Learn how Senior Funding Advisor Nicolas Lescalier helps U.S. business owners compare commercial financing structures and prepare stronger requests."
 permalink: "/about-nicolas-lescalier-us/"
 layout: default
 breadcrumb_title: About
@@ -12,8 +12,9 @@ redirect_from:
 <section class="section split">
   <div class="panel">
     <p class="eyebrow">About Nicolas Lescalier</p>
-    <h1>Direct financing guidance for operators who need clarity fast.</h1>
-    <p>I work with U.S. business owners and commercial real estate borrowers who need practical help choosing the right financing structure. My role is not to push every file into the same product. It is to narrow the realistic path, flag the weak spots early, and help the borrower move with more confidence.</p>
+    <h1>Commercial finance guidance for operators who need clarity fast.</h1>
+    <p>I am a commercial finance broker and Senior Funding Advisor at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>. I work with U.S. business owners and commercial real estate borrowers who need practical help choosing a realistic financing structure.</p>
+    <p>My role is not to approve or fund transactions directly. It is to narrow the available path, flag weak spots early, prepare the request, and help the borrower compare third-party financing options with more confidence.</p>
     <p>My work spans working capital loans, lines of credit, term loans, equipment financing, invoice-driven solutions, SBA paths, bridge financing, and broader commercial mortgage scenarios.</p>
   </div>
   <div class="proof-card">
@@ -24,6 +25,20 @@ redirect_from:
       <li>Help choosing between multiple financing paths</li>
       <li>A straightforward explanation of cost, structure, and risk</li>
     </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="identity-card">
+    <p class="eyebrow">Verify and contact</p>
+    <p class="identity-card__role">Senior Funding Advisor | Premium Merchant Funding</p>
+    <p>More than five years of commercial and alternative-finance experience across operating-business and real-estate scenarios. Product availability, approval, and terms are determined by third-party providers.</p>
+    <p class="identity-card__links">
+      <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">PMF website</a>
+      <a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>
+      <a href="mailto:nlescalier@pmfus.com">nlescalier@pmfus.com</a>
+      <a href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call</a>
+    </p>
   </div>
 </section>
 
@@ -109,10 +124,10 @@ redirect_from:
   </div>
   <div class="proof-card">
     <p class="eyebrow">Next Pages</p>
-    <p>If you want to evaluate credibility and process before reaching out, start with the trust and reviews pages below.</p>
+    <p>If you want to evaluate process before reaching out, start with the working-standard and case-example pages below.</p>
     <div class="cta-row">
       <a class="button" href="/why-us-clients-trust-nicolas/">Why clients trust Nicolas</a>
-      <a class="button button--secondary" href="/reviews-us-funding/">Read reviews and feedback themes</a>
+      <a class="button button--secondary" href="/reviews-us-funding/">Review the client experience standard</a>
     </div>
   </div>
 </section>

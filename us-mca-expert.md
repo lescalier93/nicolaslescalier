@@ -1,6 +1,6 @@
 ---
-title: "U.S. Working Capital Loans | Nicolas Lescalier"
-description: "Learn when a short-term working capital loan makes sense, how repayment works, and how Nicolas Lescalier helps U.S. businesses evaluate fast-turn working capital offers responsibly."
+title: "U.S. Working Capital Loans"
+description: "Learn when short-term working capital fits, how factor-based repayment works, what it costs, and which cash-flow risks to check before accepting an offer."
 layout: default
 permalink: /services/us-working-capital-loans/
 breadcrumb_title: Working Capital Loans

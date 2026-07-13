@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Term Loan Calculator | Nicolas Lescalier"
+title: "Business Term Loan Calculator"
 description: "Model term loan payments, solve for the missing variable, review amortization, and carry the scenario into a financing application."
 permalink: /term-loan-calculator.html
 breadcrumb_title: Term Loan Calculator
@@ -387,8 +387,8 @@ breadcrumb_title: Term Loan Calculator
   <section class="section tool-intro">
     <div class="panel">
       <p class="eyebrow">Calculator</p>
-      <h1>Model whether a term loan payment actually fits the business.</h1>
-      <p>This calculator solves for the missing variable, builds the amortization, and shows the numbers borrowers usually underestimate: the payment, the total interest, and how long the cash flow has to carry the debt.</p>
+      <h1>Model a term loan, then test the payment against available cash flow.</h1>
+      <p>This calculator solves for the missing loan variable, builds the amortization, and shows the payment, total interest, payoff horizon, and optional debt-service coverage estimate.</p>
       <div class="cta-row">
         <a class="button" id="termScenarioLink" href="/apply/">Use this scenario in application</a>
         <a class="button button--secondary" href="/services/us-term-loans-approach/">Read the term loan guide</a>
@@ -400,7 +400,7 @@ breadcrumb_title: Term Loan Calculator
       <ul class="plain-list">
         <li>Use it to back into payment, rate, loan amount, or term.</li>
         <li>Annual schedule view groups the monthly amortization into yearly totals.</li>
-        <li>If the solved result looks unrealistic, the structure is likely weak before the lender review starts.</li>
+        <li>If the solved result looks unrealistic, revise the assumptions before treating it as a viable financing path.</li>
       </ul>
     </aside>
   </section>
@@ -423,8 +423,8 @@ breadcrumb_title: Term Loan Calculator
   <section class="section">
     <div class="insight-grid">
       <article class="insight-card">
-        <h3>Useful for longer-term fit</h3>
-        <p>Model whether the monthly load still works after payroll, rent, inventory, and existing debt are taken into account.</p>
+        <h3>Useful for payment modeling</h3>
+        <p>Compare the monthly payment with cash genuinely available after payroll, rent, inventory, taxes, and existing debt.</p>
       </article>
       <article class="insight-card">
         <h3>Structure matters as much as rate</h3>
@@ -432,7 +432,7 @@ breadcrumb_title: Term Loan Calculator
       </article>
       <article class="insight-card">
         <h3>Best when tied to a real use of proceeds</h3>
-        <p>A calculator can tell you whether the debt fits. It cannot decide whether term, SBA, LOC, or equipment finance is the better product family.</p>
+        <p>A calculator can model the debt. It cannot decide whether term, SBA, LOC, or equipment finance is the better product family.</p>
       </article>
     </div>
   </section>
@@ -470,7 +470,7 @@ breadcrumb_title: Term Loan Calculator
 
     <div class="fit-strip" id="fitStrip" hidden>
       <article class="fit-card">
-        <span class="summary-label">Payment intensity</span>
+        <span class="summary-label">Cash-flow coverage</span>
         <strong class="summary-value" id="fitPaymentLabel"></strong>
         <div class="fit-meter">
           <span class="fit-meter__fill" id="fitPaymentMeter"></span>
@@ -494,7 +494,7 @@ breadcrumb_title: Term Loan Calculator
         <span class="summary-note" id="fitDurationText"></span>
       </article>
       <article class="fit-card fit-card--accent">
-        <span class="summary-label">Advisor read</span>
+        <span class="summary-label">Model status</span>
         <strong class="summary-value" id="fitVerdictLabel"></strong>
         <span class="summary-note" id="fitVerdictText"></span>
       </article>
@@ -522,7 +522,7 @@ breadcrumb_title: Term Loan Calculator
             Solve for this
           </label>
         </div>
-        <p class="field-help">Annual nominal rate. Leave it as the solved field if you want to back into the implied pricing.</p>
+        <p class="field-help">Annual nominal rate, excluding fees. This is not APR. Leave it as the solved field to estimate the implied nominal rate.</p>
       </div>
 
       <div class="form-group">
@@ -548,7 +548,15 @@ breadcrumb_title: Term Loan Calculator
         </div>
         <p class="field-help">Usually the most useful solve target when a borrower wants to know if the debt actually fits.</p>
       </div>
+
+      <div class="form-group">
+        <label for="cashAvailable">Monthly cash available for this debt ($)</label>
+        <input id="cashAvailable" type="text" value="" inputmode="decimal" placeholder="Optional">
+        <p class="field-help">Use cash available after operating expenses and existing debt—not gross revenue. This enables the coverage estimate.</p>
+      </div>
     </div>
+
+    <p class="content-note"><strong>Model limitation:</strong> Calculations assume level monthly payments and monthly compounding. They exclude fees, closing costs, variable rates, balloon payments, prepayment terms, and provider-specific requirements.</p>
 
     <div class="schedule-actions">
       <div class="freq">
@@ -611,12 +619,12 @@ breadcrumb_title: Term Loan Calculator
   </section>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.4/jspdf.plugin.autotable.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha384-JcnsjUPPylna1s1fvi1u12X5qjY5OL56iySh75FdtrwhO/SWXgMjoVqcKyIIWOLk" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.4/jspdf.plugin.autotable.min.js" integrity="sha384-Xl/CUCfJbzsngMp0CFxkmF0VW/8C160IsGujqeQlIhaGxKz2+JsIGORFqtCPeldF" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
   const $ = (id) => document.getElementById(id);
-  const currencyFields = new Set(["loanAmount", "payment"]);
+  const currencyFields = new Set(["loanAmount", "payment", "cashAvailable"]);
   const decimalFields = new Set(["interestRate", "loanTerm"]);
 
   function fmt(value) {
@@ -750,6 +758,7 @@ breadcrumb_title: Term Loan Calculator
     const rateAnnual = parseValue($("interestRate").value);
     const termYears = parseValue($("loanTerm").value);
     const payment = parseValue($("payment").value);
+    const cashAvailable = parseValue($("cashAvailable").value);
     const solveField = getSolveField();
 
     return {
@@ -759,17 +768,21 @@ breadcrumb_title: Term Loan Calculator
       termYears,
       months: Math.round(termYears * 12),
       payment,
+      cashAvailable,
       frequency: $("frequency").value,
       solveField,
     };
   }
 
   function buildApplyHref(result) {
+    const coverage = result.cashAvailable > 0 && result.payment > 0
+      ? `, monthly cash available $${fmt(result.cashAvailable)}, modeled coverage ${(result.cashAvailable / result.payment).toFixed(2)}x`
+      : "";
     const params = new URLSearchParams({
       product_interest: "Term loan",
       amount_requested: amountRange(result.amount),
       use_of_proceeds: "Evaluating whether a term loan payment fits the business and repayment timeline.",
-      additional_context: `Term scenario: $${fmt(result.amount)} amount, ${fmt(result.rateAnnual)}% annual rate, ${fmt(result.termYears)} years, monthly payment $${fmt(result.payment)}, total interest $${fmt(result.totalInterest)}.`,
+      additional_context: `Term scenario: $${fmt(result.amount)} amount, ${fmt(result.rateAnnual)}% nominal annual rate, ${fmt(result.termYears)} years, monthly payment $${fmt(result.payment)}, total interest $${fmt(result.totalInterest)}${coverage}.`,
       lead_source: "term_calculator",
       scenario_origin: result.solveField,
     });
@@ -976,7 +989,7 @@ breadcrumb_title: Term Loan Calculator
     $("summaryInterest").textContent = `$${fmt(result.totalInterest)}`;
     $("summaryInterestNote").textContent = result.rateAnnual === 0
       ? "Zero interest scenario."
-      : `${fmt(result.rateAnnual)}% annual rate across the full term.`;
+      : `${fmt(result.rateAnnual)}% nominal annual rate across the full term; fees are excluded.`;
 
     $("summaryHorizon").textContent = `${fmt(result.termYears)} years`;
     $("summaryHorizonNote").textContent = result.frequency === "monthly"
@@ -989,22 +1002,36 @@ breadcrumb_title: Term Loan Calculator
   }
 
   function renderFitStrip(result) {
-    const paymentRatio = result.amount > 0 ? result.payment / result.amount : 0;
     const interestRatio = result.amount > 0 ? result.totalInterest / result.amount : 0;
     const durationRatio = Math.min(result.termYears / 10, 1);
+    const coverageRatio = result.cashAvailable > 0 && result.payment > 0
+      ? result.cashAvailable / result.payment
+      : 0;
 
-    const paymentSignal = bandSignal(paymentRatio, [0.03, 0.06], ["Light", "Balanced", "Heavy"]);
     const interestSignal = bandSignal(interestRatio, [0.15, 0.35], ["Lean", "Moderate", "Heavy"]);
     const durationSignal = bandSignal(durationRatio, [0.3, 0.7], ["Short", "Standard", "Extended"]);
 
-    $("fitPaymentLabel").textContent = paymentSignal.label;
-    $("fitPaymentMeter").style.width = `${paymentSignal.width}%`;
-    $("fitPaymentMeter").className = paymentSignal.fillClass;
-    $("fitPaymentText").textContent = paymentRatio <= 0.03
-      ? "A lighter monthly load relative to the requested principal."
-      : paymentRatio <= 0.06
-        ? "Usually workable if margins and seasonality are controlled."
-        : "This monthly load deserves a tougher cash-flow check.";
+    if (coverageRatio >= 1.5) {
+      $("fitPaymentLabel").textContent = `${coverageRatio.toFixed(2)}x buffer`;
+      $("fitPaymentMeter").style.width = "88%";
+      $("fitPaymentMeter").className = "fit-meter__fill fit-meter__fill--good";
+      $("fitPaymentText").textContent = "Modeled available cash is at least 1.50x the monthly payment.";
+    } else if (coverageRatio >= 1.25) {
+      $("fitPaymentLabel").textContent = `${coverageRatio.toFixed(2)}x tighter`;
+      $("fitPaymentMeter").style.width = "62%";
+      $("fitPaymentMeter").className = "fit-meter__fill fit-meter__fill--warn";
+      $("fitPaymentText").textContent = "Modeled coverage is above 1.25x but leaves a smaller volatility buffer.";
+    } else if (coverageRatio > 0) {
+      $("fitPaymentLabel").textContent = `${coverageRatio.toFixed(2)}x pressure`;
+      $("fitPaymentMeter").style.width = "94%";
+      $("fitPaymentMeter").className = "fit-meter__fill fit-meter__fill--risk";
+      $("fitPaymentText").textContent = "Modeled available cash is below 1.25x the payment and deserves a stronger review.";
+    } else {
+      $("fitPaymentLabel").textContent = "Not assessed";
+      $("fitPaymentMeter").style.width = "0%";
+      $("fitPaymentMeter").className = "fit-meter__fill";
+      $("fitPaymentText").textContent = "Add monthly cash available for debt service to estimate coverage.";
+    }
 
     $("fitInterestLabel").textContent = interestSignal.label;
     $("fitInterestMeter").style.width = `${interestSignal.width}%`;
@@ -1012,7 +1039,7 @@ breadcrumb_title: Term Loan Calculator
     $("fitInterestText").textContent = interestRatio <= 0.15
       ? "The long-run interest cost is relatively contained."
       : interestRatio <= 0.35
-        ? "Reasonable only if the use of proceeds clearly earns it."
+        ? "The modeled interest is meaningful and should be compared with the return from the use of proceeds."
         : "The interest burden is high enough to compare alternatives.";
 
     $("fitDurationLabel").textContent = durationSignal.label;
@@ -1024,15 +1051,18 @@ breadcrumb_title: Term Loan Calculator
         ? "A standard term range for many business-use cases."
         : "A longer commitment that should match a durable business need.";
 
-    if (paymentRatio <= 0.04 && interestRatio <= 0.3) {
-      $("fitVerdictLabel").textContent = "Clean first look";
-      $("fitVerdictText").textContent = "This structure looks like a reasonable starting point if the borrower can document stable operating cash flow.";
-    } else if (paymentRatio <= 0.06 && interestRatio <= 0.45) {
-      $("fitVerdictLabel").textContent = "Workable with discipline";
-      $("fitVerdictText").textContent = "The structure may still fit, but the file should be checked against existing debt and real monthly volatility.";
+    if (!coverageRatio) {
+      $("fitVerdictLabel").textContent = "Payment math only";
+      $("fitVerdictText").textContent = "The amortization is calculated, but affordability cannot be assessed without cash available for debt service.";
+    } else if (coverageRatio >= 1.5) {
+      $("fitVerdictLabel").textContent = "Stronger modeled buffer";
+      $("fitVerdictText").textContent = "The cash-flow input shows a larger payment buffer. Verify it against actual statements, seasonality, and existing obligations.";
+    } else if (coverageRatio >= 1.25) {
+      $("fitVerdictLabel").textContent = "Tighter modeled buffer";
+      $("fitVerdictText").textContent = "The coverage estimate is positive but sensitive to volatility. Verify normalized cash flow and existing debt.";
     } else {
-      $("fitVerdictLabel").textContent = "Pressure-test alternatives";
-      $("fitVerdictText").textContent = "This is where I would compare LOC, SBA, equipment finance, or a smaller ask before treating term debt as the obvious answer.";
+      $("fitVerdictLabel").textContent = "Coverage pressure";
+      $("fitVerdictText").textContent = "The modeled cash buffer is thin. Compare a smaller request, longer term, or another product before treating this payment as affordable.";
     }
 
     $("fitStrip").hidden = false;
@@ -1082,6 +1112,7 @@ breadcrumb_title: Term Loan Calculator
     $("interestRate").value = "10.50";
     $("loanTerm").value = "10.00";
     $("payment").value = "4,722.72";
+    $("cashAvailable").value = "";
     $("solvePayment").checked = true;
     $("frequency").value = "monthly";
     setEditableState();
@@ -1117,6 +1148,7 @@ breadcrumb_title: Term Loan Calculator
     $("interestRate").value = fmt(preset.rateAnnual);
     $("loanTerm").value = fmt(preset.termYears);
     $("payment").value = "";
+    $("cashAvailable").value = "";
     document.querySelector(`input[name="solveField"][value="${preset.solveField}"]`).checked = true;
     setEditableState();
     calculate();
@@ -1125,6 +1157,11 @@ breadcrumb_title: Term Loan Calculator
 
   $("download").addEventListener("click", () => {
     if (!window.__loanResult) {
+      return;
+    }
+
+    if (!window.jspdf?.jsPDF) {
+      setMessage("PDF tools did not load. Your calculation is still available on screen.", "error");
       return;
     }
 
@@ -1144,6 +1181,9 @@ breadcrumb_title: Term Loan Calculator
     doc.text(`Interest Rate (%): ${$("interestRate").value}`, marginLeft, startY + 15);
     doc.text(`Loan Term (years): ${$("loanTerm").value}`, marginLeft, startY + 30);
     doc.text(`Monthly Payment: $${$("payment").value}`, marginLeft, startY + 45);
+    if ($("cashAvailable").value) {
+      doc.text(`Monthly Cash Available: $${$("cashAvailable").value}`, marginLeft, startY + 60);
+    }
 
     const head = [[
       $("hdrPeriod").textContent,
@@ -1159,7 +1199,7 @@ breadcrumb_title: Term Loan Calculator
     doc.autoTable({
       head,
       body,
-      startY: startY + 70,
+      startY: startY + 85,
       theme: "grid",
       headStyles: { fillColor: [27, 77, 62] },
       styles: { fontSize: 10, cellPadding: 4 },
@@ -1169,7 +1209,7 @@ breadcrumb_title: Term Loan Calculator
     doc.save("loan-amortization-schedule.pdf");
   });
 
-  ["loanAmount", "interestRate", "loanTerm", "payment"].forEach((id) => {
+  ["loanAmount", "interestRate", "loanTerm", "payment", "cashAvailable"].forEach((id) => {
     stripFormattingOnFocus(id);
     $(id).addEventListener("input", scheduleCalculate);
     $(id).addEventListener("blur", calculate);

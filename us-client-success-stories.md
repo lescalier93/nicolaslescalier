@@ -1,9 +1,9 @@
 ---
-title: "Client Success Stories | Nicolas Lescalier"
-description: "Examples of U.S. business financing outcomes arranged by Nicolas Lescalier across working capital, term loans, bridge financing, and commercial real estate."
+title: "Business Financing Case Examples"
+description: "Review representative business financing scenarios that explain how timing, collateral, cash flow, and repayment structure affect product fit."
 layout: default
 permalink: /services/us-client-success-stories/
-breadcrumb_title: Success Stories
+breadcrumb_title: Case Examples
 redirect_from:
   - /client-success-stories/
 ---
@@ -11,17 +11,17 @@ redirect_from:
 <section class="section">
   <div class="section-band">
     <div class="section-band__panel">
-      <p class="eyebrow">Success Stories</p>
-      <h1>Case-style examples of how the right structure changes the outcome.</h1>
-      <p>This page is different from the reviews page. These are simplified deal snapshots showing the business problem, the key constraint, the financing structure chosen, and why that fit mattered to the result.</p>
+      <p class="eyebrow">Case examples</p>
+      <h1>Representative scenarios showing why financing structure matters.</h1>
+      <p>These are simplified, educational scenarios—not client testimonials or promises of results. Each example isolates the business problem, key constraint, possible financing structure, and the reason that structure may fit.</p>
       <div class="section-band__actions">
         <a class="button" href="/apply/">Start application</a>
-        <a class="button button--secondary" href="/reviews-us-funding/">See review themes</a>
+        <a class="button button--secondary" href="/reviews-us-funding/">Review the client experience standard</a>
       </div>
     </div>
     <div class="mini-grid">
       <article class="mini-card">
-        <h3>How to read these stories</h3>
+        <h3>How to read these examples</h3>
         <p>Start with the constraint first. The product matters only because it solved that specific timing, collateral, or repayment problem.</p>
       </article>
       <article class="mini-card">
@@ -64,8 +64,8 @@ redirect_from:
           <p>The business needed speed more than perfect long-term pricing, and the repayment could be supported by the expected revenue lift.</p>
         </div>
         <div class="case-study__detail case-study__detail--full">
-          <strong>Outcome</strong>
-          <p>The location opened within six weeks and annual revenue increased materially after launch.</p>
+          <strong>Potential outcome</strong>
+          <p>A successful execution could preserve the site, complete the opening, and give the new location time to produce the revenue needed to support repayment.</p>
         </div>
       </div>
     </article>
@@ -99,8 +99,8 @@ redirect_from:
           <p>The asset could support the debt more naturally than a broad working-capital structure, and monthly payment predictability mattered.</p>
         </div>
         <div class="case-study__detail case-study__detail--full">
-          <strong>Outcome</strong>
-          <p>Production time dropped, new contracts were won, and the company repaid the facility ahead of schedule.</p>
+          <strong>Potential outcome</strong>
+          <p>If the equipment performs as expected, the business could reduce production time, add capacity, and repay the asset over its useful life.</p>
         </div>
       </div>
     </article>
@@ -134,8 +134,8 @@ redirect_from:
           <p>The gap was temporary, the receivables path was visible, and the bridge preserved execution speed without forcing the wrong permanent product too early.</p>
         </div>
         <div class="case-study__detail case-study__detail--full">
-          <strong>Outcome</strong>
-          <p>The project stayed on schedule, the borrower repaid after receivables landed, and the company won follow-on work.</p>
+          <strong>Potential outcome</strong>
+          <p>If receivables arrive as projected, the bridge could keep labor and materials moving and then be repaid from the contracted cash inflow.</p>
         </div>
       </div>
     </article>
@@ -169,8 +169,8 @@ redirect_from:
           <p>The property had enough stability for a refinance path, and the lower monthly burden mattered more than a fast short-term bridge.</p>
         </div>
         <div class="case-study__detail case-study__detail--full">
-          <strong>Outcome</strong>
-          <p>Monthly payments fell, renovation capital was unlocked, and property performance improved.</p>
+          <strong>Potential outcome</strong>
+          <p>A successful refinance could reduce monthly debt service, release approved improvement capital, and improve the property’s coverage profile.</p>
         </div>
       </div>
     </article>
@@ -179,7 +179,7 @@ redirect_from:
 
 <section class="section split">
   <div class="panel">
-    <p class="eyebrow">What these stories are really showing</p>
+    <p class="eyebrow">What these examples are showing</p>
     <ul class="plain-list">
       <li>The financing matched the business timeline</li>
       <li>Repayment structure fit actual cash flow</li>
@@ -189,9 +189,9 @@ redirect_from:
   </div>
   <div class="proof-card">
     <p class="eyebrow">If you want the shorter version</p>
-    <p>The reviews page is the faster route if you are judging communication quality and process feel rather than looking for deal-by-deal structure breakdowns.</p>
+    <p>The client-experience page is the faster route if you are judging communication standards and process rather than looking at structure examples.</p>
     <div class="cta-row">
-      <a class="button" href="/reviews-us-funding/">Open reviews</a>
+      <a class="button" href="/reviews-us-funding/">Open client experience</a>
       <a class="button button--secondary" href="/why-us-clients-trust-nicolas/">Why clients trust Nicolas</a>
     </div>
   </div>

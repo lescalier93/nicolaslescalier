@@ -1,6 +1,6 @@
 ---
-title: "How U.S. SMBs Get Funding Fast | Nicolas Lescalier"
-description: "A practical guide to choosing between working capital loans, lines of credit, term loans, equipment financing, factoring, PO financing, SBA 7(a), and commercial real estate options."
+title: "How U.S. Small Businesses Compare Financing"
+description: "A practical guide to comparing working capital, lines of credit, term loans, equipment, factoring, PO financing, SBA 7(a), and CRE options."
 layout: default
 permalink: /services/us-smbs-funding-guide/
 breadcrumb_title: Funding Guide
@@ -66,6 +66,39 @@ redirect_from:
       <a href="/services/us-mortgage-financing/">See mortgage financing</a>
     </article>
   </div>
+</section>
+
+<section class="section">
+  <p class="eyebrow">Decision matrix</p>
+  <h2>Compare the financing families on the tradeoffs that actually change the decision.</h2>
+  <div class="table-scroll">
+    <table class="decision-table">
+      <thead>
+        <tr><th>Product</th><th>Best matched need</th><th>Typical payment shape</th><th>Main underwriting focus</th><th>Primary risk</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><a href="/services/us-working-capital-loans/">Working capital</a></td><td>Urgent, short-duration operating need</td><td>Often daily or weekly</td><td>Recent deposits, revenue consistency, existing positions</td><td>Frequent payments can compress cash flow</td></tr>
+        <tr><td><a href="/services/us-line-of-credit/">Line of credit</a></td><td>Recurring inventory or operating cycle</td><td>Payment based on drawn balance</td><td>Revenue, credit, operating history, bank activity</td><td>Availability or pricing can change after review</td></tr>
+        <tr><td><a href="/services/us-term-loans-approach/">Term loan</a></td><td>Expansion, refinance, acquisition, durable investment</td><td>Usually fixed monthly amortization</td><td>Cash flow, credit, financial statements, debt schedule</td><td>Long commitment or prepayment restrictions</td></tr>
+        <tr><td><a href="/services/us-equipment-financing/">Equipment finance</a></td><td>Vehicle, machinery, device, or productive asset</td><td>Monthly payment tied to asset term</td><td>Asset value, useful life, credit, business cash flow</td><td>Asset loss or deficiency if the structure fails</td></tr>
+        <tr><td><a href="/services/us-factoring/">Factoring</a></td><td>Slow-paying B2B invoices</td><td>Fee deducted as invoices are purchased or collected</td><td>Invoice quality, customer credit, dilution, concentration</td><td>Customer concentration and ongoing fee drag</td></tr>
+        <tr><td><a href="/services/us-po-financing/">PO finance</a></td><td>Fulfilling a credible purchase order</td><td>Transaction-specific repayment from order proceeds</td><td>Customer, supplier, gross margin, execution path</td><td>Thin margins or fulfillment failure</td></tr>
+        <tr><td><a href="/services/us-sba-7a-loans/">SBA 7(a)</a></td><td>Acquisition, expansion, refinance, longer-term capital</td><td>Longer monthly amortization</td><td>Repayment ability, eligibility, equity, documentation</td><td>Longer process and eligibility constraints</td></tr>
+        <tr><td><a href="/services/us-mortgage-financing/">CRE finance</a></td><td>Property acquisition, refinance, construction, bridge</td><td>Interest-only or amortizing, depending on structure</td><td>Property cash flow, LTV, DSCR, sponsor, exit</td><td>Refinance, valuation, construction, or exit risk</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <p class="eyebrow">Preparation by product</p>
+  <h2>The documents change with the financing structure.</h2>
+  <div class="grid grid--3">
+    <article class="service-card"><h3>Cash-flow products</h3><p>Recent business bank statements, processing statements where relevant, current debt schedule, ownership details, and a clear use-of-proceeds explanation.</p></article>
+    <article class="service-card"><h3>Invoice and order products</h3><p>Accounts-receivable aging, customer concentration, sample invoices, purchase orders, supplier information, gross-margin support, and fulfillment details.</p></article>
+    <article class="service-card"><h3>Term, SBA, and CRE</h3><p>Financial statements, tax returns when requested securely, debt schedule, projections, purchase contract or property information, sponsor liquidity, and collateral details.</p></article>
+  </div>
+  <p class="content-note"><strong>Practical rule:</strong> Do not email or submit highly sensitive documents through a public form. Complete the initial fit review first, then use the secure process provided for the selected financing path.</p>
 </section>
 
 <section class="section split">

@@ -1,6 +1,6 @@
 ---
-title: "Bridge Financing in U.S. Markets | Nicolas Lescalier"
-description: "Understand when bridge financing works, what lenders care about, and how Nicolas Lescalier structures short-term bridge loans for U.S. businesses and real estate deals."
+title: "Bridge Financing for U.S. Businesses and CRE"
+description: "Understand when bridge financing fits, what lenders examine, how exits are evaluated, and when short-term debt creates more risk than value."
 layout: default
 permalink: /services/us-bridge-financing/
 breadcrumb_title: Bridge Financing

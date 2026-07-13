@@ -3,24 +3,42 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ page.title | default: site.title }}</title>
-    {% seo %}
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    {% assign seo_title = page.title | default: site.title %}
+    {% assign seo_description = page.description | default: site.description %}
+    <title>{{ seo_title }}{% unless seo_title == site.title %} | {{ site.title }}{% endunless %}</title>
+    <meta name="description" content="{{ seo_description | escape }}">
+    <meta name="author" content="Nicolas Lescalier">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta property="og:title" content="{{ seo_title | escape }}">
+    <meta property="og:description" content="{{ seo_description | escape }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:site_name" content="Nicolas Lescalier">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="{{ seo_title | escape }}">
+    <meta name="twitter:description" content="{{ seo_description | escape }}">
     {% assign social_image = page.image | default: site.social_image %}
     {% if page.noindex %}
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="noindex, follow">
     {% endif %}
     {% if social_image %}
     <meta property="og:image" content="{{ social_image | absolute_url }}">
     <meta property="og:image:alt" content="{{ page.title | default: site.title }}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="{{ site.social_image_width | default: 1200 }}">
+    <meta property="og:image:height" content="{{ site.social_image_height | default: 630 }}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="{{ social_image | absolute_url }}">
+    <meta name="twitter:image:alt" content="{{ page.title | default: site.title }}">
     {% endif %}
     <meta name="theme-color" content="#1b4d3e">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
-    <link rel="shortcut icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+    <link rel="icon" href="{{ '/assets/favicon-32.png' | relative_url }}" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | relative_url }}" sizes="180x180">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.asset_version | default: '1' }}">
     {% include structured_data.html %}
     {% include breadcrumb_structured_data.html %}
@@ -31,9 +49,9 @@
     <div class="site-shell">
       <div class="topbar">
         <div class="wrap topbar__inner">
-          <p class="topbar__copy">Direct financing review for U.S. operators, investors, and owner-led businesses.</p>
+          <p class="topbar__copy">Commercial finance guidance for U.S. operators, investors, and owner-led businesses.</p>
           <div class="topbar__meta">
-            <span>Nationwide coverage</span>
+            <span>Broker-guided review</span>
             <span>Fast initial response</span>
             <span>Direct contact with Nicolas</span>
           </div>
@@ -53,8 +71,8 @@
             <nav class="site-nav" aria-label="Primary">
               <a href="{{ '/services/' | relative_url }}">Services</a>
               <a href="{{ '/resources.html' | relative_url }}">Resources</a>
-              <a href="{{ '/services/us-client-success-stories/' | relative_url }}">Success Stories</a>
-              <a href="{{ '/reviews-us-funding/' | relative_url }}">Reviews</a>
+              <a href="{{ '/services/us-client-success-stories/' | relative_url }}">Case Examples</a>
+              <a href="{{ '/reviews-us-funding/' | relative_url }}">Client Experience</a>
               <a href="{{ '/about-nicolas-lescalier-us/' | relative_url }}">About</a>
               <a href="{{ '/contact/' | relative_url }}">Contact</a>
             </nav>
@@ -74,8 +92,8 @@
         <div class="wrap site-footer__grid">
           <div>
             <p class="site-footer__title">Nicolas Lescalier</p>
-            <p class="site-footer__copy">Financing solutions for U.S. small and mid-sized businesses across working capital, term debt, revolving credit, invoice finance, SBA, and commercial real estate.</p>
-            <p class="site-footer__note">Clearer product fit, cleaner prep, and direct review before the process turns noisy.</p>
+            <p class="site-footer__copy">Senior Funding Advisor at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>, helping U.S. businesses compare working capital, term debt, revolving credit, invoice finance, SBA, and commercial real estate options.</p>
+            <p class="site-footer__note">Broker-guided product fit, clearer preparation, and direct communication.</p>
           </div>
           <div>
             <p class="site-footer__title">Explore</p>
@@ -84,8 +102,8 @@
               <li><a href="{{ '/resources.html' | relative_url }}">Resources</a></li>
               <li><a href="{{ '/working-capital-calculator.html' | relative_url }}">Working capital calculator</a></li>
               <li><a href="{{ '/term-loan-calculator.html' | relative_url }}">Term loan calculator</a></li>
-              <li><a href="{{ '/reviews-us-funding/' | relative_url }}">Reviews</a></li>
-              <li><a href="{{ '/services/us-client-success-stories/' | relative_url }}">Success stories</a></li>
+              <li><a href="{{ '/reviews-us-funding/' | relative_url }}">Client experience</a></li>
+              <li><a href="{{ '/services/us-client-success-stories/' | relative_url }}">Case examples</a></li>
             </ul>
           </div>
           <div>
@@ -95,6 +113,7 @@
               <li><a href="{{ '/apply/' | relative_url }}">Application</a></li>
               <li><a href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call</a></li>
               <li><a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></li>
+              <li><a href="mailto:nlescalier@pmfus.com">nlescalier@pmfus.com</a></li>
               <li><a href="{{ '/terms-and-conditions/' | relative_url }}">Terms and conditions</a></li>
               <li><a href="{{ '/privacy-policy/' | relative_url }}">Privacy policy</a></li>
             </ul>
@@ -105,6 +124,11 @@
           </div>
         </div>
       </footer>
+      <div class="site-disclosure">
+        <div class="wrap">
+          <p>Nicolas Lescalier is a commercial finance broker and Senior Funding Advisor at Premium Merchant Funding, not a direct lender. Financing is offered through third-party providers, is subject to underwriting and approval, and may not be available in every state or for every business. Terms, costs, and timing vary by provider and applicant. Website calculators and examples are educational estimates, not offers or commitments to fund.</p>
+        </div>
+      </div>
     </div>
     <script>
       (() => {

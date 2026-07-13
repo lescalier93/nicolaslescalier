@@ -9,7 +9,7 @@
     {% elsif current_url contains '/services/' %}
     <li><a href="{{ '/services/' | relative_url }}">Services</a></li>
     <li class="breadcrumbs__current" aria-current="page">{{ page_label }}</li>
-    {% elsif current_url == '/working-capital-calculator.html' or current_url == '/term-loan-calculator.html' %}
+    {% elsif current_url == '/working-capital-calculator.html' or current_url == '/term-loan-calculator.html' or current_url == '/application-checklist/' %}
     <li><a href="{{ '/resources.html' | relative_url }}">Resources</a></li>
     <li class="breadcrumbs__current" aria-current="page">{{ page_label }}</li>
     {% elsif current_url == '/contact-thank-you/' %}

@@ -1,9 +1,11 @@
 ---
 layout: default
-title: "Financing Products | Nicolas Lescalier"
-description: "Compare business financing products with Nicolas Lescalier, including working capital loans, lines of credit, term loans, equipment financing, factoring, PO finance, SBA 7(a), and commercial mortgage options."
+title: "Business Financing Products"
+description: "Compare working capital, lines of credit, term loans, equipment financing, factoring, PO finance, SBA 7(a), bridge, and commercial mortgage options."
 permalink: /services/
 breadcrumb_title: Services
+redirect_from:
+  - /us/
 ---
 
 <section class="section">
