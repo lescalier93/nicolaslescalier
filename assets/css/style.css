@@ -1803,7 +1803,7 @@ textarea:focus-visible { outline-color: var(--brand); }
 .topbar__copy, .topbar__meta { font-size: 0.78rem; }
 .site-nav a { padding: 0.55rem 0.65rem; }
 .button { min-height: 44px; text-align: center; line-height: 1.35; }
-.contact-layout { grid-template-columns: minmax(230px, 0.65fr) minmax(0, 1.35fr); }
+.contact-layout { grid-template-columns: minmax(0, 1.35fr) minmax(230px, 0.65fr); }
 .contact-layout .contact-card { align-self: start; }
 .contact-layout .contact-card h2 { font-size: 1.35rem; }
 .contact-layout .contact-form { box-shadow: none; }
