@@ -15,7 +15,7 @@ breadcrumb_title: Privacy Policy
 <div class="legal-content">
   <section>
     <h2>1. Who handles the information</h2>
-    <p>Nicolas Lescalier operates this website in his professional capacity as a commercial finance broker and Senior Funding Advisor at Premium Merchant Funding (“PMF”). Nicolas and PMF may use submitted information to respond to requests, evaluate possible financing paths, and communicate with appropriate third-party financing providers.</p>
+    <p>Nicolas Lescalier operates this website in his professional capacity as a Senior Funding Advisor at Premium Merchant Funding (“PMF”). Nicolas and PMF may use submitted information to respond to requests, evaluate possible financing paths, and communicate with appropriate third-party financing providers.</p>
     <p>Privacy questions can be sent to <a href="mailto:nlescalier@pmfus.com">nlescalier@pmfus.com</a>.</p>
   </section>
 

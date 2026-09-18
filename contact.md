@@ -1,6 +1,6 @@
 ---
 title: "Contact Nicolas Lescalier"
-description: "Contact commercial finance broker Nicolas Lescalier to discuss a working capital, term loan, SBA, equipment, invoice finance, bridge, or CRE request."
+description: "Contact Nicolas Lescalier to discuss a working capital, term loan, SBA, equipment, invoice finance, bridge, or CRE request."
 permalink: "/contact/"
 layout: default
 image: "/assets/social-contact.png"

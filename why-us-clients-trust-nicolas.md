@@ -84,8 +84,8 @@ breadcrumb_title: Why Clients Trust Nicolas
   <div class="grid grid--2">
     <article class="service-card">
       <span class="card-label">Role</span>
-      <h3>Broker status stated clearly</h3>
-      <p>Nicolas is a commercial finance broker and Senior Funding Advisor at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>, not a direct lender. Third-party providers make final approval and pricing decisions.</p>
+      <h3>A clear funding role</h3>
+      <p>Nicolas is a Senior Funding Advisor at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>. He acts as a direct lender on select deals and works with an extensive network for co-funding. Financing is subject to underwriting and approval.</p>
     </article>
     <article class="service-card">
       <span class="card-label">Contact</span>

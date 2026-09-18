@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "U.S. Business Financing Specialist"
-description: "Compare working capital, lines of credit, term loans, SBA, equipment, invoice finance, and CRE options with commercial finance broker Nicolas Lescalier."
+description: "Compare working capital, lines of credit, term loans, SBA, equipment, invoice finance, and CRE options with Nicolas Lescalier: direct funding on select deals and an extensive network for co-funding."
 permalink: /
 faq:
   - question: "How fast can funding happen?"
@@ -24,7 +24,7 @@ faq:
         <a class="button" href="/apply/">Start Application</a>
         <a class="button button--secondary" href="/services/">Compare financing options</a>
       </div>
-      <p class="hero-note">Commercial finance broker · Senior Funding Advisor at Premium Merchant Funding</p>
+      <p class="hero-note">Direct funding on select deals · Extensive network for co-funding</p>
     </div>
     <aside class="hero-card">
       <span class="hero-card__label">How I work</span>
@@ -38,7 +38,7 @@ faq:
   <div class="identity-card">
     <p class="eyebrow">Professional role</p>
     <p class="identity-card__role">Nicolas Lescalier — Senior Funding Advisor at Premium Merchant Funding</p>
-    <p>I am a commercial finance broker, not a direct lender. I help business owners prepare requests, compare realistic product paths, and communicate with third-party capital providers. Final approval, pricing, and documentation are determined by the provider.</p>
+    <p>I fund select deals directly and work with an extensive network of funding partners when co-funding is appropriate. I also help business owners compare financing options and prepare requests for other providers. Every deal is subject to underwriting and approval.</p>
     <p class="identity-card__links">
       <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>
       <a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
