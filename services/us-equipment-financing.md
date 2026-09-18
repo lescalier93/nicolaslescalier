@@ -20,6 +20,7 @@ faq:
     <p class="eyebrow">Equipment Financing</p>
     <h1>Finance the equipment your business needs.</h1>
     <p>Equipment financing is often cleaner than using working capital for machinery, vehicles, medical devices, restaurant equipment, or production tools. The structure should match the useful life of the asset and the cash flow it helps create.</p>
+  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
   </div>
   <div class="proof-card">
     <p class="eyebrow">Best fit</p>

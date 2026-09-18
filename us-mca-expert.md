@@ -27,6 +27,7 @@ faq:
     <h1>Working capital when timing matters.</h1>
     <p>A short-term working capital loan can be useful when a business needs capital quickly and repayment needs to track receivables more closely than a fixed monthly loan. It is often the right tool for urgent inventory, payroll, repairs, marketing, or location-related spend, but only when the repayment pressure actually fits the business.</p>
     <p>I help borrowers determine whether a working capital loan solves the problem cleanly or whether another product would create less drag on cash flow.</p>
+  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
   </div>
   <div class="proof-card">
     <p class="eyebrow">Best fit</p>
@@ -71,10 +72,8 @@ faq:
     <p>The goal is to secure enough capital to solve the problem without letting repayment choke the business right after funding.</p>
   </div>
   <div class="proof-card">
-    <p class="eyebrow">Example</p>
-    <blockquote class="quote">
-      A California boutique hotel needed $100,000 to complete room upgrades before peak season. We structured a working capital facility that funded within two days, aligned remittances with card activity, and let the property reopen in time for the seasonal demand spike.
-    </blockquote>
+    <p class="eyebrow">Explore a scenario</p>
+    <p>See how financing structures can fit different business needs in the <a href="/services/us-client-success-stories/">educational financing examples</a>. These illustrations are not client testimonials or commitments to fund.</p>
   </div>
 </section>
 

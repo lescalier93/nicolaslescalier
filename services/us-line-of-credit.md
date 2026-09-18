@@ -20,6 +20,7 @@ faq:
     <p class="eyebrow">Line of Credit</p>
     <h1>A business line of credit for recurring needs.</h1>
     <p>A line of credit is usually the right fit when the need is recurring rather than one-time. Inventory cycles, uneven receivables, seasonal swings, and short-term operating gaps often fit a revolving facility better than a lump-sum loan.</p>
+  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
   </div>
   <div class="proof-card">
     <p class="eyebrow">Best fit</p>

@@ -20,6 +20,7 @@ faq:
     <p class="eyebrow">Factoring</p>
     <h1>Turn unpaid invoices into working capital.</h1>
     <p>Factoring can be a strong fit for businesses with reliable invoices and creditworthy customers that need cash now instead of waiting 30, 60, or 90 days. The key is to judge customer quality, margin, and whether invoice finance is cleaner than using a working capital loan or line of credit.</p>
+  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
   </div>
   <div class="proof-card">
     <p class="eyebrow">Best fit</p>

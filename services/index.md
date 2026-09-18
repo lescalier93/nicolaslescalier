@@ -12,6 +12,7 @@ redirect_from:
   <p class="eyebrow">Products</p>
   <h1>Find the right financing for your business.</h1>
   <p class="section-intro">Compare options by use of funds, timing, and repayment structure.</p>
+  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
   <div class="mini-grid mini-grid--3">
     <article class="mini-card">
       <span class="card-label">Fastest route</span>

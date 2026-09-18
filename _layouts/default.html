@@ -35,7 +35,7 @@
     <meta name="theme-color" content="#1b4d3e">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif&display=optional" rel="stylesheet">
     <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
     <link rel="icon" href="{{ '/assets/favicon-32.png' | relative_url }}" sizes="32x32" type="image/png">
     <link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | relative_url }}" sizes="180x180">
@@ -48,16 +48,6 @@
   <body{% if page.conversion_page %} data-conversion-page="{{ page.conversion_page }}"{% endif %}>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-shell">
-      <div class="topbar">
-        <div class="wrap topbar__inner">
-          <p class="topbar__copy">Business financing for U.S. businesses</p>
-          <div class="topbar__meta">
-            <span>Personal financing review</span>
-            <span>Fast initial response</span>
-            <span>Direct contact with Nicolas</span>
-          </div>
-        </div>
-      </div>
       <header class="site-header">
         <div class="wrap site-header__inner" data-nav-shell data-nav-open="false">
           <a class="brand" href="{{ '/' | relative_url }}">
@@ -430,6 +420,7 @@
 
             event.preventDefault();
             form.dataset.submitting = "true";
+            form.setAttribute("aria-busy", "true");
 
             if (submitButton) {
               submitButton.disabled = true;
@@ -438,8 +429,11 @@
 
             setStatus(statusNode, "pending", "Submitting...");
 
+            const controller = new AbortController();
+            const timeout = window.setTimeout(() => controller.abort(), 20000);
             try {
               const response = await fetch(form.action, {
+                signal: controller.signal,
                 method: form.method || "POST",
                 body: new FormData(form),
                 headers: {
@@ -516,8 +510,12 @@
                 });
               }
 
-              setStatus(statusNode, "error", "Connection issue. Please try again.");
+              setStatus(statusNode, "error", error.name === "AbortError"
+                ? "This is taking longer than expected. We could not confirm receipt. Your entries are still here. Contact nlescalier@pmfus.com to confirm before sending again."
+                : "Connection issue. Your entries are still here. Check your connection and try again, or contact nlescalier@pmfus.com.");
             } finally {
+              window.clearTimeout(timeout);
+              form.removeAttribute("aria-busy");
               form.dataset.submitting = "false";
               if (submitButton) {
                 submitButton.disabled = false;

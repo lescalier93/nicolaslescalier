@@ -27,6 +27,7 @@ faq:
     <h1>Term loans for long-term business needs.</h1>
     <p>Term loans are usually the right choice when the business is financing growth, equipment, expansion, acquisition, or refinancing and needs predictable monthly repayment. They are slower than short-term working capital loans, but they can be materially cleaner from a total-cost and cash-flow standpoint.</p>
     <p>I help borrowers evaluate whether the structure fits not just the purchase, but what the business will need after the loan closes.</p>
+  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
   </div>
   <div class="proof-card">
     <p class="eyebrow">Best fit</p>
@@ -71,10 +72,8 @@ faq:
     <p>Borrowers often focus too early on headline rate. The better sequence is repayment fit, documentation reality, then lender selection.</p>
   </div>
   <div class="proof-card">
-    <p class="eyebrow">Case study</p>
-    <blockquote class="quote">
-      A Cleveland manufacturer needed $800,000 to expand production. By packaging the file for an SBA-backed structure, the business secured longer-term repayment and room to hire, invest, and keep balance-sheet flexibility.
-    </blockquote>
+    <p class="eyebrow">Explore a scenario</p>
+    <p>See how financing structures can fit different business needs in the <a href="/services/us-client-success-stories/">educational financing examples</a>. These illustrations are not client testimonials or commitments to fund.</p>
   </div>
 </section>
 
@@ -95,8 +94,8 @@ faq:
     <h2>Run the numbers before you choose between a term loan and a short-term product.</h2>
     <p>Use the term loan calculator to model payment pressure, then compare it against faster but more expensive alternatives if speed is part of the equation.</p>
     <div class="cta-row">
-      <a class="button" href="/term-loan-calculator.html">Open term loan calculator</a>
-      <a class="button button--secondary" href="/apply/">Start application</a>
+      <a class="button" href="/apply/">Start application</a>
+      <a class="button button--secondary" href="/term-loan-calculator.html">Open term loan calculator</a>
     </div>
   </div>
 </section>

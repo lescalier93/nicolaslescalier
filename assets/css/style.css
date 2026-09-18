@@ -1997,3 +1997,17 @@ p { line-height: 1.7; }
   .site-footer__grid > :first-child, .site-footer__grid > :last-child { grid-column: 1 / -1; }
   .header-apply { padding: 0.65rem 0.75rem; }
 }
+
+/* Conversion hierarchy and accessible financial data. */
+.text-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; text-decoration: underline; text-underline-offset: 0.22em; }
+.service-intro-actions { align-items: center; gap: 0.9rem 1.5rem; }
+.split > .panel .service-intro-actions { margin-top: 0.75rem; padding-top: 0; }
+input[inputmode="decimal"], input[type="number"], .summary-value, .result-value, table { font-variant-numeric: tabular-nums lining-nums; }
+caption { padding: 1rem; text-align: left; font-size: 0.85rem; color: var(--muted); caption-side: top; }
+.table-wrapper table th:not(:first-child), .table-wrapper table td:not(:first-child) { text-align: right; }
+.table-wrapper table tbody tr:nth-child(even) { background: #f3f6f2; }
+.table-wrapper:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; }
+button:disabled { cursor: wait; opacity: 0.65; }
+.validation-note { min-height: 3.2rem; }
+.tool-shell > .section:first-child { border-top: 0; padding-top: 0; }
+@media(max-width:640px) { .service-intro-actions .text-link { justify-content: center; width: 100%; } }

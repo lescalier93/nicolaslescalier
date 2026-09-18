@@ -386,13 +386,13 @@ breadcrumb_title: Term Loan Calculator
 <div class="tool-shell">
   <section class="section tool-intro tool-intro--compact">
     <div class="panel">
-      <p class="eyebrow">Calculator</p>
+      <p class="eyebrow">Calculator · USD estimates</p>
       <h1>Calculate your term loan payments.</h1>
       <p>This calculator solves for the missing loan variable, builds the amortization, and shows the payment, total interest, payoff horizon, and optional debt-service coverage estimate.</p>
       <div class="cta-row">
         <a class="button" href="#term-loan-inputs">Use calculator</a>
-        <a class="button" id="termScenarioLink" href="/apply/">Use this scenario in application</a>
-        <a class="button button--secondary" href="/services/us-term-loans-approach/">Read the term loan guide</a>
+        <a class="button button--secondary" id="termScenarioLink" href="/apply/">Use this scenario in application</a>
+        <a class="text-link" href="/services/us-term-loans-approach/">Read the term loan guide</a>
       </div>
     </div>
 
@@ -454,7 +454,7 @@ breadcrumb_title: Term Loan Calculator
       </article>
     </div>
 
-    <p class="validation-note" id="loanMessage">Select the field to solve for. The other three values must describe a realistic loan structure.</p>
+    <p class="validation-note" id="loanMessage" role="status" aria-live="polite" aria-atomic="true">Select the field to solve for. The other three values must describe a realistic loan structure.</p>
 
     <div class="fit-strip" id="fitStrip" hidden>
       <article class="fit-card">
@@ -522,7 +522,7 @@ breadcrumb_title: Term Loan Calculator
             Solve for this
           </label>
         </div>
-        <p class="field-help">Use decimal years when needed. Example: `2.50` for a 30-month term.</p>
+        <p class="field-help">Use decimal years when needed. Example: 2.50 for a 30-month term.</p>
       </div>
 
       <div class="form-group">
@@ -560,15 +560,16 @@ breadcrumb_title: Term Loan Calculator
       </div>
     </div>
 
-    <div class="table-wrapper">
+    <div class="table-wrapper" tabindex="0" role="region" aria-label="Amortization schedule, scroll horizontally to see all columns">
       <table>
+        <caption>Estimated amortization schedule · amounts in USD · excludes fees</caption>
         <thead>
           <tr>
-            <th id="hdrPeriod">Month</th>
-            <th>Payment</th>
-            <th>Principal</th>
-            <th>Interest</th>
-            <th>Balance</th>
+            <th scope="col" id="hdrPeriod">Month</th>
+            <th scope="col">Payment</th>
+            <th scope="col">Principal</th>
+            <th scope="col">Interest</th>
+            <th scope="col">Balance</th>
           </tr>
         </thead>
         <tbody id="schedule"></tbody>
@@ -623,8 +624,6 @@ breadcrumb_title: Term Loan Calculator
   </section>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha384-JcnsjUPPylna1s1fvi1u12X5qjY5OL56iySh75FdtrwhO/SWXgMjoVqcKyIIWOLk" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.4/jspdf.plugin.autotable.min.js" integrity="sha384-Xl/CUCfJbzsngMp0CFxkmF0VW/8C160IsGujqeQlIhaGxKz2+JsIGORFqtCPeldF" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
   const $ = (id) => document.getElementById(id);
@@ -639,7 +638,8 @@ breadcrumb_title: Term Loan Calculator
   }
 
   function parseValue(value) {
-    return parseFloat(String(value || "").replace(/[^0-9.-]/g, "")) || 0;
+    const cleaned = String(value ?? "").trim().replace(/[$,\s]/g, "");
+    return cleaned === "" ? NaN : Number(cleaned);
   }
 
   function amountRange(amount) {
@@ -762,7 +762,7 @@ breadcrumb_title: Term Loan Calculator
     const rateAnnual = parseValue($("interestRate").value);
     const termYears = parseValue($("loanTerm").value);
     const payment = parseValue($("payment").value);
-    const cashAvailable = parseValue($("cashAvailable").value);
+    const cashAvailable = $("cashAvailable").value.trim() === "" ? 0 : parseValue($("cashAvailable").value);
     const solveField = getSolveField();
 
     return {
@@ -819,7 +819,7 @@ breadcrumb_title: Term Loan Calculator
       input.value = "";
       return;
     }
-    input.value = raw > 0 ? fmt(raw) : "";
+    if (Number.isFinite(raw)) input.value = fmt(raw);
   }
 
   function selectFieldOnFocus(input) {
@@ -869,7 +869,7 @@ breadcrumb_title: Term Loan Calculator
     const input = $(id);
     input.addEventListener("focus", () => {
       const raw = parseValue(input.value);
-      input.value = raw > 0 ? raw.toFixed(2) : "";
+      if (Number.isFinite(raw)) input.value = raw.toFixed(2);
     });
     input.addEventListener("blur", () => formatFieldOnBlur(id));
     selectFieldOnFocus(input);
@@ -877,6 +877,17 @@ breadcrumb_title: Term Loan Calculator
 
   function solveScenario(state) {
     const result = { ...state };
+    const fields = { loanAmount: "amount", interestRate: "rateAnnual", loanTerm: "termYears", payment: "payment" };
+    const required = Object.entries(fields).filter(([field]) => field !== state.solveField);
+    if (required.some(([, key]) => !Number.isFinite(state[key]))) {
+      throw new Error("Enter a valid number in each of the three input fields. Enter 0 explicitly for a zero-interest loan.");
+    }
+    if (!Number.isFinite(state.cashAvailable) || state.cashAvailable < 0) {
+      throw new Error("Monthly cash available must be zero or a positive number, or left blank.");
+    }
+    if (state.solveField !== "loanTerm" && (state.months < 1 || state.months > 1200)) {
+      throw new Error("This calculator supports terms from one month to 100 years.");
+    }
 
     if (state.solveField === "payment") {
       if (!(state.amount > 0 && state.termYears > 0 && state.rateAnnual >= 0)) {
@@ -907,6 +918,9 @@ breadcrumb_title: Term Loan Calculator
       setFieldValue("interestRate", result.rateAnnual);
     }
 
+    if (!Number.isFinite(result.payment) || !Number.isFinite(result.amount) || !Number.isFinite(result.months) || result.months < 1 || result.months > 1200) {
+      throw new Error("The inputs do not produce a supported repayment schedule. Check the amount, payment, and term.");
+    }
     result.totalPaid = result.payment * result.months;
     result.totalInterest = result.totalPaid - result.amount;
 
@@ -1159,15 +1173,37 @@ breadcrumb_title: Term Loan Calculator
     trackEvent("term_preset_loaded", { preset: name });
   }
 
-  $("download").addEventListener("click", () => {
+  let pdfToolsPromise;
+  function loadPdfTools() {
+    if (!pdfToolsPromise) {
+      const sources = [["https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js", "sha384-JcnsjUPPylna1s1fvi1u12X5qjY5OL56iySh75FdtrwhO/SWXgMjoVqcKyIIWOLk"], ["https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.4/jspdf.plugin.autotable.min.js", "sha384-Xl/CUCfJbzsngMp0CFxkmF0VW/8C160IsGujqeQlIhaGxKz2+JsIGORFqtCPeldF"]];
+      pdfToolsPromise = sources.reduce((ready, source) => ready.then(() => new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = source[0];
+        script.integrity = source[1];
+        script.crossOrigin = "anonymous";
+        script.referrerPolicy = "no-referrer";
+        const timeout = window.setTimeout(() => { script.remove(); reject(new Error("PDF download timed out")); }, 15000);
+        script.onload = () => { window.clearTimeout(timeout); resolve(); };
+        script.onerror = () => { window.clearTimeout(timeout); script.remove(); reject(new Error("PDF tools unavailable")); };
+        document.head.appendChild(script);
+      })), Promise.resolve()).catch(error => { pdfToolsPromise = undefined; throw error; });
+    }
+    return pdfToolsPromise;
+  }
+
+  $("download").addEventListener("click", async () => {
     if (!window.__loanResult) {
       return;
     }
 
-    if (!window.jspdf?.jsPDF) {
-      setMessage("PDF tools did not load. Your calculation is still available on screen.", "error");
-      return;
-    }
+    const downloadButton = $("download");
+    downloadButton.disabled = true;
+    downloadButton.textContent = "Preparing PDF…";
+    downloadButton.setAttribute("aria-busy", "true");
+    try {
+      await loadPdfTools();
+      if (!window.jspdf?.jsPDF || !window.__loanResult) throw new Error("No valid calculation");
 
     trackEvent("term_pdf_downloaded", {
       solve_field: window.__loanResult.solveField,
@@ -1179,7 +1215,7 @@ breadcrumb_title: Term Loan Calculator
     const startY = 60;
 
     doc.setFontSize(16);
-    doc.text("Loan Amortization Schedule", marginLeft, 40);
+    doc.text("Estimated Loan Amortization · USD", marginLeft, 40);
     doc.setFontSize(12);
     doc.text(`Loan Amount: $${$("loanAmount").value}`, marginLeft, startY);
     doc.text(`Interest Rate (%): ${$("interestRate").value}`, marginLeft, startY + 15);
@@ -1210,7 +1246,16 @@ breadcrumb_title: Term Loan Calculator
       margin: { left: marginLeft, right: 40 },
     });
 
+    doc.setFontSize(8);
+    doc.text("Estimate only. Monthly compounding; excludes fees, closing costs and balloon payments.", 40, 825);
     doc.save("loan-amortization-schedule.pdf");
+    } catch (error) {
+      setMessage("The PDF could not be prepared. Your calculation remains on screen. Try the download again.", "error");
+    } finally {
+      downloadButton.disabled = !window.__loanResult;
+      downloadButton.textContent = "Download PDF";
+      downloadButton.removeAttribute("aria-busy");
+    }
   });
 
   ["loanAmount", "interestRate", "loanTerm", "payment", "cashAvailable"].forEach((id) => {

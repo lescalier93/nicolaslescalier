@@ -20,6 +20,7 @@ faq:
     <p class="eyebrow">PO Financing</p>
     <h1>Finance your next purchase order.</h1>
     <p>Purchase order financing fits businesses that have a valid customer order but need capital to produce, source, or deliver the goods before getting paid. It is most useful when the order is real, the customer is credible, and the margin can support the structure.</p>
+  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
   </div>
   <div class="proof-card">
     <p class="eyebrow">Best fit</p>
