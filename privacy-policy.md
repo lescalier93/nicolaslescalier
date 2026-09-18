@@ -15,13 +15,13 @@ breadcrumb_title: Privacy Policy
 <div class="legal-content">
   <section>
     <h2>1. Who handles the information</h2>
-    <p>Nicolas Lescalier operates this website in his professional capacity as a commercial finance broker and Senior Funding Advisor at Premium Merchant Funding (“PMF”). Nicolas and PMF may use submitted information to respond to requests, evaluate possible financing paths, and communicate with appropriate third-party financing providers.</p>
+    <p>Nicolas Lescalier operates this website in his professional capacity as a Senior Funding Advisor at Premium Merchant Funding (“PMF”). Nicolas and PMF may use submitted information to respond to requests, evaluate possible financing paths, and communicate with appropriate third-party financing providers.</p>
     <p>Privacy questions can be sent to <a href="mailto:nlescalier@pmfus.com">nlescalier@pmfus.com</a>.</p>
   </section>
 
   <section>
     <h2>2. Information collected</h2>
-    <p>Information you submit may include your name, business email, phone number, company name, industry, operating state, time in business, revenue range, requested amount, use of proceeds, existing debt, estimated credit range, and other context you choose to provide.</p>
+    <p>Information you submit may include your name, business email, phone number, company name, industry, country, province/territory or state, currency, time in business, revenue range, requested amount, use of proceeds, existing debt, estimated credit range, and other context you choose to provide.</p>
     <p>The website may also collect technical and attribution information such as IP address, browser and device data, pages visited, referring page, landing page, entry path, campaign parameters, and advertising click identifiers. Calculators operate in the browser; scenario details are transferred only when you choose to carry them into a financing request.</p>
   </section>
 
@@ -52,7 +52,7 @@ breadcrumb_title: Privacy Policy
 
   <section>
     <h2>6. Sensitive information</h2>
-    <p>Do not submit Social Security numbers, full bank statements, tax returns, bank-account or routing numbers, bank login credentials, government IDs, passwords, or similar sensitive documents through public website forms. If sensitive information is required later, use only the secure method specifically provided for that purpose.</p>
+    <p>Do not submit Social Security or Social Insurance numbers, full bank statements, tax returns, bank-account or routing numbers, bank login credentials, government IDs, passwords, or similar sensitive documents through public website forms. If sensitive information is required later, use only the secure method specifically provided for that purpose.</p>
     <p>Submitting the public form does not itself authorize a credit pull. Any credit authorization should be presented separately by the applicable provider.</p>
   </section>
 
@@ -64,7 +64,7 @@ breadcrumb_title: Privacy Policy
 
   <section>
     <h2>8. Cross-border processing</h2>
-    <p>Nicolas operates from Canada while supporting U.S. business-purpose financing requests through PMF and third-party providers. Information may therefore be processed or stored in Canada, the United States, or other locations used by service providers, where privacy laws may differ.</p>
+    <p>Nicolas operates from Canada while supporting Canadian and U.S. business-purpose financing requests through PMF and third-party providers. Information may therefore be processed or stored in Canada, the United States, or other locations used by service providers, where privacy laws may differ.</p>
   </section>
 
   <section>

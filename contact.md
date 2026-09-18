@@ -1,74 +1,23 @@
 ---
 title: "Contact Nicolas Lescalier"
-description: "Contact commercial finance broker Nicolas Lescalier to discuss a working capital, term loan, SBA, equipment, invoice finance, bridge, or CRE request."
+description: "Contact Nicolas Lescalier to discuss a working capital, term loan, SBA, equipment, invoice finance, bridge, or CRE request."
 permalink: "/contact/"
 layout: default
 image: "/assets/social-contact.png"
 breadcrumb_title: Contact
 ---
 
-<section class="section split">
-  <div class="contact-card">
-    <p class="eyebrow">Contact</p>
-    <h1>Start with the deal basics.</h1>
-    <p>Send the amount, use of proceeds, and timing. That is usually enough to identify the most realistic financing path before the process gets noisier than it needs to be.</p>
-    <div class="signal-list">
-      <div>
-        <strong>Best first message</strong>
-        <span>Amount needed, timing, use of proceeds, and whether revenue, collateral, or receivables are part of the picture.</span>
-      </div>
-      <div>
-        <strong>What the first review should answer</strong>
-        <span>Fit, likely path, key friction points, and what documents matter most next.</span>
-      </div>
-      <div>
-        <strong>What to avoid</strong>
-        <span>Submitting the wrong product application first and creating unnecessary underwriting noise.</span>
-      </div>
-    </div>
-    <div class="grid grid--2">
-      <div>
-        <h3>Best channel</h3>
-        <p>Use the message form on this page for a lighter first conversation, book a short call if you want to talk through the situation live, or go straight to the full application if you already have a financing request ready.</p>
-        <p class="link-stack"><a href="mailto:nlescalier@pmfus.com">nlescalier@pmfus.com</a><a href="/apply/">Open full application</a><a href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call on Calendly</a><a href="/application-checklist/">Application checklist</a><a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></p>
-      </div>
-      <div>
-        <h3>What to include</h3>
-        <ul class="plain-list">
-          <li>Requested amount or range</li>
-          <li>Use of proceeds</li>
-          <li>Preferred timeline</li>
-          <li>Product you think you need, if you already have one in mind</li>
-          <li>Any collateral or existing debt constraints</li>
-        </ul>
-        <p><a href="/application-checklist/">See the full application checklist</a></p>
-      </div>
-    </div>
-    <div class="feature-list">
-      <div class="feature-item">
-        <strong>1. Send the basics</strong>
-        <span>Enough detail to understand the amount, timing, and likely financing lane.</span>
-      </div>
-      <div class="feature-item">
-        <strong>2. Get a real fit read</strong>
-        <span>Pressure-test structure, timing, and document needs before the process gets noisier.</span>
-      </div>
-      <div class="feature-item">
-        <strong>3. Move to the cleanest next step</strong>
-        <span>Stay with a message, move into the full application, or book a call if live review is the fastest path.</span>
-      </div>
-    </div>
-    <div class="cta-row">
-      <a class="button" href="/apply/">Open full application</a>
-      <a class="button button--secondary" href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call</a>
-      <a class="button button--secondary" href="/application-checklist/">Checklist first</a>
-    </div>
-  </div>
+<header class="page-intro">
+  <p class="eyebrow">Contact</p>
+  <h1>Let’s talk about your financing.</h1>
+  <p>For financing in Canada or the U.S., share your location, currency, amount, timing, and use of funds. I’ll review the request and outline the next steps.</p>
+</header>
+<section class="section split contact-layout">
 
   <div class="contact-form">
     <p class="eyebrow">Message</p>
-    <h2>Send a commercial finance inquiry</h2>
-    <p>I review inquiries personally as a commercial finance broker and Senior Funding Advisor at Premium Merchant Funding. If the scenario is workable, I will outline the most likely financing path and next information required. You can also <a href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">book a short call</a>.</p>
+    <h2>Send a message</h2>
+    <p>I review inquiries personally. Please leave sensitive documents for a later secure follow-up.</p>
     <form name="contact_inquiry" action="https://formspree.io/f/maypkwyo" method="POST" data-ajax-form="true" data-success-url="/contact-thank-you/">
       <input type="hidden" name="_subject" value="New contact inquiry from nicolaslescalier.com">
       <input type="hidden" name="utm_source">
@@ -111,7 +60,7 @@ breadcrumb_title: Contact
           <option>Equipment financing</option>
           <option>Factoring or invoice finance</option>
           <option>PO financing</option>
-          <option>SBA 7(a)</option>
+          <option value="SBA 7(a)">SBA 7(a) — U.S. business</option>
           <option>Bridge or mortgage financing</option>
           <option>Not sure yet</option>
         </select>
@@ -119,7 +68,7 @@ breadcrumb_title: Contact
 
       <div>
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="7" required placeholder="Tell me about the business, the amount you need, the timeline, and the product you are considering."></textarea>
+        <textarea id="message" name="message" rows="7" required placeholder="Tell me about the business, country and province/state, amount and currency (CAD or USD), timeline, and financing need."></textarea>
       </div>
 
       <div class="notice-card">
@@ -140,4 +89,9 @@ breadcrumb_title: Contact
       <button class="button" type="submit">Send inquiry</button>
     </form>
   </div>
+  <aside class="contact-card">
+    <h2>Contact Nicolas</h2>
+    <p>Senior Funding Advisor at Premium Merchant Funding.</p>
+    <p class="link-stack"><a href="mailto:nlescalier@pmfus.com">nlescalier@pmfus.com</a><a href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call</a><a href="/apply/">Start a financing application</a><a href="/application-checklist/">Application checklist</a><a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></p>
+  </aside>
 </section>

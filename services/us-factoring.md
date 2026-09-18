@@ -18,8 +18,9 @@ faq:
 <section class="section split">
   <div class="panel">
     <p class="eyebrow">Factoring</p>
-    <h1>Accelerate invoice cash flow when the customer is good but the payment timing is slow.</h1>
+    <h1>Turn unpaid invoices into working capital.</h1>
     <p>Factoring can be a strong fit for businesses with reliable invoices and creditworthy customers that need cash now instead of waiting 30, 60, or 90 days. The key is to judge customer quality, margin, and whether invoice finance is cleaner than using a working capital loan or line of credit.</p>
+  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
   </div>
   <div class="proof-card">
     <p class="eyebrow">Best fit</p>
@@ -74,23 +75,11 @@ faq:
 <section class="section">
   <p class="eyebrow">FAQ</p>
   <h2>Common factoring questions.</h2>
-  <div class="grid grid--2">
-    <article class="service-card">
-      <h3>When is factoring a good fit?</h3>
-      <p>Factoring is often a good fit when the business has strong invoices and creditworthy customers but cannot wait for normal payment timing.</p>
-    </article>
-    <article class="service-card">
-      <h3>Does factoring depend more on my business or my customer?</h3>
-      <p>Customer quality matters heavily because the invoice needs to be collectible by a credible payer.</p>
-    </article>
-    <article class="service-card">
-      <h3>How is factoring different from a line of credit?</h3>
-      <p>Factoring is tied directly to invoices, while a line of credit is a broader revolving tool that may depend more on the borrower&apos;s overall profile.</p>
-    </article>
-    <article class="service-card">
-      <h3>What usually weakens a factoring file?</h3>
-      <p>Weak customers, disputed invoices, poor margins, or unclear invoice documentation can weaken the structure.</p>
-    </article>
+  <div class="faq-list">
+    <details class="faq-item"><summary>When is factoring a good fit?</summary><p>Factoring is often a good fit when the business has strong invoices and creditworthy customers but cannot wait for normal payment timing.</p></details>
+    <details class="faq-item"><summary>Does factoring depend more on my business or my customer?</summary><p>Customer quality matters heavily because the invoice needs to be collectible by a credible payer.</p></details>
+    <details class="faq-item"><summary>How is factoring different from a line of credit?</summary><p>Factoring is tied directly to invoices, while a line of credit is a broader revolving tool that may depend more on the borrower&apos;s overall profile.</p></details>
+    <details class="faq-item"><summary>What usually weakens a factoring file?</summary><p>Weak customers, disputed invoices, poor margins, or unclear invoice documentation can weaken the structure.</p></details>
   </div>
 </section>
 

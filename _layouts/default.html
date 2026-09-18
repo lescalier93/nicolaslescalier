@@ -35,11 +35,12 @@
     <meta name="theme-color" content="#1b4d3e">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif&display=optional" rel="stylesheet">
     <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
     <link rel="icon" href="{{ '/assets/favicon-32.png' | relative_url }}" sizes="32x32" type="image/png">
     <link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | relative_url }}" sizes="180x180">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.asset_version | default: '1' }}">
+    <noscript><style>@media(max-width:900px){.site-header__actions{display:grid}.site-nav-toggle{display:none}}</style></noscript>
     {% include structured_data.html %}
     {% include breadcrumb_structured_data.html %}
     {% include faq_structured_data.html %}
@@ -47,22 +48,13 @@
   <body{% if page.conversion_page %} data-conversion-page="{{ page.conversion_page }}"{% endif %}>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-shell">
-      <div class="topbar">
-        <div class="wrap topbar__inner">
-          <p class="topbar__copy">Commercial finance guidance for U.S. operators, investors, and owner-led businesses.</p>
-          <div class="topbar__meta">
-            <span>Broker-guided review</span>
-            <span>Fast initial response</span>
-            <span>Direct contact with Nicolas</span>
-          </div>
-        </div>
-      </div>
       <header class="site-header">
         <div class="wrap site-header__inner" data-nav-shell data-nav-open="false">
           <a class="brand" href="{{ '/' | relative_url }}">
-            <span class="brand__eyebrow">U.S. Business Financing</span>
+            <span class="brand__eyebrow">Canada &amp; U.S. Financing</span>
             <span class="brand__name">Nicolas Lescalier</span>
           </a>
+          <a class="button header-apply" href="{{ '/apply/' | relative_url }}">Apply</a>
           <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-panel" data-nav-toggle>
             <span>Menu</span>
             <span class="site-nav-toggle__icon" aria-hidden="true"></span>
@@ -70,9 +62,7 @@
           <div class="site-header__actions" id="site-nav-panel" data-nav-panel>
             <nav class="site-nav" aria-label="Primary">
               <a href="{{ '/services/' | relative_url }}">Services</a>
-              <a href="{{ '/resources.html' | relative_url }}">Resources</a>
-              <a href="{{ '/services/us-client-success-stories/' | relative_url }}">Case Examples</a>
-              <a href="{{ '/reviews-us-funding/' | relative_url }}">Client Experience</a>
+              <a href="{{ '/resources.html' | relative_url }}">Tools &amp; guides</a>
               <a href="{{ '/about-nicolas-lescalier-us/' | relative_url }}">About</a>
               <a href="{{ '/contact/' | relative_url }}">Contact</a>
             </nav>
@@ -81,7 +71,7 @@
         </div>
       </header>
 
-      <main class="site-main" id="main-content">
+      <main class="site-main" id="main-content" tabindex="-1">
         <div class="wrap">
           {% include breadcrumbs.html %}
           {{ content }}
@@ -92,8 +82,8 @@
         <div class="wrap site-footer__grid">
           <div>
             <p class="site-footer__title">Nicolas Lescalier</p>
-            <p class="site-footer__copy">Senior Funding Advisor at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>, helping U.S. businesses compare working capital, term debt, revolving credit, invoice finance, SBA, and commercial real estate options.</p>
-            <p class="site-footer__note">Broker-guided product fit, clearer preparation, and direct communication.</p>
+            <p class="site-footer__copy">Senior Funding Advisor at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>, supporting business financing requests in Canada and the United States. Available products and terms depend on location and the transaction.</p>
+            <p class="site-footer__note">Direct funding on select deals, an extensive co-funding network, and clear communication.</p>
           </div>
           <div>
             <p class="site-footer__title">Explore</p>
@@ -126,7 +116,7 @@
       </footer>
       <div class="site-disclosure">
         <div class="wrap">
-          <p>Nicolas Lescalier is a commercial finance broker and Senior Funding Advisor at Premium Merchant Funding, not a direct lender. Financing is offered through third-party providers, is subject to underwriting and approval, and may not be available in every state or for every business. Terms, costs, and timing vary by provider and applicant. Website calculators and examples are educational estimates, not offers or commitments to fund.</p>
+          <p>Nicolas Lescalier is a Senior Funding Advisor at Premium Merchant Funding. He acts as a direct lender on select deals, works with an extensive network for co-funding, and helps arrange financing through third-party providers. All financing is subject to underwriting and approval and may not be available in every province, territory, or state, or for every business. Terms, costs, and timing vary by provider and applicant. Website calculators and examples are educational estimates, not offers or commitments to fund.</p>
         </div>
       </div>
     </div>
@@ -167,8 +157,9 @@
         });
 
         document.addEventListener("keydown", (event) => {
-          if (event.key === "Escape") {
+          if (event.key === "Escape" && shell.dataset.navOpen === "true") {
             closeMenu();
+            toggle.focus();
           }
         });
 
@@ -191,7 +182,7 @@
         } else if (currentPath === "/application-received/") {
           activePath = "/apply/";
         } else if (currentPath.startsWith("/services/us-client-success-stories/")) {
-          activePath = "/services/us-client-success-stories/";
+          activePath = "/services/";
         } else if (currentPath.startsWith("/services/")) {
           activePath = "/services/";
         } else if (
@@ -429,6 +420,7 @@
 
             event.preventDefault();
             form.dataset.submitting = "true";
+            form.setAttribute("aria-busy", "true");
 
             if (submitButton) {
               submitButton.disabled = true;
@@ -437,8 +429,11 @@
 
             setStatus(statusNode, "pending", "Submitting...");
 
+            const controller = new AbortController();
+            const timeout = window.setTimeout(() => controller.abort(), 20000);
             try {
               const response = await fetch(form.action, {
+                signal: controller.signal,
                 method: form.method || "POST",
                 body: new FormData(form),
                 headers: {
@@ -515,8 +510,12 @@
                 });
               }
 
-              setStatus(statusNode, "error", "Connection issue. Please try again.");
+              setStatus(statusNode, "error", error.name === "AbortError"
+                ? "This is taking longer than expected. We could not confirm receipt. Your entries are still here. Contact nlescalier@pmfus.com to confirm before sending again."
+                : "Connection issue. Your entries are still here. Check your connection and try again, or contact nlescalier@pmfus.com.");
             } finally {
+              window.clearTimeout(timeout);
+              form.removeAttribute("aria-busy");
               form.dataset.submitting = "false";
               if (submitButton) {
                 submitButton.disabled = false;

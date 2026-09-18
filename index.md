@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "U.S. Business Financing Specialist"
-description: "Compare working capital, lines of credit, term loans, SBA, equipment, invoice finance, and CRE options with commercial finance broker Nicolas Lescalier."
+title: "Business Financing in Canada & the U.S."
+description: "Explore financing in Canada and the U.S. with Nicolas Lescalier: direct funding on select deals and an extensive network for co-funding."
 permalink: /
 faq:
   - question: "How fast can funding happen?"
@@ -17,34 +17,19 @@ faq:
 <section class="hero">
   <div class="hero__grid">
     <div>
-      <p class="eyebrow">Broad product access, direct guidance</p>
-      <h1>Funding that fits the business you are actually running.</h1>
-      <p class="lede">I help U.S. operators compare working capital, lines of credit, equipment financing, term loans, factoring, PO financing, SBA 7(a), bridge loans, and commercial real estate capital without wasting weeks in the wrong process. The goal is simple: match the structure to your timeline, cash flow, and growth plan.</p>
+      <p class="eyebrow">Canada &amp; U.S. financing</p>
+      <h1>Business financing that fits your next move.</h1>
+      <p class="lede">Explore business financing in Canada and the U.S. with Nicolas Lescalier. Get direct guidance on the structure, repayment, and next steps that fit your business.</p>
       <div class="hero__actions">
         <a class="button" href="/apply/">Start Application</a>
-        <a class="button button--secondary" href="/resources.html">Open Tools & Calculators</a>
+        <a class="button button--secondary" href="/services/">Compare financing options</a>
       </div>
-      <p class="hero-note">Apply if you already have a financing request ready. Use the calculators and guides first if you are still pressure-testing cost, speed, or repayment fit.</p>
+      <p class="hero-note">Direct funding on select deals · Extensive network for co-funding</p>
     </div>
     <aside class="hero-card">
       <span class="hero-card__label">How I work</span>
-      <h3>Practical guidance, not generic lender shopping.</h3>
-      <ul class="check-list">
-        <li>Clarify the use of proceeds before choosing a product.</li>
-        <li>Pressure-test repayment fit against real cash flow.</li>
-        <li>Use specialized products only when the business actually fits them.</li>
-        <li>Keep communication direct so decisions happen faster.</li>
-      </ul>
-      <div class="feature-list">
-        <div class="feature-item">
-          <strong>Best for borrowers who need clarity fast</strong>
-          <span>Urgent working capital, expansion, invoice friction, or a real estate timing gap.</span>
-        </div>
-        <div class="feature-item">
-          <strong>What you get early</strong>
-          <span>A faster read on fit, likely documentation, and where the process could stall.</span>
-        </div>
-      </div>
+      <h2>From request to next steps.</h2>
+      <ul class="check-list"><li>Start with the amount, timing, and use of funds.</li><li>Compare options against your cash flow.</li><li>Understand the documents and next steps.</li></ul>
     </aside>
   </div>
 </section>
@@ -53,7 +38,7 @@ faq:
   <div class="identity-card">
     <p class="eyebrow">Professional role</p>
     <p class="identity-card__role">Nicolas Lescalier — Senior Funding Advisor at Premium Merchant Funding</p>
-    <p>I am a commercial finance broker, not a direct lender. I help business owners prepare requests, compare realistic product paths, and communicate with third-party capital providers. Final approval, pricing, and documentation are determined by the provider.</p>
+    <p>I fund select deals directly and work with an extensive network of funding partners when co-funding is appropriate. I also help business owners compare financing options and prepare requests for other providers. Every deal is subject to underwriting and approval.</p>
     <p class="identity-card__links">
       <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>
       <a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -64,7 +49,7 @@ faq:
 
 <section class="section">
   <p class="eyebrow">Core products</p>
-  <h2>The financing products clients most often ask me to compare.</h2>
+  <h2>Explore financing options.</h2>
   <p class="section-intro">A payroll gap, large purchase order, invoice backlog, equipment purchase, or property acquisition should not go through the same playbook. Different situations need different capital.</p>
   <div class="grid grid--3">
     <article class="service-card">
@@ -108,8 +93,8 @@ faq:
 
 <section class="section">
   <p class="eyebrow">Tools and guides</p>
-  <h2>If you want to compare options before you apply, start here.</h2>
-  <p class="section-intro">The site should not force you to guess which page matters. These are the fastest routes into the calculators, product comparisons, and prep material that actually help before a financing decision.</p>
+  <h2>Compare costs before you apply.</h2>
+  <p class="section-intro">Use the calculators to compare repayment, or explore the guides to prepare your request.</p>
   <div class="grid grid--3">
     <article class="service-card">
       <span class="card-label">Hub</span>
@@ -132,51 +117,19 @@ faq:
   </div>
 </section>
 
-<section class="section">
-  <p class="eyebrow">Representative scenarios</p>
-  <h2>How product fit can change a financing outcome.</h2>
-  <p class="section-intro">Most borrowers do not need more lender noise. They need help narrowing the right product, avoiding bad-fit offers, and getting to a decision quickly. These simplified scenarios show the kind of tradeoffs that matter; they are educational examples, not testimonials or promises of identical results.</p>
-  <div class="grid grid--3">
-    <article class="proof-card proof-card--outcome">
-      <span class="card-label">Hospitality | Florida</span>
-      <h3>$300,000 working capital loan in 72 hours</h3>
-      <div class="proof-meta">
-        <span>Use: upgrades + marketing</span>
-        <span>Fit: speed-sensitive working capital</span>
-      </div>
-      <p>A restaurant group needed capital quickly after a slow season and did not have time for a bank process that was moving too slowly.</p>
-      <p><strong>Structure objective:</strong> Move quickly enough to protect the operating plan while confirming that projected revenue can support the frequent payment.</p>
-    </article>
-    <article class="proof-card proof-card--outcome">
-      <span class="card-label">Manufacturing | Ohio</span>
-      <h3>$500,000 term loan for expansion</h3>
-      <div class="proof-meta">
-        <span>Use: equipment growth</span>
-        <span>Fit: fixed repayment, cleaner collateral</span>
-      </div>
-      <p>An industrial supplier needed expansion capital but wanted to avoid an overly aggressive collateral structure that would restrict the business later.</p>
-      <p><strong>Structure objective:</strong> Match repayment to the equipment’s useful life and avoid using short-duration capital for a longer-lived asset.</p>
-    </article>
-    <article class="proof-card proof-card--outcome">
-      <span class="card-label">Real Estate | Arizona</span>
-      <h3>Bridge financing for a timing gap</h3>
-      <div class="proof-meta">
-        <span>Use: keep transaction moving</span>
-        <span>Fit: short-term bridge to permanent debt</span>
-      </div>
-      <p>A developer needed fast bridge capital while waiting for longer-term financing to be finalized and could not afford deal slippage.</p>
-      <p><strong>Structure objective:</strong> Preserve the transaction timeline while maintaining a documented exit into sale proceeds or longer-term commercial real estate debt.</p>
-    </article>
+<section class="section section--compact">
+  <p class="eyebrow">Financing in practice</p>
+  <h2>See how different financing structures work.</h2>
+  <p>Explore educational scenarios and the process you can expect when submitting a request.</p>
+  <div class="cta-row">
+    <a class="button button--secondary" href="/services/us-client-success-stories/">Explore case examples</a>
+    <a class="button button--secondary" href="/reviews-us-funding/">What to expect</a>
   </div>
-    <div class="cta-row">
-      <a class="button button--secondary" href="/reviews-us-funding/">Review the client experience standard</a>
-      <a class="button button--secondary" href="/services/us-client-success-stories/">Review more case examples</a>
-    </div>
 </section>
 
 <section class="section">
   <p class="eyebrow">FAQ</p>
-  <h2>Common questions before borrowers reach out.</h2>
+  <h2>Your questions, answered.</h2>
   <div class="faq-list">
     <details class="faq-item">
       <summary>How fast can funding happen?</summary>
@@ -200,7 +153,7 @@ faq:
 <section class="section">
   <div class="cta-panel">
     <p class="eyebrow">Next step</p>
-    <h2>Tell me what you need capital for and how fast you need it.</h2>
+    <h2>Let’s find your next step.</h2>
     <p>If the deal is a fit, I will help you identify the most realistic financing path, the likely documentation, and the tradeoffs you should expect before you apply.</p>
     <div class="cta-row">
       <a class="button" href="/apply/">Start the application</a>

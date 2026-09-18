@@ -16,9 +16,10 @@ redirect_from:
 <section class="section split">
   <div class="panel">
     <p class="eyebrow">Bridge Financing</p>
-    <h1>Short-term capital for deals that cannot wait for long-term underwriting.</h1>
+    <h1>Bridge financing for time-sensitive deals.</h1>
     <p>Bridge loans are designed for timing problems: acquisitions, rehab periods, receivable gaps, or transition windows where the borrower knows the permanent solution but cannot get there in time. These deals can move quickly, but only if the collateral and exit are clear.</p>
     <p>I help borrowers determine when bridge debt preserves an opportunity and when it simply adds expensive pressure without a credible exit.</p>
+  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
   </div>
   <div class="proof-card">
     <p class="eyebrow">Best fit</p>
@@ -61,10 +62,8 @@ redirect_from:
     <p>My role is to tighten both. That means reviewing value, timing, documentation, and the most realistic next capital event before the borrower commits.</p>
   </div>
   <div class="proof-card">
-    <p class="eyebrow">Example</p>
-    <blockquote class="quote">
-      A Houston investor needed $1.2 million in five days to close on an auction property. With the right asset-backed lender and a clear refinance path after rehab, the deal closed on time and rolled into longer-term financing after value was created.
-    </blockquote>
+    <p class="eyebrow">Explore a scenario</p>
+    <p>See how financing structures can fit different business needs in the <a href="/services/us-client-success-stories/">educational financing examples</a>. These illustrations are not client testimonials or commitments to fund.</p>
   </div>
 </section>
 

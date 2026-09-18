@@ -10,29 +10,10 @@ redirect_from:
 
 <section class="section">
   <p class="eyebrow">Products</p>
-  <h1>Financing products for different operating realities.</h1>
-  <p class="section-intro">Use this page to narrow the financing family that fits your timeline, repayment pressure, and business need before you spend time in the wrong application path.</p>
-  <div class="section-band">
-    <div class="section-band__panel">
-      <p class="eyebrow">How to use this page</p>
-      <h2>Pick the financing family that best matches the business problem.</h2>
-      <p>Do not start with product names if you are unsure. Start with what the capital is solving, how fast it is needed, and what repayment structure the business can support.</p>
-      <div class="section-band__actions">
-        <a class="button" href="/apply/">Start application</a>
-        <a class="button button--secondary" href="/resources.html">Open tools and calculators</a>
-      </div>
-    </div>
-    <div class="mini-grid">
-      <article class="mini-card">
-        <h3>Usually speed-driven</h3>
-        <p>Working capital loans, line of credit, bridge, or invoice-based structures when timing matters more than headline rate alone.</p>
-      </article>
-      <article class="mini-card">
-        <h3>Usually structure-driven</h3>
-        <p>Term, SBA, equipment, or mortgage products when repayment shape and longer-term fit matter more.</p>
-      </article>
-    </div>
-  </div>
+  <h1>Find the right financing for your business.</h1>
+  <p class="section-intro">Financing support for businesses in Canada and the United States. Compare options by use of funds, timing, and repayment structure.</p>
+  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
+  <p class="content-note">The guides below focus on U.S. financing. For Canadian requests, share your province or territory, currency, and financing need so we can review the available options. <a href="https://legacy.sba.gov/partners/lenders/7a-loan-program/terms-conditions-eligibility">SBA programs require a U.S.-located business</a>; availability of other products varies by location.</p>
   <div class="mini-grid mini-grid--3">
     <article class="mini-card">
       <span class="card-label">Fastest route</span>

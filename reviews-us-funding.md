@@ -10,7 +10,7 @@ breadcrumb_title: Client Experience
   <div class="section-band">
     <div class="section-band__panel">
       <p class="eyebrow">Client experience</p>
-      <h1>A clear standard for how a financing request should be handled.</h1>
+      <h1>What to expect when we work together.</h1>
       <p>Commercial financing can become noisy quickly. My role is to make the first review more disciplined: define the use of proceeds, identify the realistic product family, explain the tradeoffs, and move only the viable paths forward.</p>
       <div class="section-band__actions">
         <a class="button" href="/apply/">Start a financing request</a>
@@ -56,7 +56,7 @@ breadcrumb_title: Client Experience
     <article class="theme-card">
       <span class="card-label">Follow-through</span>
       <h3>Support through execution</h3>
-      <p>The broker’s role continues through document collection, provider communication, comparison of terms, and the final decision—not only the first conversation.</p>
+      <p>Support continues through document collection, provider communication, comparison of terms, and the final decision—not only the first conversation.</p>
     </article>
   </div>
 </section>
@@ -69,12 +69,12 @@ breadcrumb_title: Client Experience
       <li>A clear list of the information needed next</li>
       <li>An explanation of payment structure, cost, collateral, and timing</li>
       <li>Honest pushback when the requested product does not match the business</li>
-      <li>Direct communication as the request moves between providers</li>
+      <li>Direct communication throughout the funding process</li>
     </ul>
   </div>
   <div class="proof-card">
     <p class="eyebrow">Important role disclosure</p>
-    <p>Nicolas Lescalier is a commercial finance broker and Senior Funding Advisor at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>, not a direct lender. Providers make final underwriting and approval decisions.</p>
+    <p>Nicolas Lescalier is a Senior Funding Advisor at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>. He acts as a direct lender on select deals and works with an extensive network for co-funding. Financing is subject to underwriting and approval.</p>
     <p><a href="/about-nicolas-lescalier-us/">Review Nicolas’s role and approach</a>.</p>
   </div>
 </section>

@@ -1,15 +1,15 @@
-# Site configuration for Nicolas Lescalier U.S. market
+# Site configuration for Nicolas Lescalier Canadian and U.S. markets
 
 # Basic settings
 url: "https://nicolaslescalier.com"
 title: "Nicolas Lescalier"
-tagline: "U.S. Business Financing"
-description: "Commercial finance guidance for U.S. businesses comparing working capital, lines of credit, term loans, SBA, equipment, invoice finance, and CRE options."
+tagline: "Canada & U.S. Business Financing"
+description: "Business financing guidance for businesses in Canada and the United States. Product availability depends on location and the financing request."
 google_analytics_id: "G-F2SD579BRL"
 social_image: "/assets/social-card.png"
 social_image_width: 1200
 social_image_height: 630
-asset_version: "20260713-1"
+asset_version: "20260918-3"
 
 author:
   name: "Nicolas Lescalier"
@@ -23,6 +23,7 @@ plugins:
 # Optional: exclude vendor or tooling directories
 exclude:
   - vendor
+  - tests
 
 # Markdown processing
 markdown: kramdown

@@ -8,7 +8,7 @@ breadcrumb_title: Why Clients Trust Nicolas
 
 <section class="section">
   <p class="eyebrow">Working with Nicolas Lescalier</p>
-  <h1>Commercial financing should be explained without hype.</h1>
+  <h1>Clear advice. A practical financing process.</h1>
   <p class="section-intro">Financing is a high-friction decision. The reason clients keep coming back is not marketing language. It is knowing how the process will work, what the lender will care about, and where the risks sit before the deal moves forward.</p>
 </section>
 
@@ -84,8 +84,8 @@ breadcrumb_title: Why Clients Trust Nicolas
   <div class="grid grid--2">
     <article class="service-card">
       <span class="card-label">Role</span>
-      <h3>Broker status stated clearly</h3>
-      <p>Nicolas is a commercial finance broker and Senior Funding Advisor at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>, not a direct lender. Third-party providers make final approval and pricing decisions.</p>
+      <h3>A clear funding role</h3>
+      <p>Nicolas is a Senior Funding Advisor at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>. He acts as a direct lender on select deals and works with an extensive network for co-funding. Financing is subject to underwriting and approval.</p>
     </article>
     <article class="service-card">
       <span class="card-label">Contact</span>

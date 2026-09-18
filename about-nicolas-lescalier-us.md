@@ -1,6 +1,6 @@
 ---
 title: "About Nicolas Lescalier"
-description: "Learn how Senior Funding Advisor Nicolas Lescalier helps U.S. business owners compare commercial financing structures and prepare stronger requests."
+description: "Learn how Senior Funding Advisor Nicolas Lescalier helps business owners in Canada and the U.S. compare commercial financing structures and prepare stronger requests."
 permalink: "/about-nicolas-lescalier-us/"
 layout: default
 breadcrumb_title: About
@@ -12,9 +12,9 @@ redirect_from:
 <section class="section split">
   <div class="panel">
     <p class="eyebrow">About Nicolas Lescalier</p>
-    <h1>Commercial finance guidance for operators who need clarity fast.</h1>
-    <p>I am a commercial finance broker and Senior Funding Advisor at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>. I work with U.S. business owners and commercial real estate borrowers who need practical help choosing a realistic financing structure.</p>
-    <p>My role is not to approve or fund transactions directly. It is to narrow the available path, flag weak spots early, prepare the request, and help the borrower compare third-party financing options with more confidence.</p>
+    <h1>Direct guidance from Nicolas Lescalier.</h1>
+    <p>I am a Senior Funding Advisor at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>. I work with business owners in Canada and the United States and commercial real estate borrowers who need practical help choosing a realistic financing structure.</p>
+    <p>I act as a direct lender on select deals and work with an extensive network of funding partners when co-funding is appropriate. I also help borrowers prepare requests and compare options from other providers, with attention to structure, cost, and repayment.</p>
     <p>My work spans working capital loans, lines of credit, term loans, equipment financing, invoice-driven solutions, SBA paths, bridge financing, and broader commercial mortgage scenarios.</p>
   </div>
   <div class="proof-card">
@@ -32,7 +32,7 @@ redirect_from:
   <div class="identity-card">
     <p class="eyebrow">Verify and contact</p>
     <p class="identity-card__role">Senior Funding Advisor | Premium Merchant Funding</p>
-    <p>More than five years of commercial and alternative-finance experience across operating-business and real-estate scenarios. Product availability, approval, and terms are determined by third-party providers.</p>
+    <p>More than five years of commercial and alternative-finance experience across operating-business and real-estate scenarios. Product availability, approval, and terms depend on the transaction and the participating funding providers.</p>
     <p class="identity-card__links">
       <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">PMF website</a>
       <a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>
@@ -83,7 +83,7 @@ redirect_from:
     <article class="service-card">
       <span class="card-label">Borrower Coverage</span>
       <h3>Operators and investors</h3>
-      <p>I support small and mid-sized businesses, owner-operators, and commercial real estate borrowers across the United States, especially where the financing problem is more nuanced than a basic bank application.</p>
+      <p>I support small and mid-sized businesses, owner-operators, and commercial real estate borrowers in Canada and the United States, especially where the financing problem is more nuanced than a basic bank application.</p>
     </article>
     <article class="service-card">
       <span class="card-label">Typical Scenarios</span>

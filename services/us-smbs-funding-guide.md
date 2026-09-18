@@ -11,8 +11,9 @@ redirect_from:
 
 <section class="section">
   <p class="eyebrow">Funding Guide</p>
-  <h1>Fast funding starts with the right product choice, not just the fastest lender.</h1>
+  <h1>Compare your business funding options.</h1>
   <p class="section-intro">When a business needs capital quickly, the biggest mistake is often choosing a structure before clarifying the actual problem. Payroll stress, equipment growth, invoice delays, purchase orders, and property transition do not belong in the same financing bucket.</p>
+  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
 </section>
 
 <section class="section">
@@ -71,10 +72,11 @@ redirect_from:
 <section class="section">
   <p class="eyebrow">Decision matrix</p>
   <h2>Compare the financing families on the tradeoffs that actually change the decision.</h2>
-  <div class="table-scroll">
+  <div class="table-scroll" tabindex="0" role="region" aria-label="Financing product comparison, scroll horizontally for all columns">
     <table class="decision-table">
+      <caption>Financing structures compared by use, repayment, underwriting, and risk</caption>
       <thead>
-        <tr><th>Product</th><th>Best matched need</th><th>Typical payment shape</th><th>Main underwriting focus</th><th>Primary risk</th></tr>
+        <tr><th scope="col">Product</th><th scope="col">Best matched need</th><th scope="col">Typical payment shape</th><th scope="col">Main underwriting focus</th><th scope="col">Primary risk</th></tr>
       </thead>
       <tbody>
         <tr><td><a href="/services/us-working-capital-loans/">Working capital</a></td><td>Urgent, short-duration operating need</td><td>Often daily or weekly</td><td>Recent deposits, revenue consistency, existing positions</td><td>Frequent payments can compress cash flow</td></tr>

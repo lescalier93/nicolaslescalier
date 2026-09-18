@@ -12,7 +12,7 @@ redirect_from:
   <div class="section-band">
     <div class="section-band__panel">
       <p class="eyebrow">Case examples</p>
-      <h1>Representative scenarios showing why financing structure matters.</h1>
+      <h1>Financing scenarios, explained.</h1>
       <p>These are simplified, educational scenarios—not client testimonials or promises of results. Each example isolates the business problem, key constraint, possible financing structure, and the reason that structure may fit.</p>
       <div class="section-band__actions">
         <a class="button" href="/apply/">Start application</a>
