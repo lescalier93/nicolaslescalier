@@ -10,7 +10,7 @@ breadcrumb_title: Contact
 <header class="page-intro">
   <p class="eyebrow">Contact</p>
   <h1>Let’s talk about your financing.</h1>
-  <p>Share the amount, timing, and use of funds. I’ll review the request and outline the next steps.</p>
+  <p>For financing in Canada or the U.S., share your location, currency, amount, timing, and use of funds. I’ll review the request and outline the next steps.</p>
 </header>
 <section class="section split contact-layout">
 
@@ -60,7 +60,7 @@ breadcrumb_title: Contact
           <option>Equipment financing</option>
           <option>Factoring or invoice finance</option>
           <option>PO financing</option>
-          <option>SBA 7(a)</option>
+          <option value="SBA 7(a)">SBA 7(a) — U.S. business</option>
           <option>Bridge or mortgage financing</option>
           <option>Not sure yet</option>
         </select>
@@ -68,7 +68,7 @@ breadcrumb_title: Contact
 
       <div>
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="7" required placeholder="Tell me about the business, the amount you need, the timeline, and the product you are considering."></textarea>
+        <textarea id="message" name="message" rows="7" required placeholder="Tell me about the business, country and province/state, amount and currency (CAD or USD), timeline, and financing need."></textarea>
       </div>
 
       <div class="notice-card">

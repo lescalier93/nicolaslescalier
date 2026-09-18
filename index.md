@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "U.S. Business Financing Specialist"
-description: "Compare working capital, lines of credit, term loans, SBA, equipment, invoice finance, and CRE options with Nicolas Lescalier: direct funding on select deals and an extensive network for co-funding."
+title: "Business Financing in Canada & the U.S."
+description: "Explore financing in Canada and the U.S. with Nicolas Lescalier: direct funding on select deals and an extensive network for co-funding."
 permalink: /
 faq:
   - question: "How fast can funding happen?"
@@ -17,9 +17,9 @@ faq:
 <section class="hero">
   <div class="hero__grid">
     <div>
-      <p class="eyebrow">U.S. business financing</p>
+      <p class="eyebrow">Canada &amp; U.S. financing</p>
       <h1>Business financing that fits your next move.</h1>
-      <p class="lede">Compare working capital, credit lines, term loans, and more with Nicolas Lescalier. Get direct guidance on the structure, repayment, and next steps that fit your business.</p>
+      <p class="lede">Explore business financing in Canada and the U.S. with Nicolas Lescalier. Get direct guidance on the structure, repayment, and next steps that fit your business.</p>
       <div class="hero__actions">
         <a class="button" href="/apply/">Start Application</a>
         <a class="button button--secondary" href="/services/">Compare financing options</a>
