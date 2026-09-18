@@ -384,17 +384,20 @@ breadcrumb_title: Term Loan Calculator
 </style>
 
 <div class="tool-shell">
-  <section class="section tool-intro">
+  <section class="section tool-intro tool-intro--compact">
     <div class="panel">
       <p class="eyebrow">Calculator</p>
-      <h1>Model a term loan, then test the payment against available cash flow.</h1>
+      <h1>Calculate your term loan payments.</h1>
       <p>This calculator solves for the missing loan variable, builds the amortization, and shows the payment, total interest, payoff horizon, and optional debt-service coverage estimate.</p>
       <div class="cta-row">
+        <a class="button" href="#term-loan-inputs">Use calculator</a>
         <a class="button" id="termScenarioLink" href="/apply/">Use this scenario in application</a>
         <a class="button button--secondary" href="/services/us-term-loans-approach/">Read the term loan guide</a>
       </div>
     </div>
-    <aside class="tool-note">
+
+  </section>
+<details class="tool-advice"><summary>How to use this calculator</summary>    <aside class="tool-note">
       <p class="eyebrow">How to use it</p>
       <h3>Choose one field to solve for, then give the other three.</h3>
       <ul class="plain-list">
@@ -402,8 +405,8 @@ breadcrumb_title: Term Loan Calculator
         <li>Annual schedule view groups the monthly amortization into yearly totals.</li>
         <li>If the solved result looks unrealistic, revise the assumptions before treating it as a viable financing path.</li>
       </ul>
-    </aside>
-  </section>
+    </aside></details>
+
 
   <section class="section">
     <div class="calculator-toolbar">
@@ -420,24 +423,9 @@ breadcrumb_title: Term Loan Calculator
     </div>
   </section>
 
-  <section class="section">
-    <div class="insight-grid">
-      <article class="insight-card">
-        <h3>Useful for payment modeling</h3>
-        <p>Compare the monthly payment with cash genuinely available after payroll, rent, inventory, taxes, and existing debt.</p>
-      </article>
-      <article class="insight-card">
-        <h3>Structure matters as much as rate</h3>
-        <p>Term length and amortization can change business strain just as much as the nominal rate.</p>
-      </article>
-      <article class="insight-card">
-        <h3>Best when tied to a real use of proceeds</h3>
-        <p>A calculator can model the debt. It cannot decide whether term, SBA, LOC, or equipment finance is the better product family.</p>
-      </article>
-    </div>
-  </section>
 
-  <div class="calculator-container">
+
+  <div class="calculator-container" id="term-loan-inputs">
     <div class="calculator-header">
       <h2>Term Loan Solver and Amortization</h2>
       <p>Select the field you want solved, then enter the other three. The calculator updates the answer, total repayment, total interest, and the amortization schedule automatically.</p>
@@ -588,6 +576,22 @@ breadcrumb_title: Term Loan Calculator
     </div>
   </div>
 
+  <section class="section">
+    <div class="insight-grid">
+      <article class="insight-card">
+        <h3>Useful for payment modeling</h3>
+        <p>Compare the monthly payment with cash genuinely available after payroll, rent, inventory, taxes, and existing debt.</p>
+      </article>
+      <article class="insight-card">
+        <h3>Structure matters as much as rate</h3>
+        <p>Term length and amortization can change business strain just as much as the nominal rate.</p>
+      </article>
+      <article class="insight-card">
+        <h3>Best when tied to a real use of proceeds</h3>
+        <p>A calculator can model the debt. It cannot decide whether term, SBA, LOC, or equipment finance is the better product family.</p>
+      </article>
+    </div>
+  </section>
   <section class="section">
     <div class="cta-panel">
       <p class="eyebrow">Interpret the result</p>

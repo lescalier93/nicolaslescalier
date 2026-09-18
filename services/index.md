@@ -10,29 +10,8 @@ redirect_from:
 
 <section class="section">
   <p class="eyebrow">Products</p>
-  <h1>Financing products for different operating realities.</h1>
-  <p class="section-intro">Use this page to narrow the financing family that fits your timeline, repayment pressure, and business need before you spend time in the wrong application path.</p>
-  <div class="section-band">
-    <div class="section-band__panel">
-      <p class="eyebrow">How to use this page</p>
-      <h2>Pick the financing family that best matches the business problem.</h2>
-      <p>Do not start with product names if you are unsure. Start with what the capital is solving, how fast it is needed, and what repayment structure the business can support.</p>
-      <div class="section-band__actions">
-        <a class="button" href="/apply/">Start application</a>
-        <a class="button button--secondary" href="/resources.html">Open tools and calculators</a>
-      </div>
-    </div>
-    <div class="mini-grid">
-      <article class="mini-card">
-        <h3>Usually speed-driven</h3>
-        <p>Working capital loans, line of credit, bridge, or invoice-based structures when timing matters more than headline rate alone.</p>
-      </article>
-      <article class="mini-card">
-        <h3>Usually structure-driven</h3>
-        <p>Term, SBA, equipment, or mortgage products when repayment shape and longer-term fit matter more.</p>
-      </article>
-    </div>
-  </div>
+  <h1>Find the right financing for your business.</h1>
+  <p class="section-intro">Compare options by use of funds, timing, and repayment structure.</p>
   <div class="mini-grid mini-grid--3">
     <article class="mini-card">
       <span class="card-label">Fastest route</span>

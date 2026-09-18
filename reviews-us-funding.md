@@ -10,7 +10,7 @@ breadcrumb_title: Client Experience
   <div class="section-band">
     <div class="section-band__panel">
       <p class="eyebrow">Client experience</p>
-      <h1>A clear standard for how a financing request should be handled.</h1>
+      <h1>What to expect when we work together.</h1>
       <p>Commercial financing can become noisy quickly. My role is to make the first review more disciplined: define the use of proceeds, identify the realistic product family, explain the tradeoffs, and move only the viable paths forward.</p>
       <div class="section-band__actions">
         <a class="button" href="/apply/">Start a financing request</a>

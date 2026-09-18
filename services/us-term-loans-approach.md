@@ -24,7 +24,7 @@ faq:
 <section class="section split">
   <div class="panel">
     <p class="eyebrow">Term Loans</p>
-    <h1>Lower-cost capital for business needs that deserve a longer repayment runway.</h1>
+    <h1>Term loans for long-term business needs.</h1>
     <p>Term loans are usually the right choice when the business is financing growth, equipment, expansion, acquisition, or refinancing and needs predictable monthly repayment. They are slower than short-term working capital loans, but they can be materially cleaner from a total-cost and cash-flow standpoint.</p>
     <p>I help borrowers evaluate whether the structure fits not just the purchase, but what the business will need after the loan closes.</p>
   </div>
@@ -81,23 +81,11 @@ faq:
 <section class="section">
   <p class="eyebrow">FAQ</p>
   <h2>Common term loan questions.</h2>
-  <div class="grid grid--2">
-    <article class="service-card">
-      <h3>How long does a term loan usually take?</h3>
-      <p>It depends on the lender path. Bank and SBA files take longer than many non-bank term structures because the documentation burden is heavier.</p>
-    </article>
-    <article class="service-card">
-      <h3>What matters more than the headline rate?</h3>
-      <p>Payment supportability, amortization, fees, collateral terms, and whether the structure limits future flexibility.</p>
-    </article>
-    <article class="service-card">
-      <h3>Is a term loan better than a short-term working capital loan?</h3>
-      <p>Usually for longer-duration needs, yes. But if the timing is too tight or the documentation is not there, a term loan may not be realistic right now.</p>
-    </article>
-    <article class="service-card">
-      <h3>What should I prepare?</h3>
-      <p>Expect to need stronger financial visibility than short-term products require. The <a href="/application-checklist/">application checklist</a> is the best place to start.</p>
-    </article>
+  <div class="faq-list">
+    <details class="faq-item"><summary>How long does a term loan usually take?</summary><p>It depends on the lender path. Bank and SBA files take longer than many non-bank term structures because the documentation burden is heavier.</p></details>
+    <details class="faq-item"><summary>What matters more than the headline rate?</summary><p>Payment supportability, amortization, fees, collateral terms, and whether the structure limits future flexibility.</p></details>
+    <details class="faq-item"><summary>Is a term loan better than a short-term working capital loan?</summary><p>Usually for longer-duration needs, yes. But if the timing is too tight or the documentation is not there, a term loan may not be realistic right now.</p></details>
+    <details class="faq-item"><summary>What should I prepare?</summary><p>Expect to need stronger financial visibility than short-term products require. The <a href="/application-checklist/">application checklist</a> is the best place to start.</p></details>
   </div>
 </section>
 

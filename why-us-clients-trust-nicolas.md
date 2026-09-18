@@ -8,7 +8,7 @@ breadcrumb_title: Why Clients Trust Nicolas
 
 <section class="section">
   <p class="eyebrow">Working with Nicolas Lescalier</p>
-  <h1>Commercial financing should be explained without hype.</h1>
+  <h1>Clear advice. A practical financing process.</h1>
   <p class="section-intro">Financing is a high-friction decision. The reason clients keep coming back is not marketing language. It is knowing how the process will work, what the lender will care about, and where the risks sit before the deal moves forward.</p>
 </section>
 

@@ -18,7 +18,7 @@ faq:
 <section class="section split">
   <div class="panel">
     <p class="eyebrow">PO Financing</p>
-    <h1>Fund a strong purchase order without draining the business to fulfill it.</h1>
+    <h1>Finance your next purchase order.</h1>
     <p>Purchase order financing fits businesses that have a valid customer order but need capital to produce, source, or deliver the goods before getting paid. It is most useful when the order is real, the customer is credible, and the margin can support the structure.</p>
   </div>
   <div class="proof-card">
@@ -74,23 +74,11 @@ faq:
 <section class="section">
   <p class="eyebrow">FAQ</p>
   <h2>Common PO financing questions.</h2>
-  <div class="grid grid--2">
-    <article class="service-card">
-      <h3>When is PO financing a good fit?</h3>
-      <p>PO financing is usually a good fit when a real customer order exists but the business needs capital to source or produce the goods before payment arrives.</p>
-    </article>
-    <article class="service-card">
-      <h3>What matters most in a PO file?</h3>
-      <p>Order quality, customer credibility, supplier path, margin, and execution visibility all matter heavily.</p>
-    </article>
-    <article class="service-card">
-      <h3>Can PO financing work without strong margins?</h3>
-      <p>Usually not. Thin margins make the structure much harder to justify.</p>
-    </article>
-    <article class="service-card">
-      <h3>Should I compare PO financing with factoring?</h3>
-      <p>Yes. In some cases the better path is to combine or sequence the structures depending on how the order and invoice flow works.</p>
-    </article>
+  <div class="faq-list">
+    <details class="faq-item"><summary>When is PO financing a good fit?</summary><p>PO financing is usually a good fit when a real customer order exists but the business needs capital to source or produce the goods before payment arrives.</p></details>
+    <details class="faq-item"><summary>What matters most in a PO file?</summary><p>Order quality, customer credibility, supplier path, margin, and execution visibility all matter heavily.</p></details>
+    <details class="faq-item"><summary>Can PO financing work without strong margins?</summary><p>Usually not. Thin margins make the structure much harder to justify.</p></details>
+    <details class="faq-item"><summary>Should I compare PO financing with factoring?</summary><p>Yes. In some cases the better path is to combine or sequence the structures depending on how the order and invoice flow works.</p></details>
   </div>
 </section>
 

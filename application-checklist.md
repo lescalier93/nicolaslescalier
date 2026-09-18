@@ -8,7 +8,7 @@ breadcrumb_title: Checklist
 
 <section class="section">
   <p class="eyebrow">Application Checklist</p>
-  <h1>What to prepare before you apply for business financing.</h1>
+  <h1>Your business financing checklist.</h1>
   <p class="section-intro">The cleaner the file, the better the conversation. You do not need every document for every product, but you should have the basic deal facts ready before expecting a useful answer.</p>
 </section>
 

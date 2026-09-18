@@ -11,7 +11,7 @@ redirect_from:
 
 <section class="section">
   <p class="eyebrow">Funding Guide</p>
-  <h1>Fast funding starts with the right product choice, not just the fastest lender.</h1>
+  <h1>Compare your business funding options.</h1>
   <p class="section-intro">When a business needs capital quickly, the biggest mistake is often choosing a structure before clarifying the actual problem. Payroll stress, equipment growth, invoice delays, purchase orders, and property transition do not belong in the same financing bucket.</p>
 </section>
 

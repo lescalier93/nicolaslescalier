@@ -18,7 +18,7 @@ faq:
 <section class="section split">
   <div class="panel">
     <p class="eyebrow">Line of Credit</p>
-    <h1>Flexible capital for businesses that need room to draw, repay, and draw again.</h1>
+    <h1>A business line of credit for recurring needs.</h1>
     <p>A line of credit is usually the right fit when the need is recurring rather than one-time. Inventory cycles, uneven receivables, seasonal swings, and short-term operating gaps often fit a revolving facility better than a lump-sum loan.</p>
   </div>
   <div class="proof-card">
@@ -74,23 +74,11 @@ faq:
 <section class="section">
   <p class="eyebrow">FAQ</p>
   <h2>Common line of credit questions.</h2>
-  <div class="grid grid--2">
-    <article class="service-card">
-      <h3>When is a line better than a term loan?</h3>
-      <p>When the need repeats. Inventory cycles, recurring working-capital gaps, and seasonal borrowing are usually cleaner with a line.</p>
-    </article>
-    <article class="service-card">
-      <h3>Do I pay interest on the full limit?</h3>
-      <p>Usually not. Revolving structures typically charge based on the amount drawn, not just the total approved limit.</p>
-    </article>
-    <article class="service-card">
-      <h3>Can a line replace a short-term working capital loan?</h3>
-      <p>Sometimes. If the borrower has enough support for a revolving facility, it can be a cleaner option than repeated short-term advances.</p>
-    </article>
-    <article class="service-card">
-      <h3>What usually weakens a line request?</h3>
-      <p>Thin revenue, poor repayment visibility, uneven bank activity, or a use of proceeds that actually belongs in a different product.</p>
-    </article>
+  <div class="faq-list">
+    <details class="faq-item"><summary>When is a line better than a term loan?</summary><p>When the need repeats. Inventory cycles, recurring working-capital gaps, and seasonal borrowing are usually cleaner with a line.</p></details>
+    <details class="faq-item"><summary>Do I pay interest on the full limit?</summary><p>Usually not. Revolving structures typically charge based on the amount drawn, not just the total approved limit.</p></details>
+    <details class="faq-item"><summary>Can a line replace a short-term working capital loan?</summary><p>Sometimes. If the borrower has enough support for a revolving facility, it can be a cleaner option than repeated short-term advances.</p></details>
+    <details class="faq-item"><summary>What usually weakens a line request?</summary><p>Thin revenue, poor repayment visibility, uneven bank activity, or a use of proceeds that actually belongs in a different product.</p></details>
   </div>
 </section>
 

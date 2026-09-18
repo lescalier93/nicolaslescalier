@@ -18,7 +18,7 @@ faq:
 <section class="section split">
   <div class="panel">
     <p class="eyebrow">SBA 7(a)</p>
-    <h1>Lower-cost capital for stronger borrowers who can tolerate a slower process.</h1>
+    <h1>SBA 7(a) financing for business growth.</h1>
     <p>SBA 7(a) loans are often the best-value option for acquisitions, expansion, refinance, partner buyouts, and other larger financing needs when the file is strong enough and the borrower can support a more documentation-heavy process.</p>
   </div>
   <div class="proof-card">
@@ -74,23 +74,11 @@ faq:
 <section class="section">
   <p class="eyebrow">FAQ</p>
   <h2>Common SBA 7(a) questions.</h2>
-  <div class="grid grid--2">
-    <article class="service-card">
-      <h3>When is SBA 7(a) worth pursuing?</h3>
-      <p>SBA 7(a) is often worth pursuing when the borrower has a strong enough file to justify the slower process in exchange for lower-cost, longer-term capital.</p>
-    </article>
-    <article class="service-card">
-      <h3>What kinds of situations fit SBA 7(a)?</h3>
-      <p>Business acquisition, expansion, refinance, partner buyouts, and other larger needs are common examples.</p>
-    </article>
-    <article class="service-card">
-      <h3>Why doesn&apos;t every borrower use SBA?</h3>
-      <p>Because the documentation burden, timing, and qualification standards are heavier than many faster alternatives.</p>
-    </article>
-    <article class="service-card">
-      <h3>Should SBA be compared with a term loan?</h3>
-      <p>Yes. Sometimes SBA is the best long-term outcome, but sometimes a non-SBA term structure is more realistic for the current timeline.</p>
-    </article>
+  <div class="faq-list">
+    <details class="faq-item"><summary>When is SBA 7(a) worth pursuing?</summary><p>SBA 7(a) is often worth pursuing when the borrower has a strong enough file to justify the slower process in exchange for lower-cost, longer-term capital.</p></details>
+    <details class="faq-item"><summary>What kinds of situations fit SBA 7(a)?</summary><p>Business acquisition, expansion, refinance, partner buyouts, and other larger needs are common examples.</p></details>
+    <details class="faq-item"><summary>Why doesn&apos;t every borrower use SBA?</summary><p>Because the documentation burden, timing, and qualification standards are heavier than many faster alternatives.</p></details>
+    <details class="faq-item"><summary>Should SBA be compared with a term loan?</summary><p>Yes. Sometimes SBA is the best long-term outcome, but sometimes a non-SBA term structure is more realistic for the current timeline.</p></details>
   </div>
 </section>
 

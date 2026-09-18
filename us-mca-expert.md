@@ -24,7 +24,7 @@ faq:
 <section class="section split">
   <div class="panel">
     <p class="eyebrow">Working Capital Loans</p>
-    <h1>Fast working capital when timing matters more than perfect bank paper.</h1>
+    <h1>Working capital when timing matters.</h1>
     <p>A short-term working capital loan can be useful when a business needs capital quickly and repayment needs to track receivables more closely than a fixed monthly loan. It is often the right tool for urgent inventory, payroll, repairs, marketing, or location-related spend, but only when the repayment pressure actually fits the business.</p>
     <p>I help borrowers determine whether a working capital loan solves the problem cleanly or whether another product would create less drag on cash flow.</p>
   </div>
@@ -81,23 +81,11 @@ faq:
 <section class="section">
   <p class="eyebrow">FAQ</p>
   <h2>Common working capital loan questions.</h2>
-  <div class="grid grid--2">
-    <article class="service-card">
-      <h3>How fast can a working capital loan fund?</h3>
-      <p>Some working capital files can move within 24 to 72 hours if deposits are clear and the documentation is ready.</p>
-    </article>
-    <article class="service-card">
-      <h3>Is a working capital loan always expensive?</h3>
-      <p>It is often more expensive than term debt, but the real question is whether the timing value and repayment cadence make sense for the business.</p>
-    </article>
-    <article class="service-card">
-      <h3>Who is usually a bad fit for a working capital loan?</h3>
-      <p>Borrowers with thin deposits, tight margins, or no room for frequent remittances are often better served by another structure.</p>
-    </article>
-    <article class="service-card">
-      <h3>Should I compare more than one offer?</h3>
-      <p>Yes. Factor rate alone is not enough. Compare total payback, remittance pace, term, and whether the deal can be absorbed cleanly.</p>
-    </article>
+  <div class="faq-list">
+    <details class="faq-item"><summary>How fast can a working capital loan fund?</summary><p>Some working capital files can move within 24 to 72 hours if deposits are clear and the documentation is ready.</p></details>
+    <details class="faq-item"><summary>Is a working capital loan always expensive?</summary><p>It is often more expensive than term debt, but the real question is whether the timing value and repayment cadence make sense for the business.</p></details>
+    <details class="faq-item"><summary>Who is usually a bad fit for a working capital loan?</summary><p>Borrowers with thin deposits, tight margins, or no room for frequent remittances are often better served by another structure.</p></details>
+    <details class="faq-item"><summary>Should I compare more than one offer?</summary><p>Yes. Factor rate alone is not enough. Compare total payback, remittance pace, term, and whether the deal can be absorbed cleanly.</p></details>
   </div>
 </section>
 

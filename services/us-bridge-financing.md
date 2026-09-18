@@ -16,7 +16,7 @@ redirect_from:
 <section class="section split">
   <div class="panel">
     <p class="eyebrow">Bridge Financing</p>
-    <h1>Short-term capital for deals that cannot wait for long-term underwriting.</h1>
+    <h1>Bridge financing for time-sensitive deals.</h1>
     <p>Bridge loans are designed for timing problems: acquisitions, rehab periods, receivable gaps, or transition windows where the borrower knows the permanent solution but cannot get there in time. These deals can move quickly, but only if the collateral and exit are clear.</p>
     <p>I help borrowers determine when bridge debt preserves an opportunity and when it simply adds expensive pressure without a credible exit.</p>
   </div>

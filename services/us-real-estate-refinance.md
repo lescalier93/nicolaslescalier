@@ -12,7 +12,7 @@ redirect_from:
 <section class="section split">
   <div class="panel">
     <p class="eyebrow">Commercial Refinance</p>
-    <h1>Refinance commercial property when the new structure improves the asset, not just the monthly payment.</h1>
+    <h1>Refinance your commercial property.</h1>
     <p>Commercial real estate refinancing can reduce debt cost, extend term, replace a bridge loan, or unlock equity for improvements and new investments. The key is to compare the real savings and strategic benefit against closing costs, leverage, covenants, and prepayment friction.</p>
     <p>I help borrowers evaluate whether a refinance improves the capital stack or just creates a new set of constraints.</p>
   </div>

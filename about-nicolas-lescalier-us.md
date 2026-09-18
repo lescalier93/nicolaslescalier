@@ -12,7 +12,7 @@ redirect_from:
 <section class="section split">
   <div class="panel">
     <p class="eyebrow">About Nicolas Lescalier</p>
-    <h1>Commercial finance guidance for operators who need clarity fast.</h1>
+    <h1>Direct guidance from Nicolas Lescalier.</h1>
     <p>I am a commercial finance broker and Senior Funding Advisor at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>. I work with U.S. business owners and commercial real estate borrowers who need practical help choosing a realistic financing structure.</p>
     <p>My role is not to approve or fund transactions directly. It is to narrow the available path, flag weak spots early, prepare the request, and help the borrower compare third-party financing options with more confidence.</p>
     <p>My work spans working capital loans, lines of credit, term loans, equipment financing, invoice-driven solutions, SBA paths, bridge financing, and broader commercial mortgage scenarios.</p>
