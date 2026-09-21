@@ -85,7 +85,7 @@ breadcrumb_title: Why Clients Trust Nicolas
     <article class="service-card">
       <span class="card-label">Role</span>
       <h3>A clear funding role</h3>
-      <p>Nicolas is a Senior Funding Advisor at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>. He acts as a direct lender on select deals and works with an extensive network for co-funding. Financing is subject to underwriting and approval.</p>
+      <p>Nicolas is a Funding Manager at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>. He acts as a direct lender on select deals and works with an extensive network for co-funding. Financing is subject to underwriting and approval.</p>
     </article>
     <article class="service-card">
       <span class="card-label">Contact</span>

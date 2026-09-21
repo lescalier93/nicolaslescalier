@@ -1,6 +1,6 @@
 ---
 title: "About Nicolas Lescalier"
-description: "Learn how Senior Funding Advisor Nicolas Lescalier helps business owners in Canada and the U.S. compare commercial financing structures and prepare stronger requests."
+description: "Learn how Funding Manager Nicolas Lescalier helps business owners in Canada and the U.S. compare commercial financing structures and prepare stronger requests."
 permalink: "/about-nicolas-lescalier-us/"
 layout: default
 breadcrumb_title: About
@@ -13,7 +13,7 @@ redirect_from:
   <div class="panel">
     <p class="eyebrow">About Nicolas Lescalier</p>
     <h1>Direct guidance from Nicolas Lescalier.</h1>
-    <p>I am a Senior Funding Advisor at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>. I work with business owners in Canada and the United States and commercial real estate borrowers who need practical help choosing a realistic financing structure.</p>
+    <p>I am a Funding Manager at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>. I work with business owners in Canada and the United States and commercial real estate borrowers who need practical help choosing a realistic financing structure.</p>
     <p>I act as a direct lender on select deals and work with an extensive network of funding partners when co-funding is appropriate. I also help borrowers prepare requests and compare options from other providers, with attention to structure, cost, and repayment.</p>
     <p>My work spans working capital loans, lines of credit, term loans, equipment financing, invoice-driven solutions, SBA paths, bridge financing, and broader commercial mortgage scenarios.</p>
   </div>
@@ -31,7 +31,7 @@ redirect_from:
 <section class="section">
   <div class="identity-card">
     <p class="eyebrow">Verify and contact</p>
-    <p class="identity-card__role">Senior Funding Advisor | Premium Merchant Funding</p>
+    <p class="identity-card__role">Funding Manager | Premium Merchant Funding</p>
     <p>More than five years of commercial and alternative-finance experience across operating-business and real-estate scenarios. Product availability, approval, and terms depend on the transaction and the participating funding providers.</p>
     <p class="identity-card__links">
       <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">PMF website</a>

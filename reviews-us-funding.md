@@ -74,7 +74,7 @@ breadcrumb_title: Client Experience
   </div>
   <div class="proof-card">
     <p class="eyebrow">Important role disclosure</p>
-    <p>Nicolas Lescalier is a Senior Funding Advisor at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>. He acts as a direct lender on select deals and works with an extensive network for co-funding. Financing is subject to underwriting and approval.</p>
+    <p>Nicolas Lescalier is a Funding Manager at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>. He acts as a direct lender on select deals and works with an extensive network for co-funding. Financing is subject to underwriting and approval.</p>
     <p><a href="/about-nicolas-lescalier-us/">Review Nicolas’s role and approach</a>.</p>
   </div>
 </section>

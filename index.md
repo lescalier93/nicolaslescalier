@@ -37,7 +37,7 @@ faq:
 <section class="section">
   <div class="identity-card">
     <p class="eyebrow">Professional role</p>
-    <p class="identity-card__role">Nicolas Lescalier — Senior Funding Advisor at Premium Merchant Funding</p>
+    <p class="identity-card__role">Nicolas Lescalier — Funding Manager at Premium Merchant Funding</p>
     <p>I fund select deals directly and work with an extensive network of funding partners when co-funding is appropriate. I also help business owners compare financing options and prepare requests for other providers. Every deal is subject to underwriting and approval.</p>
     <p class="identity-card__links">
       <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>

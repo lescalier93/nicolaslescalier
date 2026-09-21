@@ -15,7 +15,7 @@ breadcrumb_title: Terms and Conditions
 <div class="legal-content">
   <section>
     <h2>1. Financing role</h2>
-    <p>Nicolas Lescalier is a Senior Funding Advisor at Premium Merchant Funding (“PMF”). He acts as a direct lender on select deals, works with an extensive network for co-funding, and helps arrange financing through third-party providers. Neither this website nor a conversation with Nicolas creates a commitment to lend. Financing, if available, is subject to the underwriting, approval, pricing, and documentation requirements of the participating lenders, funders, banks, or other providers.</p>
+    <p>Nicolas Lescalier is a Funding Manager at Premium Merchant Funding (“PMF”). He acts as a direct lender on select deals, works with an extensive network for co-funding, and helps arrange financing through third-party providers. Neither this website nor a conversation with Nicolas creates a commitment to lend. Financing, if available, is subject to the underwriting, approval, pricing, and documentation requirements of the participating lenders, funders, banks, or other providers.</p>
     <p>Nicolas and PMF may receive compensation from a financing provider, from transaction proceeds, or as otherwise disclosed in connection with a completed transaction.</p>
   </section>
 
