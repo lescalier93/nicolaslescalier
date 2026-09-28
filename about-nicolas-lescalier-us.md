@@ -1,5 +1,5 @@
 ---
-title: "About Nicolas Lescalier"
+title: "Nicolas Lescalier | Funding Manager"
 description: "Learn how Funding Manager Nicolas Lescalier helps business owners in Canada and the U.S. compare commercial financing structures and prepare stronger requests."
 permalink: "/about-nicolas-lescalier-us/"
 layout: default
@@ -12,7 +12,7 @@ redirect_from:
 <section class="section split">
   <div class="panel">
     <p class="eyebrow">About Nicolas Lescalier</p>
-    <h1>Direct guidance from Nicolas Lescalier.</h1>
+    <h1>Nicolas Lescalier, Funding Manager.</h1>
     <p>I am a Funding Manager at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>. I work with business owners in Canada and the United States and commercial real estate borrowers who need practical help choosing a realistic financing structure.</p>
     <p>I act as a direct lender on select deals and work with an extensive network of funding partners when co-funding is appropriate. I also help borrowers prepare requests and compare options from other providers, with attention to structure, cost, and repayment.</p>
     <p>My work spans working capital loans, lines of credit, term loans, equipment financing, invoice-driven solutions, SBA paths, bridge financing, and broader commercial mortgage scenarios.</p>

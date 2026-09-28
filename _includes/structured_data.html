@@ -2,14 +2,23 @@
 {
   "@context": "https://schema.org",
   "@graph": [
+    {% if page.url == '/about-nicolas-lescalier-us/' %}
+    {
+      "@type": "ProfilePage",
+      "@id": "https://nicolaslescalier.com/about-nicolas-lescalier-us/#profile",
+      "url": "https://nicolaslescalier.com/about-nicolas-lescalier-us/",
+      "name": {{ page.title | jsonify }},
+      "mainEntity": { "@id": "https://nicolaslescalier.com/#person" },
+      "isPartOf": { "@id": "https://nicolaslescalier.com/#website" }
+    },
+    {% endif %}
     {
       "@type": "Person",
       "@id": "https://nicolaslescalier.com/#person",
       "name": "Nicolas Lescalier",
       "description": "Funding Manager offering direct funding on select deals, access to an extensive co-funding network, and guidance on business financing in Canada and the United States.",
       "jobTitle": "Funding Manager",
-      "url": "https://nicolaslescalier.com",
-      "areaServed": "US",
+      "url": "https://nicolaslescalier.com/about-nicolas-lescalier-us/",
       "worksFor": {
         "@type": "Organization",
         "name": "Premium Merchant Funding",

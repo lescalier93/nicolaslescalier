@@ -6,7 +6,7 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
     {% assign seo_title = page.title | default: site.title %}
     {% assign seo_description = page.description | default: site.description %}
-    <title>{{ seo_title }}{% unless seo_title == site.title %} | {{ site.title }}{% endunless %}</title>
+    <title>{{ seo_title | escape }}{% unless seo_title contains site.title %} | {{ site.title | escape }}{% endunless %}</title>
     <meta name="description" content="{{ seo_description | escape }}">
     <meta name="author" content="Nicolas Lescalier">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
