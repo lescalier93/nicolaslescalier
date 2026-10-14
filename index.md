@@ -161,3 +161,10 @@ faq:
     </div>
   </div>
 </section>
+
+{% include canada_guides.html %}
+
+<section class="section split">
+  <div class="panel"><p class="eyebrow">Where I operate</p><h2>Across Canada and all 50 U.S. states.</h2><p>My service is fully online, including Canada's northern territories, Alaska, and Hawaii. We review the financing request remotely, with product availability assessed for your business and location.</p><a class="button" href="/where-i-operate/">Explore the coverage map</a></div>
+  <a class="coverage-preview" href="/where-i-operate/" aria-label="View the Canada and U.S. coverage map"><img src="/assets/canada-us-coverage.svg" width="1000" height="720" loading="lazy" alt="Canada and United States online service coverage, including Alaska and Hawaii."></a>
+</section>

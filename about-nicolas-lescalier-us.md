@@ -33,6 +33,7 @@ redirect_from:
     <p class="eyebrow">Verify and contact</p>
     <p class="identity-card__role">Funding Manager | Premium Merchant Funding</p>
     <p>More than five years of commercial and alternative-finance experience across operating-business and real-estate scenarios. Product availability, approval, and terms depend on the transaction and the participating funding providers.</p>
+    <p>My service is fully online across all Canadian provinces and territories and all 50 U.S. states. <a href="/where-i-operate/">View the coverage map and remote process</a>.</p>
     <p class="identity-card__links">
       <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">PMF website</a>
       <a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>
