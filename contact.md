@@ -56,7 +56,7 @@ breadcrumb_title: Contact
           <option value="">Select the closest fit</option>
           <option>Working capital loan</option>
           <option>Line of credit</option>
-          <option>Term loan</option>
+          <option>Term loan</option><option>3-year term program</option>
           <option>Equipment financing</option>
           <option>Factoring or invoice finance</option>
           <option>PO financing</option>

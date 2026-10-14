@@ -47,6 +47,8 @@ faq:
   </div>
 </section>
 
+{% include term_program_feature.html %}
+
 <section class="section">
   <p class="eyebrow">Core products</p>
   <h2>Explore financing options.</h2>

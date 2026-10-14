@@ -47,3 +47,12 @@ Check Bing Webmaster Tools Search Performance (queries, pages, clicks, impressio
 Existing GA4 events distinguish `cta_click`, `booking_click`, `phone_click`, `email_click`, `form_started`, `form_submit`, and thank-you views. A click is an inquiry intent, not a funded loan. A form submission event can be an attempt; use confirmed form success and valid business records when measuring actual leads. No visitor-entered name, email, phone number, or financing amounts should be added to analytics events.
 
 The website's service is fully online. Coverage pages are service information and must not imply physical offices. LinkedIn is outside the scope of these website updates. Real credentials and customer outcomes require factual support and permission before publication; existing fictional educational examples must remain clearly labeled.
+
+
+## Build-time page audit
+
+The Build website workflow runs `python3 scripts/check_site.py _site` after the actual GitHub Pages Jekyll build. It checks every sitemap page for self-referencing canonicals, distinct titles and descriptions, indexable crawler directives, one H1, valid JSON-LD, social URL consistency, accessible local images, inbound links, and working internal URLs and fragments. It also checks robots.txt access for major search and AI crawlers. It makes no network requests and does not equate technical eligibility with indexing or AI citations.
+
+## Three-year term program
+
+`_data/term_program.yml` holds the confirmed program details and FAQs. The program page, featured cards, FAQs, and LoanOrCredit markup read this data. If terms change, also review the Canadian overview, application/checklist copy, and page description for consistency. Only publish terms confirmed by Nicolas; do not infer rates, loan sizes, guarantees, or payment schedules from a different program's materials. Amounts are CAD in Canada and USD in the United States.

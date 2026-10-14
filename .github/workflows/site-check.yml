@@ -11,13 +11,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check loan calculation edge cases
         run: node --test tests/loan-calculator.test.cjs
-      - name: Check search notification safeguards
+      - name: Check search safeguards
         run: python3 -m unittest discover -s tests -p 'test_*.py'
       - name: Build with GitHub Pages Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
+      - name: Audit every public page and internal link
+        run: python3 scripts/check_site.py _site
       - name: Save review build
         uses: actions/upload-artifact@v4
         with:

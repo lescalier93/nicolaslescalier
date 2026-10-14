@@ -92,6 +92,8 @@ redirect_from:
   </div>
 </section>
 
+{% include term_program_feature.html %}
+
 <section class="section split">
   <div class="panel">
     <p class="eyebrow">Best use of this site</p>
