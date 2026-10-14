@@ -84,6 +84,7 @@
       if (target.includes("/application-checklist/")) return "checklist";
       if (target.includes("linkedin.com")) return "profile";
       if (target.startsWith("tel:")) return "phone";
+      if (target.startsWith("mailto:")) return "email";
       return target.startsWith("#") ? "jump_link" : "link";
     };
 
@@ -113,6 +114,7 @@
         || href.includes("calendly.com")
         || href.includes("calculator")
         || href.startsWith("tel:")
+        || href.startsWith("mailto:")
         || href.includes("linkedin.com");
 
       if (target.matches("[data-nav-toggle]")) {
@@ -139,6 +141,8 @@
         window.nicolasTrack("booking_click", trackingPayload);
       } else if (trackingPayload.cta_type === "phone") {
         window.nicolasTrack("phone_click", trackingPayload);
+      } else if (trackingPayload.cta_type === "email") {
+        window.nicolasTrack("email_click", trackingPayload);
       }
     });
 

@@ -13,7 +13,7 @@ redirect_from:
   <h1>Find the right financing for your business.</h1>
   <p class="section-intro">Financing support for businesses in Canada and the United States. Compare options by use of funds, timing, and repayment structure.</p>
   <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
-  <p class="content-note">The guides below focus on U.S. financing. For Canadian requests, share your province or territory, currency, and financing need so we can review the available options. <a href="https://legacy.sba.gov/partners/lenders/7a-loan-program/terms-conditions-eligibility">SBA programs require a U.S.-located business</a>; availability of other products varies by location.</p>
+  <p class="content-note">Choose the <a href="/services/canada-business-financing/">Canadian financing guide</a> for Canadian requests or explore the U.S. product guides below. Service is <a href="/where-i-operate/">fully online across Canada and the United States</a>. <a href="https://www.sba.gov/loans/7a-loans/">SBA programs require a U.S.-located business</a>; product availability varies by location.</p>
   <div class="mini-grid mini-grid--3">
     <article class="mini-card">
       <span class="card-label">Fastest route</span>
@@ -120,3 +120,5 @@ redirect_from:
     </div>
   </div>
 </section>
+
+{% include canada_guides.html %}

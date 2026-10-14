@@ -2011,3 +2011,26 @@ button:disabled { cursor: wait; opacity: 0.65; }
 .validation-note { min-height: 3.2rem; }
 .tool-shell > .section:first-child { border-top: 0; padding-top: 0; }
 @media(max-width:640px) { .service-intro-actions .text-link { justify-content: center; width: 100%; } }
+
+/* Country guides and accessible, static service coverage map. */
+.guide-content { max-width: 880px; margin-inline: auto; }
+.guide-content h2 { margin-top: 2.2rem; }
+.guide-content p, .guide-content li { max-width: 76ch; }
+.guide-content p a, .guide-content li a, .guide-notes a { text-decoration: underline; }
+.table-scroll { width: 100%; overflow-x: auto; margin-block: 1.5rem; }
+.table-scroll table { width: 100%; min-width: 620px; border-collapse: collapse; background: var(--surface); }
+.table-scroll th, .table-scroll td { padding: 1rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.table-scroll th { background: var(--brand); color: white; }
+.coverage-map { margin: 2rem 0 0; }
+.coverage-map img { display: block; width: 100%; height: auto; border-radius: var(--radius-lg); }
+.coverage-map figcaption { display: flex; flex-wrap: wrap; gap: .8rem 1.5rem; padding-block: 1rem; font-size: .88rem; }
+.map-key { display: inline-flex; align-items: center; gap: .5rem; font-weight: 700; }
+.map-key::before { content: ''; width: .8rem; height: .8rem; border-radius: 3px; }
+.map-key--canada::before { background: #1b4d3e; }
+.map-key--us::before { background: #cd773c; }
+.coverage-regions { columns: 2; padding-left: 1.3rem; }
+.coverage-regions li { break-inside: avoid; padding-block: .15rem; }
+.coverage-details summary { cursor: pointer; font-weight: 700; color: var(--brand); }
+.coverage-preview { align-self: center; }
+.coverage-preview img { display: block; height: auto; border-radius: var(--radius-lg); }
+@media (max-width: 480px) { .coverage-regions { columns: 1; } }

@@ -38,3 +38,12 @@ Manage the property at https://www.bing.com/webmasters/ and submit the sitemap
 URL above. Ownership may be imported from Google Search Console. Bing's Sitemaps
 and URL Inspection screens show processing/indexing results; a successful
 submission is distinct from completed crawling and indexing.
+
+
+## Monthly visibility review
+
+Check Bing Webmaster Tools Search Performance (queries, pages, clicks, impressions, CTR), AI Performance (citations and cited pages from the sources named in the report), Sitemaps, IndexNow, URL Inspection, Recommendations, Site Explorer, and Site Scan. Compare equivalent date ranges and separate unavailable or still-processing data from measured zeros. Run a bounded Site Scan after substantial changes and fix reproducible issues; do not change crawl controls or block URLs merely to raise a score.
+
+Existing GA4 events distinguish `cta_click`, `booking_click`, `phone_click`, `email_click`, `form_started`, `form_submit`, and thank-you views. A click is an inquiry intent, not a funded loan. A form submission event can be an attempt; use confirmed form success and valid business records when measuring actual leads. No visitor-entered name, email, phone number, or financing amounts should be added to analytics events.
+
+The website's service is fully online. Coverage pages are service information and must not imply physical offices. LinkedIn is outside the scope of these website updates. Real credentials and customer outcomes require factual support and permission before publication; existing fictional educational examples must remain clearly labeled.

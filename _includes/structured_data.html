@@ -12,6 +12,19 @@
       "isPartOf": { "@id": "https://nicolaslescalier.com/#website" }
     },
     {% endif %}
+    {% if page.guide %}
+    {
+      "@type": "Article",
+      "@id": {{ page.url | absolute_url | append: '#article' | jsonify }},
+      "headline": {{ page.title | jsonify }},
+      "description": {{ page.description | jsonify }},
+      "mainEntityOfPage": {{ page.url | absolute_url | jsonify }},
+      "dateModified": {{ page.last_reviewed | date: '%Y-%m-%d' | jsonify }},
+      "author": { "@id": "https://nicolaslescalier.com/#person" },
+      "publisher": { "@id": "https://nicolaslescalier.com/#person" },
+      "inLanguage": "en-CA"
+    },
+    {% endif %}
     {
       "@type": "Person",
       "@id": "https://nicolaslescalier.com/#person",
@@ -66,6 +79,11 @@
         { "@type": "Country", "name": "Canada" },
         { "@type": "Country", "name": "United States" }
       ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://nicolaslescalier.com/contact/",
+        "availableLanguage": "English"
+      },
       "url": "https://nicolaslescalier.com/services/"
     }
   ]

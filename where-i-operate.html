@@ -1,0 +1,58 @@
+---
+layout: default
+title: "Canada & U.S. Financing Coverage | Nicolas Lescalier"
+description: "Online business financing guidance across all 10 Canadian provinces, 3 territories, and 50 U.S. states. View the service coverage map and how to get started."
+permalink: /where-i-operate/
+breadcrumb_title: Where I operate
+faq:
+  - question: "Where does Nicolas Lescalier operate?"
+    answer: "Nicolas Lescalier provides online business financing guidance throughout Canada and the United States, including all ten Canadian provinces, three territories, and all fifty U.S. states."
+  - question: "Can I visit an office or meet in person?"
+    answer: "No. Nicolas's client service is fully online, with remote discussions and follow-up. He does not meet clients in person."
+  - question: "Does service coverage mean every financing product is available everywhere?"
+    answer: "No. Service coverage means you can contact Nicolas from those regions. Product availability, approval, and terms depend on the location, business, transaction, and funding provider."
+---
+
+<section class="section">
+  <p class="eyebrow">Where I operate</p>
+  <h1>Canada and the United States. Fully online.</h1>
+  <p class="section-intro">I work with business owners across all 10 Canadian provinces, 3 territories, and all 50 U.S. states. We discuss your financing needs remotely, wherever your business operates.</p>
+  <figure class="coverage-map">
+    <img src="/assets/canada-us-coverage.svg" width="1000" height="720" alt="Service coverage map showing Canada and the United States, including Alaska and a Hawaii inset. All provinces, territories, and states are listed below.">
+    <figcaption><span class="map-key map-key--canada">Canada</span><span class="map-key map-key--us">United States</span><span>Online service coverage · Hawaii inset uses a different scale</span></figcaption>
+  </figure>
+  <p class="content-note">This map shows where I provide online financing guidance. Financing products, approval, and terms depend on your location, business, transaction, and the participating provider. Coverage is not a commitment to fund.</p>
+</section>
+
+<section class="section grid grid--2">
+  <article class="panel">
+    <p class="eyebrow">Canada</p>
+    <h2>All provinces and territories.</h2>
+    <ul class="coverage-regions">{% for region in site.data.coverage.canada %}<li>{{ region }}</li>{% endfor %}</ul>
+    <a class="text-link" href="/services/canada-business-financing/">Explore Canadian financing</a>
+  </article>
+  <article class="panel">
+    <p class="eyebrow">United States</p>
+    <h2>All 50 states, plus Washington, D.C.</h2>
+    <details class="coverage-details"><summary>View U.S. states and district</summary><ul class="coverage-regions">{% for region in site.data.coverage.united_states %}<li>{{ region }}</li>{% endfor %}</ul></details>
+    <p>Alaska and Hawaii are included. The same remote process applies across time zones.</p>
+    <a class="text-link" href="/services/us-smbs-funding-guide/">Explore U.S. financing</a>
+  </article>
+</section>
+
+<section class="section">
+  <p class="eyebrow">How we work together</p>
+  <h2>A remote process, built around your request.</h2>
+  <div class="step-grid">
+    <article class="step-card"><span class="step-card__number">1</span><h3>Share the essentials</h3><p>Send your country, province or state, amount, currency, use of funds, and timing. Start with a summary; sensitive documents can follow through the appropriate secure process.</p></article>
+    <article class="step-card"><span class="step-card__number">2</span><h3>Discuss fit remotely</h3><p>We review the business need, repayment expectations, and likely documentation. My service is fully online; I do not meet customers in person.</p></article>
+    <article class="step-card"><span class="step-card__number">3</span><h3>Review the available path</h3><p>Where a financing path is available, we work through the relevant provider's requirements. Approval and final terms remain subject to underwriting.</p></article>
+  </div>
+  <div class="cta-row"><a class="button" href="/contact/">Discuss your location and need</a><a class="button button--secondary" href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a remote call</a></div>
+</section>
+
+<section class="section faq-section">
+  <h2>Coverage questions</h2>
+  <div class="faq-list">{% for item in page.faq %}<details class="faq-item"><summary>{{ item.question }}</summary><p>{{ item.answer }}</p></details>{% endfor %}</div>
+  <p class="content-note">Map boundaries: <a href="https://www.naturalearthdata.com/">Natural Earth</a>, public-domain cartographic data. The map is a general service-area illustration.</p>
+</section>

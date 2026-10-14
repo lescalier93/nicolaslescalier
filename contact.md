@@ -92,6 +92,7 @@ breadcrumb_title: Contact
   <aside class="contact-card">
     <h2>Contact Nicolas</h2>
     <p>Funding Manager at Premium Merchant Funding.</p>
+    <p>Fully online across Canada and the United States. I do not meet clients in person. <a href="/where-i-operate/">View service coverage</a>.</p>
     <p class="link-stack"><a href="mailto:nlescalier@pmfus.com">nlescalier@pmfus.com</a><a href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call</a><a href="/apply/">Start a financing application</a><a href="/application-checklist/">Application checklist</a><a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></p>
   </aside>
 </section>
