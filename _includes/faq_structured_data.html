@@ -1,10 +1,12 @@
-{% if page.faq %}
+{% assign page_faq = page.faq %}
+{% if page.term_program %}{% assign page_faq = site.data.term_program.faq %}{% endif %}
+{% if page_faq %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {% for item in page.faq %}
+    {% for item in page_faq %}
     {
       "@type": "Question",
       "name": {{ item.question | jsonify }},

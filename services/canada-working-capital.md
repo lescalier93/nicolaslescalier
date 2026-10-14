@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Working Capital Financing in Canada | Loans & Credit Lines"
+title: "Working Capital Financing in Canada"
 description: "Compare working capital loans and lines of credit for a Canadian business. Review payment frequency, total cost, cash-flow fit, documents, and currency."
 permalink: /services/canada-working-capital/
 breadcrumb_title: Canadian working capital

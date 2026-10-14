@@ -41,7 +41,7 @@ breadcrumb_title: Checklist
     <article class="service-card">
       <span class="card-label">1. Deal Basics</span>
       <ul class="plain-list">
-        <li>Requested amount or target range</li>
+        <li>Requested amount or target range and currency (CAD or USD)</li>
         <li>Use of proceeds</li>
         <li>Preferred funding timeline</li>
         <li>Product you think you need, if any</li>
@@ -50,7 +50,7 @@ breadcrumb_title: Checklist
     <article class="service-card">
       <span class="card-label">2. Business Profile</span>
       <ul class="plain-list">
-        <li>Industry and state</li>
+        <li>Industry, country, and province, territory, or state</li>
         <li>Time in business</li>
         <li>Estimated monthly or annual revenue</li>
         <li>Whether the business is seasonal, project-based, or recurring-revenue driven</li>
@@ -126,3 +126,6 @@ breadcrumb_title: Checklist
     </div>
   </div>
 </section>
+
+
+<section class="section"><h2>Preparing for the three-year term program?</h2><p>Have your annual revenue and reporting period ready. This program requires at least CAD $3 million in annual revenue in Canada or USD $3 million in the United States. Review the <a href="/services/three-year-term-program/">36-month program at 12–16% APR</a> before applying. All financing remains subject to underwriting and approval.</p></section>

@@ -40,6 +40,10 @@ A useful financing request explains the cash-flow problem clearly. Buying a mach
 
 Read the [Canadian working capital guide](/services/canada-working-capital/) and [Canadian equipment financing guide](/services/canada-equipment-financing/) for the questions to take into a first discussion. This is a starting framework; it does not mean every product is available for every request.
 
+## A three-year program for established businesses
+
+The [three-year term program](/services/three-year-term-program/) offers a 36-month term at 12–16% APR, with a minimum annual business revenue of CAD $3 million for Canadian businesses. Program amounts in Canada are CAD. Meeting the revenue threshold does not guarantee approval; underwriting and final terms still apply.
+
 ## Bank, BDC, and government-program routes
 
 Consider the options available directly through your bank or credit union alongside other funding providers. BDC also offers business financing; its own eligibility criteria and application review apply. Its [financing FAQ](https://www.bdc.ca/en/financing/financing-faq) explains the information it may request, including financial statements and project details.
