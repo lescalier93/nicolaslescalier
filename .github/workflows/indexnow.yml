@@ -23,16 +23,18 @@ jobs:
        github.event.workflow_run.head_repository.full_name == github.repository)
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    # Only trusted main-branch code runs here; retain successful URL fingerprints.
+    cache-mode: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: main
           persist-credentials: false
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
       - name: Restore last submitted page fingerprints
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v6
         with:
           path: .indexnow-state
           key: indexnow-v1-${{ github.run_id }}-${{ github.run_attempt }}
@@ -40,7 +42,8 @@ jobs:
       - name: Validate live pages and notify IndexNow
         run: python scripts/indexnow.py
       - name: Save successfully submitted page fingerprints
-        uses: actions/cache/save@v4
+        if: hashFiles('.indexnow-state/pages.json') != ''
+        uses: actions/cache/save@v6
         with:
           path: .indexnow-state
           key: indexnow-v1-${{ github.run_id }}-${{ github.run_attempt }}
