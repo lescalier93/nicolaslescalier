@@ -2097,3 +2097,11 @@ button:disabled { cursor: wait; opacity: 0.65; }
 }
 .site-footer a { color: #e2ebe5; text-underline-offset: 0.2em; }
 .site-footer a:hover { color: #fff; }
+
+/* Keep every financing option visible without repeating large product cards. */
+.financing-catalog { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2.5rem; margin: 1.5rem 0; }
+.financing-catalog article { padding: 1.1rem 0; border-top: 1px solid var(--line); }
+.financing-catalog h3 { font-size: 1.1rem; margin: 0 0 0.3rem; }
+.financing-catalog h3 a { display: inline-flex; align-items: center; min-height: 36px; text-underline-offset: 0.2em; }
+.financing-catalog p { color: var(--muted); font-size: 0.9rem; line-height: 1.6; margin: 0; max-width: 55ch; }
+@media(max-width:640px) { .financing-catalog { grid-template-columns: 1fr; } }
