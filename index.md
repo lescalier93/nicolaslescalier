@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Business Financing in Canada & the U.S."
-description: "Explore financing in Canada and the U.S. with Nicolas Lescalier: direct funding on select deals and an extensive network for co-funding."
+title: "Nicolas Lescalier | Canada & U.S. Business Financing"
+description: "Nicolas Lescalier, Funding Manager at Premium Merchant Funding. Explore business financing and an online review process across Canada and the United States."
 permalink: /
 faq:
   - question: "How fast can funding happen?"
@@ -17,9 +17,9 @@ faq:
 <section class="hero">
   <div class="hero__grid">
     <div>
-      <p class="eyebrow">Canada &amp; U.S. financing</p>
-      <h1>Business financing that fits your next move.</h1>
-      <p class="lede">Explore business financing in Canada and the U.S. with Nicolas Lescalier. Get direct guidance on the structure, repayment, and next steps that fit your business.</p>
+      <p class="eyebrow">Business financing in Canada &amp; the United States</p>
+      <h1>Nicolas Lescalier</h1>
+      <p class="lede">I’m a Funding Manager at Premium Merchant Funding. I help business owners compare financing structures, understand repayment, and prepare their next steps through a fully online process.</p>
       <div class="hero__actions">
         <a class="button" href="/apply/">Start Application</a>
         <a class="button button--secondary" href="/services/">Compare financing options</a>
@@ -40,6 +40,7 @@ faq:
     <p class="identity-card__role">Nicolas Lescalier — Funding Manager at Premium Merchant Funding</p>
     <p>I fund select deals directly and work with an extensive network of funding partners when co-funding is appropriate. I also help business owners compare financing options and prepare requests for other providers. Every deal is subject to underwriting and approval.</p>
     <p class="identity-card__links">
+      <a href="/about-nicolas-lescalier-us/">About Nicolas Lescalier</a>
       <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>
       <a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a href="mailto:nlescalier@pmfus.com">nlescalier@pmfus.com</a>

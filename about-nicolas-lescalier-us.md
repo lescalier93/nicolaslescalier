@@ -1,5 +1,5 @@
 ---
-title: "Nicolas Lescalier | Funding Manager"
+title: "About Nicolas Lescalier | Funding Manager"
 description: "Learn how Funding Manager Nicolas Lescalier helps business owners in Canada and the U.S. compare commercial financing structures and prepare stronger requests."
 permalink: "/about-nicolas-lescalier-us/"
 layout: default

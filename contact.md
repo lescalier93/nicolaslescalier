@@ -9,7 +9,7 @@ breadcrumb_title: Contact
 
 <header class="page-intro">
   <p class="eyebrow">Contact</p>
-  <h1>Let’s talk about your financing.</h1>
+  <h1>Contact Nicolas Lescalier</h1>
   <p>For financing in Canada or the U.S., share your location, currency, amount, timing, and use of funds. I’ll review the request and outline the next steps.</p>
 </header>
 <section class="section split contact-layout">
