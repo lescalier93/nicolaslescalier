@@ -23,7 +23,8 @@ faq:
   <div class="panel">
     <p class="eyebrow">Mortgage Financing</p>
     <h1>Commercial real estate financing.</h1>
-    <p>Mortgage financing is broader than a simple refinance. I can help evaluate acquisition loans, refinance structures, bridge takeouts, construction financing, recapitalization, repositioning, mezzanine debt, and equity-adjacent real estate scenarios.</p>
+    <p>Review financing for commercial property acquisition, refinancing, construction, and transitional projects. Start with the property, the amount needed, and your repayment plan.</p>
+    <p>For <a href="/services/us-construction-loans/">U.S. construction loans</a>, interest-only payments are available for the first twelve months. For home equity, see <a href="/services/us-heloc/">U.S. HELOCs with first, second, or third lien options</a>.</p>
   <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start a financing review</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
   </div>
   <div class="proof-card">
@@ -39,7 +40,7 @@ faq:
 
 <section class="section">
   <p class="eyebrow">What usually decides a CRE execution path</p>
-  <h2>The asset story and the sponsor story have to support the same structure.</h2>
+  <h2>Match the financing to the property and repayment plan.</h2>
   <div class="grid grid--3">
     <article class="service-card">
       <span class="card-label">Property quality</span>

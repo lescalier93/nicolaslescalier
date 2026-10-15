@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "3-Year Business Term Program | Canada & U.S."
-description: "Explore a 36-month business term program at 12–16% APR. Minimum annual revenue: CAD $3M in Canada or USD $3M in the U.S. Apply online with Nicolas Lescalier."
+description: "Explore a 36-month business term program at 12–16% APR. Minimum annual revenue: $3M. Apply online with Nicolas Lescalier."
 permalink: /services/three-year-term-program/
 breadcrumb_title: 3-year term program
 term_program: true
@@ -11,32 +11,26 @@ term_program: true
   <div class="hero__grid">
     <div>
       <p class="eyebrow">Business financing · Canada &amp; United States</p>
-      <h1>Three years. A clear starting point for your financing request.</h1>
-      <p class="lede">A {{ program.term_months }}-month business term program at {{ program.apr_min }}–{{ program.apr_max }}% APR for businesses with at least {{ program.revenue_display }} in annual revenue. Amounts are CAD in Canada and USD in the U.S.</p>
+      <h1>Three-year business term program.</h1>
+      <p class="lede">A {{ program.term_months }}-month business term program at {{ program.apr_min }}–{{ program.apr_max }}% APR for businesses with at least {{ program.revenue_display }} in annual revenue.</p>
       <div class="hero__actions"><a class="button" href="{{ program.application_path }}">Apply for this program</a><a class="button button--secondary" href="/contact/">Discuss your eligibility</a></div>
       <p class="hero-note">Fully online. Subject to underwriting and approval.</p>
     </div>
     <aside class="hero-card">
       <span class="hero-card__label">Program at a glance</span>
       <h2>{{ program.apr_min }}–{{ program.apr_max }}% APR</h2>
-      <ul class="check-list"><li>Three-year ({{ program.term_months }}-month) term</li><li>Canada: CAD {{ program.revenue_display }}+ annual revenue</li><li>United States: USD {{ program.revenue_display }}+ annual revenue</li></ul>
+      <ul class="check-list"><li>Three-year ({{ program.term_months }}-month) term</li><li>{{ program.revenue_display }}+ annual revenue</li><li>Available in Canada and the United States</li></ul>
       <p>APR is an annual percentage rate. It is not a monthly rate or a guarantee that every applicant will receive the lowest rate.</p>
     </aside>
   </div>
 </section>
 
 <section class="section guide-content" markdown="1">
-## Eligibility and currency
+## Who this program is for
 
-The first eligibility check is your business's annual revenue. The threshold applies in the currency of the country where the borrowing business is based.
+Businesses in Canada and the United States with at least {{ program.revenue_display }} in annual revenue. This is a **revenue threshold, not a minimum loan amount**. Approval and final terms depend on underwriting.
 
-<div class="table-scroll" role="region" aria-label="Program eligibility by country" tabindex="0">
-<table><thead><tr><th scope="col">Business location</th><th scope="col">Minimum annual revenue</th><th scope="col">Currency for program amounts</th></tr></thead><tbody>{% for market in program.markets %}<tr><th scope="row">{{ market.country }}</th><td>{{ market.currency }} {{ program.revenue_display }}</td><td>{{ market.currency }}</td></tr>{% endfor %}</tbody></table>
-</div>
-
-The {{ program.revenue_display }} threshold is **annual business revenue, not the amount you must borrow**. Meeting this threshold does not guarantee approval. The requested amount, business profile, repayment capacity, location, and underwriting still need review.
-
-If your business operates in both countries, identify the entity applying, where it operates, and the currency of its revenues and existing obligations. [View the full Canada and U.S. service coverage](/where-i-operate/).
+Need a different repayment structure? [Other term-loan options](/services/us-term-loans-approach/) offer rates starting at 9% APR, terms up to five years, and possible amortization up to fifteen years, depending on qualifications. Those terms are separate from this three-year program.
 
 ## What to prepare for the first review
 
@@ -55,7 +49,7 @@ Loan amounts, payment frequency, collateral or guarantee requirements, and fundi
 
 ## Below the revenue threshold or comparing options?
 
-This is one financing program. The same terms and eligibility rules do not apply automatically to other products. Explore the [Canadian financing guide](/services/canada-business-financing/) or the [U.S. term loan guide](/services/us-term-loans-approach/), or [contact me](/contact/) to discuss the business need before choosing a product.
+This is one financing program. The same terms and eligibility rules do not apply automatically to other products. Explore the [Canadian financing guide](/services/canada-business-financing/) or the [term loan guide](/services/us-term-loans-approach/), or [contact me](/contact/) to discuss the business need before choosing a product.
 </section>
 
 <section class="section">
