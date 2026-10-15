@@ -14,14 +14,14 @@ permalink: /
   <p class="hero-note">Fully online. No need to choose a product first.</p>
 </section>
 
+{% include financing_options.html %}
+
 <section class="section">
   <p class="eyebrow">How it works</p>
   <h2>A clear path from need to next step.</h2>
   {% include review_steps.html %}
   <a class="text-link" href="/services/">Explore financing services</a>
 </section>
-
-{% include term_program_feature.html %}
 
 <section class="section split">
   <div class="panel">
