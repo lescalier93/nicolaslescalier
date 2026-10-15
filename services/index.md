@@ -8,119 +8,31 @@ redirect_from:
   - /us/
 ---
 
+<section class="section service-intro">
+  <p class="eyebrow">Financing with Nicolas Lescalier</p>
+  <h1>Start with your business need.</h1>
+  <p class="section-intro">You don’t need to pick a loan first. Tell me what you want to finance, how much you need, and when. I’ll help you compare the options.</p>
+  <div class="cta-row"><a class="button" href="/apply/">Start a financing review</a></div>
+  <p class="quiet-note">Fully online across Canada and the United States.</p>
+</section>
+
 <section class="section">
-  <p class="eyebrow">Products</p>
-  <h1>Find the right financing for your business.</h1>
-  <p class="section-intro">Financing support for businesses in Canada and the United States. Compare options by use of funds, timing, and repayment structure.</p>
-  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
-  <p class="content-note">Choose the <a href="/services/canada-business-financing/">Canadian financing guide</a> for Canadian requests or explore the U.S. product guides below. Service is <a href="/where-i-operate/">fully online across Canada and the United States</a>. <a href="https://www.sba.gov/loans/7a-loans/">SBA programs require a U.S.-located business</a>; product availability varies by location.</p>
-  <div class="mini-grid mini-grid--3">
-    <article class="mini-card">
-      <span class="card-label">Fastest route</span>
-      <h3>If timing is the real issue</h3>
-      <p>Start with working capital, revolving credit, receivables-based financing, or bridge structures before chasing a slower product that cannot move in time.</p>
-      <a href="{{ '/services/us-working-capital-loans/' | relative_url }}">Start with faster options</a>
-    </article>
-    <article class="mini-card">
-      <span class="card-label">Lower pressure</span>
-      <h3>If payment shape matters most</h3>
-      <p>Start with term, equipment, SBA, or mortgage structures when the business can wait slightly longer for a better long-term repayment profile.</p>
-      <a href="{{ '/services/us-term-loans-approach/' | relative_url }}">Compare structured options</a>
-    </article>
-    <article class="mini-card">
-      <span class="card-label">Not sure yet</span>
-      <h3>If you are still narrowing fit</h3>
-      <p>Use the resources hub and calculators first, then move into the application once the product family and urgency are clearer.</p>
-      <a href="{{ '/resources.html' | relative_url }}">Open tools and guides</a>
-    </article>
+  <h2>What do you need to finance?</h2>
+  <div class="needs-grid">
+    <article><h3>Everyday cash flow</h3><p>Payroll, inventory, seasonal gaps, or unpaid invoices.</p><p class="quiet-note">Working capital, credit lines, factoring, and purchase-order financing.</p></article>
+    <article><h3>Business growth</h3><p>Equipment, expansion, or an acquisition.</p><p class="quiet-note">Term loans, equipment financing, and eligible U.S. SBA options.</p></article>
+    <article><h3>Commercial property</h3><p>A purchase, refinance, or short-term bridge.</p><p class="quiet-note">Commercial mortgage and bridge structures.</p></article>
   </div>
-  <div class="grid grid--3">
-    <article class="service-card">
-      <span class="card-label">Fast Access</span>
-      <h3>Working capital loans</h3>
-      <p>For urgent working capital, inventory, payroll, repairs, or seasonal swings when traditional bank timing is too slow.</p>
-      <a href="{{ '/services/us-working-capital-loans/' | relative_url }}">View working capital details</a>
-    </article>
-    <article class="service-card">
-      <span class="card-label">Flexible Access</span>
-      <h3>Line of credit</h3>
-      <p>For repeat borrowing needs, inventory cycles, and uneven cash flow where a revolving facility is more useful than a one-time advance.</p>
-      <a href="{{ '/services/us-line-of-credit/' | relative_url }}">View line of credit</a>
-    </article>
-    <article class="service-card">
-      <span class="card-label">Structured Growth</span>
-      <h3>Term loans</h3>
-      <p>For expansion projects, equipment, refinancing, and business investments that need clearer repayment terms.</p>
-      <a href="{{ '/services/us-term-loans-approach/' | relative_url }}">Review term loans</a>
-    </article>
-    <article class="service-card">
-      <span class="card-label">Asset-backed</span>
-      <h3>Equipment financing</h3>
-      <p>For vehicles, machinery, medical tools, and other equipment purchases where the asset itself can support the structure.</p>
-      <a href="{{ '/services/us-equipment-financing/' | relative_url }}">See equipment financing</a>
-    </article>
-    <article class="service-card">
-      <span class="card-label">Receivables</span>
-      <h3>Factoring</h3>
-      <p>For businesses with good invoices but a slow cash conversion cycle that needs to be accelerated.</p>
-      <a href="{{ '/services/us-factoring/' | relative_url }}">Explore factoring</a>
-    </article>
-    <article class="service-card">
-      <span class="card-label">Purchase Orders</span>
-      <h3>PO financing</h3>
-      <p>For businesses that have a strong purchase order but need capital to fulfill it before getting paid.</p>
-      <a href="{{ '/services/us-po-financing/' | relative_url }}">Review PO financing</a>
-    </article>
-    <article class="service-card">
-      <span class="card-label">Government-backed</span>
-      <h3>SBA 7(a) loans</h3>
-      <p>For stronger files that qualify for longer-term, lower-cost financing for acquisition, expansion, or refinance.</p>
-      <a href="{{ '/services/us-sba-7a-loans/' | relative_url }}">Review SBA 7(a)</a>
-    </article>
-    <article class="service-card">
-      <span class="card-label">Real Estate</span>
-      <h3>Mortgage financing</h3>
-      <p>For commercial acquisitions, refinances, construction, bridge takeouts, and recapitalizations across CRE situations.</p>
-      <a href="{{ '/services/us-mortgage-financing/' | relative_url }}">Explore mortgage financing</a>
-    </article>
-    <article class="service-card">
-      <span class="card-label">Reference</span>
-      <h3>Funding guide</h3>
-      <p>For owners comparing products, documentation, lender expectations, and timing before they submit a request.</p>
-      <a href="{{ '/services/us-smbs-funding-guide/' | relative_url }}">Read the guide</a>
-    </article>
-  </div>
+  <p class="quiet-note">Available products depend on your business and location. We’ll review fit before choosing a path.</p>
 </section>
 
 {% include term_program_feature.html %}
 
-<section class="section split">
-  <div class="panel">
-    <p class="eyebrow">Best use of this site</p>
-    <div class="signal-list">
-      <div>
-        <strong>If speed is the main issue</strong>
-        <span>Focus first on working capital loans, line of credit, bridge, or receivables-based options.</span>
-      </div>
-      <div>
-        <strong>If repayment fit is the main issue</strong>
-        <span>Compare term, equipment, SBA, or mortgage structures before choosing a faster short-term product.</span>
-      </div>
-      <div>
-        <strong>If you are not sure which product fits</strong>
-        <span>Start with the funding guide or resources hub instead of guessing wrong.</span>
-      </div>
-    </div>
-  </div>
-  <div class="proof-card">
-    <p class="eyebrow">Next step</p>
-    <h3>Need help narrowing the right path?</h3>
-    <p>The highest-value conversation usually happens before an application is submitted, when the request can still be steered toward the structure that fits best.</p>
-    <div class="cta-row">
-      <a class="button" href="/apply/">Start application</a>
-      <a class="button button--secondary" href="/resources.html">Open tools and calculators</a>
-    </div>
-  </div>
+<section class="section" id="guides">
+  <p class="eyebrow">Optional reading</p>
+  <h2>Want to explore the details?</h2>
+  <p>Open the guides for your country, or go straight to a review.</p>
+  {% include financing_guides.html %}
 </section>
 
-{% include canada_guides.html %}
+{% include review_cta.html %}

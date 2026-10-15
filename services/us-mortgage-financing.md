@@ -24,7 +24,7 @@ faq:
     <p class="eyebrow">Mortgage Financing</p>
     <h1>Commercial real estate financing.</h1>
     <p>Mortgage financing is broader than a simple refinance. I can help evaluate acquisition loans, refinance structures, bridge takeouts, construction financing, recapitalization, repositioning, mezzanine debt, and equity-adjacent real estate scenarios.</p>
-  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
+  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start a financing review</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
   </div>
   <div class="proof-card">
     <p class="eyebrow">Common use cases</p>
@@ -93,7 +93,7 @@ faq:
     <h2>Start with the asset, the leverage target, and the exit or hold plan.</h2>
     <p>I can help determine whether the right path is refinance, bridge, acquisition debt, or a more specialized CRE structure.</p>
     <div class="cta-row">
-      <a class="button" href="/apply/">Start application</a>
+      <a class="button" href="/apply/">Start a financing review</a>
       <a class="button button--secondary" href="/services/us-real-estate-refinance/">See refinance guide</a>
     </div>
   </div>

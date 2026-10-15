@@ -13,155 +13,28 @@ redirect_from:
   <div class="panel">
     <p class="eyebrow">About Nicolas Lescalier</p>
     <h1>Nicolas Lescalier, Funding Manager.</h1>
-    <p>I am a Funding Manager at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>. I work with business owners in Canada and the United States and commercial real estate borrowers who need practical help choosing a realistic financing structure.</p>
-    <p>I act as a direct lender on select deals and work with an extensive network of funding partners when co-funding is appropriate. I also help borrowers prepare requests and compare options from other providers, with attention to structure, cost, and repayment.</p>
-    <p>My work spans working capital loans, lines of credit, term loans, equipment financing, invoice-driven solutions, SBA paths, bridge financing, and broader commercial mortgage scenarios.</p>
+    <p class="section-intro">I help business owners in Canada and the United States understand their financing options and prepare the next step.</p>
+    <p>I’m a Funding Manager at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>. My work covers business financing and commercial real estate, with attention to the purpose, cost, timing, and repayment of each request.</p>
+    <p>I act as a direct lender on select deals and work with funding partners when co-funding or another provider is appropriate. All financing is subject to underwriting and approval.</p>
+    <div class="cta-row"><a class="button" href="/apply/">Start a financing review</a></div>
   </div>
-  <div class="proof-card">
-    <p class="eyebrow">What clients usually need from me</p>
-    <ul class="plain-list">
-      <li>Speed on urgent working capital or acquisition timelines</li>
-      <li>Clarity on whether a product actually fits cash flow</li>
-      <li>Help choosing between multiple financing paths</li>
-      <li>A straightforward explanation of cost, structure, and risk</li>
-    </ul>
-  </div>
+  <aside class="simple-aside">
+    <h2>Work with me online.</h2>
+    <p>All Canadian provinces and territories. All 50 U.S. states.</p>
+    <p><a href="/where-i-operate/">View service coverage</a></p>
+    <p class="link-stack"><a href="mailto:nlescalier@pmfus.com">nlescalier@pmfus.com</a><a href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call</a><a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></p>
+  </aside>
 </section>
 
 <section class="section">
-  <div class="identity-card">
-    <p class="eyebrow">Verify and contact</p>
-    <p class="identity-card__role">Funding Manager | Premium Merchant Funding</p>
-    <p>More than five years of commercial and alternative-finance experience across operating-business and real-estate scenarios. Product availability, approval, and terms depend on the transaction and the participating funding providers.</p>
-    <p>My service is fully online across all Canadian provinces and territories and all 50 U.S. states. <a href="/where-i-operate/">View the coverage map and remote process</a>.</p>
-    <p class="identity-card__links">
-      <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">PMF website</a>
-      <a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>
-      <a href="mailto:nlescalier@pmfus.com">nlescalier@pmfus.com</a>
-      <a href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call</a>
-    </p>
-  </div>
+  <h2>What we’ll work through together.</h2>
+  {% include review_steps.html %}
+  <p>I’ll explain the tradeoffs and documentation involved so you can decide whether an available option fits your business.</p>
+  <a class="text-link" href="/services/">Explore financing services</a>
 </section>
 
 <section class="section">
-  <div class="section-band">
-    <div class="section-band__panel">
-      <p class="eyebrow">Working style</p>
-      <h2>The value is not just access to lenders. It is judgment before the file loses momentum.</h2>
-      <p>Good financing advice means saying when a product is too expensive, too rigid, too slow, or simply not matched to the actual use of proceeds. That filtering is part of the service.</p>
-      <div class="section-band__actions">
-        <a class="button" href="/apply/">Start application</a>
-        <a class="button button--secondary" href="/why-us-clients-trust-nicolas/">Why clients trust Nicolas</a>
-      </div>
-    </div>
-    <div class="mini-grid">
-      <article class="mini-card">
-        <h3>What borrowers tend to value</h3>
-        <p>Direct communication, faster clarity, realistic expectations, and less wasted motion through the wrong process.</p>
-      </article>
-      <article class="mini-card">
-        <h3>What this avoids</h3>
-        <p>Generic broker language, vague promises, and treating every file like a generic rate-shopping exercise.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <p class="eyebrow">Background</p>
-  <h2>Built around financing execution, not generic consulting.</h2>
-  <div class="grid grid--2">
-    <article class="service-card">
-      <span class="card-label">Commercial Finance</span>
-      <h3>Foundation in transaction-driven lending</h3>
-      <p>My background is rooted in commercial finance and alternative lending rather than broad business consulting. That matters because financing decisions usually break on documentation, timing, and repayment fit, not theory.</p>
-    </article>
-    <article class="service-card">
-      <span class="card-label">U.S. Market Exposure</span>
-      <h3>Working familiarity with lender process</h3>
-      <p>Experience with U.S. borrower files, underwriting friction points, and lender expectations gives me a working view of what gets a deal moving and what tends to stall it.</p>
-    </article>
-    <article class="service-card">
-      <span class="card-label">Borrower Coverage</span>
-      <h3>Operators and investors</h3>
-      <p>I support small and mid-sized businesses, owner-operators, and commercial real estate borrowers in Canada and the United States, especially where the financing problem is more nuanced than a basic bank application.</p>
-    </article>
-    <article class="service-card">
-      <span class="card-label">Typical Scenarios</span>
-      <h3>Working capital, growth, and transitional deals</h3>
-      <p>That includes fast capital, equipment purchases, invoice acceleration, purchase-order support, acquisition or expansion loans, bridge situations, and commercial real estate refinance or mortgage execution.</p>
-    </article>
-  </div>
-</section>
-
-<section class="section">
-  <p class="eyebrow">How I think about a file</p>
-  <h2>The main questions I try to answer before a borrower wastes time.</h2>
-  <div class="grid grid--3">
-    <article class="service-card">
-      <span class="card-label">Use of Proceeds</span>
-      <p>What is the capital actually solving, and does that point toward a short-term, revolving, asset-backed, invoice-based, or longer-term structure?</p>
-    </article>
-    <article class="service-card">
-      <span class="card-label">Repayment Reality</span>
-      <p>Can the business or asset support the repayment cadence without creating the next problem immediately after funding?</p>
-    </article>
-    <article class="service-card">
-      <span class="card-label">Execution Risk</span>
-      <p>What documentation, collateral, timing, or borrower assumptions are likely to weaken the file before it reaches a decision?</p>
-    </article>
-  </div>
-</section>
-
-<section class="section split">
-  <div class="panel">
-    <p class="eyebrow">What I am not trying to do</p>
-    <ul class="plain-list">
-      <li>Push the fastest product when the payment structure is wrong</li>
-      <li>Oversell certainty before the file is properly pressure-tested</li>
-      <li>Treat every business as if it should fit the same lender path</li>
-    </ul>
-    <p>That filtering process is part of the value. Good financing is not just about access. It is about fit.</p>
-  </div>
-  <div class="proof-card">
-    <p class="eyebrow">Next Pages</p>
-    <p>If you want to evaluate process before reaching out, start with the working-standard and case-example pages below.</p>
-    <div class="cta-row">
-      <a class="button" href="/why-us-clients-trust-nicolas/">Why clients trust Nicolas</a>
-      <a class="button button--secondary" href="/reviews-us-funding/">Review the client experience standard</a>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <p class="eyebrow">What working together should feel like</p>
-  <div class="step-grid">
-    <article class="step-card">
-      <span class="step-card__number">1</span>
-      <h3>Direct intake</h3>
-      <p>Start with the business need, timeline, and constraints rather than forcing a product-first conversation.</p>
-    </article>
-    <article class="step-card">
-      <span class="step-card__number">2</span>
-      <h3>Realistic filtering</h3>
-      <p>Pressure-test fit early so the business does not burn time on a path that was weak from the start.</p>
-    </article>
-    <article class="step-card">
-      <span class="step-card__number">3</span>
-      <h3>Cleaner execution</h3>
-      <p>Move into the right file prep and documentation process only after the financing path makes sense.</p>
-    </article>
-  </div>
-</section>
-
-<section class="section">
-  <div class="cta-panel">
-    <p class="eyebrow">Next Step</p>
-    <h2>If you are evaluating a financing move, start with the facts of the deal.</h2>
-    <p>Send the amount, use of proceeds, timing, and the product you think you need. I will help narrow the likely paths quickly and tell you where the weak spots are.</p>
-    <div class="cta-row">
-      <a class="button" href="/apply/">Start a financing review</a>
-      <a class="button button--secondary" href="/application-checklist/">See application checklist</a>
-    </div>
-  </div>
+  <h2>Before you get in touch.</h2>
+  <p>You can review <a href="/reviews-us-funding/">what to expect from the process</a>, my <a href="/why-us-clients-trust-nicolas/">working approach</a>, or the <a href="/application-checklist/">application checklist</a>.</p>
+  <p>Have a question first? <a href="/contact/">Send me a message</a>.</p>
 </section>

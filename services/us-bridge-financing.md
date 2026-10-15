@@ -19,7 +19,7 @@ redirect_from:
     <h1>Bridge financing for time-sensitive deals.</h1>
     <p>Bridge loans are designed for timing problems: acquisitions, rehab periods, receivable gaps, or transition windows where the borrower knows the permanent solution but cannot get there in time. These deals can move quickly, but only if the collateral and exit are clear.</p>
     <p>I help borrowers determine when bridge debt preserves an opportunity and when it simply adds expensive pressure without a credible exit.</p>
-  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
+  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start a financing review</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
   </div>
   <div class="proof-card">
     <p class="eyebrow">Best fit</p>
@@ -73,7 +73,7 @@ redirect_from:
     <h2>If you need bridge debt, start with the asset and the exit plan.</h2>
     <p>Send the purchase or project timeline, collateral details, and the expected takeout path. I will tell you quickly whether the bridge structure is realistic.</p>
     <div class="cta-row">
-      <a class="button" href="/apply/">Start application</a>
+      <a class="button" href="/apply/">Start a financing review</a>
       <a class="button button--secondary" href="/services/us-real-estate-refinance/">See refinance options</a>
     </div>
   </div>

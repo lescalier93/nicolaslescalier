@@ -70,7 +70,7 @@ For a business with operations in both countries, identify the borrowing entity,
 
 I am Nicolas Lescalier, Funding Manager at Premium Merchant Funding. I help narrow the financing path, prepare the request, and compare structure and repayment. Availability and terms depend on the transaction and participating providers.
 
-<div class="cta-row"><a class="button" href="/contact/">Discuss Canadian financing</a><a class="button button--secondary" href="/apply/">Start application</a></div>
+<div class="cta-row"><a class="button" href="/contact/">Discuss Canadian financing</a><a class="button button--secondary" href="/apply/">Start a financing review</a></div>
 </section>
 
 {% include guide_notes.html %}

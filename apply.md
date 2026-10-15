@@ -8,7 +8,7 @@ breadcrumb_title: Application
 ---
 
 <header class="page-intro application-intro">
-  <p class="eyebrow">Business financing application</p>
+  <p class="eyebrow">Start a financing review</p>
   <h1>Tell me what your business needs.</h1>
   <p>About 3 minutes. Start with your contact details and funding request. Submitting does not authorize a credit pull.</p>
   <p class="intro-help">No sensitive documents needed. Prefer to talk? <a href="https://calendly.com/nlescalier/funding" target="_blank" rel="noopener noreferrer">Book a call</a>.</p>

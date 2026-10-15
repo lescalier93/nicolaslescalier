@@ -13,7 +13,7 @@ breadcrumb_title: Client Experience
       <h1>What to expect when we work together.</h1>
       <p>Commercial financing can become noisy quickly. My role is to make the first review more disciplined: define the use of proceeds, identify the realistic product family, explain the tradeoffs, and move only the viable paths forward.</p>
       <div class="section-band__actions">
-        <a class="button" href="/apply/">Start a financing request</a>
+        <a class="button" href="/apply/">Start a financing review</a>
         <a class="button button--secondary" href="/services/us-client-success-stories/">Review case examples</a>
       </div>
     </div>
@@ -108,7 +108,7 @@ breadcrumb_title: Client Experience
     <h2>Start with the facts of the request.</h2>
     <p>Send the amount, use of proceeds, timing, revenue range, and current debt context. That is enough to begin a useful first review without collecting sensitive documents on a public form.</p>
     <div class="cta-row">
-      <a class="button" href="/apply/">Start application</a>
+      <a class="button" href="/apply/">Start a financing review</a>
       <a class="button button--secondary" href="/application-checklist/">Open the checklist</a>
     </div>
   </div>

@@ -1,16 +1,12 @@
 {% assign program = site.data.term_program %}
-<section class="section split">
-  <div class="panel">
-    <p class="eyebrow">Canada &amp; United States</p>
-    <h2>A three-year term program for established businesses.</h2>
-    <p>A {{ program.term_months }}-month term at {{ program.apr_min }}–{{ program.apr_max }}% APR, for businesses with at least {{ program.revenue_display }} in annual revenue: CAD in Canada and USD in the U.S.</p>
-    <p class="content-note">Revenue eligibility is a starting point. Financing and final terms are subject to underwriting and approval.</p>
-    <a class="button" href="{{ program.path }}">Explore the 3-year term program</a>
-  </div>
-  <div class="proof-card">
-    <p class="eyebrow">Prepare your request</p>
-    <h3>Start with your business and financing need.</h3>
-    <p>Share your country, annual revenue, requested amount, and intended use of funds. The review and next steps take place online.</p>
-    <a href="{{ program.application_path }}">Apply for this program</a>
-  </div>
+<section class="section program-feature">
+  <p class="eyebrow">Canada &amp; United States</p>
+  <h2>Three-year term program.</h2>
+  <dl class="program-facts">
+    <div><dt>Term</dt><dd>{{ program.term_months }} months</dd></div>
+    <div><dt>Rate range</dt><dd>{{ program.apr_min }}–{{ program.apr_max }}% APR</dd></div>
+    <div><dt>Minimum annual revenue</dt><dd>{{ program.revenue_display }}</dd></div>
+  </dl>
+  <p class="quiet-note">CAD in Canada · USD in the United States. Financing and final terms are subject to underwriting and approval.</p>
+  <a class="text-link" href="{{ program.path }}">View program details and eligibility</a>
 </section>

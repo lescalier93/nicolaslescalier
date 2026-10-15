@@ -19,7 +19,7 @@ breadcrumb_title: Why Clients Trust Nicolas
       <h2>Trust is built when the borrower understands the tradeoffs before the documents start flying.</h2>
       <p>That means being direct about speed, cost pressure, documentation, collateral, and whether the chosen structure is solving the right problem in the first place.</p>
       <div class="section-band__actions">
-        <a class="button" href="/apply/">Start application</a>
+        <a class="button" href="/apply/">Start a financing review</a>
         <a class="button button--secondary" href="/reviews-us-funding/">Review the client experience standard</a>
       </div>
     </div>
@@ -129,7 +129,7 @@ breadcrumb_title: Why Clients Trust Nicolas
     <p class="eyebrow">Practical next step</p>
     <p>If you already know your funding target and timeline, the most useful next page is the application checklist.</p>
     <div class="cta-row">
-      <a class="button" href="/apply/">Start application</a>
+      <a class="button" href="/apply/">Start a financing review</a>
       <a class="button button--secondary" href="/application-checklist/">Open checklist</a>
     </div>
   </div>
