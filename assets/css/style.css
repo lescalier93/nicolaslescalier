@@ -2095,3 +2095,5 @@ button:disabled { cursor: wait; opacity: 0.65; }
   .hero--simple .hero__actions .text-link { justify-content: flex-start; }
   .cta-panel--simple > .button { width: 100%; }
 }
+.site-footer a { color: #e2ebe5; text-underline-offset: 0.2em; }
+.site-footer a:hover { color: #fff; }
