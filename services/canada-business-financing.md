@@ -5,7 +5,7 @@ description: "Compare Canadian business financing options, prepare your document
 permalink: /services/canada-business-financing/
 breadcrumb_title: Canadian business financing
 guide: true
-last_reviewed: 2026-10-14
+last_reviewed: 2026-10-15
 faq:
   - question: "Do you work with businesses across Canada?"
     answer: "Yes. Nicolas Lescalier provides online financing guidance across all ten provinces and three territories. Product availability, approval, and terms depend on the location, business, transaction, and funding provider."
