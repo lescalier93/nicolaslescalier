@@ -1,0 +1,18 @@
+term_loans:
+  name: Business term loans
+  path: /services/us-term-loans-approach/
+  apr_min: 9
+  max_term_months: 60
+  max_amortization_years: 15
+  countries: [Canada, United States]
+heloc:
+  name: U.S. home equity lines of credit
+  path: /services/us-heloc/
+  max_ltv: 85
+  funding_days: 5
+  countries: [United States]
+construction:
+  name: U.S. construction loans
+  path: /services/us-construction-loans/
+  interest_only_months: 12
+  countries: [United States]

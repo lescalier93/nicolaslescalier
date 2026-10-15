@@ -6,7 +6,7 @@ apr_min: 12
 apr_max: 16
 revenue_min: 3000000
 revenue_display: "$3 million"
-reviewed: 2026-10-14
+reviewed: 2026-10-15
 markets:
   - country: Canada
     currency: CAD
@@ -16,9 +16,7 @@ faq:
   - question: "What are the program's term and rates?"
     answer: "The program has a three-year (36-month) term and a rate range of 12–16% APR. APR is an annual percentage rate, not a monthly rate. The rate offered depends on underwriting and approval."
   - question: "How much annual revenue does my business need?"
-    answer: "The minimum annual business revenue is CAD $3 million in Canada or USD $3 million in the United States. This is a revenue threshold, not a minimum loan amount. Meeting it does not guarantee approval."
-  - question: "Which currency applies to my request?"
-    answer: "Program amounts are in Canadian dollars (CAD) for Canadian businesses and U.S. dollars (USD) for U.S. businesses. Identify the borrowing business and country when you apply, especially if you operate in both countries."
+    answer: "The minimum annual business revenue is $3 million. This is a revenue threshold, not a minimum loan amount. Meeting it does not guarantee approval."
   - question: "Can I apply remotely?"
     answer: "Yes. Nicolas Lescalier works fully online with businesses across Canada and the United States. There are no in-person client meetings. Availability and final terms depend on the business, location, and underwriting."
   - question: "Can I discuss financing if annual revenue is below $3 million?"

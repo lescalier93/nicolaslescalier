@@ -1,9 +1,10 @@
 ---
-title: "Term Loans for U.S. Businesses"
-description: "See when a business term loan fits, how amortized repayment compares with short-term working capital, and what strengthens an application."
+title: "Business Term Loans | Rates From 9% APR"
+description: "Discuss term loans with Nicolas Lescalier: rates from 9% APR, terms up to 60 months, and amortization up to 15 years on qualifying Canada and U.S. requests."
 layout: default
 permalink: /services/us-term-loans-approach/
-breadcrumb_title: Term Loans
+breadcrumb_title: Term loans
+financing_key: term_loans
 redirect_from:
   - /blog/term-loans-vs-mca.html
   - /us-term-loans-approach/
@@ -11,94 +12,49 @@ redirect_from:
   - /term-loans/
   - /term-loans.html
 faq:
-  - question: "How long does a term loan usually take?"
-    answer: "It depends on the lender path. Bank and SBA files take longer than many non-bank term structures because the documentation burden is heavier."
-  - question: "What matters more than the headline rate?"
-    answer: "Payment supportability, amortization, fees, collateral terms, and whether the structure limits future flexibility."
-  - question: "Is a term loan better than a short-term working capital loan?"
-    answer: "Usually for longer-duration needs, yes. But if the timing is too tight or the documentation is not there, a term loan may not be realistic right now."
-  - question: "What should I prepare?"
-    answer: "Expect to need stronger financial visibility than short-term products require. The application checklist is the best place to start."
+  - question: "Do all applicants receive 9% APR?"
+    answer: "No. Term-loan rates can start at 9% APR. The offered rate and structure depend on qualifications, including credit profile, repayment capacity, and underwriting."
+  - question: "Is a fifteen-year amortization a fifteen-year loan?"
+    answer: "No. The loan term can be up to five years, while the payment schedule may use an amortization of up to fifteen years. A balance may remain due at maturity; the written offer must explain how it will be repaid."
+  - question: "Does the $3 million revenue threshold apply to every term loan?"
+    answer: "The published $3 million minimum annual revenue applies to the separate three-year program at 12–16% APR. Other term-loan options have their own eligibility criteria."
 ---
-
-<section class="section split">
-  <div class="panel">
-    <p class="eyebrow">Term Loans</p>
-    <h1>Term loans for long-term business needs.</h1>
-    <p>Term loans are usually the right choice when the business is financing growth, equipment, expansion, acquisition, or refinancing and needs predictable monthly repayment. They are slower than short-term working capital loans, but they can be materially cleaner from a total-cost and cash-flow standpoint.</p>
-    <p>I help borrowers evaluate whether the structure fits not just the purchase, but what the business will need after the loan closes.</p>
-  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start a financing review</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
-  </div>
-  <div class="proof-card">
-    <p class="eyebrow">Best fit</p>
-    <ul class="plain-list">
-      <li>Equipment, expansion, renovation, or acquisition projects</li>
-      <li>Borrowers with stronger financial documentation</li>
-      <li>Need for predictable monthly payments</li>
-      <li>Situations where lower total capital cost matters more than immediate speed</li>
-    </ul>
-  </div>
+{% assign terms = site.data.financing_programs.term_loans %}
+<section class="hero hero--simple">
+  <p class="eyebrow">Canada &amp; United States</p>
+  <h1>Business term loans.</h1>
+  <p class="lede">Finance expansion, equipment, an acquisition, or refinancing with a repayment structure that fits your business.</p>
+  <div class="hero__actions"><a class="button" href="/apply/?product_interest=Term%20loan">Discuss a term loan</a></div>
+  <p class="hero-note">Reviewed directly with Nicolas Lescalier. Fully online.</p>
 </section>
 
-<section class="section">
-  <p class="eyebrow">What matters</p>
-  <h2>A term loan decision is mostly about supportability.</h2>
-  <div class="grid grid--3">
-    <article class="service-card">
-      <span class="card-label">Cash Flow</span>
-      <p>The business needs enough stable operating income to support fixed repayment without compromising operations.</p>
-    </article>
-    <article class="service-card">
-      <span class="card-label">Documentation</span>
-      <p>Lenders usually care more about financial statements, tax returns, debt service, and operating history than short-term working capital lenders do.</p>
-    </article>
-    <article class="service-card">
-      <span class="card-label">Use of Proceeds</span>
-      <p>The strongest files usually have a clear reason for the capital and a business case that supports the term being requested.</p>
-    </article>
-  </div>
+<section class="section program-feature">
+  <h2>More room to structure repayment.</h2>
+  <dl class="program-facts">
+    <div><dt>Starting rate</dt><dd>{{ terms.apr_min }}% APR</dd></div>
+    <div><dt>Loan term</dt><dd>Up to {{ terms.max_term_months }} months</dd></div>
+    <div><dt>Possible amortization</dt><dd>Up to {{ terms.max_amortization_years }} years</dd></div>
+  </dl>
+  <p class="quiet-note">Rates and available terms depend on qualifications and underwriting. These are available starting and maximum terms, not a promise that every request qualifies for all three.</p>
 </section>
 
 <section class="section split">
   <div class="panel">
-    <p class="eyebrow">How I work</p>
-    <h2>Get clear on repayment before chasing rate.</h2>
-    <ul class="plain-list">
-      <li>Review debt capacity and monthly payment tolerance</li>
-      <li>Assess collateral, if relevant, to improve structure</li>
-      <li>Compare bank, credit union, SBA, and non-bank paths where appropriate</li>
-      <li>Watch for terms that solve today’s project but restrict tomorrow’s flexibility</li>
-    </ul>
-    <p>Borrowers often focus too early on headline rate. The better sequence is repayment fit, documentation reality, then lender selection.</p>
+    <h2>Loan term and amortization are different.</h2>
+    <p>The loan term is the time until the loan matures. Amortization is the schedule used to calculate repayment. A five-year term can have payments based on a longer amortization.</p>
+    <p>That can leave a balance due at maturity. Review the final payment and how any remaining balance must be repaid before accepting an offer. The <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-a-balloon-payment-when-is-one-allowed-en-104/">CFPB explains balloon payments</a>.</p>
   </div>
-  <div class="proof-card">
-    <p class="eyebrow">Explore a scenario</p>
-    <p>See how financing structures can fit different business needs in the <a href="/services/us-client-success-stories/">educational financing examples</a>. These illustrations are not client testimonials or commitments to fund.</p>
-  </div>
+  <aside class="simple-aside">
+    <h3>A separate three-year program</h3>
+    <p>For businesses with $3 million or more in annual revenue: a 36-month program at 12–16% APR.</p>
+    <a class="text-link" href="/services/three-year-term-program/">Review three-year program eligibility</a>
+  </aside>
 </section>
 
 <section class="section">
-  <p class="eyebrow">FAQ</p>
-  <h2>Common term loan questions.</h2>
-  <div class="faq-list">
-    <details class="faq-item"><summary>How long does a term loan usually take?</summary><p>It depends on the lender path. Bank and SBA files take longer than many non-bank term structures because the documentation burden is heavier.</p></details>
-    <details class="faq-item"><summary>What matters more than the headline rate?</summary><p>Payment supportability, amortization, fees, collateral terms, and whether the structure limits future flexibility.</p></details>
-    <details class="faq-item"><summary>Is a term loan better than a short-term working capital loan?</summary><p>Usually for longer-duration needs, yes. But if the timing is too tight or the documentation is not there, a term loan may not be realistic right now.</p></details>
-    <details class="faq-item"><summary>What should I prepare?</summary><p>Expect to need stronger financial visibility than short-term products require. The <a href="/application-checklist/">application checklist</a> is the best place to start.</p></details>
-  </div>
+  <h2>Start with the essentials.</h2>
+  <p>Share your business location, requested amount, use of funds, annual revenue, and existing debt. I’ll help you compare the available repayment options.</p>
+  <p>The <a href="/term-loan-calculator.html">term loan calculator</a> models fully amortizing loans. It does not calculate a balloon balance or quote a financing offer.</p>
+  <div class="faq-list">{% for item in page.faq %}<details class="faq-item"><summary>{{ item.question | escape }}</summary><p>{{ item.answer | escape }}</p></details>{% endfor %}</div>
 </section>
-
-<section class="section">
-  <div class="cta-panel">
-    <p class="eyebrow">Compare Options</p>
-    <h2>Run the numbers before you choose between a term loan and a short-term product.</h2>
-    <p>Use the term loan calculator to model payment pressure, then compare it against faster but more expensive alternatives if speed is part of the equation.</p>
-    <div class="cta-row">
-      <a class="button" href="/apply/">Start a financing review</a>
-      <a class="button button--secondary" href="/term-loan-calculator.html">Open term loan calculator</a>
-    </div>
-  </div>
-</section>
-
-
-{% include term_program_feature.html %}
+{% include review_cta.html %}

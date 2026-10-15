@@ -12,7 +12,7 @@
   "annualPercentageRate": {"@type": "QuantitativeValue", "minValue": {{ program.apr_min }}, "maxValue": {{ program.apr_max }}, "unitText": "%"},
   "currency": [{% for market in program.markets %}{{ market.currency | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}],
   "areaServed": [{% for market in program.markets %}{"@type": "Country", "name": {{ market.country | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}],
-  "audience": {"@type": "BusinessAudience", "audienceType": "Businesses with annual revenue of at least CAD $3 million in Canada or USD $3 million in the United States"},
+  "audience": {"@type": "BusinessAudience", "audienceType": "Businesses with annual revenue of at least $3 million"},
   "termsOfService": {{ program.path | absolute_url | jsonify }}
 }
 </script>

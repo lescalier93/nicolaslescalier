@@ -132,3 +132,5 @@ redirect_from:
     </div>
   </div>
 </section>
+
+<section class="section"><h2>HELOCs and construction financing</h2><p>For U.S. properties, explore <a href="/services/us-heloc/">HELOCs up to 85% LTV</a> with first, second, or third lien options, or <a href="/services/us-construction-loans/">construction loans with interest-only payments for the first twelve months</a>. Rates and approval depend on qualifications.</p></section>

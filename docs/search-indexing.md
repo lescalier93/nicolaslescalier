@@ -56,3 +56,29 @@ The Build website workflow runs `python3 scripts/check_site.py _site` after the 
 ## Three-year term program
 
 `_data/term_program.yml` holds the confirmed program details and FAQs. The program page, featured cards, FAQs, and LoanOrCredit markup read this data. If terms change, also review the Canadian overview, application/checklist copy, and page description for consistency. Only publish terms confirmed by Nicolas; do not infer rates, loan sizes, guarantees, or payment schedules from a different program's materials. Amounts are CAD in Canada and USD in the United States.
+
+## Expanded financing range — confirmed October 15, 2026
+
+`_data/financing_programs.yml` holds general term-loan, HELOC and construction
+summary facts and service geography. Keep all twelve financing options visible
+on the homepage and Services page. Do not simplify the site by hiding products.
+
+- General term loans: Canada and U.S.; rates starting at 9% APR, terms up to
+  60 months, possible amortization up to 15 years, subject to qualifications.
+  Amortization is not the maturity term. Do not imply all maximum/starting terms
+  are available together or every borrower receives the lowest rate.
+- The separate three-year program retains 36 months, 12–16% APR and $3 million
+  minimum annual revenue. The user requested removal of repetitive CAD/Canada
+  and USD/U.S. explanatory copy; keep currency selection where needed in forms.
+- HELOC: U.S. only; first, second or third lien; up to 85% LTV; five-day funding
+  available for qualifying files; e-notary and no inspector visiting the property.
+  Rates vary by FICO and other qualifications. Do not invent a fixed rate,
+  guaranteed funding date, or a combined-LTV calculation not confirmed by Nicolas.
+- Construction loans: U.S. only; interest-only payments for the first twelve
+  months; rates vary by qualifications. No confirmed loan size, draw schedule,
+  or terms after the first year are published.
+
+HELOC and construction calls to action use the short contact form with a
+whitelisted product preselection, avoiding required business-revenue fields.
+The term calculator remains a fully amortizing model without balloon balances
+or interest-only schedules. Its limitations must stay visible.

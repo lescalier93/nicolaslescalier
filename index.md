@@ -9,7 +9,7 @@ permalink: /
   <p class="eyebrow">Business financing · Canada &amp; United States</p>
   <h1>Nicolas Lescalier</h1>
   <p class="hero-role">Funding Manager at Premium Merchant Funding</p>
-  <p class="lede">Tell me what your business needs to finance. I’ll help you compare your options, understand repayment, and take the next step.</p>
+  <p class="lede">Tell me what you need to finance. I’ll help you compare your options, understand repayment, and take the next step.</p>
   <div class="hero__actions"><a class="button" href="/apply/">Start a financing review</a><a class="text-link" href="/about-nicolas-lescalier-us/">About Nicolas</a></div>
   <p class="hero-note">Fully online. No need to choose a product first.</p>
 </section>

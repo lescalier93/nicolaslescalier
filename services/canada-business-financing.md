@@ -5,7 +5,7 @@ description: "Compare Canadian business financing options, prepare your document
 permalink: /services/canada-business-financing/
 breadcrumb_title: Canadian business financing
 guide: true
-last_reviewed: 2026-10-14
+last_reviewed: 2026-10-15
 faq:
   - question: "Do you work with businesses across Canada?"
     answer: "Yes. Nicolas Lescalier provides online financing guidance across all ten provinces and three territories. Product availability, approval, and terms depend on the location, business, transaction, and funding provider."
@@ -40,9 +40,13 @@ A useful financing request explains the cash-flow problem clearly. Buying a mach
 
 Read the [Canadian working capital guide](/services/canada-working-capital/) and [Canadian equipment financing guide](/services/canada-equipment-financing/) for the questions to take into a first discussion. This is a starting framework; it does not mean every product is available for every request.
 
-## A three-year program for established businesses
+## Term-loan options
 
-The [three-year term program](/services/three-year-term-program/) offers a 36-month term at 12–16% APR, with a minimum annual business revenue of CAD $3 million for Canadian businesses. Program amounts in Canada are CAD. Meeting the revenue threshold does not guarantee approval; underwriting and final terms still apply.
+[Business term loans](/services/us-term-loans-approach/) can start at 9% APR, with terms up to 60 months and possible amortization up to 15 years. Rates and structure depend on qualifications. A longer amortization does not extend the loan’s maturity date.
+
+### A three-year program for established businesses
+
+The [three-year term program](/services/three-year-term-program/) offers a 36-month term at 12–16% APR, with a minimum annual business revenue of $3 million. Meeting the revenue threshold does not guarantee approval; underwriting and final terms still apply.
 
 ## Bank, BDC, and government-program routes
 
@@ -55,7 +59,7 @@ These links are independent reference sources. They do not imply that I represen
 ## Prepare a clear first request
 
 - Business name, province or territory, industry, and time operating.
-- Requested amount and currency: CAD or USD.
+- Requested financing amount.
 - A specific use of funds and the date the capital is needed.
 - Recent revenue, existing financing obligations, and an explanation of any unusual cash-flow period.
 - Available financial statements, bank statements, and a project budget or equipment quote, as relevant.

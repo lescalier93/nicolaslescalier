@@ -5,132 +5,27 @@ permalink: "/why-us-clients-trust-nicolas/"
 layout: default
 breadcrumb_title: Why Clients Trust Nicolas
 ---
-
-<section class="section">
-  <p class="eyebrow">Working with Nicolas Lescalier</p>
+<section class="hero hero--simple">
+  <p class="eyebrow">Nicolas Lescalier’s approach</p>
   <h1>Clear advice. A practical financing process.</h1>
-  <p class="section-intro">Financing is a high-friction decision. The reason clients keep coming back is not marketing language. It is knowing how the process will work, what the lender will care about, and where the risks sit before the deal moves forward.</p>
+  <p class="lede">Start with what you need to finance, when you need the funds, and the repayment your business can support. I’ll help you compare the available options.</p>
+  <div class="hero__actions"><a class="button" href="/apply/">Start a financing review</a></div>
 </section>
-
 <section class="section">
-  <div class="section-band">
-    <div class="section-band__panel">
-      <p class="eyebrow">What trust should mean here</p>
-      <h2>Trust is built when the borrower understands the tradeoffs before the documents start flying.</h2>
-      <p>That means being direct about speed, cost pressure, documentation, collateral, and whether the chosen structure is solving the right problem in the first place.</p>
-      <div class="section-band__actions">
-        <a class="button" href="/apply/">Start a financing review</a>
-        <a class="button button--secondary" href="/reviews-us-funding/">Review the client experience standard</a>
-      </div>
-    </div>
-    <div class="mini-grid">
-      <article class="mini-card">
-        <h3>What weak advice looks like</h3>
-        <p>Oversimplified rate talk, product pushing, and vague certainty before the file has actually been pressure-tested.</p>
-      </article>
-      <article class="mini-card">
-        <h3>What strong advice looks like</h3>
-        <p>Clear fit analysis, realistic expectations, and cleaner movement into the right application path only when the file is ready.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section">
+  <h2>What I look at with you.</h2>
   <div class="grid grid--3">
-    <article class="service-card">
-      <span class="card-label">1. Transparency</span>
-      <h3>No hidden positioning</h3>
-      <p>I aim to surface fees, repayment expectations, collateral pressure, documentation friction, and lender constraints early so clients can make an informed decision.</p>
-    </article>
-    <article class="service-card">
-      <span class="card-label">2. Relevance</span>
-      <h3>Products matched to the real situation</h3>
-      <p>A short-term cash gap, an equipment purchase, an invoice bottleneck, and a property transition should not be treated as the same type of file.</p>
-    </article>
-    <article class="service-card">
-      <span class="card-label">3. Execution</span>
-      <h3>Active support through the process</h3>
-      <p>I stay involved from initial review through funding so documentation, lender communication, and timelines stay aligned.</p>
-    </article>
+    <article class="service-card"><h3>The financing need</h3><p>A temporary cash gap, equipment purchase, acquisition, and property project can require different financing structures.</p></article>
+    <article class="service-card"><h3>The full repayment</h3><p>Compare the payment schedule, total cost, fees, security, and early repayment conditions alongside the rate.</p></article>
+    <article class="service-card"><h3>The next step</h3><p>Understand which information is needed, what the provider will review, and which terms still need confirmation.</p></article>
   </div>
 </section>
-
 <section class="section split">
   <div class="panel">
-    <p class="eyebrow">Where borrowers usually lose time</p>
-    <ul class="plain-list">
-      <li>Submitting to lenders before the use of proceeds is clearly defined</li>
-      <li>Choosing a product based on advertised speed instead of repayment fit</li>
-      <li>Underestimating documentation or collateral constraints</li>
-      <li>Comparing offers without understanding the real cost structure</li>
-      <li>Assuming approval logic is the same across working capital loans, LOC, SBA, invoice finance, and CRE debt</li>
-    </ul>
-    <p>The goal is to compress that uncertainty early, so the borrower spends time only on realistic options.</p>
+    <h2>My role in your financing request.</h2>
+    <p>I am Nicolas Lescalier, Funding Manager at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>. I fund select deals directly and work with funding partners when co-funding or another provider is appropriate.</p>
+    <p>I work fully online across Canada and the United States. Product availability and final terms depend on the request and underwriting.</p>
+    <a class="text-link" href="/about-nicolas-lescalier-us/">About Nicolas Lescalier</a>
   </div>
-  <div class="proof-card">
-    <p class="eyebrow">What trust looks like in practice</p>
-    <ul class="plain-list">
-      <li>A quick initial read on whether the file is realistic</li>
-      <li>Honest pushback when a product looks wrong for the business</li>
-      <li>Tradeoffs explained before documentation starts flying</li>
-      <li>Steadier execution once the borrower is in motion</li>
-    </ul>
-  </div>
+  <aside class="simple-aside"><h3>Get in touch directly.</h3><p><a href="mailto:nlescalier@pmfus.com">nlescalier@pmfus.com</a></p><p><a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></p><a class="text-link" href="/reviews-us-funding/">What to expect when working together</a></aside>
 </section>
-
-<section class="section">
-  <p class="eyebrow">Professional transparency</p>
-  <div class="grid grid--2">
-    <article class="service-card">
-      <span class="card-label">Role</span>
-      <h3>A clear funding role</h3>
-      <p>Nicolas is a Funding Manager at <a href="https://www.pmfus.com/" target="_blank" rel="noopener noreferrer">Premium Merchant Funding</a>. He acts as a direct lender on select deals and works with an extensive network for co-funding. Financing is subject to underwriting and approval.</p>
-    </article>
-    <article class="service-card">
-      <span class="card-label">Contact</span>
-      <h3>Verifiable professional channels</h3>
-      <p>Borrowers can verify the professional affiliation, review the public <a href="https://www.linkedin.com/in/nicolaslescalier/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>, and contact Nicolas directly at <a href="mailto:nlescalier@pmfus.com">nlescalier@pmfus.com</a>.</p>
-    </article>
-  </div>
-</section>
-
-<section class="section">
-  <p class="eyebrow">What borrowers should feel after the first review</p>
-  <div class="step-grid">
-    <article class="step-card">
-      <span class="step-card__number">1</span>
-      <h3>More clarity</h3>
-      <p>A better sense of which products are realistic and which ones are likely to waste time.</p>
-    </article>
-    <article class="step-card">
-      <span class="step-card__number">2</span>
-      <h3>Less noise</h3>
-      <p>Fewer generic options and a cleaner view of the real underwriting pressure points.</p>
-    </article>
-    <article class="step-card">
-      <span class="step-card__number">3</span>
-      <h3>Better preparation</h3>
-      <p>A more credible file and a clearer next move into the right lender or structure.</p>
-    </article>
-  </div>
-</section>
-
-<section class="section split">
-  <div class="panel">
-    <p class="eyebrow">Related pages</p>
-    <p>If you are assessing the process before applying, use the client-experience page for working standards and case examples for structure breakdowns.</p>
-    <div class="cta-row">
-      <a class="button" href="/about-nicolas-lescalier-us/">About Nicolas</a>
-      <a class="button button--secondary" href="/reviews-us-funding/">Client experience standard</a>
-    </div>
-  </div>
-  <div class="proof-card">
-    <p class="eyebrow">Practical next step</p>
-    <p>If you already know your funding target and timeline, the most useful next page is the application checklist.</p>
-    <div class="cta-row">
-      <a class="button" href="/apply/">Start a financing review</a>
-      <a class="button button--secondary" href="/application-checklist/">Open checklist</a>
-    </div>
-  </div>
-</section>
+{% include review_cta.html %}

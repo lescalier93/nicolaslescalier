@@ -1,6 +1,6 @@
 ---
 title: "Contact Nicolas Lescalier"
-description: "Contact Nicolas Lescalier to discuss a working capital, term loan, SBA, equipment, invoice finance, bridge, or CRE request."
+description: "Contact Nicolas Lescalier about business financing in Canada and the U.S., or U.S. HELOCs and construction loans. Start with a short online inquiry."
 permalink: "/contact/"
 layout: default
 image: "/assets/social-contact.png"
@@ -10,8 +10,17 @@ breadcrumb_title: Contact
 <header class="page-intro">
   <p class="eyebrow">Contact</p>
   <h1>Contact Nicolas Lescalier</h1>
-  <p>For financing in Canada or the U.S., share your location, currency, amount, timing, and use of funds. I’ll review the request and outline the next steps.</p>
+  <p>For financing in Canada or the U.S., share your location, amount, timing, and what you want to finance. I’ll review the request and outline the next steps.</p>
 </header>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const need = document.getElementById("need");
+    const requested = new URLSearchParams(window.location.search).get("need");
+    if (requested && Array.from(need.options).some(option => option.value === requested)) {
+      need.value = requested;
+    }
+  });
+</script>
 <section class="section split contact-layout">
 
   <div class="contact-form">
@@ -62,13 +71,15 @@ breadcrumb_title: Contact
           <option>PO financing</option>
           <option value="SBA 7(a)">SBA 7(a) — U.S. business</option>
           <option>Bridge or mortgage financing</option>
+          <option value="HELOC">HELOC — U.S. only</option>
+          <option value="Construction loan">Construction loan — U.S. only</option>
           <option>Not sure yet</option>
         </select>
       </div>
 
       <div>
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="7" required placeholder="Tell me about the business, country and province/state, amount and currency (CAD or USD), timeline, and financing need."></textarea>
+        <textarea id="message" name="message" rows="7" required placeholder="Tell me about the business or property, location, amount, timeline, and financing need."></textarea>
       </div>
 
       <div class="notice-card">
