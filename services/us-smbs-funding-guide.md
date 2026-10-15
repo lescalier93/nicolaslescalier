@@ -13,7 +13,7 @@ redirect_from:
   <p class="eyebrow">Funding Guide</p>
   <h1>Compare your business funding options.</h1>
   <p class="section-intro">When a business needs capital quickly, the biggest mistake is often choosing a structure before clarifying the actual problem. Payroll stress, equipment growth, invoice delays, purchase orders, and property transition do not belong in the same financing bucket.</p>
-  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
+  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start a financing review</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
 </section>
 
 <section class="section">
@@ -127,7 +127,7 @@ redirect_from:
     <h2>Send the size of the request, the use of funds, and the time pressure.</h2>
     <p>I will help you narrow the realistic financing paths and flag where the weak assumptions are before you spend time with lenders.</p>
     <div class="cta-row">
-      <a class="button" href="/apply/">Start application</a>
+      <a class="button" href="/apply/">Start a financing review</a>
       <a class="button button--secondary" href="/resources.html">Open resources hub</a>
     </div>
   </div>

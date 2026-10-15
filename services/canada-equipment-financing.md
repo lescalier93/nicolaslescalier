@@ -47,7 +47,7 @@ Review the equipment payment alongside payroll, rent, inventory, and existing de
 
 See the [Canadian working capital guide](/services/canada-working-capital/) for payment-planning questions and the [Canadian financing overview](/services/canada-business-financing/) for broader options. Service is fully online throughout [Canada and the United States](/where-i-operate/); the financing review remains specific to your location and transaction.
 
-<div class="cta-row"><a class="button" href="/contact/">Discuss an equipment purchase</a><a class="button button--secondary" href="/apply/">Start application</a></div>
+<div class="cta-row"><a class="button" href="/contact/">Discuss an equipment purchase</a><a class="button button--secondary" href="/apply/">Start a financing review</a></div>
 </section>
 
 {% include guide_notes.html %}

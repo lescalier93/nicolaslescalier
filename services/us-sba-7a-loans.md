@@ -20,7 +20,7 @@ faq:
     <p class="eyebrow">SBA 7(a)</p>
     <h1>SBA 7(a) financing for business growth.</h1>
     <p>SBA 7(a) loans are often the best-value option for acquisitions, expansion, refinance, partner buyouts, and other larger financing needs when the file is strong enough and the borrower can support a more documentation-heavy process.</p>
-  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
+  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start a financing review</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
   </div>
   <div class="proof-card">
     <p class="eyebrow">Best fit</p>
@@ -89,7 +89,7 @@ faq:
     <h2>Start with readiness, not just rate expectations.</h2>
     <p>I can help determine whether your situation is SBA-ready or whether another product is more realistic for the current timeline.</p>
     <div class="cta-row">
-      <a class="button" href="/apply/">Start application</a>
+      <a class="button" href="/apply/">Start a financing review</a>
       <a class="button button--secondary" href="/services/us-term-loans-approach/">Compare with term loans</a>
     </div>
   </div>

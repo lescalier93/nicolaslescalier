@@ -15,7 +15,7 @@ redirect_from:
       <h1>Financing scenarios, explained.</h1>
       <p>These are simplified, educational scenarios—not client testimonials or promises of results. Each example isolates the business problem, key constraint, possible financing structure, and the reason that structure may fit.</p>
       <div class="section-band__actions">
-        <a class="button" href="/apply/">Start application</a>
+        <a class="button" href="/apply/">Start a financing review</a>
         <a class="button button--secondary" href="/reviews-us-funding/">Review the client experience standard</a>
       </div>
     </div>
@@ -203,7 +203,7 @@ redirect_from:
     <h2>Your situation will be different. The useful question is what structure fits your constraint.</h2>
     <p>If you already know the amount, timing, and use of proceeds, start the application. If you are still narrowing product fit, use the checklist or calculators first.</p>
     <div class="cta-row">
-      <a class="button" href="/apply/">Start application</a>
+      <a class="button" href="/apply/">Start a financing review</a>
       <a class="button button--secondary" href="/application-checklist/">Open application checklist</a>
     </div>
   </div>

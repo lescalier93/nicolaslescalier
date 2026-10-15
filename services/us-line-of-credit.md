@@ -20,7 +20,7 @@ faq:
     <p class="eyebrow">Line of Credit</p>
     <h1>A business line of credit for recurring needs.</h1>
     <p>A line of credit is usually the right fit when the need is recurring rather than one-time. Inventory cycles, uneven receivables, seasonal swings, and short-term operating gaps often fit a revolving facility better than a lump-sum loan.</p>
-  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
+  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start a financing review</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
   </div>
   <div class="proof-card">
     <p class="eyebrow">Best fit</p>
@@ -89,7 +89,7 @@ faq:
     <h2>If you are not sure whether you need a line or a lump sum, start with the use of funds.</h2>
     <p>I can help determine whether a revolving facility is cleaner than a short-term working capital loan or term loan for the way your business actually uses cash. If repayment structure is the main question, the term calculator is also worth using before you apply.</p>
     <div class="cta-row">
-      <a class="button" href="/apply/">Start application</a>
+      <a class="button" href="/apply/">Start a financing review</a>
       <a class="button button--secondary" href="/term-loan-calculator.html">Open term loan calculator</a>
     </div>
   </div>

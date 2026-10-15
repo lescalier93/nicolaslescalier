@@ -15,7 +15,7 @@ redirect_from:
     <h1>Refinance your commercial property.</h1>
     <p>Commercial real estate refinancing can reduce debt cost, extend term, replace a bridge loan, or unlock equity for improvements and new investments. The key is to compare the real savings and strategic benefit against closing costs, leverage, covenants, and prepayment friction.</p>
     <p>I help borrowers evaluate whether a refinance improves the capital stack or just creates a new set of constraints.</p>
-  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
+  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start a financing review</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
   </div>
   <div class="proof-card">
     <p class="eyebrow">Common reasons</p>
@@ -69,7 +69,7 @@ redirect_from:
     <h2>If you are considering a refinance, start with the current debt and the target outcome.</h2>
     <p>Send the property type, estimated value, current loan terms, and whether the goal is savings, cash-out, or permanent financing after a bridge period.</p>
     <div class="cta-row">
-      <a class="button" href="/apply/">Start application</a>
+      <a class="button" href="/apply/">Start a financing review</a>
       <a class="button button--secondary" href="/services/us-bridge-financing/">Compare with bridge debt</a>
     </div>
   </div>

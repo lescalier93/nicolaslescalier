@@ -20,7 +20,7 @@ faq:
     <p class="eyebrow">Equipment Financing</p>
     <h1>Finance the equipment your business needs.</h1>
     <p>Equipment financing is often cleaner than using working capital for machinery, vehicles, medical devices, restaurant equipment, or production tools. The structure should match the useful life of the asset and the cash flow it helps create.</p>
-  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
+  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start a financing review</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
   </div>
   <div class="proof-card">
     <p class="eyebrow">Best fit</p>
@@ -67,7 +67,7 @@ faq:
     <p>If you are deciding between asset-backed debt and a broader facility, compare the term-loan path before submitting the wrong product first.</p>
     <div class="cta-row">
       <a class="button" href="/services/us-term-loans-approach/">Compare with term loans</a>
-      <a class="button button--secondary" href="/apply/">Start application</a>
+      <a class="button button--secondary" href="/apply/">Start a financing review</a>
     </div>
   </div>
 </section>
@@ -89,7 +89,7 @@ faq:
     <h2>Start with the equipment, the budget, and the revenue impact.</h2>
     <p>I can help decide whether the asset should support its own financing structure or whether another product fits better.</p>
     <div class="cta-row">
-      <a class="button" href="/apply/">Start application</a>
+      <a class="button" href="/apply/">Start a financing review</a>
       <a class="button button--secondary" href="/services/us-term-loans-approach/">Compare with term loans</a>
     </div>
   </div>

@@ -27,7 +27,7 @@ faq:
     <h1>Working capital when timing matters.</h1>
     <p>A short-term working capital loan can be useful when a business needs capital quickly and repayment needs to track receivables more closely than a fixed monthly loan. It is often the right tool for urgent inventory, payroll, repairs, marketing, or location-related spend, but only when the repayment pressure actually fits the business.</p>
     <p>I help borrowers determine whether a working capital loan solves the problem cleanly or whether another product would create less drag on cash flow.</p>
-  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
+  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start a financing review</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
   </div>
   <div class="proof-card">
     <p class="eyebrow">Best fit</p>
@@ -95,7 +95,7 @@ faq:
     <p>A working capital loan can look simple until you translate the factor and term into actual repayment pressure. Use the calculator to compare offers, then reach out if you want a second view on the structure.</p>
     <div class="cta-row">
       <a class="button" href="/working-capital-calculator.html">Open working capital calculator</a>
-      <a class="button button--secondary" href="/apply/">Start application</a>
+      <a class="button button--secondary" href="/apply/">Start a financing review</a>
     </div>
   </div>
 </section>

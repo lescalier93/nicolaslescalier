@@ -20,7 +20,7 @@ faq:
     <p class="eyebrow">PO Financing</p>
     <h1>Finance your next purchase order.</h1>
     <p>Purchase order financing fits businesses that have a valid customer order but need capital to produce, source, or deliver the goods before getting paid. It is most useful when the order is real, the customer is credible, and the margin can support the structure.</p>
-  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start application</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
+  <div class="cta-row service-intro-actions"><a class="button" href="/apply/">Start a financing review</a><a class="text-link" href="/contact/">Discuss your financing needs</a></div>
   </div>
   <div class="proof-card">
     <p class="eyebrow">Best fit</p>
@@ -67,7 +67,7 @@ faq:
     <p>If the bottleneck changes after fulfillment, the right comparison is usually PO finance versus factoring, not just PO finance alone.</p>
     <div class="cta-row">
       <a class="button" href="/services/us-factoring/">Compare with factoring</a>
-      <a class="button button--secondary" href="/apply/">Start application</a>
+      <a class="button button--secondary" href="/apply/">Start a financing review</a>
     </div>
   </div>
 </section>
@@ -89,7 +89,7 @@ faq:
     <h2>PO finance works only when the order, supplier path, and margin all make sense.</h2>
     <p>I can help evaluate whether the purchase order is financeable and whether PO financing or factoring is the cleaner approach.</p>
     <div class="cta-row">
-      <a class="button" href="/apply/">Start application</a>
+      <a class="button" href="/apply/">Start a financing review</a>
       <a class="button button--secondary" href="/services/us-factoring/">Compare with factoring</a>
     </div>
   </div>
